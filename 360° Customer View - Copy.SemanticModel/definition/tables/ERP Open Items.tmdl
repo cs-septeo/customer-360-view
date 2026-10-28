@@ -1,0 +1,141 @@
+/// Open customer ledger entries (Offene Posten) from Business Central, DWH ERP.Debitorenposten where open = 1. Includes the last issued reminder level (Mahnstufe) and aging. Days Overdue and Aging Bucket are calculated at refresh time. Related to fact account via DebitorKey -> BC ID.
+table 'ERP Open Items'
+	lineageTag: cd8b7205-3d60-448d-a67e-8d25f5d24eb7
+
+	/// Remaining amount of all open customer ledger entries (invoices minus unapplied payments/credits).
+	measure 'Open Amount' = SUM ( 'ERP Open Items'[Remaining Amount] )
+		formatString: #,0.00
+		displayFolder: Account Detail
+		lineageTag: 17fe33e3-211f-445d-9535-763ff294a029
+
+	/// Positive remaining amount of open ledger entries whose due date has passed.
+	measure 'Overdue Amount' = CALCULATE ( SUM ( 'ERP Open Items'[Remaining Amount] ), 'ERP Open Items'[Days Overdue] > 0, 'ERP Open Items'[Remaining Amount] > 0 )
+		formatString: #,0.00
+		displayFolder: Account Detail
+		lineageTag: 6fdfe366-3ea3-496f-bffa-20f961ffb608
+
+	/// Number of overdue open ledger entries with a positive remaining amount.
+	measure 'Overdue Items' = CALCULATE ( COUNTROWS ( 'ERP Open Items' ), 'ERP Open Items'[Days Overdue] > 0, 'ERP Open Items'[Remaining Amount] > 0 )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: ab4f282d-689b-424a-9346-b7c5d3cc1b1b
+
+	/// Highest reminder level (Mahnstufe) issued on any open ledger entry; 0 = no reminder.
+	measure 'Max Reminder Level' = COALESCE ( MAX ( 'ERP Open Items'[Reminder Level] ), 0 )
+		formatString: 0
+		displayFolder: Account Detail
+		lineageTag: 283f6ecd-0f48-494f-b990-85dbc3bf804f
+
+	/// Color for conditional formatting: red = reminder issued, yellow = overdue, green = up to date.
+	measure 'Payment Status Color' = SWITCH ( TRUE (), [Max Reminder Level] > 0, "#FF543A", [Overdue Amount] > 0, "#F2C94C", "#1DD291" )
+		displayFolder: Account Detail\Formatting
+		lineageTag: cb839ce9-3efc-4d6b-aa81-fc8945294f53
+
+	column 'Entry Key'
+		dataType: string
+		isHidden
+		lineageTag: 943d3360-f926-4892-a718-2c0a27db5845
+		sourceColumn: Entry Key
+
+	column DebitorKey
+		dataType: string
+		isHidden
+		lineageTag: b8979988-f254-49c7-9609-91cb6e0657e6
+		sourceColumn: DebitorKey
+
+	column Entity
+		dataType: string
+		lineageTag: d57664f7-fa25-423a-8be0-b7149fd42651
+		sourceColumn: Entity
+
+	column 'Document No'
+		dataType: string
+		lineageTag: 0a5c5426-d994-4100-b49c-85a37f12652b
+		sourceColumn: Document No
+
+	column 'Document Type'
+		dataType: string
+		lineageTag: abd38f98-4bac-4789-83f4-ff365d1dda0e
+		sourceColumn: Document Type
+
+	column Description
+		dataType: string
+		lineageTag: 061b315f-2004-4095-9f97-8e468a46c702
+		sourceColumn: Description
+
+	column 'Posting Date'
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: bddb33a5-09b1-4c47-8a58-849e4b02b67f
+		sourceColumn: Posting Date
+
+	column 'Due Date'
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: cd4192d3-d546-4861-85cf-87eabc58ad54
+		sourceColumn: Due Date
+
+	column 'Remaining Amount'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 67a10bdb-4a78-4bca-a956-298fb0566ee0
+		summarizeBy: sum
+		sourceColumn: Remaining Amount
+
+	column 'Remaining Amount LCY'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 6da92d02-b219-4952-b445-00f77bb15f18
+		summarizeBy: sum
+		sourceColumn: Remaining Amount LCY
+
+	column Currency
+		dataType: string
+		lineageTag: 07ce9310-05cb-4d29-9536-65bea67e5422
+		sourceColumn: Currency
+
+	column 'Reminder Level'
+		dataType: int64
+		lineageTag: 1f1879e4-7b7f-4844-8b4d-85e912bbefde
+		summarizeBy: max
+		sourceColumn: Reminder Level
+
+	column 'Days Overdue'
+		dataType: int64
+		lineageTag: 5071ca40-3372-4eef-8224-ce720821be98
+		summarizeBy: max
+		sourceColumn: Days Overdue
+
+	column 'Aging Bucket'
+		dataType: string
+		lineageTag: 4d2d623d-2121-4488-943b-a684b8aa2e0c
+		sourceColumn: Aging Bucket
+		sortByColumn: 'Aging Sort'
+
+	column 'Aging Sort'
+		dataType: int64
+		isHidden
+		lineageTag: 6a24017d-f2b7-47ec-92d0-752b25ad2460
+		summarizeBy: none
+		sourceColumn: Aging Sort
+
+	partition 'ERP Open Items' = m
+		mode: import
+		source =
+				let
+				    Today = Date.From(DateTime.LocalNow()),
+				    Source = Sql.Database("v0201-044-sql01.stp.ag\DWH", "DWH"),
+				    Data = Source{[Schema = "ERP", Item = "Debitorenposten"]}[Data],
+				    Filtered = Table.SelectRows(Data, each [open] = "1"),
+				    Selected = Table.SelectColumns(Filtered, {"EntryKey", "DebitorKey", "Entity", "document_no", "document_type", "description", "posting_date", "due_date", "remaining_amount", "remaining_amt_lcy", "currency_code", "last_issued_reminder_level"}),
+				    Renamed = Table.RenameColumns(Selected, {{"EntryKey", "Entry Key"}, {"document_no", "Document No"}, {"document_type", "Document Type"}, {"description", "Description"}, {"posting_date", "Posting Date"}, {"due_date", "Due Date"}, {"remaining_amount", "Remaining Amount"}, {"remaining_amt_lcy", "Remaining Amount LCY"}, {"currency_code", "Currency"}, {"last_issued_reminder_level", "Reminder Level"}}),
+				    Cleaned = Table.TransformColumns(Renamed, {{"Currency", each if _ = null or _ = "" then "LCY" else _, type text}, {"Reminder Level", each if _ = null then 0 else _, Int64.Type}}),
+				    DaysOverdue = Table.AddColumn(Cleaned, "Days Overdue", each if [Due Date] <> null and [Due Date] < Today then Duration.Days(Today - [Due Date]) else 0, Int64.Type),
+				    AgingSort = Table.AddColumn(DaysOverdue, "Aging Sort", each if [Days Overdue] = 0 then 0 else if [Days Overdue] <= 30 then 1 else if [Days Overdue] <= 60 then 2 else if [Days Overdue] <= 90 then 3 else 4, Int64.Type),
+				    AgingBucket = Table.AddColumn(AgingSort, "Aging Bucket", each {"Not due", "1-30 days", "31-60 days", "61-90 days", "> 90 days"}{[Aging Sort]}, type text),
+				    Typed = Table.TransformColumnTypes(AgingBucket, {{"Posting Date", type datetime}, {"Due Date", type datetime}, {"Remaining Amount", Currency.Type}, {"Remaining Amount LCY", Currency.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

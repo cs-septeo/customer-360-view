@@ -1,0 +1,107 @@
+/// CRM activities (Aktivitaeten: emails, calls, tasks, appointments, chats, Bearbeitungsinformation, Auftragsuebergabe) from DWH CRM.activitypointers, last 2 years, linked to an account (accountid_final). System activities (quote/opportunity close, incident resolution, campaign) are excluded. Related to fact account via Account ID.
+table 'CRM Activities'
+	lineageTag: a59ae249-542e-4180-9a35-170fa3ee827f
+
+	/// Number of CRM activities for the account (last 2 years).
+	measure 'Activity Count' = COUNTROWS ( 'CRM Activities' )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 75eca715-294b-4f47-893c-d1b23646168f
+
+	/// CRM activities that are still open or scheduled.
+	measure 'Open Activities' = CALCULATE ( COUNTROWS ( 'CRM Activities' ), 'CRM Activities'[Status] IN { "Open", "Scheduled" } )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 0e0e54ad-b9a0-4441-9dd7-6d65f853a6f0
+
+	/// Date of the most recent past CRM activity for the account.
+	measure 'Last Activity Date' = CALCULATE ( MAX ( 'CRM Activities'[Activity Date] ), 'CRM Activities'[Activity Date] <= TODAY () )
+		formatString: dd.MM.yyyy
+		displayFolder: Account Detail
+		lineageTag: 1e7c7dde-e238-4abd-a54f-b690f77c4a7d
+
+	/// Days between the last CRM activity and today.
+	measure 'Days Since Last Activity' = VAR _last = [Last Activity Date] RETURN IF ( NOT ISBLANK ( _last ), DATEDIFF ( _last, TODAY (), DAY ) )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: f6a98f9e-2700-427f-84ec-feba5afbb07f
+
+	column 'Activity ID'
+		dataType: string
+		isHidden
+		lineageTag: 432e5942-f951-47b3-9caa-987810d130a3
+		sourceColumn: Activity ID
+
+	column 'Account ID'
+		dataType: string
+		isHidden
+		lineageTag: 6477443f-473b-4334-9bcd-a541f6214b82
+		sourceColumn: Account ID
+
+	column 'Activity Type'
+		dataType: string
+		lineageTag: c5079e71-dad4-498a-8dab-6793ba2cee5f
+		sourceColumn: Activity Type
+
+	column Subject
+		dataType: string
+		lineageTag: d6270666-60dd-4903-a2b8-b7f62bb69bd2
+		sourceColumn: Subject
+
+	column Status
+		dataType: string
+		lineageTag: e5b408a4-1500-4b94-95fb-98c7fc41b3a8
+		sourceColumn: Status
+
+	column 'Created On'
+		dataType: dateTime
+		formatString: dd.MM.yyyy HH:mm
+		lineageTag: 7b12c6d4-0ac7-402f-968c-0e164bc182b7
+		sourceColumn: Created On
+
+	column 'Activity Date'
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: 24cf96a8-986f-4092-a774-9e1449736a9f
+		sourceColumn: Activity Date
+
+	column Owner
+		dataType: string
+		lineageTag: 6e97e8e8-b271-45f4-b9cd-84e583779d63
+		sourceColumn: Owner
+
+	column 'Regarding Type'
+		dataType: string
+		lineageTag: dba70567-5ba0-4eb1-8698-63969c422127
+		sourceColumn: Regarding Type
+
+	column Regarding
+		dataType: string
+		lineageTag: 6c4986a9-9a48-4190-a060-1d10db67435d
+		sourceColumn: Regarding
+
+	partition 'CRM Activities' = m
+		mode: import
+		source =
+				let
+				    Cutoff = DateTime.ToText(Date.AddYears(DateTime.LocalNow(), -2), [Format = "yyyy-MM-dd HH:mm:ss"]),
+				    ActivityTypes = {"email", "phonecall", "task", "appointment", "chat", "ncx_bearbeitungsinformation", "stp_auftragsubergabe"},
+				    TypeNames = [email = "Email", phonecall = "Phone Call", task = "Task", appointment = "Appointment", chat = "Chat", ncx_bearbeitungsinformation = "Bearbeitungsinformation", stp_auftragsubergabe = "Auftragsübergabe"],
+				    StatusNames = {"Open", "Completed", "Canceled", "Scheduled"},
+				    ToDateTime = (t) => try DateTime.From(Text.Start(t, 19)) otherwise null,
+				    Source = Sql.Database("v0201-044-sql01.stp.ag\DWH", "DWH"),
+				    Data = Source{[Schema = "CRM", Item = "activitypointers"]}[Data],
+				    Filtered = Table.SelectRows(Data, each [createdon] >= Cutoff and List.Contains(ActivityTypes, [activitytypecode]) and [accountid_final] <> null),
+				    Selected = Table.SelectColumns(Filtered, {"activityid", "accountid_final", "activitytypecode", "subject", "statecode", "createdon", "actualend", "scheduledend", "ownerid", "regardingobject_type", "regardingobject_name"}),
+				    Users = Table.SelectColumns(Source{[Schema = "CRM", Item = "active_systemuser_raw"]}[Data], {"systemuserid", "fullname"}),
+				    Joined = Table.NestedJoin(Selected, {"ownerid"}, Users, {"systemuserid"}, "User", JoinKind.LeftOuter),
+				    Expanded = Table.ExpandTableColumn(Joined, "User", {"fullname"}, {"Owner"}),
+				    ActivityDate = Table.AddColumn(Expanded, "Activity Date", each ToDateTime(if [actualend] <> null then [actualend] else if [scheduledend] <> null then [scheduledend] else [createdon]), type datetime),
+				    Mapped = Table.TransformColumns(ActivityDate, {{"activitytypecode", each Record.FieldOrDefault(TypeNames, _, _), type text}, {"statecode", each try StatusNames{_} otherwise null, type text}, {"createdon", ToDateTime, type datetime}, {"Activity Date", each if _ = null then null else DateTime.From(DateTime.Date(_)), type datetime}}),
+				    Removed = Table.RemoveColumns(Mapped, {"actualend", "scheduledend", "ownerid"}),
+				    Renamed = Table.RenameColumns(Removed, {{"activityid", "Activity ID"}, {"accountid_final", "Account ID"}, {"activitytypecode", "Activity Type"}, {"subject", "Subject"}, {"statecode", "Status"}, {"createdon", "Created On"}, {"regardingobject_type", "Regarding Type"}, {"regardingobject_name", "Regarding"}})
+				in
+				    Renamed
+
+	annotation PBI_ResultType = Table
+

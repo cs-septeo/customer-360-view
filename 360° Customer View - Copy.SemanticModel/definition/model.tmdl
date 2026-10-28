@@ -8,9 +8,9 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground"]
+annotation PBI_QueryOrder = ["DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground","ERP Invoices","ERP Credit Memos","ERP Open Items","CRM Activities","CRM Contact Activities"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
 
 ref table 'dim bcbi_companies'
 ref table 'dim systemuser'
@@ -202,6 +202,11 @@ ref table LocalDateTable_e1edd71e-8fde-492d-80c7-ff96523a2914
 ref table LocalDateTable_7921909f-4a04-469f-bdc5-a3d8ecdf4caa
 ref table LocalDateTable_c1f99d63-79fa-4584-9c0d-2e50eb5ae109
 ref table LocalDateTable_1890632a-1311-4774-a4ee-a733f27d62c5
+ref table 'ERP Invoices'
+ref table 'ERP Credit Memos'
+ref table 'ERP Open Items'
+ref table 'CRM Activities'
+ref table 'CRM Contact Activities'
 
 ref cultureInfo en-US
 

@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1899.5633954078978,
-        "y": 790.476487261036
+        "x": 17973.855264527781,
+        "y": 13.565173784549268
       },
       "nodes": [
         {
@@ -59,19 +59,6 @@
             "width": 234
           },
           "zIndex": 7
-        },
-        {
-          "location": {
-            "x": 3877.2469040542619,
-            "y": 995.51623909291584
-          },
-          "nodeIndex": "BUD Quarterly (2)",
-          "nodeLineageTag": "58ecb694-a40f-4415-9a1f-edaf63f98779",
-          "size": {
-            "height": 176,
-            "width": 234
-          },
-          "zIndex": 8
         },
         {
           "location": {
@@ -309,23 +296,10 @@
         },
         {
           "location": {
-            "x": 1353.557701155923,
-            "y": 1076.737327015242
-          },
-          "nodeIndex": "Emp Sales Area Mapping",
-          "nodeLineageTag": "ab79a215-9906-41bc-a898-7d459779f9c8",
-          "size": {
-            "height": 152,
-            "width": 234
-          },
-          "zIndex": 35
-        },
-        {
-          "location": {
             "x": 1308.0829523616842,
             "y": 1416.2965651949733
           },
-          "nodeIndex": "Emp Sales Area Mapping (2)",
+          "nodeIndex": "Emp Sales Area Mapping",
           "nodeLineageTag": "c26cbf51-7341-4109-a1fc-c150f8cd2785",
           "size": {
             "height": 200,
@@ -491,19 +465,6 @@
         },
         {
           "location": {
-            "x": 12318.992165269257,
-            "y": 1203.1074872553102
-          },
-          "nodeIndex": "IncludeProdukte",
-          "nodeLineageTag": "449c1654-2b65-4105-8df7-eadb0778ea58",
-          "size": {
-            "height": 104,
-            "width": 234
-          },
-          "zIndex": 49
-        },
-        {
-          "location": {
             "x": 8701.1013390342632,
             "y": 1179.1074872553102
           },
@@ -553,19 +514,6 @@
             "width": 234
           },
           "zIndex": 53
-        },
-        {
-          "location": {
-            "x": 9907.0649477792613,
-            "y": 1179.1074872553102
-          },
-          "nodeIndex": "Links to External Data",
-          "nodeLineageTag": "fcb30f49-edea-44cc-825a-96add4ea223a",
-          "size": {
-            "height": 152,
-            "width": 234
-          },
-          "zIndex": 54
         },
         {
           "location": {
@@ -725,19 +673,6 @@
         },
         {
           "location": {
-            "x": 13406.967904432589,
-            "y": 0
-          },
-          "nodeIndex": "Legala Pipeline figures",
-          "nodeLineageTag": "bfd7fd3d-53d2-4d8e-af6c-3ea82c074202",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
             "x": 13821.131212565324,
             "y": 0
           },
@@ -761,19 +696,6 @@
             "width": 234
           },
           "zIndex": 26
-        },
-        {
-          "location": {
-            "x": 14235.29452069806,
-            "y": 0
-          },
-          "nodeIndex": "CRM activities all",
-          "nodeLineageTag": "c24527d2-5504-44f2-bb08-02771688d0f4",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
         },
         {
           "location": {
@@ -917,10 +839,75 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 19392.986815460848,
+            "y": 0
+          },
+          "nodeIndex": "CRM Activities",
+          "nodeLineageTag": "a59ae249-542e-4180-9a35-170fa3ee827f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 19817.2208818107,
+            "y": 0
+          },
+          "nodeIndex": "CRM Contact Activities",
+          "nodeLineageTag": "3c2e1c43-52dd-45c0-b5af-c2bc1ec2040a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 20241.454948160554,
+            "y": 0
+          },
+          "nodeIndex": "ERP Credit Memos",
+          "nodeLineageTag": "f30f7a93-ba4c-4cb0-a519-fb6598e9d6c7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 20665.689014510404,
+            "y": 0
+          },
+          "nodeIndex": "ERP Invoices",
+          "nodeLineageTag": "cddc6d30-0b2a-4d48-a48a-5581e52a8e15",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 21089.923080860259,
+            "y": 0
+          },
+          "nodeIndex": "ERP Open Items",
+          "nodeLineageTag": "cd8b7205-3d60-448d-a67e-8d25f5d24eb7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Alle Tabellen",
-      "zoomValue": 49.590342827053796,
+      "zoomValue": 44.230911415480719,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

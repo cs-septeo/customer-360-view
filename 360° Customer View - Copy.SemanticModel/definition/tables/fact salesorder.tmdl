@@ -2,6 +2,18 @@ table 'fact salesorder'
 	lineageTag: 0ed122da-c7ed-490b-81c5-dc1b685778c7
 	sourceLineageTag: 139503ab-d0cc-4aa0-9d1f-d9b5e093afbc
 
+	/// Number of CRM sales orders (Auftraege).
+	measure 'Order Count' = COUNTROWS ( 'fact salesorder' )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 17f800ef-43e1-413a-9a9d-a818cc979c1d
+
+	/// Total amount of CRM sales orders (Auftraege).
+	measure 'Orders Amount' = SUM ( 'fact salesorder'[totalamount] )
+		formatString: #,0.00
+		displayFolder: Account Detail
+		lineageTag: 67935413-628a-4f17-ac22-0e8dce7aa63e
+
 	column salesorderid
 		dataType: string
 		lineageTag: 08e58434-7ae9-4128-a70f-541d3ec8973d

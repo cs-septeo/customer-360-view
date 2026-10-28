@@ -1,0 +1,107 @@
+/// Posted sales credit memos (Gutschriften) from Business Central, DWH ERP.SalesHeaderCreditMemo. Last 3 years. Related to fact account via DebitorKey -> BC ID.
+table 'ERP Credit Memos'
+	lineageTag: f30f7a93-ba4c-4cb0-a519-fb6598e9d6c7
+
+	/// Number of posted sales credit memos (BC).
+	measure 'Credit Memo Count' = COUNTROWS ( 'ERP Credit Memos' )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: c538040f-c57d-4b1f-9f8f-f2d2ad35650e
+
+	/// Net amount of posted sales credit memos (BC), in document currency.
+	measure 'Credit Memo Amount' = SUM ( 'ERP Credit Memos'[Net Amount] )
+		formatString: #,0.00
+		displayFolder: Account Detail
+		lineageTag: edc02862-911d-4cce-9442-1b4e40988161
+
+	column 'Credit Memo Key'
+		dataType: string
+		isHidden
+		lineageTag: 218da524-5276-4862-b330-e3441385f6ec
+		sourceColumn: Credit Memo Key
+
+	column DebitorKey
+		dataType: string
+		isHidden
+		lineageTag: e1895f5d-daaa-471f-a244-29e00b2b5fd8
+		sourceColumn: DebitorKey
+
+	column Entity
+		dataType: string
+		lineageTag: 7cfbf39b-c21b-426a-b9fe-787df518362f
+		sourceColumn: Entity
+
+	column 'Credit Memo No'
+		dataType: string
+		lineageTag: 01bb8bfe-f833-449f-a141-e34544fff228
+		sourceColumn: Credit Memo No
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: cb4631aa-1114-40b5-9c6d-06aea4fdfd8d
+		sourceColumn: Customer Name
+
+	column 'Posting Date'
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: 83e80460-b83a-429c-b3b5-57a3a53964c5
+		sourceColumn: Posting Date
+
+	column 'Net Amount'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 16a63a62-9b79-421b-97b2-63222b23c57d
+		summarizeBy: sum
+		sourceColumn: Net Amount
+
+	column 'Gross Amount'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: fe52c363-d0c1-44fb-bb68-8d12997167f8
+		summarizeBy: sum
+		sourceColumn: Gross Amount
+
+	column 'Remaining Amount'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: c5862bec-cb0c-4513-893c-c8b13fc6ffd4
+		summarizeBy: sum
+		sourceColumn: Remaining Amount
+
+	column Currency
+		dataType: string
+		lineageTag: 51866fbd-3a42-4347-9dcd-347351850308
+		sourceColumn: Currency
+
+	column 'Applies To Doc No'
+		dataType: string
+		lineageTag: ed0552fe-75ba-49e2-a1d6-b0a1efce65e3
+		sourceColumn: Applies To Doc No
+
+	column 'Reason Code'
+		dataType: string
+		lineageTag: b5c8beef-a2b8-48d9-8914-e17c04b1244b
+		sourceColumn: Reason Code
+
+	column Cancelled
+		dataType: boolean
+		lineageTag: 11178961-21ec-45b0-8af9-8458b1d3b32b
+		sourceColumn: Cancelled
+
+	partition 'ERP Credit Memos' = m
+		mode: import
+		source =
+				let
+				    Today = Date.From(DateTime.LocalNow()),
+				    Source = Sql.Database("v0201-044-sql01.stp.ag\DWH", "DWH"),
+				    Data = Source{[Schema = "ERP", Item = "SalesHeaderCreditMemo"]}[Data],
+				    Filtered = Table.SelectRows(Data, each [PostingDate] >= Date.AddYears(Today, -3)),
+				    Selected = Table.SelectColumns(Filtered, {"SalesCreditMemoKey", "DebitorKey", "Entity", "SalesCreditMemoNo", "sell_to_customer_name", "PostingDate", "Amount", "AmountGross", "AmountRemaining", "currency_code", "applies_to_doc_no", "reason_code", "cancelled"}),
+				    Renamed = Table.RenameColumns(Selected, {{"SalesCreditMemoKey", "Credit Memo Key"}, {"SalesCreditMemoNo", "Credit Memo No"}, {"sell_to_customer_name", "Customer Name"}, {"PostingDate", "Posting Date"}, {"Amount", "Net Amount"}, {"AmountGross", "Gross Amount"}, {"AmountRemaining", "Remaining Amount"}, {"currency_code", "Currency"}, {"applies_to_doc_no", "Applies To Doc No"}, {"reason_code", "Reason Code"}, {"cancelled", "Cancelled"}}),
+				    Cleaned = Table.TransformColumns(Renamed, {{"Currency", each if _ = null or _ = "" then "LCY" else _, type text}, {"Cancelled", each _ = 1, type logical}}),
+				    Typed = Table.TransformColumnTypes(Cleaned, {{"Posting Date", type datetime}, {"Net Amount", Currency.Type}, {"Gross Amount", Currency.Type}, {"Remaining Amount", Currency.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Exception
+

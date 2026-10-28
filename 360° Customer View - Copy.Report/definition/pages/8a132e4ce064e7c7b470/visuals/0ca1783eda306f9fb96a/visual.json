@@ -639,5 +639,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d913ac326330dc3d01b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "FullAddress"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aa5fb95619734ad6b37d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Account Name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

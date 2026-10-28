@@ -1,0 +1,95 @@
+/// CRM activities linked to a contact (contactid), last 2 years, same types as CRM Activities. Separate table so it can relate to fact contacts without an ambiguous filter path. Related to fact contacts via Contact ID.
+table 'CRM Contact Activities'
+	lineageTag: 3c2e1c43-52dd-45c0-b5af-c2bc1ec2040a
+
+	/// Number of CRM activities linked to the contact (last 2 years).
+	measure 'Contact Activity Count' = COUNTROWS ( 'CRM Contact Activities' )
+		formatString: #,0
+		displayFolder: Contact Detail
+		lineageTag: 4577efe6-d6a4-46af-9ac7-445be06444ed
+
+	/// Date of the most recent past CRM activity for the contact.
+	measure 'Contact Last Activity Date' = CALCULATE ( MAX ( 'CRM Contact Activities'[Activity Date] ), 'CRM Contact Activities'[Activity Date] <= TODAY () )
+		formatString: dd.MM.yyyy
+		displayFolder: Contact Detail
+		lineageTag: c503b1a9-91d1-4866-97fd-36d2a1f074b5
+
+	column 'Activity ID'
+		dataType: string
+		isHidden
+		lineageTag: 43771c08-430c-4373-b52e-02d4b944b568
+		sourceColumn: Activity ID
+
+	column 'Contact ID'
+		dataType: string
+		isHidden
+		lineageTag: fbc2d9b9-ab82-47f2-98e2-ce749087778c
+		sourceColumn: Contact ID
+
+	column 'Activity Type'
+		dataType: string
+		lineageTag: 200ac65a-87d5-4ef8-bf48-e599bda64d90
+		sourceColumn: Activity Type
+
+	column Subject
+		dataType: string
+		lineageTag: 351214f4-c6a0-4bf6-ab4d-256b88402b63
+		sourceColumn: Subject
+
+	column Status
+		dataType: string
+		lineageTag: 2cdf6eb4-ee21-47f3-826a-e2c127e7f9d5
+		sourceColumn: Status
+
+	column 'Created On'
+		dataType: dateTime
+		formatString: dd.MM.yyyy HH:mm
+		lineageTag: 29ee76d4-f014-4c6e-9e50-244f47767ad0
+		sourceColumn: Created On
+
+	column 'Activity Date'
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: d0fe3e7d-4d15-42cb-b0a8-ee6932d5cfb9
+		sourceColumn: Activity Date
+
+	column Owner
+		dataType: string
+		lineageTag: 54ad13c1-96ee-4ced-bf95-31ddbbd8d898
+		sourceColumn: Owner
+
+	column 'Regarding Type'
+		dataType: string
+		lineageTag: f58f3470-901a-464b-9112-f33103434583
+		sourceColumn: Regarding Type
+
+	column Regarding
+		dataType: string
+		lineageTag: d8fc0a8b-7ec7-44e1-8388-dbbbfb9c97ca
+		sourceColumn: Regarding
+
+	partition 'CRM Contact Activities' = m
+		mode: import
+		source =
+				let
+				    Cutoff = DateTime.ToText(Date.AddYears(DateTime.LocalNow(), -2), [Format = "yyyy-MM-dd HH:mm:ss"]),
+				    ActivityTypes = {"email", "phonecall", "task", "appointment", "chat", "ncx_bearbeitungsinformation", "stp_auftragsubergabe"},
+				    TypeNames = [email = "Email", phonecall = "Phone Call", task = "Task", appointment = "Appointment", chat = "Chat", ncx_bearbeitungsinformation = "Bearbeitungsinformation", stp_auftragsubergabe = "Auftragsübergabe"],
+				    StatusNames = {"Open", "Completed", "Canceled", "Scheduled"},
+				    ToDateTime = (t) => try DateTime.From(Text.Start(t, 19)) otherwise null,
+				    Source = Sql.Database("v0201-044-sql01.stp.ag\DWH", "DWH"),
+				    Data = Source{[Schema = "CRM", Item = "activitypointers"]}[Data],
+				    Filtered = Table.SelectRows(Data, each [createdon] >= Cutoff and List.Contains(ActivityTypes, [activitytypecode]) and [contactid] <> null),
+				    Selected = Table.SelectColumns(Filtered, {"activityid", "contactid", "activitytypecode", "subject", "statecode", "createdon", "actualend", "scheduledend", "ownerid", "regardingobject_type", "regardingobject_name"}),
+				    Users = Table.SelectColumns(Source{[Schema = "CRM", Item = "active_systemuser_raw"]}[Data], {"systemuserid", "fullname"}),
+				    Joined = Table.NestedJoin(Selected, {"ownerid"}, Users, {"systemuserid"}, "User", JoinKind.LeftOuter),
+				    Expanded = Table.ExpandTableColumn(Joined, "User", {"fullname"}, {"Owner"}),
+				    ActivityDate = Table.AddColumn(Expanded, "Activity Date", each ToDateTime(if [actualend] <> null then [actualend] else if [scheduledend] <> null then [scheduledend] else [createdon]), type datetime),
+				    Mapped = Table.TransformColumns(ActivityDate, {{"activitytypecode", each Record.FieldOrDefault(TypeNames, _, _), type text}, {"statecode", each try StatusNames{_} otherwise null, type text}, {"createdon", ToDateTime, type datetime}, {"Activity Date", each if _ = null then null else DateTime.From(DateTime.Date(_)), type datetime}}),
+				    Removed = Table.RemoveColumns(Mapped, {"actualend", "scheduledend", "ownerid"}),
+				    Renamed = Table.RenameColumns(Removed, {{"activityid", "Activity ID"}, {"contactid", "Contact ID"}, {"activitytypecode", "Activity Type"}, {"subject", "Subject"}, {"statecode", "Status"}, {"createdon", "Created On"}, {"regardingobject_type", "Regarding Type"}, {"regardingobject_name", "Regarding"}})
+				in
+				    Renamed
+
+	annotation PBI_ResultType = Table
+

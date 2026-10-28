@@ -1,0 +1,136 @@
+/// Posted sales invoices (Rechnungen) from Business Central, DWH ERP.SalesHeaderInvoice. Last 3 years plus any invoice with a remaining amount. Related to fact account via DebitorKey -> BC ID.
+table 'ERP Invoices'
+	lineageTag: cddc6d30-0b2a-4d48-a48a-5581e52a8e15
+
+	/// Number of posted sales invoices (BC) in the current filter context.
+	measure 'Invoice Count' = COUNTROWS ( 'ERP Invoices' )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 148608d9-8ebf-44c9-9e7f-1ecdd664ebea
+
+	/// Net amount of posted sales invoices (BC), in document currency.
+	measure 'Invoiced Amount' = SUM ( 'ERP Invoices'[Net Amount] )
+		formatString: #,0.00
+		displayFolder: Account Detail
+		lineageTag: 4d25873f-b8ef-477f-aa53-2654a88474b6
+
+	/// Net invoiced amount posted in the last 12 months.
+	measure 'Invoiced Amount (12M)' = CALCULATE ( [Invoiced Amount], 'ERP Invoices'[Posting Date] > EDATE ( TODAY (), -12 ) )
+		formatString: #,0.00
+		displayFolder: Account Detail
+		lineageTag: 30071379-9386-441e-ae36-f0556ac11dc7
+
+	/// Invoices with a remaining amount and a due date before today (as of last refresh).
+	measure 'Overdue Invoices' = CALCULATE ( COUNTROWS ( 'ERP Invoices' ), 'ERP Invoices'[Is Overdue] = TRUE () )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: c57d5f34-e7e9-4896-8286-33837de2cbe4
+
+	column 'Invoice Key'
+		dataType: string
+		isHidden
+		lineageTag: 6c1167d1-ee9d-4df8-99d6-59225e24e04b
+		sourceColumn: Invoice Key
+
+	column DebitorKey
+		dataType: string
+		isHidden
+		lineageTag: b35ec0d2-5e14-43f9-8d1a-d6af4369f622
+		sourceColumn: DebitorKey
+
+	column Entity
+		dataType: string
+		lineageTag: 914806f6-7ea2-4443-a3b2-248e2b64aca6
+		sourceColumn: Entity
+
+	column 'Invoice No'
+		dataType: string
+		lineageTag: 2a9fa833-15fb-42dc-9651-acc2fcc77cbb
+		sourceColumn: Invoice No
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: 18d59ae8-a853-4cc1-8886-ffd5a9b73716
+		sourceColumn: Customer Name
+
+	column 'Posting Date'
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: 97f5300d-f4f1-49a6-a321-5eb82c823438
+		sourceColumn: Posting Date
+
+	column 'Due Date'
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: 051165cf-827e-4c16-a33d-198a928ad3e3
+		sourceColumn: Due Date
+
+	column 'Net Amount'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 96ce9989-5cb1-44cb-b116-7aced6f332a1
+		summarizeBy: sum
+		sourceColumn: Net Amount
+
+	column 'Gross Amount'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: d7c535e4-3593-48b3-8417-2a2805c2e366
+		summarizeBy: sum
+		sourceColumn: Gross Amount
+
+	column 'Remaining Amount'
+		dataType: decimal
+		formatString: #,0.00
+		lineageTag: 0fdc8e71-0aa6-49af-aed0-8e2c9803d7e9
+		summarizeBy: sum
+		sourceColumn: Remaining Amount
+
+	column Currency
+		dataType: string
+		lineageTag: bdaaab63-8cf0-40ca-b36c-192b12b99695
+		sourceColumn: Currency
+
+	column 'Order No'
+		dataType: string
+		lineageTag: 6572affd-0101-4c1c-8da8-e6e8d17c1038
+		sourceColumn: Order No
+
+	column 'External Document No'
+		dataType: string
+		lineageTag: ce62a1fb-b783-4c9b-96f5-a29b18f43d70
+		sourceColumn: External Document No
+
+	column 'Your Reference'
+		dataType: string
+		lineageTag: eed1f348-2d6e-4672-ac1f-7a5114bf3c16
+		sourceColumn: Your Reference
+
+	column Cancelled
+		dataType: boolean
+		lineageTag: d1eed28c-63d6-4755-8893-afc29aa175ed
+		sourceColumn: Cancelled
+
+	column 'Is Overdue'
+		dataType: boolean
+		lineageTag: f8f9b7ab-5dca-487f-9132-a4f84e7659aa
+		sourceColumn: Is Overdue
+
+	partition 'ERP Invoices' = m
+		mode: import
+		source =
+				let
+				    Today = Date.From(DateTime.LocalNow()),
+				    Source = Sql.Database("v0201-044-sql01.stp.ag\DWH", "DWH"),
+				    Data = Source{[Schema = "ERP", Item = "SalesHeaderInvoice"]}[Data],
+				    Filtered = Table.SelectRows(Data, each [PostingDate] >= Date.AddYears(Today, -3) or [AmountRemaining] <> 0),
+				    Selected = Table.SelectColumns(Filtered, {"SalesInvoiceKey", "DebitorKey", "Entity", "SalesInvoiceNo", "sell_to_customer_name", "PostingDate", "DueDate", "Amount", "AmountGross", "AmountRemaining", "currency_code", "order_no", "external_document_no", "your_reference", "cancelled"}),
+				    Renamed = Table.RenameColumns(Selected, {{"SalesInvoiceKey", "Invoice Key"}, {"SalesInvoiceNo", "Invoice No"}, {"sell_to_customer_name", "Customer Name"}, {"PostingDate", "Posting Date"}, {"DueDate", "Due Date"}, {"Amount", "Net Amount"}, {"AmountGross", "Gross Amount"}, {"AmountRemaining", "Remaining Amount"}, {"currency_code", "Currency"}, {"order_no", "Order No"}, {"external_document_no", "External Document No"}, {"your_reference", "Your Reference"}, {"cancelled", "Cancelled"}}),
+				    Cleaned = Table.TransformColumns(Renamed, {{"Currency", each if _ = null or _ = "" then "LCY" else _, type text}, {"Cancelled", each _ = 1, type logical}}),
+				    Overdue = Table.AddColumn(Cleaned, "Is Overdue", each [Remaining Amount] <> 0 and [Due Date] <> null and [Due Date] < Today, type logical),
+				    Typed = Table.TransformColumnTypes(Overdue, {{"Posting Date", type datetime}, {"Due Date", type datetime}, {"Net Amount", Currency.Type}, {"Gross Amount", Currency.Type}, {"Remaining Amount", Currency.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Exception
+

@@ -2,6 +2,18 @@ table 'fact quote'
 	lineageTag: 1d4fbe4b-9114-4bb6-819a-d71f16ea1a8e
 	sourceLineageTag: db7cea9c-636b-4f64-bc68-818b0db59b75
 
+	/// CRM quotes (Angebote) in state Entwurf or Aktiv.
+	measure 'Open Quotes' = CALCULATE ( COUNTROWS ( 'fact quote' ), 'fact quote'[statecodename] IN { "Entwurf", "Aktiv" } )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 53e85b55-f823-4ada-a528-3276bac072a9
+
+	/// Total amount of open CRM quotes (Entwurf or Aktiv).
+	measure 'Open Quotes Amount' = CALCULATE ( SUM ( 'fact quote'[totalamount] ), 'fact quote'[statecodename] IN { "Entwurf", "Aktiv" } )
+		formatString: #,0.00
+		displayFolder: Account Detail
+		lineageTag: 0b9c518b-8b64-4cc3-afed-d0c5e7b5594e
+
 	column quoteid
 		dataType: string
 		lineageTag: 3cc8a49a-3bb6-43dc-a347-d95db121bc45
