@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "b8d4e2f6a0c35791bd02",
+  "displayName": "Contact Detail",
+  "displayOption": "FitToWidth",
+  "height": 1150,
+  "width": 2000,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9f30a5a9a907ba7c4a46",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "fullname"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "38580dedf3825621289d",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "c3a7477fd89569c0954c",
+        "boundFilter": "9f30a5a9a907ba7c4a46",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "fullname"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.2
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "40D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}

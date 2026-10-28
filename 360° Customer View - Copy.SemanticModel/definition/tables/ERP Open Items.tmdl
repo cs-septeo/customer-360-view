@@ -35,45 +35,69 @@ table 'ERP Open Items'
 		dataType: string
 		isHidden
 		lineageTag: 943d3360-f926-4892-a718-2c0a27db5845
+		summarizeBy: none
 		sourceColumn: Entry Key
+
+		annotation SummarizationSetBy = Automatic
 
 	column DebitorKey
 		dataType: string
 		isHidden
 		lineageTag: b8979988-f254-49c7-9609-91cb6e0657e6
+		summarizeBy: none
 		sourceColumn: DebitorKey
+
+		annotation SummarizationSetBy = Automatic
 
 	column Entity
 		dataType: string
 		lineageTag: d57664f7-fa25-423a-8be0-b7149fd42651
+		summarizeBy: none
 		sourceColumn: Entity
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Document No'
 		dataType: string
 		lineageTag: 0a5c5426-d994-4100-b49c-85a37f12652b
+		summarizeBy: none
 		sourceColumn: Document No
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Document Type'
 		dataType: string
 		lineageTag: abd38f98-4bac-4789-83f4-ff365d1dda0e
+		summarizeBy: none
 		sourceColumn: Document Type
+
+		annotation SummarizationSetBy = Automatic
 
 	column Description
 		dataType: string
 		lineageTag: 061b315f-2004-4095-9f97-8e468a46c702
+		summarizeBy: none
 		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Posting Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy
 		lineageTag: bddb33a5-09b1-4c47-8a58-849e4b02b67f
+		summarizeBy: none
 		sourceColumn: Posting Date
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Due Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy
 		lineageTag: cd4192d3-d546-4861-85cf-87eabc58ad54
+		summarizeBy: none
 		sourceColumn: Due Date
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Remaining Amount'
 		dataType: decimal
@@ -92,32 +116,44 @@ table 'ERP Open Items'
 	column Currency
 		dataType: string
 		lineageTag: 07ce9310-05cb-4d29-9536-65bea67e5422
+		summarizeBy: none
 		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Reminder Level'
 		dataType: int64
 		lineageTag: 1f1879e4-7b7f-4844-8b4d-85e912bbefde
-		summarizeBy: max
+		summarizeBy: sum
 		sourceColumn: Reminder Level
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Days Overdue'
 		dataType: int64
 		lineageTag: 5071ca40-3372-4eef-8224-ce720821be98
-		summarizeBy: max
+		summarizeBy: sum
 		sourceColumn: Days Overdue
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Aging Bucket'
 		dataType: string
 		lineageTag: 4d2d623d-2121-4488-943b-a684b8aa2e0c
+		summarizeBy: none
 		sourceColumn: Aging Bucket
 		sortByColumn: 'Aging Sort'
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Aging Sort'
 		dataType: int64
 		isHidden
 		lineageTag: 6a24017d-f2b7-47ec-92d0-752b25ad2460
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Aging Sort
+
+		annotation SummarizationSetBy = Automatic
 
 	partition 'ERP Open Items' = m
 		mode: import

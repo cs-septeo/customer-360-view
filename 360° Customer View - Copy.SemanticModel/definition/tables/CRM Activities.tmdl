@@ -30,55 +30,85 @@ table 'CRM Activities'
 		dataType: string
 		isHidden
 		lineageTag: 432e5942-f951-47b3-9caa-987810d130a3
+		summarizeBy: none
 		sourceColumn: Activity ID
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Account ID'
 		dataType: string
 		isHidden
 		lineageTag: 6477443f-473b-4334-9bcd-a541f6214b82
+		summarizeBy: none
 		sourceColumn: Account ID
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Activity Type'
 		dataType: string
 		lineageTag: c5079e71-dad4-498a-8dab-6793ba2cee5f
+		summarizeBy: none
 		sourceColumn: Activity Type
+
+		annotation SummarizationSetBy = Automatic
 
 	column Subject
 		dataType: string
 		lineageTag: d6270666-60dd-4903-a2b8-b7f62bb69bd2
+		summarizeBy: none
 		sourceColumn: Subject
+
+		annotation SummarizationSetBy = Automatic
 
 	column Status
 		dataType: string
 		lineageTag: e5b408a4-1500-4b94-95fb-98c7fc41b3a8
+		summarizeBy: none
 		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Created On'
 		dataType: dateTime
 		formatString: dd.MM.yyyy HH:mm
 		lineageTag: 7b12c6d4-0ac7-402f-968c-0e164bc182b7
+		summarizeBy: none
 		sourceColumn: Created On
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Activity Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy
 		lineageTag: 24cf96a8-986f-4092-a774-9e1449736a9f
+		summarizeBy: none
 		sourceColumn: Activity Date
+
+		annotation SummarizationSetBy = Automatic
 
 	column Owner
 		dataType: string
 		lineageTag: 6e97e8e8-b271-45f4-b9cd-84e583779d63
+		summarizeBy: none
 		sourceColumn: Owner
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Regarding Type'
 		dataType: string
 		lineageTag: dba70567-5ba0-4eb1-8698-63969c422127
+		summarizeBy: none
 		sourceColumn: Regarding Type
+
+		annotation SummarizationSetBy = Automatic
 
 	column Regarding
 		dataType: string
 		lineageTag: 6c4986a9-9a48-4190-a060-1d10db67435d
+		summarizeBy: none
 		sourceColumn: Regarding
+
+		annotation SummarizationSetBy = Automatic
 
 	partition 'CRM Activities' = m
 		mode: import

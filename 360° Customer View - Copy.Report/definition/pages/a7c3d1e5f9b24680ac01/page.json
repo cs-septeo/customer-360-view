@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "a7c3d1e5f9b24680ac01",
+  "displayName": "Account Detail",
+  "displayOption": "FitToWidth",
+  "height": 2020,
+  "width": 2000,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "29ffa73eb515dc68cfe9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Account Name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "a317c749b91557a38d7c",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "006d24a38f7e8e46c7fc",
+        "boundFilter": "29ffa73eb515dc68cfe9",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Account Name"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.2
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "40D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}

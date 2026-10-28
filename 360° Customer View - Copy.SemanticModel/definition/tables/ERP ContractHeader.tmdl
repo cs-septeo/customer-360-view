@@ -2,6 +2,12 @@ table 'ERP ContractHeader'
 	lineageTag: 4d3d152b-f80d-49d9-8cb0-0a1fa033c2f0
 	sourceLineageTag: 1911ef2a-45c2-44dc-9ba5-e3e0ae8d2cb6
 
+	/// Number of BC contracts with ContractStatus = ACTIVE.
+	measure 'Active Contracts' = CALCULATE ( COUNTROWS ( 'ERP ContractHeader' ), 'ERP ContractHeader'[ContractStatus] = "ACTIVE" )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 5cdc1ff4-97cc-4915-9863-89bcc96e938f
+
 	column address
 		dataType: string
 		lineageTag: 485888a4-df66-4e4a-8768-8f8150a80ba0

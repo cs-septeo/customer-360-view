@@ -1,2 +1,2519 @@
 cultureInfo en-US
 
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "fact_account.crm_link_account": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account",
+			          "ConceptualProperty": "CRM Link (Account)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_account.firmenname_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account",
+			          "ConceptualProperty": "Firmenname 2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Account Name 2": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_account.customerid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account",
+			          "ConceptualProperty": "CustomerId"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Customer No.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_account.business_relation_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account",
+			          "ConceptualProperty": "Business Relation Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Business Relation": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_account.fulladdress": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account",
+			          "ConceptualProperty": "FullAddress"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Address": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_bcbi_companies.bcbi_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim bcbi_companies",
+			          "ConceptualProperty": "bcbi_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Entity": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tickets.created_at": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tickets",
+			          "ConceptualProperty": "created_at"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Created On": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tickets.priority": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tickets",
+			          "ConceptualProperty": "priority"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Priority": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tickets.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tickets",
+			          "ConceptualProperty": "type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tickets.status_clean": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tickets",
+			          "ConceptualProperty": "Status Clean"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tickets.subject": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tickets",
+			          "ConceptualProperty": "subject"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Subject": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tickets.metric_solved_at_time_stamp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tickets",
+			          "ConceptualProperty": "metric_solved_at_time_stamp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Solved": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tickets.tickets": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tickets",
+			          "ConceptualProperty": "# Tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Open Support Tickets": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "organizations.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Organizations",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Customer Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractline.run_rate_active_cls": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "Run Rate (Active CLs)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Run Rate": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractline.contract": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "Contract"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Contract": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractline.vznr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "VZNr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Line": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractline.vzbeschreibung": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "VZBeschreibung"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Description": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractline.product": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "Product"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Product": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractline.clstatus": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "CLStatus"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractline.vzstart": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "VZStart"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Start": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractline.vzende": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "VZEnde"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "End": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_lead_4.crm_link_lead": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact lead (4)",
+			          "ConceptualProperty": "CRM Link (Lead)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_lead_4.lead": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact lead (4)",
+			          "ConceptualProperty": "Lead"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_lead_4.pipelinephase": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact lead (4)",
+			          "ConceptualProperty": "Pipelinephase"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Stage": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_lead_4.datasetsource": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact lead (4)",
+			          "ConceptualProperty": "Datasetsource"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Source": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_lead_4.datasetsource_marketing": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact lead (4)",
+			          "ConceptualProperty": "Datasetsource (Marketing)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Source (Marketing)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.sales_forecast_new": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "Sales Forecast New"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sales Forecast": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.crm_link_opp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "CRM Link (Opp)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.opportunity_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "Opportunity Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Topic": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.emp_sales_area_mapping_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "Emp Sales Area Mapping.Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Owner": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.salesforecast": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "Salesforecast"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sales Forecast": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.transactiontype": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "Transactiontype"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Transaction Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.created_on_clean": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "Created On Clean"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Created On": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.opps_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "Opps (Total)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Open Opportunities": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_opportunity.acv_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity",
+			          "ConceptualProperty": "ACV (Total)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Open ACV": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.crm_link_contact": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "CRM Link (Contact)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.ncx_anrede": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "ncx_anrede"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sal.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.ncx_vorangestelltertitel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "ncx_vorangestelltertitel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Title": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.fullname": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "fullname"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.emailaddress1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "emailaddress1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mail": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.telephone1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "telephone1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Phone": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.funktion1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "funktion1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Role": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.ncx_hauptansprechpartnercode": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "ncx_hauptansprechpartnercode"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Primary Contact": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_contacts.createdon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts",
+			          "ConceptualProperty": "createdon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Created On": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ems_projects.project_link": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "EMS projects",
+			          "ConceptualProperty": "project_link"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ems_projects.s_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "EMS projects",
+			          "ConceptualProperty": "S_Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Project Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ems_projects.b_beendet": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "EMS projects",
+			          "ConceptualProperty": "B_Beendet"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ems_projects.d_orderdate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "EMS projects",
+			          "ConceptualProperty": "D_OrderDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Order Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ems_projects.d_enddate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "EMS projects",
+			          "ConceptualProperty": "D_EndDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "End Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ems_projects.s_costcenter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "EMS projects",
+			          "ConceptualProperty": "S_CostCenter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cost Center": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ems_projects.d_projectcreated": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "EMS projects",
+			          "ConceptualProperty": "D_ProjectCreated"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Created On": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_open_items.document_no": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Document No"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Document No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_open_items.document_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Document Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_open_items.due_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Due Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Due Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_open_items.aging_bucket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Aging Bucket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Aging": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_open_items.currency": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Currency"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Currency": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_open_items.open_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Open Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Open Amount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_open_items.overdue_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Overdue Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Overdue Amount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_open_items.max_reminder_level": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Max Reminder Level"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mahnstufe": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_quote.open_quotes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact quote",
+			          "ConceptualProperty": "Open Quotes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Open Quotes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_quote.crm_link_quote": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact quote",
+			          "ConceptualProperty": "CRM Link (Quote)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_quote.quotenumber": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact quote",
+			          "ConceptualProperty": "quotenumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Quote No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_quote.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact quote",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_quote.statecodename": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact quote",
+			          "ConceptualProperty": "statecodename"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_quote.createdon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact quote",
+			          "ConceptualProperty": "createdon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Created On": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_quote.expireson": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact quote",
+			          "ConceptualProperty": "expireson"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Expires On": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_salesorder.orders_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact salesorder",
+			          "ConceptualProperty": "Orders Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Orders Amount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_salesorder.crm_link_salesorder": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact salesorder",
+			          "ConceptualProperty": "CRM Link (Salesorder)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Link": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_salesorder.ordernumber": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact salesorder",
+			          "ConceptualProperty": "ordernumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Order No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_salesorder.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact salesorder",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_salesorder.statecodename": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact salesorder",
+			          "ConceptualProperty": "statecodename"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_salesorder.createdon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact salesorder",
+			          "ConceptualProperty": "createdon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Created On": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_salesorder.datefulfilled": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact salesorder",
+			          "ConceptualProperty": "datefulfilled"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Fulfilled On": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_activities.days_since_last_activity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Days Since Last Activity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Days Since Last Activity": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_activities.activity_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Activity Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_activities.activity_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Activity Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Activity Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_activities.subject": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Subject"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Subject": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_activities.status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_activities.owner": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Owner"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Owner": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_activities.regarding": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Regarding"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Regarding": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_activities.activity_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Activity Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Activities": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.invoice_no": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Invoice No"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Invoice No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.posting_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Posting Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Posting Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.due_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Due Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Due Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.currency": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Currency"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Currency": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.is_overdue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Is Overdue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Overdue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.entity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Entity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Entity": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.order_no": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Order No"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Order No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.posting_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Posting Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.invoiced_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Invoiced Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Invoiced Amount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.selected_account_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Selected Account Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_invoices.invoiced_amount_12m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Invoiced Amount (12M)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Invoiced (12M)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_credit_memos.credit_memo_no": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Credit Memos",
+			          "ConceptualProperty": "Credit Memo No"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Credit Memo No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_credit_memos.posting_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Credit Memos",
+			          "ConceptualProperty": "Posting Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Posting Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_credit_memos.currency": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Credit Memos",
+			          "ConceptualProperty": "Currency"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Currency": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_credit_memos.applies_to_doc_no": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Credit Memos",
+			          "ConceptualProperty": "Applies To Doc No"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Applies To": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_credit_memos.reason_code": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Credit Memos",
+			          "ConceptualProperty": "Reason Code"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Reason": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_credit_memos.entity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Credit Memos",
+			          "ConceptualProperty": "Entity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Entity": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractheader.contract": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader",
+			          "ConceptualProperty": "Contract"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Contract": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractheader.description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader",
+			          "ConceptualProperty": "description"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Description": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractheader.contractstatus": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader",
+			          "ConceptualProperty": "ContractStatus"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractheader.entity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader",
+			          "ConceptualProperty": "Entity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Entity": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractheader.startingdate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader",
+			          "ConceptualProperty": "startingdate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Start": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractheader.endingdate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader",
+			          "ConceptualProperty": "endingdate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "End": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractheader.billingperiod": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader",
+			          "ConceptualProperty": "billingperiod"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Billing Period": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "erp_contractheader.active_contracts": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader",
+			          "ConceptualProperty": "Active Contracts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Active Contracts": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.activity_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Activity Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.activity_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Activity Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Activity Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.subject": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Subject"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Subject": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.owner": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Owner"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Owner": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.regarding_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Regarding Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Regarding Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.regarding": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Regarding"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Regarding": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.contact_activity_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Contact Activity Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Activities": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Activities (2 years)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.contact_last_activity_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Contact Last Activity Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Last Activity": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.activity_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Activity Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.selected_contact_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Selected Contact Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

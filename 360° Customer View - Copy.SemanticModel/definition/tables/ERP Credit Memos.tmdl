@@ -18,34 +18,52 @@ table 'ERP Credit Memos'
 		dataType: string
 		isHidden
 		lineageTag: 218da524-5276-4862-b330-e3441385f6ec
+		summarizeBy: none
 		sourceColumn: Credit Memo Key
+
+		annotation SummarizationSetBy = Automatic
 
 	column DebitorKey
 		dataType: string
 		isHidden
 		lineageTag: e1895f5d-daaa-471f-a244-29e00b2b5fd8
+		summarizeBy: none
 		sourceColumn: DebitorKey
+
+		annotation SummarizationSetBy = Automatic
 
 	column Entity
 		dataType: string
 		lineageTag: 7cfbf39b-c21b-426a-b9fe-787df518362f
+		summarizeBy: none
 		sourceColumn: Entity
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Credit Memo No'
 		dataType: string
 		lineageTag: 01bb8bfe-f833-449f-a141-e34544fff228
+		summarizeBy: none
 		sourceColumn: Credit Memo No
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Customer Name'
 		dataType: string
 		lineageTag: cb4631aa-1114-40b5-9c6d-06aea4fdfd8d
+		summarizeBy: none
 		sourceColumn: Customer Name
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Posting Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy
 		lineageTag: 83e80460-b83a-429c-b3b5-57a3a53964c5
+		summarizeBy: none
 		sourceColumn: Posting Date
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Net Amount'
 		dataType: decimal
@@ -71,22 +89,34 @@ table 'ERP Credit Memos'
 	column Currency
 		dataType: string
 		lineageTag: 51866fbd-3a42-4347-9dcd-347351850308
+		summarizeBy: none
 		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Applies To Doc No'
 		dataType: string
 		lineageTag: ed0552fe-75ba-49e2-a1d6-b0a1efce65e3
+		summarizeBy: none
 		sourceColumn: Applies To Doc No
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Reason Code'
 		dataType: string
 		lineageTag: b5c8beef-a2b8-48d9-8914-e17c04b1244b
+		summarizeBy: none
 		sourceColumn: Reason Code
+
+		annotation SummarizationSetBy = Automatic
 
 	column Cancelled
 		dataType: boolean
 		lineageTag: 11178961-21ec-45b0-8af9-8458b1d3b32b
+		summarizeBy: none
 		sourceColumn: Cancelled
+
+		annotation SummarizationSetBy = Automatic
 
 	partition 'ERP Credit Memos' = m
 		mode: import

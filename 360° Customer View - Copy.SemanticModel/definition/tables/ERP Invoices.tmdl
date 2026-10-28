@@ -26,44 +26,70 @@ table 'ERP Invoices'
 		displayFolder: Account Detail
 		lineageTag: c57d5f34-e7e9-4896-8286-33837de2cbe4
 
+	/// Name of the account in the current filter context (page subtitle of Account Detail).
+	measure 'Selected Account Name' = SELECTEDVALUE ( 'fact account'[Account Name], "Multiple accounts selected" )
+		displayFolder: Account Detail\Formatting
+		lineageTag: f121ad26-8d90-4227-9972-8cd1e5c9cd5c
+
 	column 'Invoice Key'
 		dataType: string
 		isHidden
 		lineageTag: 6c1167d1-ee9d-4df8-99d6-59225e24e04b
+		summarizeBy: none
 		sourceColumn: Invoice Key
+
+		annotation SummarizationSetBy = Automatic
 
 	column DebitorKey
 		dataType: string
 		isHidden
 		lineageTag: b35ec0d2-5e14-43f9-8d1a-d6af4369f622
+		summarizeBy: none
 		sourceColumn: DebitorKey
+
+		annotation SummarizationSetBy = Automatic
 
 	column Entity
 		dataType: string
 		lineageTag: 914806f6-7ea2-4443-a3b2-248e2b64aca6
+		summarizeBy: none
 		sourceColumn: Entity
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Invoice No'
 		dataType: string
 		lineageTag: 2a9fa833-15fb-42dc-9651-acc2fcc77cbb
+		summarizeBy: none
 		sourceColumn: Invoice No
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Customer Name'
 		dataType: string
 		lineageTag: 18d59ae8-a853-4cc1-8886-ffd5a9b73716
+		summarizeBy: none
 		sourceColumn: Customer Name
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Posting Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy
 		lineageTag: 97f5300d-f4f1-49a6-a321-5eb82c823438
+		summarizeBy: none
 		sourceColumn: Posting Date
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Due Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy
 		lineageTag: 051165cf-827e-4c16-a33d-198a928ad3e3
+		summarizeBy: none
 		sourceColumn: Due Date
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Net Amount'
 		dataType: decimal
@@ -89,32 +115,57 @@ table 'ERP Invoices'
 	column Currency
 		dataType: string
 		lineageTag: bdaaab63-8cf0-40ca-b36c-192b12b99695
+		summarizeBy: none
 		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Order No'
 		dataType: string
 		lineageTag: 6572affd-0101-4c1c-8da8-e6e8d17c1038
+		summarizeBy: none
 		sourceColumn: Order No
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'External Document No'
 		dataType: string
 		lineageTag: ce62a1fb-b783-4c9b-96f5-a29b18f43d70
+		summarizeBy: none
 		sourceColumn: External Document No
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Your Reference'
 		dataType: string
 		lineageTag: eed1f348-2d6e-4672-ac1f-7a5114bf3c16
+		summarizeBy: none
 		sourceColumn: Your Reference
+
+		annotation SummarizationSetBy = Automatic
 
 	column Cancelled
 		dataType: boolean
 		lineageTag: d1eed28c-63d6-4755-8893-afc29aa175ed
+		summarizeBy: none
 		sourceColumn: Cancelled
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Is Overdue'
 		dataType: boolean
 		lineageTag: f8f9b7ab-5dca-487f-9132-a4f84e7659aa
+		summarizeBy: none
 		sourceColumn: Is Overdue
+
+		annotation SummarizationSetBy = Automatic
+
+	/// First day of the posting month, used as chart axis.
+	column 'Posting Month' = DATE ( YEAR ( 'ERP Invoices'[Posting Date] ), MONTH ( 'ERP Invoices'[Posting Date] ), 1 )
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: 515a2deb-f98b-4949-90f8-ff5470153a6f
+		summarizeBy: none
 
 	partition 'ERP Invoices' = m
 		mode: import

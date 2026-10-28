@@ -263,21 +263,21 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "1.25D"
+                  "Value": "0.11D"
                 }
               }
             },
             "centerLongitude": {
               "expr": {
                 "Literal": {
-                  "Value": "53.2386768147544D"
+                  "Value": "10.827400943444104D"
                 }
               }
             },
             "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "-49.765527420880645D"
+                  "Value": "0D"
                 }
               }
             }
@@ -639,37 +639,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d913ac326330dc3d01b9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact account"
-              }
-            },
-            "Property": "FullAddress"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "aa5fb95619734ad6b37d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact account"
-              }
-            },
-            "Property": "Account Name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

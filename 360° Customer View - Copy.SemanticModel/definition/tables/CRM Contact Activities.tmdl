@@ -14,59 +14,101 @@ table 'CRM Contact Activities'
 		displayFolder: Contact Detail
 		lineageTag: c503b1a9-91d1-4866-97fd-36d2a1f074b5
 
+	/// Name of the contact in the current filter context (page subtitle of Contact Detail).
+	measure 'Selected Contact Name' = SELECTEDVALUE ( 'fact contacts'[fullname], "Multiple contacts selected" )
+		displayFolder: Contact Detail\Formatting
+		lineageTag: aa3bd052-1f79-4317-827d-327ef1cf32eb
+
 	column 'Activity ID'
 		dataType: string
 		isHidden
 		lineageTag: 43771c08-430c-4373-b52e-02d4b944b568
+		summarizeBy: none
 		sourceColumn: Activity ID
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Contact ID'
 		dataType: string
 		isHidden
 		lineageTag: fbc2d9b9-ab82-47f2-98e2-ce749087778c
+		summarizeBy: none
 		sourceColumn: Contact ID
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Activity Type'
 		dataType: string
 		lineageTag: 200ac65a-87d5-4ef8-bf48-e599bda64d90
+		summarizeBy: none
 		sourceColumn: Activity Type
+
+		annotation SummarizationSetBy = Automatic
 
 	column Subject
 		dataType: string
 		lineageTag: 351214f4-c6a0-4bf6-ab4d-256b88402b63
+		summarizeBy: none
 		sourceColumn: Subject
+
+		annotation SummarizationSetBy = Automatic
 
 	column Status
 		dataType: string
 		lineageTag: 2cdf6eb4-ee21-47f3-826a-e2c127e7f9d5
+		summarizeBy: none
 		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Created On'
 		dataType: dateTime
 		formatString: dd.MM.yyyy HH:mm
 		lineageTag: 29ee76d4-f014-4c6e-9e50-244f47767ad0
+		summarizeBy: none
 		sourceColumn: Created On
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Activity Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy
 		lineageTag: d0fe3e7d-4d15-42cb-b0a8-ee6932d5cfb9
+		summarizeBy: none
 		sourceColumn: Activity Date
+
+		annotation SummarizationSetBy = Automatic
 
 	column Owner
 		dataType: string
 		lineageTag: 54ad13c1-96ee-4ced-bf95-31ddbbd8d898
+		summarizeBy: none
 		sourceColumn: Owner
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Regarding Type'
 		dataType: string
 		lineageTag: f58f3470-901a-464b-9112-f33103434583
+		summarizeBy: none
 		sourceColumn: Regarding Type
+
+		annotation SummarizationSetBy = Automatic
 
 	column Regarding
 		dataType: string
 		lineageTag: d8fc0a8b-7ec7-44e1-8388-dbbbfb9c97ca
+		summarizeBy: none
 		sourceColumn: Regarding
+
+		annotation SummarizationSetBy = Automatic
+
+	/// First day of the activity month, used as chart axis.
+	column 'Activity Month' = DATE ( YEAR ( 'CRM Contact Activities'[Activity Date] ), MONTH ( 'CRM Contact Activities'[Activity Date] ), 1 )
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: efca3e72-0e74-42f0-8ca6-ca0010977703
+		summarizeBy: none
 
 	partition 'CRM Contact Activities' = m
 		mode: import

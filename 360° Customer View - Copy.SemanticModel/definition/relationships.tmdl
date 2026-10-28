@@ -795,22 +795,27 @@ relationship 90d4d047-b1b4-478d-a4e8-cdbc9715c928
 	toColumn: LocalDateTable_1890632a-1311-4774-a4ee-a733f27d62c5.Date
 
 relationship 'ERP Invoices_DebitorKey_fact account_BC ID'
+	securityFilteringBehavior: none
 	fromColumn: 'ERP Invoices'.DebitorKey
 	toColumn: 'fact account'.'BC ID'
 
 relationship 'ERP Credit Memos_DebitorKey_fact account_BC ID'
+	securityFilteringBehavior: none
 	fromColumn: 'ERP Credit Memos'.DebitorKey
 	toColumn: 'fact account'.'BC ID'
 
 relationship 'ERP Open Items_DebitorKey_fact account_BC ID'
+	securityFilteringBehavior: none
 	fromColumn: 'ERP Open Items'.DebitorKey
 	toColumn: 'fact account'.'BC ID'
 
 relationship 'CRM Activities_Account ID_fact account_Account ID'
+	securityFilteringBehavior: none
 	fromColumn: 'CRM Activities'.'Account ID'
 	toColumn: 'fact account'.'Account ID'
 
 relationship 'CRM Contact Activities_Contact ID_fact contacts_contactid'
+	securityFilteringBehavior: none
 	fromColumn: 'CRM Contact Activities'.'Contact ID'
 	toColumn: 'fact contacts'.contactid
 
