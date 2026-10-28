@@ -1,0 +1,42 @@
+table 'CRM stp_produkte'
+	lineageTag: f7ac3f17-7ba5-4992-8140-832008ebde57
+	sourceLineageTag: 3f8a85a4-47c6-44bc-8c98-e359393e7664
+
+	measure '# Products' = EXTERNALMEASURE("# Products", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 1b58d513-9d03-44ae-9c42-a3e2a61e92a0
+		sourceLineageTag: 31de3e04-90d4-4813-be70-d0f5e969a685
+		dataCategory: Uncategorized
+
+	measure '# Products 2' = EXTERNALMEASURE("# Products 2", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: ae1a1b95-9673-40d1-ad14-2943b90f07be
+		sourceLineageTag: 60ef888a-869a-43ea-a141-3ac30b36ea3a
+		dataCategory: Uncategorized
+
+	column opportunityid
+		dataType: string
+		lineageTag: c8e3bb23-ba67-4d66-bec8-3eb73caa56e0
+		sourceLineageTag: 714aa3de-1cb6-44f3-9cc4-558500ae0099
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: opportunityid
+
+		annotation SummarizationSetBy = User
+
+	column stp_produkt
+		dataType: string
+		lineageTag: 9a5a8103-ce49-49d1-b637-a8d1d0be5b3e
+		sourceLineageTag: 156ee83d-d990-4288-a400-a98c44ea6073
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_produkt
+
+		annotation SummarizationSetBy = User
+
+	partition 'CRM stp_produkte' = entity
+		mode: directQuery
+		source
+			entityName: CRM stp_produkte
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

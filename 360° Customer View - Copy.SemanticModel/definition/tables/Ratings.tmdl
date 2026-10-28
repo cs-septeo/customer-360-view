@@ -1,0 +1,148 @@
+table Ratings
+	lineageTag: 1cc04380-c9d4-4dcf-8674-88d80de6b11f
+	sourceLineageTag: 1421f5bc-80ae-4b56-890e-ad69855be3d6
+
+	column data_update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: fda495aa-1141-4eb7-8fcc-61925eb59b4f
+		sourceLineageTag: 6f4a4b9f-1f56-43c8-ad33-416948534bb3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: data_update
+
+		variation Variation
+			isDefault
+			relationship: 57107100-ce96-4dfa-ad62-ac185f76ad51
+			defaultHierarchy: LocalDateTable_828146f0-c6c3-4d76-ad64-19dd7b8b8857.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column url
+		dataType: string
+		lineageTag: a32ffbba-4176-4f7f-a136-2dd0e82cf711
+		sourceLineageTag: e4a35344-d532-4ff3-a28f-3f20d6ddaaa8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = User
+
+	column id
+		dataType: string
+		lineageTag: 62660456-ff93-4806-ac4b-5c92c570ebf2
+		sourceLineageTag: 4a3b1d3b-a4a5-4b2e-bd9b-4a82885940d4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = User
+
+	column assignee_id
+		dataType: string
+		lineageTag: 103463ed-039b-47e9-9ea2-184dd51a6d44
+		sourceLineageTag: cd758db6-fb9f-4a5c-aa11-78787f9fee94
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: assignee_id
+
+		annotation SummarizationSetBy = User
+
+	column group_id
+		dataType: string
+		lineageTag: 0a36007c-12cc-4400-aa5f-8712332fe5ea
+		sourceLineageTag: 9b23be5c-6890-49fc-8f40-9dc97e8afc26
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = User
+
+	column requester_id
+		dataType: string
+		lineageTag: 6ff01b37-cfd8-421d-ba38-86d6737e3cba
+		sourceLineageTag: ca665fa0-c207-4b16-8a39-4377ca32b68a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: requester_id
+
+		annotation SummarizationSetBy = User
+
+	column ticket_id
+		dataType: string
+		lineageTag: 7a1794a5-14bb-4e49-a7ac-c2c9c11cef36
+		sourceLineageTag: 024dddd6-5584-41db-af0c-52f2e1a68529
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ticket_id
+
+		annotation SummarizationSetBy = User
+
+	column score
+		dataType: string
+		lineageTag: 19fec1b7-bd1e-4a4c-be87-afd850cea681
+		sourceLineageTag: cd92875e-e239-4cc7-a722-460f06c02611
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: score
+
+		annotation SummarizationSetBy = User
+
+	column created_at
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3edaf1d8-ea4d-41b9-9fa6-be4a7138e6c0
+		sourceLineageTag: acfcb619-83a4-4ee3-926d-6c039cb05df1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: 68816f80-98aa-400d-9578-8d15a2e9d291
+			defaultHierarchy: LocalDateTable_16793e9f-a9b9-487c-924c-242ad31ef56b.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column updated_at
+		dataType: string
+		lineageTag: 9a6f4702-511e-4a65-b21a-d5dd840ee02d
+		sourceLineageTag: 9a36001d-8a97-4e4b-b68d-cf6d0d2f8282
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = User
+
+	column comment
+		dataType: string
+		lineageTag: 44f39c43-2c66-4d4c-b742-f80e678bd490
+		sourceLineageTag: 70e12793-d5ed-4612-998d-2dfd82af113f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: comment
+
+		annotation SummarizationSetBy = User
+
+	column created_at_timestamp
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: fa0f86e5-0563-4166-9673-8bfe6dd7a02f
+		sourceLineageTag: d2219605-05e9-4cee-856b-c613d7b138c5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: created_at_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 8ea2edc2-890c-4179-a2ee-0a7eec145739
+			defaultHierarchy: LocalDateTable_dd422654-2e8f-48d3-b1be-c4fc67cce1bf.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	partition Ratings = entity
+		mode: directQuery
+		source
+			entityName: Ratings
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

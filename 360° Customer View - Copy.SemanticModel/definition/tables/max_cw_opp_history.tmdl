@@ -1,0 +1,48 @@
+table max_cw_opp_history
+	lineageTag: f6d66110-3c94-4f7d-abb5-9c4d578a7f3f
+	sourceLineageTag: 9d1fdc4d-6c87-4be0-9f84-948a8687dc11
+
+	column snapshottimestamp
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: fc4c5316-1f08-4115-82fd-08878f63814d
+		sourceLineageTag: c98f53d7-b698-4996-b473-6cf3fda9dd8e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: snapshottimestamp
+
+		variation Variation
+			isDefault
+			relationship: f91cfc12-b477-4792-bbae-0d51f903cf88
+			defaultHierarchy: LocalDateTable_490cd9f0-db7a-41ad-a39d-cf523034714d.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column snapshotweek
+		dataType: int64
+		formatString: 0
+		lineageTag: 261112b1-1426-4849-8870-b4ca83058e21
+		sourceLineageTag: ba708925-be03-4c81-adf4-96a9c27461c5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: snapshotweek
+
+		annotation SummarizationSetBy = User
+
+	column year_snap
+		dataType: int64
+		formatString: 0
+		lineageTag: 04323eae-76c6-4d16-822a-534bb81d077a
+		sourceLineageTag: a1fed987-fef5-46d0-bb7c-60cb6abfa5cf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: year_snap
+
+		annotation SummarizationSetBy = User
+
+	partition max_cw_opp_history = entity
+		mode: directQuery
+		source
+			entityName: max_cw_opp_history
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

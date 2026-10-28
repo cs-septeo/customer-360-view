@@ -1,0 +1,72 @@
+table 'Data Update'
+	lineageTag: c946bd34-71de-49b4-93a3-146938954aff
+	sourceLineageTag: 97f2488b-e628-4102-917e-bcf972bbfdf9
+
+	measure Update_Status = EXTERNALMEASURE("Update_Status", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 95affeff-c5e6-4ca4-8d4f-041cfc980a40
+		sourceLineageTag: 1e0d7b0d-3b13-40b3-bf1e-f00bc67c40c8
+		dataCategory: Uncategorized
+
+	measure 'Min Update Time' = EXTERNALMEASURE("Min Update Time", DATETIME, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: General Number
+		lineageTag: fdcee23d-c369-4dd9-a848-1d7de2393a54
+		sourceLineageTag: a250b636-0be6-423a-9217-1feb81f2d8c1
+		dataCategory: Uncategorized
+
+	measure 'Font Color Update' = EXTERNALMEASURE("Font Color Update", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 451f6a55-b4ae-48bf-8063-e9667e7410cb
+		sourceLineageTag: 08a2015b-5aef-4dcc-8fb7-7a142b1d4495
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Min Update Status' = EXTERNALMEASURE("Min Update Status", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 89406cf5-bdec-4fe0-a1a8-960807b85d51
+		sourceLineageTag: 17892fbe-baaf-4371-ad41-77834aa75d48
+		dataCategory: Uncategorized
+
+	column Table
+		dataType: string
+		lineageTag: 2b46a570-0401-44c7-93d1-84e3fe61f992
+		sourceLineageTag: 72781416-f172-4901-b285-4b75c06c2342
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Table
+
+		annotation SummarizationSetBy = User
+
+	column Update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: a5110d95-266e-4b70-b8eb-10c9909d1163
+		sourceLineageTag: 55956f5a-3350-4176-aea2-28944318ebd4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Update
+
+		variation Variation
+			isDefault
+			relationship: c1bf96b9-c7e9-4dae-bded-559c74888775
+			defaultHierarchy: LocalDateTable_353128ff-b5c6-4ab5-95bd-a360630983d1.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Update Successfull'
+		dataType: int64
+		formatString: 0
+		lineageTag: fe11929a-42fd-4392-a255-a3457a35567b
+		sourceLineageTag: a2fd21c6-e518-4651-97b8-728b580154fd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Update Successfull
+
+		annotation SummarizationSetBy = User
+
+	partition 'Data Update' = entity
+		mode: directQuery
+		source
+			entityName: Data Update
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

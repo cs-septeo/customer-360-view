@@ -1,0 +1,147 @@
+table 'FACT RevenueTrackerPipeline'
+	lineageTag: b4196940-2a47-42bb-9986-b172cc1e79b0
+	sourceLineageTag: b621302a-d874-4d34-a763-4e995d330e25
+
+	column SalesAreaSort
+		dataType: int64
+		formatString: 0
+		lineageTag: d30a0ef2-5739-42f2-aa0f-66700327369e
+		sourceLineageTag: b09c2d6d-37ff-4967-9e5c-e29fa9ed2199
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: SalesAreaSort
+
+		annotation SummarizationSetBy = User
+
+	column ProductSort
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b1c900f-8b6b-4686-9ee9-6e49b3749c7b
+		sourceLineageTag: 915f988f-ba94-4cae-acc6-a13182ff6f82
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ProductSort
+
+		annotation SummarizationSetBy = User
+
+	column ForecastSort
+		dataType: int64
+		formatString: 0
+		lineageTag: 920c74b9-14d2-4959-b3e4-3fde8aa4d9f8
+		sourceLineageTag: 2606b0ce-6de0-44d5-9239-74e1df0dc628
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ForecastSort
+
+		annotation SummarizationSetBy = User
+
+	column RowSort
+		dataType: int64
+		formatString: 0
+		lineageTag: fde1f9ef-896c-411b-be50-742b351a21c6
+		sourceLineageTag: 8002b491-5c20-49ab-839a-c601924f8c2a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: RowSort
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 212e5730-13a5-41e9-b991-106203ab0a0d
+		sourceLineageTag: e499bcf5-2836-449c-8d4f-a61a3fc25e91
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+		sortByColumn: SalesAreaSort
+
+		annotation SummarizationSetBy = User
+
+	column Product
+		dataType: string
+		lineageTag: 68b0ee3d-e89d-452d-b983-74bc003d3ff7
+		sourceLineageTag: 4c664896-277c-4b77-9d1c-0ade22ec86c3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Product
+		sortByColumn: ProductSort
+
+		annotation SummarizationSetBy = User
+
+	column Forecast
+		dataType: string
+		lineageTag: da72e950-8113-423f-b808-8cc47d331c27
+		sourceLineageTag: 7339b16e-3f0e-4d6a-9526-d75670abb896
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Forecast
+		sortByColumn: ForecastSort
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 08425bc2-8f84-4d4c-aae1-833bbb8531b9
+		sourceLineageTag: 0840541e-7ad2-4a9c-a4a5-12adaf090fb6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 8064e637-2c56-4100-8365-fdc0376b05c3
+		sourceLineageTag: da08b60d-9b26-4a1f-867b-29ecf0efd030
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Year_Quarter
+		dataType: string
+		lineageTag: 8d98023f-f52c-465c-ba0e-94798aa16d64
+		sourceLineageTag: e0018838-153a-4089-ae73-e4760716dd2b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year_Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Value
+		dataType: double
+		lineageTag: 017448a7-ff39-4f28-9871-2f13518699d1
+		sourceLineageTag: 1568dd6e-5a0d-4856-ac39-9b3ad80618dd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data_update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 37c642ef-fcf6-4cb7-968e-07e08867f2bb
+		sourceLineageTag: 806f36d8-fb98-483e-a8b6-00afebdf35f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: data_update
+
+		variation Variation
+			isDefault
+			relationship: 90d4d047-b1b4-478d-a4e8-cdbc9715c928
+			defaultHierarchy: LocalDateTable_1890632a-1311-4774-a4ee-a733f27d62c5.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	partition 'FACT RevenueTrackerPipeline' = entity
+		mode: directQuery
+		source
+			entityName: FACT RevenueTrackerPipeline
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

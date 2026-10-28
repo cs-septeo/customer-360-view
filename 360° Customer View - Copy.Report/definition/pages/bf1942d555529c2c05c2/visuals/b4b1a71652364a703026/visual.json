@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "b4b1a71652364a703026",
+  "position": {
+    "x": 590.29623698959165,
+    "y": 185.49239391513208,
+    "z": 0,
+    "height": 279.77582065652518,
+    "width": 459.11929543634903,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "brinkmann: 4a45364a-986d-ee11-9ae7-0022489e2efe"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "gsk: f74a2864-7872-ee11-8179-0022489dfe45"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

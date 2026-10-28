@@ -1,0 +1,249 @@
+table 'Amberlo Pipeline figures'
+	lineageTag: 801d5938-5ac5-4306-bc63-9a1bb8f28d10
+	sourceLineageTag: 1f682ff8-4847-4413-a16e-86c6f4ca1b31
+
+	column snapshottimestamp
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 2b0299d2-09ec-4872-8975-f9bff4252120
+		sourceLineageTag: 5957fbdb-16fd-493f-afc8-9c6889f403e7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: snapshottimestamp
+
+		variation Variation
+			isDefault
+			relationship: a44b4370-f940-4a32-a1fa-7e4f540ac4e2
+			defaultHierarchy: LocalDateTable_ed0642ac-15bb-4bae-9e79-5be343de7ba9.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column year_snap
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a29d236-48f7-4b80-8db3-3b3341b33d10
+		sourceLineageTag: a5cb4798-1ab9-44b7-b1a7-5502316bb5e3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: year_snap
+
+		annotation SummarizationSetBy = User
+
+	column snapshotweek
+		dataType: int64
+		formatString: 0
+		lineageTag: ba91d0f7-d4e4-4240-ae13-4c29e1ee20f1
+		sourceLineageTag: 2ab42938-a0f7-41c2-a93f-1859c00c0df9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: snapshotweek
+
+		annotation SummarizationSetBy = User
+
+	column Done
+		dataType: int64
+		formatString: 0
+		lineageTag: 1fd2cf8c-0536-4d99-94ba-dab82dcd6c31
+		sourceLineageTag: 8f7c7059-bbef-4b96-8789-cbf0e4024ac1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Done
+
+		annotation SummarizationSetBy = User
+
+	column Commit
+		dataType: int64
+		formatString: 0
+		lineageTag: ffccac3f-51c6-4bb9-9e18-399a7e871894
+		sourceLineageTag: f6a13603-9f4a-4e35-813f-8e056394834e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Commit
+
+		annotation SummarizationSetBy = User
+
+	column Probable
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ae07cc5-3dfe-4c4f-80f2-bf30567a3813
+		sourceLineageTag: e4a3752f-7b8c-4113-8931-d2e8a707846a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Probable
+
+		annotation SummarizationSetBy = User
+
+	column Upside
+		dataType: int64
+		formatString: 0
+		lineageTag: e76227ba-c8c0-4e59-9f32-f2c233259205
+		sourceLineageTag: 781c6a4b-ed63-478c-935d-c5849488dc5f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Upside
+
+		annotation SummarizationSetBy = User
+
+	column Pipeline
+		dataType: int64
+		formatString: 0
+		lineageTag: 8acc45bc-88c9-42b2-be72-f66efc9a70a4
+		sourceLineageTag: 9e745228-d73f-4df2-b889-ff522e1041b2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Pipeline
+
+		annotation SummarizationSetBy = User
+
+	column Lost
+		dataType: int64
+		formatString: 0
+		lineageTag: 96b93304-bfa2-4ca6-97cf-9457f4cb3b51
+		sourceLineageTag: a0e515d8-2d24-436b-8e78-a97aa691af01
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Lost
+
+		annotation SummarizationSetBy = User
+
+	column Total_Pipeline
+		dataType: int64
+		formatString: 0
+		lineageTag: 13d21578-ee62-4fc8-b5a6-e0397b83efe4
+		sourceLineageTag: 10a6957c-bd37-4da5-bb35-e108dafb72d2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Total_Pipeline
+
+		annotation SummarizationSetBy = User
+
+	column Forecast_Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 9cb39685-2a0b-4e89-aedd-165ededa4030
+		sourceLineageTag: d97214bc-80ba-4031-ab55-7e6409e611d8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Forecast_Quarter
+
+		annotation SummarizationSetBy = User
+
+	column BoQ
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8b034028-a8cb-4b20-826d-4f65b9024035
+		sourceLineageTag: f04d7316-2042-4f8c-9c0e-41359e169b12
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoQ
+
+		variation Variation
+			isDefault
+			relationship: fabebc22-eac3-4ae1-80d5-c756e92f54a3
+			defaultHierarchy: LocalDateTable_6fa88e5f-f86e-40a4-ab62-7547e332b1f6.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: cd13b4ca-687d-43f8-8379-cb0420526786
+		sourceLineageTag: 5183e6dc-2ed4-47cf-b621-b3821b8c7e9b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column Comments
+		dataType: string
+		lineageTag: 6a2eefbd-e3ec-49dc-b395-584830ca7f5c
+		sourceLineageTag: fe696f38-95cf-4789-bc18-43f65b80ee80
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = User
+
+	column Done_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 1bfff6e1-2757-4801-9653-d9c2ee01f62d
+		sourceLineageTag: c919b2a8-3465-4856-8f52-2ccd65c7d2e7
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Done_Count
+
+		annotation SummarizationSetBy = User
+
+	column Commit_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: e269572a-64bd-4fe0-88cc-291d3449edd2
+		sourceLineageTag: d4c0f88b-e1cc-4f53-9670-b2766ed00e83
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Commit_Count
+
+		annotation SummarizationSetBy = User
+
+	column Probable_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: b47c5f50-cf5e-46d6-911b-fd17652d686c
+		sourceLineageTag: 50f8103e-6563-4027-a66a-bfeae1224504
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Probable_Count
+
+		annotation SummarizationSetBy = User
+
+	column Upside_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 078aabcb-f7e8-45f2-9c35-8adeb78b6114
+		sourceLineageTag: 0eb676fd-79a1-45a6-b07a-542a039cd6df
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Upside_Count
+
+		annotation SummarizationSetBy = User
+
+	column Pipeline_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: f345dc45-3a1b-4e72-bd69-23faf05fe947
+		sourceLineageTag: a8b4d061-d757-4dbd-9959-9623c1c4a3cd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Pipeline_Count
+
+		annotation SummarizationSetBy = User
+
+	column Lost_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 503f446f-ee84-4e49-9899-898e9219c7fe
+		sourceLineageTag: 5d48174a-1f4c-405c-a8ed-e4517326c63f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Lost_Count
+
+		annotation SummarizationSetBy = User
+
+	column Total_Pipeline_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f3c098f-529d-4e65-9ebf-814c7e33764e
+		sourceLineageTag: 786536e4-7110-47a0-8980-c6c592633b53
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Total_Pipeline_Count
+
+		annotation SummarizationSetBy = User
+
+	partition 'Amberlo Pipeline figures' = entity
+		mode: directQuery
+		source
+			entityName: Amberlo Pipeline figures
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

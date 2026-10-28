@@ -1,0 +1,64 @@
+table 'Emp Sales Area Mapping'
+	lineageTag: 1df8c5e9-d420-4897-bc86-de9d7f1d32df
+	sourceLineageTag: c26cbf51-7341-4109-a1fc-c150f8cd2785
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 8325cf9c-1d30-4d2e-bf06-6cc26cd798a8
+		sourceLineageTag: b5e69067-7476-4388-8852-83bedc8bca77
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column Name
+		dataType: string
+		lineageTag: 5210db70-2d3e-4894-ab70-4f03cfbb1641
+		sourceLineageTag: f80e42b0-7a00-4750-b37d-e884c307afc5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = User
+
+	column Ownerid
+		dataType: string
+		isNullable: false
+		lineageTag: c264c655-3cf9-483c-ba15-bbb9a7f13aea
+		sourceLineageTag: 968728ec-3ae1-41fe-b768-3a223b31e459
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Ownerid
+
+		annotation SummarizationSetBy = User
+
+	column systemuserid
+		dataType: string
+		isNullable: false
+		lineageTag: 4bd56bf1-cc2e-4e3b-953a-e2fe4afc115a
+		sourceLineageTag: b39d459b-9b2e-404b-9090-b233c934b2ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: systemuserid
+
+		annotation SummarizationSetBy = User
+
+	column stp_marktsegmentsales
+		dataType: double
+		lineageTag: 49b0efd6-7585-418d-8e0a-935d8da00141
+		sourceLineageTag: 0f8da578-8c35-4fad-9570-1ad0cac3989a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: stp_marktsegmentsales
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Emp Sales Area Mapping' = entity
+		mode: directQuery
+		source
+			entityName: Emp Sales Area Mapping
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

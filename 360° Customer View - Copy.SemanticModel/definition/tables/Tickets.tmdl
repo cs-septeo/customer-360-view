@@ -1,0 +1,318 @@
+table Tickets
+	lineageTag: 32367ceb-c052-4e9e-8f8d-1d52c0e13e6a
+	sourceLineageTag: 8861975f-06b5-4692-9f46-52f999515267
+
+	measure '# Tickets' = EXTERNALMEASURE("# Tickets", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 8fea3a33-4c42-4cae-a958-afed4f3b7832
+		sourceLineageTag: 9cc11002-3c27-4ee8-b40d-7818d43c7dee
+		dataCategory: Uncategorized
+
+	measure '# Tickets (Incidents)' = EXTERNALMEASURE("# Tickets (Incidents)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 768e10e5-3e50-48ff-a30f-86be99ee7504
+		sourceLineageTag: 2522aa0d-81bd-43f0-af23-e73b63260327
+		dataCategory: Uncategorized
+
+	measure '# Tickets (Problems)' = EXTERNALMEASURE("# Tickets (Problems)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: affc074d-70ab-478a-b6fa-0832307cceb2
+		sourceLineageTag: 625d4489-be70-48b9-a8d4-37d72a648275
+		dataCategory: Uncategorized
+
+	column data_update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: ea58bc90-8a08-4e7e-b283-245bad1a66ff
+		sourceLineageTag: 5801634e-06db-4572-bc87-897c00ff1545
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: data_update
+
+		variation Variation
+			isDefault
+			relationship: f7599ce6-41f0-4578-a37b-7fc08cf4c62f
+			defaultHierarchy: LocalDateTable_0080910c-c328-4126-abeb-1e328beb3aea.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column url
+		dataType: string
+		lineageTag: 17d761ef-0bdf-4bb5-a0e9-ede0314062f2
+		sourceLineageTag: a4ab94e7-a982-4433-8139-158c50f60263
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = User
+
+	column id
+		dataType: string
+		lineageTag: 93c288ec-2918-4965-aa3b-7a9713b51df5
+		sourceLineageTag: 219f2e3b-43d8-431a-b41a-10dab2227e73
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = User
+
+	column created_at
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 1baa4cf0-6ceb-4a44-a904-f6a43ec93ba8
+		sourceLineageTag: 25cda8e7-3a8f-4073-ac8d-821e61d4c942
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: 2aea288b-83b6-4589-bdbf-3df6f3b6af48
+			defaultHierarchy: LocalDateTable_c73e110e-8fc1-4654-88fa-9f32f7207f14.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column updated_at
+		dataType: string
+		lineageTag: f51dc8c1-2e35-4ebf-a19e-e6ee51c7dbb7
+		sourceLineageTag: 40829255-2c7c-4a18-a55e-573824f3b9c3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = User
+
+	column type
+		dataType: string
+		lineageTag: 3fc352eb-aa96-4bab-88b6-7adf054a979b
+		sourceLineageTag: 647e1f2a-ec3c-438e-bde0-dc3ebfc9057d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = User
+
+	column subject
+		dataType: string
+		lineageTag: 7221e4d9-13aa-4596-9e2a-beaf76688e59
+		sourceLineageTag: efddef5b-768c-4c19-a0b3-3bd169b637ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: subject
+
+		annotation SummarizationSetBy = User
+
+	column raw_subject
+		dataType: string
+		lineageTag: a5bf793a-f300-48c1-945a-26487f756616
+		sourceLineageTag: fb631840-e636-4c81-b7f5-1bae5d46d4d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: raw_subject
+
+		annotation SummarizationSetBy = User
+
+	column description
+		dataType: string
+		lineageTag: f1a4c409-08bc-4675-a3da-2466f403891a
+		sourceLineageTag: 09fa50fb-ec6c-44c4-8333-fb6023e4718f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = User
+
+	column priority
+		dataType: string
+		lineageTag: c5f1cbca-0388-4c75-86eb-cf6204bd3dcb
+		sourceLineageTag: cc58f6c3-e665-4512-9ca4-5495ad258c6d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: priority
+		sortByColumn: priority_sort
+
+		annotation SummarizationSetBy = User
+
+	column status
+		dataType: string
+		lineageTag: 5c7e66f7-91ff-4086-9dd2-647fc11f482f
+		sourceLineageTag: 6ad342c2-f3c3-4f15-a5fe-aa8b624d9bf1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = User
+
+	column organization_id
+		dataType: string
+		lineageTag: 90e55b9b-0094-4854-a176-b48b834c4261
+		sourceLineageTag: 23f859eb-bea9-4458-a0d6-c74c37140d0d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = User
+
+	column group_id
+		dataType: string
+		lineageTag: e39f9d1a-19a3-4352-b5ff-21bc1e4682b7
+		sourceLineageTag: 413f9601-b918-4130-8ea2-cd4d8d4d0776
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = User
+
+	column has_incidents
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8480d6e2-28b5-4181-bf92-7d022f23a884
+		sourceLineageTag: 85dccb2b-7b25-4707-b130-18fbf48ed315
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: has_incidents
+
+		annotation SummarizationSetBy = User
+
+	column ticket_form_id
+		dataType: string
+		lineageTag: 2949c680-5165-4844-8c71-642d9d0e84a3
+		sourceLineageTag: bb8fd341-296b-4fa8-8023-06549636c3ec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ticket_form_id
+
+		annotation SummarizationSetBy = User
+
+	column brand_id
+		dataType: string
+		lineageTag: d36ce863-5e75-4017-8a2f-60988dc0a5da
+		sourceLineageTag: 4ee66bb3-c26b-461a-a427-b6f43eaf19f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: brand_id
+
+		annotation SummarizationSetBy = User
+
+	column problem_id
+		dataType: string
+		lineageTag: 3fc0866e-c5d2-4b26-ba51-a004dae3a7af
+		sourceLineageTag: 44576f70-1b1e-420d-9401-d2e8d53657a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: problem_id
+
+		annotation SummarizationSetBy = User
+
+	column ticket_handling_time
+		dataType: int64
+		formatString: 0
+		lineageTag: e26586ca-9e3b-4fc7-9dbe-02505d9535d6
+		sourceLineageTag: fd3e55aa-ab69-4659-b058-3977568d5d78
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ticket_handling_time
+
+		annotation SummarizationSetBy = User
+
+	column metric_created_at
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: ea8db8d4-0067-43dc-b114-a61d50528070
+		sourceLineageTag: 84508cbf-7705-4d1f-9b6d-4db1bc2f37e9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: metric_created_at
+
+		variation Variation
+			isDefault
+			relationship: 722cb089-8e69-43be-b658-67235178e389
+			defaultHierarchy: LocalDateTable_fe765f5a-0878-4293-bc10-84831f192b76.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column metric_solved_at
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5e2a13ca-ef4d-4789-84ec-90e5fb4d2a81
+		sourceLineageTag: 083b03d0-7930-4568-825c-859a0f63d01d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: metric_solved_at
+
+		variation Variation
+			isDefault
+			relationship: 44820139-7871-40cf-92e2-1981282a1dbf
+			defaultHierarchy: LocalDateTable_e80a4117-b230-4840-af10-be3d0585eb0f.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column created_at_datetime
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 341c96ec-38ab-483e-a496-77ba3aad0c3f
+		sourceLineageTag: b15ca5ca-7b33-4a1d-9f82-83326f7c0748
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: created_at_datetime
+
+		variation Variation
+			isDefault
+			relationship: b821f03d-e8e0-412c-8499-b4178e1a9b42
+			defaultHierarchy: LocalDateTable_d535409e-816b-4149-944f-27278c82e080.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Status Clean'
+		dataType: string
+		lineageTag: b2a8ef66-8135-45e2-9dd1-68477943ad3d
+		sourceLineageTag: c31642bc-5f3d-4d37-af00-1ae7f04f36bf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status Clean
+
+		annotation SummarizationSetBy = User
+
+	column Link
+		dataType: string
+		lineageTag: b7ec3721-4681-4c3c-9394-8b8ec991d839
+		sourceLineageTag: e396862c-5fe1-4bbd-801a-ff3e57b2d323
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = User
+
+	column metric_solved_at_time_stamp
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 9caad26a-4c00-41e9-96b3-1ac3fa84c427
+		sourceLineageTag: c74cd26f-d897-4f7c-958b-0fe8c89fddd4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: metric_solved_at_time_stamp
+
+		variation Variation
+			isDefault
+			relationship: 13e543a9-5a32-4a65-9543-132356aa5b03
+			defaultHierarchy: LocalDateTable_68ed2af7-b6c0-4d41-af52-0fe635c956e7.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column priority_sort
+		dataType: int64
+		formatString: 0
+		lineageTag: 4997082e-cb1a-48d4-8343-407a8c5cce33
+		sourceLineageTag: 1e1995be-bc26-40f6-b7c3-43de4c5151da
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: priority_sort
+
+		annotation SummarizationSetBy = User
+
+	partition Tickets = entity
+		mode: directQuery
+		source
+			entityName: Tickets
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

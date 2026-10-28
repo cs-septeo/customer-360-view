@@ -1,0 +1,48 @@
+table 'Category (Lead) - Row'
+	lineageTag: 04fdb78e-409e-4377-b465-b48c8246ac59
+	sourceLineageTag: 2f2adb07-df87-4d8d-b329-a98c6b15532c
+
+	column 'Category (Lead) - Row'
+		dataType: string
+		lineageTag: 6ca8f12c-cd1d-4bca-ba70-158f54ba13be
+		sourceLineageTag: b4ac6df8-9692-47d6-8af3-c698a7cad30a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Category (Lead) - Row
+		sortByColumn: 'Category (Lead) - Row Reihenfolge'
+
+		relatedColumnDetails
+			groupByColumn: 'Category (Lead) - Row Felder'
+
+		annotation SummarizationSetBy = User
+
+	column 'Category (Lead) - Row Felder'
+		dataType: string
+		isHidden
+		lineageTag: 86cc749a-b164-4f64-98ea-cf9773d739ce
+		sourceLineageTag: d4c156c1-59ea-4670-9d09-3d43685e7fec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Category (Lead) - Row Felder
+		sortByColumn: 'Category (Lead) - Row Reihenfolge'
+
+		annotation SummarizationSetBy = User
+
+	column 'Category (Lead) - Row Reihenfolge'
+		dataType: double
+		isHidden
+		formatString: 0
+		lineageTag: 8c0cc84e-e869-495e-972a-ea31373b6476
+		sourceLineageTag: 2b74595b-dfc3-4a59-864f-a1a0a3f6e678
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Category (Lead) - Row Reihenfolge
+
+		annotation SummarizationSetBy = User
+
+	partition 'Category (Lead) - Row' = entity
+		mode: directQuery
+		source
+			entityName: Category (Lead) - Row
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

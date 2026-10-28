@@ -1,0 +1,20 @@
+table 'leads Spaltenübersetzung'
+	lineageTag: cecc5ee4-ed64-404b-bbbe-fc6ed1136ea5
+	sourceLineageTag: 04f9a638-89c6-4ad4-9e8a-9150fad4eefc
+
+	column 'leads Spaltenübersetzung'
+		dataType: string
+		lineageTag: a70bf65b-04f3-44fc-bfd5-a5ada01885d2
+		sourceLineageTag: d0df0870-cdda-4618-bbca-0b22a60bed38
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: leads Spaltenübersetzung
+
+		annotation SummarizationSetBy = User
+
+	partition 'leads Spaltenübersetzung' = entity
+		mode: directQuery
+		source
+			entityName: leads Spaltenübersetzung
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

@@ -1,0 +1,289 @@
+table 'Sales Budget 24 Monthly (Real Time)'
+	lineageTag: 9e4ba909-1c0d-4c02-87c8-0c6f23db17e2
+	sourceLineageTag: 94db1a8d-b12e-4143-931f-8dfb026039ba
+
+	measure BUD = EXTERNALMEASURE("BUD", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 729079f1-b20a-41a0-842f-f2d580e00bc9
+		sourceLineageTag: 35c45fde-6933-48f6-a80e-46cc16023de5
+		dataCategory: Uncategorized
+
+	measure 'Δ DCP vs. BUD' = EXTERNALMEASURE("Δ DCP vs. BUD", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 614e752f-555a-4a0c-b949-221e1d588753
+		sourceLineageTag: 0e335ed3-4f93-4c4a-9fd3-7104a0da8672
+		dataCategory: Uncategorized
+
+	measure '% DCP vs. BUD' = EXTERNALMEASURE("% DCP vs. BUD", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: fc6b0c44-4fd3-4d71-9d0a-1315e19bb1e1
+		sourceLineageTag: c2fac644-03ce-403c-8bec-f1bff901cb72
+		dataCategory: Uncategorized
+
+	measure 'Δ Done vs. BUD' = EXTERNALMEASURE("Δ Done vs. BUD", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 830485e4-af55-4566-80d9-1df9e43d9520
+		sourceLineageTag: 316c43d4-d312-492d-bad9-560d87293ab5
+		dataCategory: Uncategorized
+
+	measure '% Done vs. BUD' = EXTERNALMEASURE("% Done vs. BUD", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 15fbbf0b-323b-4713-8aea-061aa800c8b7
+		sourceLineageTag: a73cd0fc-dd80-49fe-8bce-6a165514adbd
+		dataCategory: Uncategorized
+
+	measure 'Data Label Sales Performance Value 1' = EXTERNALMEASURE("Data Label Sales Performance Value 1", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 4e8cad8d-9592-4629-b500-05c78287e2c6
+		sourceLineageTag: 2ce34bac-479c-4f4d-9d75-0ad13f707b9e
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Label Sales Performance Value 2' = EXTERNALMEASURE("Data Label Sales Performance Value 2", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: fa92778a-235d-4748-88ea-3910b28fa268
+		sourceLineageTag: 9eadbcb3-0850-4382-8b8f-5a5f6ba6b75f
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Label Pipeline 1' = EXTERNALMEASURE("Data Label Pipeline 1", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: c93812c2-7479-47f7-a328-1537bc5e669f
+		sourceLineageTag: 8c156a1b-52fb-4f5a-9278-0fdc0ad54b71
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Label Pipeline 2' = EXTERNALMEASURE("Data Label Pipeline 2", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 9bbdb3ce-a07d-4ad7-8f5b-e0b8ecfb65bb
+		sourceLineageTag: 7f3c3214-52f4-47dc-ae1e-c78e0505af11
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'BUD CW' = EXTERNALMEASURE("BUD CW", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 4cdabab9-5e15-482e-a39e-812e1f64a236
+		sourceLineageTag: bd395c80-6e60-445e-a7ec-5564cec7589b
+		dataCategory: Uncategorized
+
+	measure BUDx3 = EXTERNALMEASURE("BUDx3", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: c4b8e78c-5ec9-4109-9dae-35cba68e3656
+		sourceLineageTag: 61e13447-b971-421c-bc70-a54ff6d9ace4
+		dataCategory: Uncategorized
+
+	measure 'Δ Pipeline vs. BUDx3' = EXTERNALMEASURE("Δ Pipeline vs. BUDx3", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: a2d90c1d-b22d-4774-ae29-4e25794b9eac
+		sourceLineageTag: 5bc4bfab-63aa-4c3d-ab6c-0867be866c1a
+		dataCategory: Uncategorized
+
+	measure Delta_Red = EXTERNALMEASURE("Delta_Red", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 02431cd3-0fb8-48db-8d29-e280dbe896d0
+		sourceLineageTag: bc0f2fb4-a7a9-4297-afef-5511d25b0fa2
+		dataCategory: Uncategorized
+
+	measure Delta_Green = EXTERNALMEASURE("Delta_Green", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 853ef2e7-d160-43e3-8b0f-6f849b7c892b
+		sourceLineageTag: 5cce3d12-43ee-45db-a81a-1e52eaedcf06
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Data Label Sales Performance Details 1' = EXTERNALMEASURE("Data Label Sales Performance Details 1", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 8952494c-af8d-477c-a543-96fcaad94654
+		sourceLineageTag: ca88fede-4192-49cb-bfd1-0cf022eee8a7
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Label Sales Performance Details 2' = EXTERNALMEASURE("Data Label Sales Performance Details 2", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: bda5313f-b3cd-492c-a8f6-4a907508519e
+		sourceLineageTag: 6ee3f05f-3cc9-4f89-baa1-5d56333bc515
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Δ Done vs. BUD (CW)' = EXTERNALMEASURE("Δ Done vs. BUD (CW)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 18c15bdf-b8c5-4279-94b0-1b57e867b024
+		sourceLineageTag: 23d7d230-f7ef-40e5-9081-eb678d62354e
+		dataCategory: Uncategorized
+
+	measure '% Done vs. BUD (CW)' = EXTERNALMEASURE("% Done vs. BUD (CW)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 8ab1a76b-73ac-4a0f-920b-291884b74fbd
+		sourceLineageTag: 12382ff6-b873-4474-83bf-426303841016
+		dataCategory: Uncategorized
+
+	measure 'Data Label Tacho' = EXTERNALMEASURE("Data Label Tacho", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 04a20bf6-53ac-40e1-821f-3a4587ba2654
+		sourceLineageTag: d4022478-f15d-4e83-948a-610da93d37ac
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Label Tacho (CW)' = EXTERNALMEASURE("Data Label Tacho (CW)", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 29f59228-dfa1-44aa-8819-a92ca69bd4a0
+		sourceLineageTag: 9f2de25d-021f-43be-a03a-1e3dc376022c
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Δ Done vs. BUD (CM)' = EXTERNALMEASURE("Δ Done vs. BUD (CM)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 6fa5c3d8-0b25-40ff-8331-77471c93c298
+		sourceLineageTag: edcaeffc-45ec-447a-8b93-fc227ede25b0
+		dataCategory: Uncategorized
+
+	measure 'Δ Done vs. BUD (CQ)' = EXTERNALMEASURE("Δ Done vs. BUD (CQ)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: b06b82b0-03a4-4159-b65b-f2238139a6cb
+		sourceLineageTag: faf21f7a-96df-4777-a2a3-b4053d3cb567
+		dataCategory: Uncategorized
+
+	measure 'Data Label Tacho (CM)' = EXTERNALMEASURE("Data Label Tacho (CM)", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 99b40b44-04da-4f6a-a0df-f214bba651f9
+		sourceLineageTag: e7c4a3ff-5a7f-4a40-bab3-d9309a76b588
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure '% Done vs. BUD (CM)' = EXTERNALMEASURE("% Done vs. BUD (CM)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: b9de01d2-6fd5-4089-b8a9-44d52c803a12
+		sourceLineageTag: 4b9fe0fe-3a8d-4f1c-83b3-beafcc73b88b
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Data Label Tacho (CQ)' = EXTERNALMEASURE("Data Label Tacho (CQ)", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 42bd65b0-c5b5-4d07-bbc5-d0145ef844be
+		sourceLineageTag: 5c491862-ca0b-4967-91d6-8aab6f9d953a
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure '% Done vs. BUD (CQ)' = EXTERNALMEASURE("% Done vs. BUD (CQ)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: afe6cbe6-c6a8-4c33-bbce-324c647937b3
+		sourceLineageTag: 8e196cea-4326-4066-9f6a-b927d872ad20
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'BUD indep.' = EXTERNALMEASURE("BUD indep.", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 06ba6323-966a-48bb-adad-a238f4a6258b
+		sourceLineageTag: b1acd226-949e-4274-8fb2-e55a72c19c03
+		dataCategory: Uncategorized
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 2dab7e9b-f45e-4cc0-9581-b3de4dfdc88f
+		sourceLineageTag: 2001b798-50ed-476a-9c77-92511d9c1c1d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 1cd7e65e-5fbb-4619-8522-6f8b33bf027b
+		sourceLineageTag: 2b40c78b-d812-45a2-a5c3-ca8e374a1314
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Target
+		dataType: int64
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 9c991ccf-d428-4ec7-8572-b3b3966c2434
+		sourceLineageTag: 9f1a36db-2593-442f-a690-c4a13f9b045e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 1b52e38f-69af-4e05-9bdc-2966756b3181
+		sourceLineageTag: 07800ac9-7e79-4b3f-988f-23a96bb612ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column BoQ
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 3fdc8c99-a485-4c55-b1d4-82cdd5fd05ba
+		sourceLineageTag: 873dfd1e-e47d-4589-9b70-c46143818a88
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoQ
+
+		variation Variation
+			isDefault
+			relationship: c77a2e32-992a-4037-a77e-48795e97296b
+			defaultHierarchy: LocalDateTable_47b2dc30-fec0-47cc-bc8c-79199b575a8c.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column Euro
+		dataType: int64
+		formatString: 0
+		lineageTag: 513a4d05-1208-44df-abb2-fedf76eda08d
+		sourceLineageTag: 0b9d2823-2e15-4494-994a-21e36070bef5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Euro
+
+		annotation SummarizationSetBy = User
+
+	column Faktor
+		dataType: double
+		lineageTag: 1b6fcf82-1b8c-4f33-bfde-3b00ba6d1c54
+		sourceLineageTag: e8e001f9-51b3-491d-afe3-c18d2f62626b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Faktor
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Current Month'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 45ce36a6-0f11-4eae-abaf-a93829b87df7
+		sourceLineageTag: 3f3df37c-4424-4006-9223-220117495b0a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Current Month
+
+		annotation SummarizationSetBy = User
+
+	column 'Current Qtr'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0877b8d1-0714-406e-812c-19aa29b03d05
+		sourceLineageTag: 126dda1d-8119-4926-94a8-e970561f0749
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Current Qtr
+
+		annotation SummarizationSetBy = User
+
+	partition 'Sales Budget 24 Monthly (Real Time)' = entity
+		mode: directQuery
+		source
+			entityName: Sales Budget 24 Monthly (Real Time)
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

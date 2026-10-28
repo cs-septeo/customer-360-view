@@ -1,0 +1,64 @@
+table 'dim systemuser'
+	lineageTag: 41331498-f251-47da-96b3-1ff6f7b775c3
+	sourceLineageTag: b00579d2-de03-49ff-acd7-b00eddcc83c3
+
+	column systemuserid
+		dataType: string
+		isNullable: false
+		lineageTag: 073d1a0b-5f84-43ba-9032-4b76f98abf78
+		sourceLineageTag: 6677ad28-6b48-4508-b564-8befd94dbba4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: systemuserid
+
+		annotation SummarizationSetBy = User
+
+	column fullname
+		dataType: string
+		lineageTag: fd58b315-361e-4ed8-9b61-e8add1d4be48
+		sourceLineageTag: e39b1486-a73d-40f7-b9d1-4a15bd39cb96
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: fullname
+
+		annotation SummarizationSetBy = User
+
+	column stp_marktsegmentsales
+		dataType: double
+		lineageTag: e2dababa-0c13-4f70-ab2e-777c5413b4ec
+		sourceLineageTag: 799bfb23-4511-4480-8994-37474ac9b089
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: stp_marktsegmentsales
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Sales Area (Reporting) FINAL'
+		dataType: string
+		lineageTag: f2454a1d-9e89-47c9-9c67-39ede274589c
+		sourceLineageTag: 2f46a9ce-50b6-470a-93d0-81287cbdf79e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area (Reporting) FINAL
+
+		annotation SummarizationSetBy = User
+
+	column ownerid
+		dataType: string
+		isNullable: false
+		lineageTag: 0c0321ac-3541-4a7a-848b-28c59506486a
+		sourceLineageTag: daa2d30e-0b6b-4f34-8077-ad5ac11dd471
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = User
+
+	partition 'dim systemuser' = entity
+		mode: directQuery
+		source
+			entityName: dim systemuser
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

@@ -1,0 +1,198 @@
+table 'fact opportunity_history (backup)'
+	lineageTag: ad3efbab-d716-493c-9949-22977d16bcab
+	sourceLineageTag: 2cbb964e-6428-42f5-9031-5ae335f61d19
+
+	column snapshottimestamp
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c52ec12f-028f-4dc1-959b-92aef3c5939f
+		sourceLineageTag: 0adbecc9-039e-4ad9-8aeb-e44b9ac0846a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: snapshottimestamp
+
+		variation Variation
+			isDefault
+			relationship: 0cd923d3-13cb-491f-9210-ac6a2efd5d3f
+			defaultHierarchy: LocalDateTable_2f7805ae-db72-4716-8201-db8443773e42.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column snapshotweek
+		dataType: int64
+		formatString: 0
+		lineageTag: 22221367-42a6-4eeb-a9c9-1a039407f592
+		sourceLineageTag: c52480c8-1fe1-4760-81d7-b967441c5840
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: snapshotweek
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 1c834bd3-6dc9-421a-8778-6b6a02fbf452
+		sourceLineageTag: 19cc2b59-7ab6-49c2-96f4-98ee108678ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column Done
+		dataType: double
+		lineageTag: 27499ed8-a6db-4e1c-8175-4b5993081107
+		sourceLineageTag: 96e35321-aadd-428e-bec7-e193c2545def
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Done
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Commit
+		dataType: double
+		lineageTag: 3de1dc39-8a62-4808-b6ae-ff51780a31b2
+		sourceLineageTag: a125ced3-3599-43fb-8c00-ec4c9058de51
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Commit
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Probable
+		dataType: double
+		lineageTag: 0ac41252-bbf8-4270-b8ed-65795698be19
+		sourceLineageTag: a20eeede-a3e0-434d-b80d-bb9d1894286c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Probable
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Upside
+		dataType: double
+		lineageTag: 83643865-ec63-4054-abbc-802008dd1b7a
+		sourceLineageTag: cfa553ba-e8c0-4682-9989-586de1c26a2f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Upside
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Pipeline
+		dataType: double
+		lineageTag: 0866acac-7ec3-46d5-b5ae-12fbf90f0b8c
+		sourceLineageTag: 111d9966-7c96-4932-81b5-abf1bffd5851
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Pipeline
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lost
+		dataType: double
+		lineageTag: 4d4d70df-a031-42bd-ab03-af784c582763
+		sourceLineageTag: 6c700c79-c9e6-4a77-92ca-9d1eddbec9ec
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Lost
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CW_SA
+		dataType: string
+		lineageTag: 387e6317-7319-47f8-961c-c2f72039ea37
+		sourceLineageTag: 6f024731-d189-4fd7-b442-380b88578ca4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CW_SA
+
+		annotation SummarizationSetBy = User
+
+	column Q
+		dataType: string
+		lineageTag: 708d3cc8-bc2a-4737-b1d6-bc53392b41d6
+		sourceLineageTag: fc550e22-3ac3-45b0-8eab-40bf182aa90d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Q
+
+		annotation SummarizationSetBy = User
+
+	column BoQ
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e0c25c54-5333-4069-9349-4b068449f223
+		sourceLineageTag: ec0b4786-0e19-42cd-b703-4090ed878a67
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoQ
+
+		variation Variation
+			isDefault
+			relationship: e5b2ba2b-6759-4162-9032-d7df5d5b9fd1
+			defaultHierarchy: LocalDateTable_35eaf9b4-f81b-468b-b5b2-6d7fc60ce20b.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Forecast'
+		dataType: int64
+		formatString: 0
+		lineageTag: cb57f003-139b-47a4-afd1-a8cf9755fd0a
+		sourceLineageTag: be7751b8-b880-4698-94ad-db9023fbcb4e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sales Forecast
+
+		annotation SummarizationSetBy = User
+
+	column SA_BoQ
+		dataType: string
+		lineageTag: fb4dcc41-d7f5-4db8-8ada-e10fdaf33701
+		sourceLineageTag: 88566c4b-c828-40ce-8a7b-921134ad037f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SA_BoQ
+
+		annotation SummarizationSetBy = User
+
+	column 'Bud Quarter'
+		dataType: int64
+		formatString: 0
+		lineageTag: d4edc297-6df3-458e-b3da-aa626e70577c
+		sourceLineageTag: 8d27c577-d439-4e17-a32e-4a31f4abf382
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Bud Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Target
+		dataType: int64
+		formatString: 0
+		lineageTag: afa20be6-2903-4ce7-b09c-41d7108def7b
+		sourceLineageTag: 72027354-8853-4d4d-bf19-7b8f04046c77
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = User
+
+	partition 'fact opportunity_history (backup)' = entity
+		mode: directQuery
+		source
+			entityName: fact opportunity_history (backup)
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

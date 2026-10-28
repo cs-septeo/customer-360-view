@@ -1,0 +1,95 @@
+table 'Sales Cockpit Target Chart'
+	lineageTag: f23ecb3a-2b21-452a-b7cf-53917fdcfde0
+	sourceLineageTag: 6b4dcc5b-7dc8-4217-96e9-a5a3871ebbaf
+
+	measure 'All Min' = EXTERNALMEASURE("All Min", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 08976651-eb58-4f26-ac98-dcb7513bb6f9
+		sourceLineageTag: 922ae7f7-e37d-4e47-961e-5fb44db99561
+		dataCategory: Uncategorized
+
+	measure 'Month Max' = EXTERNALMEASURE("Month Max", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 8aa0f734-d611-471c-aaad-e395d58cbae7
+		sourceLineageTag: f337f3a1-02ab-4823-885f-9ebac7db7357
+		dataCategory: Uncategorized
+
+	measure 'Quarter Max' = EXTERNALMEASURE("Quarter Max", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 1206f162-2c61-4eac-be17-f002b9edd7b3
+		sourceLineageTag: b5394f02-fcd4-4ab1-96ed-05714dd49bfd
+		dataCategory: Uncategorized
+
+	measure 'Week Max' = EXTERNALMEASURE("Week Max", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 5e20c495-194c-4d3a-aa16-3dff9009dccd
+		sourceLineageTag: 65ac4ebb-cbf5-4f19-a715-9405f27f5d3e
+		dataCategory: Uncategorized
+
+	measure 'Year Max' = EXTERNALMEASURE("Year Max", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: bc16c997-f96b-4de6-a141-49eab31703ec
+		sourceLineageTag: 81915036-146e-4be1-9548-2ead32084d72
+		dataCategory: Uncategorized
+
+	column 'Sales Area'
+		dataType: string
+		isNullable: false
+		lineageTag: 759b5013-9d8e-45f2-8c93-2f0bc516c043
+		sourceLineageTag: b7be8c1e-80ea-4d0a-8ebf-02074e9adbd0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: b8f5b0f6-2106-4f64-9264-9890a1419c23
+		sourceLineageTag: 540958d2-3bd4-4f15-a865-34eef5c2f79b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: caa0f8ac-7200-4921-a758-08085b62ac95
+		sourceLineageTag: 9d8ca9ab-3d89-4c78-8fd9-f8fd2c9c015f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 1169fe45-aa19-4605-b567-ac0d907a30d8
+		sourceLineageTag: 64c0e7f8-03e9-4815-bd9c-b6f8060e3c2c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Week
+		dataType: int64
+		formatString: 0
+		lineageTag: 57265afc-1bf1-4b8d-b42d-1cab853d11cd
+		sourceLineageTag: 37fc1b61-a2bd-490c-80ce-dc4063f72447
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Week
+
+		annotation SummarizationSetBy = User
+
+	partition 'Sales Cockpit Target Chart' = entity
+		mode: directQuery
+		source
+			entityName: Sales Cockpit Target Chart
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

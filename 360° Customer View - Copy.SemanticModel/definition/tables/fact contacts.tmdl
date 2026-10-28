@@ -1,0 +1,486 @@
+table 'fact contacts'
+	lineageTag: 4b2e54af-d2b5-43ed-80a4-09e2d96adecc
+	sourceLineageTag: 699bd49c-e5e9-4b46-b000-203eb4fa21a2
+
+	column ncx_hierarchygrandparentaccountid
+		dataType: string
+		lineageTag: 97280055-bb77-4fe1-bed9-b8f072c1750d
+		sourceLineageTag: 4b4f1a8e-80d2-41ab-a69d-07ec9b7c31f8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_hierarchygrandparentaccountid
+
+		annotation SummarizationSetBy = User
+
+	column donotemail
+		dataType: string
+		lineageTag: 46f13a42-04ba-422f-a3de-664343eac32a
+		sourceLineageTag: 29729897-7654-4437-af6f-23643be2f384
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: donotemail
+
+		annotation SummarizationSetBy = User
+
+	column ncx_einwilligungcode
+		dataType: string
+		lineageTag: d5e9fd1e-1a37-48c4-812f-5346bcb91b41
+		sourceLineageTag: 181d9f23-faf1-47b6-89db-5372714eba04
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_einwilligungcode
+
+		annotation SummarizationSetBy = User
+
+	column firstname
+		dataType: string
+		lineageTag: d8e4624d-556b-4f56-b776-5d53324f19bc
+		sourceLineageTag: 75395a5d-30af-4ca2-9441-7e040f97f09d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: firstname
+
+		annotation SummarizationSetBy = User
+
+	column stp_productnews
+		dataType: string
+		lineageTag: f712f79a-5e82-4616-8a23-e003d0738440
+		sourceLineageTag: d8b8e89b-7a9d-4d24-81c2-af452eb95bbe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_productnews
+
+		annotation SummarizationSetBy = User
+
+	column donotpostalmail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c9ee560b-27af-4cc7-8f30-5496dc54edd6
+		sourceLineageTag: feaf1f06-9218-4a31-902c-047250687c4a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: donotpostalmail
+
+		annotation SummarizationSetBy = User
+
+	column statecode
+		dataType: string
+		lineageTag: 795dddbd-6b95-446c-8a9a-155955b69b4c
+		sourceLineageTag: d7fbad3e-2705-4a11-8148-85c2109d0a6d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = User
+
+	column stp_event
+		dataType: string
+		lineageTag: 510a48df-c3fe-4ec8-9c41-78f60e2af78c
+		sourceLineageTag: 0c451344-fe76-4231-9608-fcd62d26ab41
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_event
+
+		annotation SummarizationSetBy = User
+
+	column owninguser
+		dataType: string
+		lineageTag: 993a81e4-b851-4d9c-8809-32052b642c7e
+		sourceLineageTag: 24e15619-06b2-4f55-b7c4-0339643a2e94
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = User
+
+	column address1_country
+		dataType: string
+		lineageTag: 9f11610d-0fde-43f1-8a70-cf2306a08968
+		sourceLineageTag: 41243942-372f-4483-bcf1-c2bcafe5a325
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: address1_country
+
+		annotation SummarizationSetBy = User
+
+	column emailaddress1
+		dataType: string
+		lineageTag: 27422cde-4398-4af2-9229-45a91a88ddd0
+		sourceLineageTag: bd756757-a6f8-4e3e-bebd-f54a7078c7a9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: emailaddress1
+
+		annotation SummarizationSetBy = User
+
+	column accountid
+		dataType: string
+		lineageTag: 2817fd69-0c03-45ef-8208-43ffc8420cb7
+		sourceLineageTag: 6e4cf950-8685-4049-9bf8-f80c2ef93a1f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: accountid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_marktsegmentcode
+		dataType: int64
+		formatString: 0
+		lineageTag: fa3f8c67-daa1-4ce2-bc33-c500c75035b2
+		sourceLineageTag: 22bbb95c-8fe4-46a3-9c77-6a9d89b44534
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_marktsegmentcode
+
+		annotation SummarizationSetBy = User
+
+	column createdon
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: f9bfefd0-be67-4af4-b34a-b95ddf72f35d
+		sourceLineageTag: 33891d2f-89ef-44d4-aa03-ac9a1594be00
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: 59a583ce-31f4-4b40-b851-29c081d90af0
+			defaultHierarchy: LocalDateTable_09b0c032-0ded-4710-aa56-79f4796a2f13.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column fullname
+		dataType: string
+		lineageTag: 4ce23972-8063-4ffd-ade0-f6074e61d107
+		sourceLineageTag: 921292d1-9445-453e-ad6f-16ee481db259
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: fullname
+
+		annotation SummarizationSetBy = User
+
+	column parentcontactid
+		dataType: string
+		lineageTag: f181dd10-13d1-466e-9c93-68de2fb1ce9d
+		sourceLineageTag: 3996658c-fab1-49a7-b7bb-1a502cf870fb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: parentcontactid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_firstcontact
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: e7a0dd1b-db38-42a9-82bb-4281e47a51c5
+		sourceLineageTag: fca1b877-849a-4442-bd36-f240c5e80859
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_firstcontact
+
+		variation Variation
+			isDefault
+			relationship: 576d861b-008c-49d1-83b0-c8f6b2d4381d
+			defaultHierarchy: LocalDateTable_91136e67-9204-44a5-b52d-86df0094d640.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column stp_newsletteradvoware
+		dataType: string
+		lineageTag: cf36689e-93d6-41a9-beb9-72787b257a68
+		sourceLineageTag: 215b59ef-da71-4196-8de4-c676ebf65647
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_newsletteradvoware
+
+		annotation SummarizationSetBy = User
+
+	column donotphone
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2c5de6e9-fba8-420d-985d-025720582a50
+		sourceLineageTag: 7a15ccc2-d2bd-43bf-9784-94fa6d6a795c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: donotphone
+
+		annotation SummarizationSetBy = User
+
+	column address1_city
+		dataType: string
+		lineageTag: e15a473a-c70c-4aa6-a09f-cada9fb060c8
+		sourceLineageTag: ae3b1de9-d48a-47f4-8d96-c583514e2ab8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: address1_city
+
+		annotation SummarizationSetBy = User
+
+	column contactid
+		dataType: string
+		lineageTag: f8107eca-e287-4041-9646-71742503d8ef
+		sourceLineageTag: 672409ef-c5da-4b64-b52a-642d5c8c2c2e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: contactid
+
+		annotation SummarizationSetBy = User
+
+	column stp_marketplace
+		dataType: string
+		lineageTag: b7eb826b-ab84-4fa6-b010-137fa2759980
+		sourceLineageTag: 48336161-2ef5-4ebd-b5c0-87f61cd3cbbb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_marketplace
+
+		annotation SummarizationSetBy = User
+
+	column donotbulkpostalmail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 56561632-5fab-43a4-8bc7-ba3b8123e612
+		sourceLineageTag: c6230f87-f05a-40b9-9a5b-5518cb490675
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: donotbulkpostalmail
+
+		annotation SummarizationSetBy = User
+
+	column donotbulkemail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: fcbae45f-d806-4ecb-a8a6-8d60c858e8c5
+		sourceLineageTag: cab28621-458d-4bc7-aae9-d9a803799a05
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: donotbulkemail
+
+		annotation SummarizationSetBy = User
+
+	column ncx_funktionzweicode
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d4f6a29-4cb5-4c27-bef7-1a5d59e72c26
+		sourceLineageTag: 6c0d8092-1048-4d46-906b-e5ce4abfacab
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_funktionzweicode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_firmaid
+		dataType: string
+		lineageTag: 01df1855-090d-49be-b9f2-5d2198974f02
+		sourceLineageTag: ac9d3c03-31a8-4c56-8ddd-ba7aafb559bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_firmaid
+
+		annotation SummarizationSetBy = User
+
+	column ownerid
+		dataType: string
+		lineageTag: b3f7f6ee-cfea-42f8-a21c-72309d97bfcf
+		sourceLineageTag: 4f59ea06-4755-4100-badf-022261d4819b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_funktioncode
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ee21cd2-3cf1-49ee-b01b-f669b3cbe4ea
+		sourceLineageTag: dc6ac757-aab6-4801-9690-81d5492d021d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_funktioncode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_anrede
+		dataType: string
+		lineageTag: 810611bd-292d-4c2f-a5fe-f3932b399637
+		sourceLineageTag: fbf4dbe9-da06-4151-a62f-a99a61c2e2e4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_anrede
+
+		annotation SummarizationSetBy = User
+
+	column address1_postalcode
+		dataType: string
+		lineageTag: 2631a39c-2970-454a-bd0f-2fcd1de8a64e
+		sourceLineageTag: 718e231e-c7d7-4d82-b41f-95bd892b296d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: address1_postalcode
+
+		annotation SummarizationSetBy = User
+
+	column address1_line1
+		dataType: string
+		lineageTag: 7696422d-08f9-42c3-b697-e60119ddc9a4
+		sourceLineageTag: 17fe2de9-2f3e-4e1d-bea2-cef5a389ab27
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: address1_line1
+
+		annotation SummarizationSetBy = User
+
+	column ncx_letzterkontakt
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 52809f77-3180-46db-bb57-021cea5764e7
+		sourceLineageTag: 8fe558e9-b28b-41af-8a12-0a2e3a4b1aca
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_letzterkontakt
+
+		variation Variation
+			isDefault
+			relationship: 8a2f8047-4998-48d7-b636-c6978fffb72f
+			defaultHierarchy: LocalDateTable_69473c88-0fb8-46b9-80ea-3abbaf438e1a.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column parentcustomerid
+		dataType: string
+		lineageTag: b07b7267-456e-4622-b445-2118d360df53
+		sourceLineageTag: 068d6fd4-d122-4ad3-bcd9-ce4b4f2862cd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: parentcustomerid
+
+		annotation SummarizationSetBy = User
+
+	column stp_insightsdownloads
+		dataType: string
+		lineageTag: 917408a0-e2cf-4e58-9957-69f0da7eb406
+		sourceLineageTag: 8151365a-4c10-426a-ba41-c99af9e7ca68
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_insightsdownloads
+
+		annotation SummarizationSetBy = User
+
+	column ncx_hierarchyparentaccountid
+		dataType: string
+		lineageTag: ccb020c7-b28b-4e15-99aa-363b32d757a4
+		sourceLineageTag: 4e398c41-7190-4ac9-a2de-91be295955ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_hierarchyparentaccountid
+
+		annotation SummarizationSetBy = User
+
+	column 'CRM Link (Contact)'
+		dataType: string
+		lineageTag: cc93ec60-12c5-41ba-8fb4-8be40674304e
+		sourceLineageTag: d5f0798a-4cd8-47ff-b23b-d8f15111d506
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: CRM Link (Contact)
+
+		annotation SummarizationSetBy = User
+
+	column ncx_bundeslandid
+		dataType: string
+		lineageTag: 54495dbd-0dae-46cf-9688-2e62812ab62e
+		sourceLineageTag: f9b1acae-b444-4481-9165-59090702a5fa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_bundeslandid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_landid
+		dataType: string
+		lineageTag: 588f2dd0-a44b-49da-962e-faefa30ac033
+		sourceLineageTag: 0302f09c-e6ed-49e1-a91a-044cac6ba572
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_landid
+
+		annotation SummarizationSetBy = User
+
+	column description
+		dataType: string
+		lineageTag: 22947f16-8cb2-4dce-bf21-a852186dd8ac
+		sourceLineageTag: bdf181ca-6814-4dc4-9090-0f0bd3aaaf1f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = User
+
+	column funktion1
+		dataType: string
+		lineageTag: 2648763c-ac5e-46be-9560-37975356f3ce
+		sourceLineageTag: ae309aa5-ebee-4634-a3a6-26e23211edb9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: funktion1
+
+		annotation SummarizationSetBy = User
+
+	column telephone1
+		dataType: string
+		lineageTag: 73e0d2df-6eea-45a8-9071-54015d061bb3
+		sourceLineageTag: da2a6c1b-8694-4a6c-b38f-001a93af49fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: telephone1
+
+		annotation SummarizationSetBy = User
+
+	column lastname
+		dataType: string
+		lineageTag: 32d75018-eab9-41d0-bba4-910b73a9ea91
+		sourceLineageTag: 85cbba15-63ec-4c22-9fcb-a3d84c13ef92
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lastname
+
+		annotation SummarizationSetBy = User
+
+	column ncx_vorangestelltertitel
+		dataType: string
+		lineageTag: 85dd31b6-6568-492b-8fa9-de3ac2b81636
+		sourceLineageTag: 0a236fcd-bdb1-48ca-b163-8745b89f32b0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_vorangestelltertitel
+
+		annotation SummarizationSetBy = User
+
+	column ncx_hauptansprechpartnercode
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 31ce2409-8188-416b-a094-2425ac0ba2b6
+		sourceLineageTag: d20be07f-0264-4f46-9c66-cc9cb73094c5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_hauptansprechpartnercode
+
+		annotation SummarizationSetBy = User
+
+	column stp_letztedatensatzquelldetails2
+		dataType: string
+		lineageTag: 3f8e9ec2-f70c-4797-9582-e96921c61597
+		sourceLineageTag: 91a1a212-339c-4930-923e-a8ae17a5aa14
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_letztedatensatzquelldetails2
+
+		annotation SummarizationSetBy = User
+
+	partition 'fact contacts' = entity
+		mode: directQuery
+		source
+			entityName: fact contacts
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

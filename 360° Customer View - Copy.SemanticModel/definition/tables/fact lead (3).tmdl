@@ -1,0 +1,31 @@
+table 'fact lead (3)'
+	lineageTag: 2b03bea6-dac6-48da-8aa9-98e679365f0a
+	sourceLineageTag: 263e3240-7889-4681-a6f8-f2eb06ae4baf
+
+	column leadid
+		dataType: string
+		isNullable: false
+		lineageTag: 927457d5-bcc4-44ec-b454-2813ae346f0d
+		sourceLineageTag: 1c6dcc83-6de7-4cd7-b4ba-aba732f224bf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: leadid
+
+		annotation SummarizationSetBy = User
+
+	column fullname
+		dataType: string
+		lineageTag: 9384be59-270b-437b-b402-b848c0da0235
+		sourceLineageTag: fb9b09c3-fd8d-4c02-82f0-65446bd5ef39
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: fullname
+
+		annotation SummarizationSetBy = User
+
+	partition 'fact lead (3)' = entity
+		mode: directQuery
+		source
+			entityName: fact lead (3)
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

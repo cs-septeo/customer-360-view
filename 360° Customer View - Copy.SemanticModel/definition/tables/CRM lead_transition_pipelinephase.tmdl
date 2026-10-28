@@ -1,0 +1,373 @@
+table 'CRM lead_transition_pipelinephase'
+	lineageTag: 1423b52f-601d-4b1f-8f9f-924401c7eecb
+	sourceLineageTag: ad3ee123-c03f-41eb-829e-25ac9be99744
+
+	measure '# Transitions' = EXTERNALMEASURE("# Transitions", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 2bd3ba2d-4d9d-4e0d-812a-ef2a8e666ab5
+		sourceLineageTag: aa2f1fb8-5025-4cd2-b8eb-6ca654693953
+		dataCategory: Uncategorized
+
+	column objecttypecode
+		dataType: string
+		lineageTag: 4b4de301-f88d-4519-8315-f56b18501932
+		sourceLineageTag: e4d2d681-c628-499a-b381-3a9b46cef9e2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: objecttypecode
+
+		annotation SummarizationSetBy = User
+
+	column leadid
+		dataType: string
+		lineageTag: 38d57a1b-7bfc-4533-82cc-40010f429df6
+		sourceLineageTag: ca2c7b6c-79cd-45c4-a641-dc36f2538fd0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: leadid
+
+		annotation SummarizationSetBy = User
+
+	column createdon
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: a4475412-14dd-4ab7-ae2a-9edfe074a852
+		sourceLineageTag: a313acbc-d9b4-4409-aefe-7a923300b11d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdon
+
+		annotation SummarizationSetBy = User
+
+	column userid
+		dataType: string
+		lineageTag: 83d3d9b9-3fbd-4c6d-9a44-ed60083e3b39
+		sourceLineageTag: 23e945e1-b20f-48c6-aa5f-570e185e92fb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: userid
+
+		annotation SummarizationSetBy = User
+
+	column transition_backwards
+		dataType: int64
+		formatString: 0
+		lineageTag: f43b1ac6-3727-4135-9e3b-a64ddbd1fd7e
+		sourceLineageTag: 065bd97c-1e14-406e-b73c-d7b303002bd9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: transition_backwards
+
+		annotation SummarizationSetBy = User
+
+	column transition_counter
+		dataType: int64
+		formatString: 0
+		lineageTag: 512b93f7-5024-488f-89de-7f23f308a7b2
+		sourceLineageTag: b043ae8a-1530-4f46-bfab-76ded7859be0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: transition_counter
+
+		annotation SummarizationSetBy = User
+
+	column same_transition_counter
+		dataType: int64
+		formatString: 0
+		lineageTag: 769b5f5a-7b53-4853-af41-a82f7a02d199
+		sourceLineageTag: 419bc8df-c5d2-432a-99b5-15bdaba76344
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: same_transition_counter
+
+		annotation SummarizationSetBy = User
+
+	column first_transition
+		dataType: int64
+		formatString: 0
+		lineageTag: ca3c1c59-4538-486e-8d06-6dd997eb21e1
+		sourceLineageTag: 3f1eece2-db15-4dae-a580-209d60685e4f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: first_transition
+
+		annotation SummarizationSetBy = User
+
+	column last_transition
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c9c4622-3e45-494a-b10a-81cd8a5a6ec6
+		sourceLineageTag: bc3bb6b9-62ef-4a57-b910-fff6677659d8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: last_transition
+
+		annotation SummarizationSetBy = User
+
+	column first_or_last_transition
+		dataType: string
+		lineageTag: d8e51451-3ba0-42fc-bfc3-4ba2309865dc
+		sourceLineageTag: 47903c0a-3e12-4e3c-ac06-6ca10f8ae62b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: first_or_last_transition
+
+		annotation SummarizationSetBy = User
+
+	column currentstage
+		dataType: int64
+		formatString: 0
+		lineageTag: c85ae51a-df50-4fd5-ae84-14626704fd12
+		sourceLineageTag: fa3f6b53-a0fa-47b6-b391-3eba5b0021b0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: currentstage
+
+		annotation SummarizationSetBy = User
+
+	column 'Transition - Timestamp'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: a2a2e444-89e0-4d9e-a65d-6ea129d5c939
+		sourceLineageTag: c140c31f-275d-4d7d-aff5-95613c878481
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Transition - Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 217fba39-b6e2-4edf-a46f-2062cd638c45
+			defaultHierarchy: LocalDateTable_a556c01c-7a20-4c6c-b4db-e0521270a8f2.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column first_or_last_same_transition
+		dataType: string
+		lineageTag: 34cd81ad-384d-4506-9095-ac332fa50240
+		sourceLineageTag: bda0a3da-4c32-45d9-a06c-28967fd3794d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: first_or_last_same_transition
+
+		annotation SummarizationSetBy = User
+
+	column max_same_transition
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b10c8c8-9331-4380-a4b3-1a33e2bcbd5f
+		sourceLineageTag: b4e5b281-7996-4d5b-8058-f8dd53f9fc62
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: max_same_transition
+
+		annotation SummarizationSetBy = User
+
+	column pipelinephase_old
+		dataType: string
+		lineageTag: 4d51a495-a79a-403b-b0c9-f8d24d8f5b6a
+		sourceLineageTag: ab8bf286-bc16-4448-9930-d76f6bef27e4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pipelinephase_old
+
+		annotation SummarizationSetBy = User
+
+	column pipelinephase_new
+		dataType: string
+		lineageTag: 2de59d46-969c-4977-8685-5eb4d8d90e8f
+		sourceLineageTag: 1a4a34b2-41be-415e-b1e5-f2ffb196e7d3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pipelinephase_new
+
+		annotation SummarizationSetBy = User
+
+	column pipelinephase_old_number
+		dataType: int64
+		formatString: 0
+		lineageTag: a9566407-adc6-4154-9657-38cbd6077f07
+		sourceLineageTag: 0e61f06d-09a9-4220-b5bd-05ffe981821c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: pipelinephase_old_number
+
+		annotation SummarizationSetBy = User
+
+	column pipelinephase_new_number
+		dataType: int64
+		formatString: 0
+		lineageTag: da0c05bf-53c3-4415-8e68-4bbbeaf25fca
+		sourceLineageTag: 45077c8b-eb48-45ef-8c0a-b0f359843216
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: pipelinephase_new_number
+
+		annotation SummarizationSetBy = User
+
+	column pipelinephase_transition
+		dataType: string
+		lineageTag: c881661e-c75b-40a4-b56d-c5956e7cc9e6
+		sourceLineageTag: b0d913f3-7650-45cd-980f-e49ac6c2cce0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pipelinephase_transition
+
+		annotation SummarizationSetBy = User
+
+	column pipelinephase_transition_name
+		dataType: string
+		lineageTag: 375044fe-7ba9-4560-b533-80fe6a82525b
+		sourceLineageTag: 0d51bbd3-e96f-42dd-9d71-f494dc15aa64
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pipelinephase_transition_name
+
+		annotation SummarizationSetBy = User
+
+	column pipelinephase_new_counter
+		dataType: double
+		formatString: 0
+		lineageTag: 4a2336f4-d9c3-4c75-b07d-50e5e563bf61
+		sourceLineageTag: e5a0e488-5d0f-4c7f-a7c2-2c11153b2adf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: pipelinephase_new_counter
+
+		annotation SummarizationSetBy = User
+
+	column last_pipelinephase_new
+		dataType: int64
+		formatString: 0
+		lineageTag: 966dfc4f-0bc3-41fa-9d94-12b08cb5c1c3
+		sourceLineageTag: de4e4566-b10e-4664-99ca-849878228c5f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: last_pipelinephase_new
+
+		annotation SummarizationSetBy = User
+
+	column first_pipelinephase_new
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fe2c4d9-a8b6-4dbe-a243-7d1140ee9b4c
+		sourceLineageTag: 3d3ee39d-61a3-4461-a730-15311fb26888
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: first_pipelinephase_new
+
+		annotation SummarizationSetBy = User
+
+	column first_or_last_pipelinephase_new
+		dataType: string
+		lineageTag: abd095dd-1fc7-4143-bffa-04fc37d92531
+		sourceLineageTag: 80ea3890-0203-42c1-934f-1d8d3ecc5883
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: first_or_last_pipelinephase_new
+
+		annotation SummarizationSetBy = User
+
+	column data_update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 489fbd8e-2e06-4bc5-b751-333787ead0fa
+		sourceLineageTag: aa277d74-ca31-4840-bbab-bafe9738eb5e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: data_update
+
+		variation Variation
+			isDefault
+			relationship: e7794c7f-1d64-42de-ba2a-b0bb50068c31
+			defaultHierarchy: LocalDateTable_d065530e-cd72-4141-8094-5571770d2645.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column next_stage
+		dataType: string
+		lineageTag: 53b5d28f-bf0c-4e63-8ff1-6c39618bff21
+		sourceLineageTag: 107bc249-eceb-4a24-9741-733bc9a5c217
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: next_stage
+
+		annotation SummarizationSetBy = User
+
+	column next_stage_number
+		dataType: double
+		lineageTag: 811a710d-f45f-4f2d-893d-fa2f6c0bd420
+		sourceLineageTag: 2f25da9a-7b17-4655-888d-610c845db146
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: next_stage_number
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column next_stage_date
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 03012834-26fa-4a5f-81ea-8e2cae1ff877
+		sourceLineageTag: 859fa1db-3da0-4d15-a0c1-ac6f8da36608
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: next_stage_date
+
+		variation Variation
+			isDefault
+			relationship: d7a338a1-6245-4bf8-94ce-f4ab85f645c6
+			defaultHierarchy: LocalDateTable_221317c7-c043-4fa8-868f-5a3c97647538.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column days_between_two_conseq_stages
+		dataType: double
+		lineageTag: 3804b561-ddc3-40dc-b5d8-078ce7546eab
+		sourceLineageTag: b3aafbd5-b174-44d6-a05a-4afbdbf1de9b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: days_between_two_conseq_stages
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column hours_between_two_conseq_stages
+		dataType: double
+		lineageTag: b0d9fadd-a322-40bb-83b3-8256a53d5b60
+		sourceLineageTag: 97974e0e-29ce-4689-9853-42356b186805
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: hours_between_two_conseq_stages
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column auditid
+		dataType: string
+		lineageTag: 3e82039c-376d-417c-89d2-42339c681a21
+		sourceLineageTag: 869f4617-6e39-4d48-922a-f40df3918eb8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: auditid
+
+		annotation SummarizationSetBy = User
+
+	column 'User Fullname'
+		dataType: string
+		lineageTag: fa8f3129-010b-45a3-b5aa-6c77253da7ef
+		sourceLineageTag: 70b4459c-5d02-4791-8efe-5829e0717d96
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: User Fullname
+
+		annotation SummarizationSetBy = User
+
+	partition 'CRM lead_transition_pipelinephase' = entity
+		mode: directQuery
+		source
+			entityName: CRM lead_transition_pipelinephase
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

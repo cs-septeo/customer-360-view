@@ -1,0 +1,631 @@
+table 'fact opportunity_history'
+	lineageTag: 5f5fded6-602c-44f4-af91-94ac91ba1476
+	sourceLineageTag: 8adb4d1b-4209-4741-b3a3-5e39c279a06b
+
+	measure 'ACV (Done) Hist' = EXTERNALMEASURE("ACV (Done) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 83250ce5-1d76-4c60-b942-5688ab682710
+		sourceLineageTag: fffaef0e-cbba-4dc0-9d83-1703e434d3c6
+		dataCategory: Uncategorized
+
+	measure 'End ACV (Done) Hist' = EXTERNALMEASURE("End ACV (Done) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 6155edfb-fccd-41bb-bb15-46fe864e0c3d
+		sourceLineageTag: 95cecf5b-b409-4f26-96d3-fd245a1abd04
+		dataCategory: Uncategorized
+
+	measure 'Start ACV (Done) Hist' = EXTERNALMEASURE("Start ACV (Done) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 09b39941-d5fd-4d30-939b-f8e0723186d7
+		sourceLineageTag: 7f720fb2-7dbe-4c60-a2eb-db07778b1dee
+		dataCategory: Uncategorized
+
+	measure 'Δ Done History' = EXTERNALMEASURE("Δ Done History", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		displayFolder: Opp History Measures
+		lineageTag: f0935013-5ee9-4ac5-97d0-11c8ba7be4b9
+		sourceLineageTag: 1188542e-1c74-4d90-aea1-e02d17f13b1c
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Δ Done Hist' = EXTERNALMEASURE("Δ Done Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: fcaf3409-6214-4ff6-bbb3-d4c7373f3eb0
+		sourceLineageTag: 637768fc-cec4-4634-ac1b-03ab5741ff89
+		dataCategory: Uncategorized
+
+	measure 'BUD Hist' = EXTERNALMEASURE("BUD Hist", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 9e5f40a3-75f0-4df0-b4bd-21b095e7b255
+		sourceLineageTag: 16c6bfd8-1f0c-4052-b7d3-497cc6f2233a
+		dataCategory: Uncategorized
+
+	measure 'FC Hist' = EXTERNALMEASURE("FC Hist", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 10d09ee4-7f19-454c-a2b4-a256f0cd4051
+		sourceLineageTag: 0f25203b-7ad4-4ba2-9b11-abda5e2f21ee
+		dataCategory: Uncategorized
+
+	measure 'ACV (Commit) Hist' = EXTERNALMEASURE("ACV (Commit) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		displayFolder: Opp History Measures
+		lineageTag: ae395d8b-5510-4962-957e-bf2c32c03db6
+		sourceLineageTag: 2b8b7d6a-2e86-4a97-9b6e-bcdbfee6d538
+		dataCategory: Uncategorized
+
+	measure 'ACV (Probable) Hist' = EXTERNALMEASURE("ACV (Probable) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 2891a37b-032c-4289-aaba-4d03c97ea446
+		sourceLineageTag: 473d41c4-1fe1-43c5-ab34-b055eb79be7b
+		dataCategory: Uncategorized
+
+	measure 'ACV (Upside) Hist' = EXTERNALMEASURE("ACV (Upside) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		displayFolder: Opp History Measures
+		lineageTag: 4c956a55-1594-4063-b6e3-b00c5f028f69
+		sourceLineageTag: e11134c1-895f-4cd6-a8e8-78bc90a9f9e6
+		dataCategory: Uncategorized
+
+	measure 'ACV (Pipeline) Hist' = EXTERNALMEASURE("ACV (Pipeline) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 86090f1c-250f-4ab7-9253-d8ffdf8e58e9
+		sourceLineageTag: 71d465e9-36ef-496f-9c76-c323f2586452
+		dataCategory: Uncategorized
+
+	measure 'End ACV (Commit) Hist' = EXTERNALMEASURE("End ACV (Commit) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: c488fdfb-212f-415f-9dbd-b99b3efe5eac
+		sourceLineageTag: a6baeb91-a6ed-4894-a942-c3fc95b82b25
+		dataCategory: Uncategorized
+
+	measure 'End ACV (Probable) Hist' = EXTERNALMEASURE("End ACV (Probable) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 0386b8f0-6532-4111-aa10-5d9852f3c913
+		sourceLineageTag: f61a3b70-ae00-4390-b56b-e804ac2d5928
+		dataCategory: Uncategorized
+
+	measure 'End ACV (Upside) Hist' = EXTERNALMEASURE("End ACV (Upside) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 395c4431-3361-43b6-a135-373b22189901
+		sourceLineageTag: 731c3193-8efe-4f21-bf0a-f5d02bf14a8e
+		dataCategory: Uncategorized
+
+	measure 'End ACV (Pipeline) Hist' = EXTERNALMEASURE("End ACV (Pipeline) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 0e08f7b9-e58a-45ac-be80-ffa0629856ee
+		sourceLineageTag: d2040775-78e0-47f6-83c4-7971d33632b4
+		dataCategory: Uncategorized
+
+	measure 'End BUD Hist' = EXTERNALMEASURE("End BUD Hist", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 50d77ce7-e658-404c-a570-3dd30d1ac5bd
+		sourceLineageTag: eea72cf7-b119-4821-ad4a-bb8ef4671d61
+		dataCategory: Uncategorized
+
+	measure 'End FC Hist' = EXTERNALMEASURE("End FC Hist", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 3d6aeb65-68f4-44cf-ad89-41fb946ee45d
+		sourceLineageTag: 62eb2079-22a5-420b-83d5-f6a2692758aa
+		dataCategory: Uncategorized
+
+	measure 'Start ACV (Commit) Hist' = EXTERNALMEASURE("Start ACV (Commit) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: fabb86fe-6c3d-4a52-a03f-6750b62d6997
+		sourceLineageTag: 46a2ff9e-1152-4154-9bf5-45d7a99d3481
+		dataCategory: Uncategorized
+
+	measure 'Start ACV (Probable) Hist' = EXTERNALMEASURE("Start ACV (Probable) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 445ccc74-e0db-443b-8665-8d269542ca77
+		sourceLineageTag: 352fc70d-684f-4671-948e-6be95c93f97c
+		dataCategory: Uncategorized
+
+	measure 'Start ACV (Upside) Hist' = EXTERNALMEASURE("Start ACV (Upside) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 3d5d933d-5560-4461-9ff6-833e2dd298cb
+		sourceLineageTag: e8f3a959-970a-453a-8e47-0d9520b3f269
+		dataCategory: Uncategorized
+
+	measure 'Start ACV (Pipeline) Hist' = EXTERNALMEASURE("Start ACV (Pipeline) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 6f4b1a54-12b1-4ac4-8bb0-1ec1f26651c5
+		sourceLineageTag: 40ce2d9f-d2c7-4863-92c0-bb1e2a6ca366
+		dataCategory: Uncategorized
+
+	measure 'Start BUD Hist' = EXTERNALMEASURE("Start BUD Hist", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: df5da714-6273-4b84-a719-4dc22dc3df48
+		sourceLineageTag: b376f09f-f866-4faa-8595-071d04308e76
+		dataCategory: Uncategorized
+
+	measure 'Start FC Hist' = EXTERNALMEASURE("Start FC Hist", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 45d3ea17-eac3-4ee2-ac92-e93829d6a2e1
+		sourceLineageTag: eb3d3ed1-39d0-4258-b982-17274b85c835
+		dataCategory: Uncategorized
+
+	measure 'Δ BUD Hist' = EXTERNALMEASURE("Δ BUD Hist", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 1ccc66ff-d030-4497-a9ba-d384c572a97f
+		sourceLineageTag: ba5e99ad-7af2-41ed-9114-6353d7f40675
+		dataCategory: Uncategorized
+
+	measure 'Δ FC Hist' = EXTERNALMEASURE("Δ FC Hist", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 896e7441-ce97-4266-bf5a-1571e55a8cbd
+		sourceLineageTag: ef184302-7a6b-4eb3-9433-7a28f20de4ab
+		dataCategory: Uncategorized
+
+	measure 'Δ Commit Hist' = EXTERNALMEASURE("Δ Commit Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 583c9c1c-fd98-4e46-9ebb-559ead1b9b40
+		sourceLineageTag: 2581ab05-27ca-44c9-be32-0bb65724017b
+		dataCategory: Uncategorized
+
+	measure 'Δ Probable Hist' = EXTERNALMEASURE("Δ Probable Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: fdcec962-bb0b-47c5-a8b9-e1ccae17243e
+		sourceLineageTag: 0e290685-4426-4464-a791-8541d1db2aff
+		dataCategory: Uncategorized
+
+	measure 'Δ Upside Hist' = EXTERNALMEASURE("Δ Upside Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: b8f432a9-17cf-45ab-a5aa-bcecf6b2cdc0
+		sourceLineageTag: 14c1103f-1ac8-4035-af75-c3e9d40c5ee7
+		dataCategory: Uncategorized
+
+	measure 'Δ Pipeline Hist' = EXTERNALMEASURE("Δ Pipeline Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 4860141b-40b0-4fc1-8d54-53915af30e8a
+		sourceLineageTag: 6ffe7caa-02d6-4065-8cbf-1bc85f7b5420
+		dataCategory: Uncategorized
+
+	measure 'ACV (Total Pipeline) Hist' = EXTERNALMEASURE("ACV (Total Pipeline) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Opp History Measures
+		lineageTag: 23d088f4-2f27-4e54-985b-2593827ec601
+		sourceLineageTag: 425080e2-4655-4625-9e68-9d52cd4dedc9
+		dataCategory: Uncategorized
+
+	measure 'End ACV (Total Pipeline) Hist' = EXTERNALMEASURE("End ACV (Total Pipeline) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: cebb908b-0367-47fe-b3ca-bdfe6648b75a
+		sourceLineageTag: db5bb047-7229-4967-bd16-a28982132526
+		dataCategory: Uncategorized
+
+	measure 'Start ACV (Total Pipeline) Hist' = EXTERNALMEASURE("Start ACV (Total Pipeline) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: be83b8c3-6ab0-4501-adc8-5367441b14a9
+		sourceLineageTag: bda8c3ec-05e8-43a5-8b10-c7911fecc85f
+		dataCategory: Uncategorized
+
+	measure 'ACV (CP) Hist' = EXTERNALMEASURE("ACV (CP) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		displayFolder: Opp History Measures
+		lineageTag: 0f364364-d23d-4afc-9976-0936726ca7e7
+		sourceLineageTag: bacdaea8-8ad6-4de6-a2af-9f2fada7f535
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'End ACV (CP) Hist' = EXTERNALMEASURE("End ACV (CP) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		displayFolder: Opp History Measures
+		lineageTag: 41897cca-2710-4bb7-bf7a-9e8bc7b67ea4
+		sourceLineageTag: d97968da-0005-4781-af35-6d1ceccc6542
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'End CP Coverage % 2' = EXTERNALMEASURE("End CP Coverage % 2", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Opp History Measures
+		lineageTag: 4cc168f9-7642-4991-9acd-8cca080d0b71
+		sourceLineageTag: ab30326e-b29e-4f10-bde9-f2b47bff798a
+		dataCategory: Uncategorized
+
+	measure 'Start CP Coverage % 2' = EXTERNALMEASURE("Start CP Coverage % 2", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Opp History Measures
+		lineageTag: 41d924c3-95a8-4678-b1a5-ea0a1e7c645a
+		sourceLineageTag: 49582244-350a-4599-9d50-b4916257da99
+		dataCategory: Uncategorized
+
+	measure 'Δ Total Pipeline Hist' = EXTERNALMEASURE("Δ Total Pipeline Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: dcdae9b6-8da7-4f45-ba97-a8b58c8a4d85
+		sourceLineageTag: 8b06a97b-5e02-4507-96e1-36209701e6ac
+		dataCategory: Uncategorized
+
+	measure 'ACV (DCP) Hist' = EXTERNALMEASURE("ACV (DCP) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		displayFolder: Opp History Measures
+		lineageTag: 7d5bd67d-8db6-4a8b-8758-5b4a44e01de8
+		sourceLineageTag: 25d269f5-ecac-49d9-aeff-ecb4dc4dc746
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'End ACV (DCP) Hist' = EXTERNALMEASURE("End ACV (DCP) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: 6e6caa5f-edc5-48fd-beb1-1f918d1ab28d
+		sourceLineageTag: 6d8fa46e-1254-40f8-8c45-48348ac587ad
+		dataCategory: Uncategorized
+
+	measure 'Start ACV (DCP) Hist' = EXTERNALMEASURE("Start ACV (DCP) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: ceda263c-6bde-49f7-83ab-ab0bec85a4d1
+		sourceLineageTag: cdb7eab5-e824-4bc9-98de-a7b7b9378131
+		dataCategory: Uncategorized
+
+	measure 'Δ DCP Hist' = EXTERNALMEASURE("Δ DCP Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		displayFolder: Opp History Measures
+		lineageTag: efe9f1d1-89b1-46eb-9e05-3b1698c814fa
+		sourceLineageTag: 9b074d68-16b6-4edb-bdfa-8009073b8f0f
+		dataCategory: Uncategorized
+
+	column snapshottimestamp
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 483bd478-a4c3-41e8-bd94-773fe328be91
+		sourceLineageTag: fffcf512-1100-493f-ab55-2261a2e5402d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: snapshottimestamp
+
+		variation Variation
+			isDefault
+			relationship: 854c285d-eacb-4858-89dc-cf53432462e5
+			defaultHierarchy: LocalDateTable_d376604c-ed73-472a-bc08-73b3d41d6dda.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column snapshotweek
+		dataType: double
+		formatString: 0
+		lineageTag: 6eab6871-15ce-4b04-a255-51bd043ce966
+		sourceLineageTag: edc60cb3-8a55-4922-b01c-71db12493a2a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: snapshotweek
+
+		annotation SummarizationSetBy = User
+
+	column Pipeline
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: d3806f6f-a218-4258-9ee0-8a432ffbac94
+		sourceLineageTag: 2c49898d-a121-44ca-b906-7bd846931722
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Pipeline
+
+		annotation SummarizationSetBy = User
+
+	column Done
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: c3ca27cf-d76d-4260-8889-33421290fa5b
+		sourceLineageTag: 8a54b7e3-58eb-4fd0-aa8b-dd7d043e0c47
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Done
+
+		annotation SummarizationSetBy = User
+
+	column Upside
+		dataType: double
+		lineageTag: 6891a189-a04a-4674-9f27-278d0c51a90b
+		sourceLineageTag: e48fee7b-de20-47f3-ac3e-5e87f72c01ea
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Upside
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lost
+		dataType: double
+		lineageTag: bbfbb92e-200e-4fd6-8f44-a07019d1ed9b
+		sourceLineageTag: d7d8d67a-59e4-4ffa-90d1-40930a2e6480
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Lost
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Commit
+		dataType: double
+		lineageTag: 954d89c7-d350-4dd9-9769-e88e5d85072a
+		sourceLineageTag: c52ca36b-c72d-4dff-b45d-63f8fd7a038f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Commit
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Probable
+		dataType: double
+		lineageTag: 2117ccc4-8ab5-4a4c-8c3a-16ae5f920308
+		sourceLineageTag: 35e70640-7eb5-44a3-86ce-800b459659c7
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Probable
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CW_SA
+		dataType: string
+		lineageTag: 1a025d19-bbc5-4d9a-99d2-5412f8ea331a
+		sourceLineageTag: f0e405d1-95e5-41fb-ad26-17de33712b66
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CW_SA
+
+		annotation SummarizationSetBy = User
+
+	column Q
+		dataType: string
+		lineageTag: d574e823-8a4a-46c1-b694-a8c0c405c700
+		sourceLineageTag: 4afe5d50-917f-4f0c-ac79-73e3fe2ad33b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Q
+
+		annotation SummarizationSetBy = User
+
+	column BoQ
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d31be0e5-e40f-4943-a1c5-dd948412ce8e
+		sourceLineageTag: 734b41c2-7637-43d8-afbc-424ca1dff8aa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoQ
+
+		variation Variation
+			isDefault
+			relationship: 7a89b67d-43ed-430e-9246-4f3d4b0d5d04
+			defaultHierarchy: LocalDateTable_41e896d0-ad15-4e0b-877d-743a1ea332c0.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Forecast'
+		dataType: int64
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 2b32b1b0-6aa5-42c0-a53e-aabd17c82d01
+		sourceLineageTag: 031a32e3-bc8f-4758-9603-192f92ccb1cb
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sales Forecast
+
+		annotation SummarizationSetBy = User
+
+	column SA_BoQ
+		dataType: string
+		lineageTag: 3958329e-f794-4a68-a5fd-b96d13a72383
+		sourceLineageTag: 33b4efe6-af7a-4e06-99ad-59f62739cf31
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SA_BoQ
+
+		annotation SummarizationSetBy = User
+
+	column Target
+		dataType: int64
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: c9effd69-5fec-44b8-ac69-8ccd704551be
+		sourceLineageTag: 46051c17-beea-461f-a9ec-69b53d2bb332
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = User
+
+	column 'Bud Quarter'
+		dataType: int64
+		formatString: 0
+		lineageTag: 85012cab-6e28-407c-b9bf-7711b42de016
+		sourceLineageTag: 1b535a51-2b01-4185-bad3-bc200844996c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Bud Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 107c0087-f0c2-4eb1-9786-1723e8030974
+		sourceLineageTag: 8861e5e8-7c61-438d-a423-3268972b8d22
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column year_snap
+		dataType: double
+		formatString: 0
+		lineageTag: fe7cc92e-0b53-4421-94a5-a4143316dccb
+		sourceLineageTag: abdf2d32-09c2-46ef-b4cd-9a0b0b22e53a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: year_snap
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 75b0aebc-747f-4b61-b375-c89db4f83390
+		sourceLineageTag: 96f6a953-a596-415f-81b0-6d86c7a7d07e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column Total_Pipeline
+		dataType: double
+		lineageTag: 615b3556-22ce-4a2f-8c56-86069fda9847
+		sourceLineageTag: 862b8e2e-a2fa-424b-b844-c51113d6c85d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Total_Pipeline
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Forecast_Quarter
+		dataType: double
+		formatString: 0
+		lineageTag: 0a2b21a0-34e6-4c7d-8dc4-75c8bcb4c730
+		sourceLineageTag: 004ae88a-212a-43fc-a48d-5bfd520d6f5a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Forecast_Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Forecast
+		dataType: double
+		lineageTag: 907f35dc-7d32-4fb0-8b2d-ec359577fc9f
+		sourceLineageTag: 3bd3c62d-b7be-40de-b8fd-54ee4d59b9f5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Forecast
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Comments
+		dataType: string
+		lineageTag: 208cc5fa-b535-43b4-8fc1-d1f1b1d2497d
+		sourceLineageTag: 1089f909-edef-4126-b252-433249965ad8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = User
+
+	column Done_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 692829c3-d987-4c3a-bb75-fd13731f3966
+		sourceLineageTag: 71ffbfd9-9b2a-431f-b74e-e63a8065427a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Done_Count
+
+		annotation SummarizationSetBy = User
+
+	column Commit_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 8cfb0de5-27ba-416b-82e6-a7b061d94be0
+		sourceLineageTag: 701ff79c-102d-4e98-a5eb-1f517cfa5a1f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Commit_Count
+
+		annotation SummarizationSetBy = User
+
+	column Probable_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 581bb981-c781-42af-af62-d4d867c2d854
+		sourceLineageTag: 07da4376-d515-4ff6-b9a9-11666a82bbe2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Probable_Count
+
+		annotation SummarizationSetBy = User
+
+	column Upside_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: a571cbe8-bff1-41a7-a9a6-fbb49b5aa465
+		sourceLineageTag: fc0211e7-cb28-49dd-963b-9b9bebf50e11
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Upside_Count
+
+		annotation SummarizationSetBy = User
+
+	column Pipeline_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 81b7eb6d-7cb3-48ea-b21e-b4863f752687
+		sourceLineageTag: ca964336-d69c-4ebe-ba67-5e3e0f0539a5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Pipeline_Count
+
+		annotation SummarizationSetBy = User
+
+	column Lost_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 4669ef7d-4dc0-4f6c-834f-256911e8305b
+		sourceLineageTag: f8045418-fe41-4193-a0a7-550af7d2c542
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Lost_Count
+
+		annotation SummarizationSetBy = User
+
+	column Total_Pipeline_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: 6589c62f-350a-490e-b861-aa50247ea789
+		sourceLineageTag: ca83c387-a72b-420a-9f13-eaf527ec66e7
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Total_Pipeline_Count
+
+		annotation SummarizationSetBy = User
+
+	partition 'fact opportunity_history' = entity
+		mode: directQuery
+		source
+			entityName: fact opportunity_history
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

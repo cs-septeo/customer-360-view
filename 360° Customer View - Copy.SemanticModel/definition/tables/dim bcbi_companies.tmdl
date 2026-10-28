@@ -1,0 +1,81 @@
+table 'dim bcbi_companies'
+	lineageTag: 454e5c3f-3da1-4b51-bba0-7a2a0701f35f
+	sourceLineageTag: c9a926c1-2902-401a-a075-4d3c867dd0fe
+
+	column createdon
+		dataType: string
+		lineageTag: 6860ab3c-8c53-4dbf-b757-2d5e0db3a7a4
+		sourceLineageTag: a991b03d-8570-4d32-9ec9-eca957eb24d1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdon
+
+		annotation SummarizationSetBy = User
+
+	column bcbi_companyid
+		dataType: string
+		isNullable: false
+		lineageTag: a52b6697-551a-4d99-95ac-f988b1f7a56c
+		sourceLineageTag: 9c7f4dad-5758-4950-ace6-b1ab55c358e9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: bcbi_companyid
+
+		annotation SummarizationSetBy = User
+
+	column bcbi_name
+		dataType: string
+		lineageTag: 9a992121-d481-4d64-96d6-f5a12d7820f6
+		sourceLineageTag: 955d1129-940a-4ebc-a93e-2bc62f301af8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: bcbi_name
+
+		annotation SummarizationSetBy = User
+
+	column modifiedon
+		dataType: string
+		lineageTag: 6b391b7a-6dd1-4554-9da5-86b67051ba51
+		sourceLineageTag: bad3f85e-649c-4a3b-88af-d67f36fa01d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		annotation SummarizationSetBy = User
+
+	column bcbi_externalid
+		dataType: string
+		lineageTag: 0e021d4b-e12a-416d-b288-b6ca782726e0
+		sourceLineageTag: a297b4cf-6a10-45bb-b492-bcde8e0bb064
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: bcbi_externalid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_preislistestandardid
+		dataType: string
+		lineageTag: 9c954bf8-0be4-4763-884b-676f3ef18ba1
+		sourceLineageTag: e1240489-59d4-444b-9906-ba9deb420310
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_preislistestandardid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_waehrungstandardid
+		dataType: string
+		lineageTag: 3b79952a-e075-4ba2-b5b9-a2ceb964af69
+		sourceLineageTag: fb90c9c4-6536-40f1-8331-3fcae241259c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_waehrungstandardid
+
+		annotation SummarizationSetBy = User
+
+	partition 'dim bcbi_companies' = entity
+		mode: directQuery
+		source
+			entityName: dim bcbi_companies
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

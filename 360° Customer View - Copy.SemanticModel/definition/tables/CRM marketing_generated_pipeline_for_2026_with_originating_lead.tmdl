@@ -1,0 +1,222 @@
+table 'CRM marketing_generated_pipeline_for_2026_with_originating_lead'
+	lineageTag: 36cf2986-7618-4e06-a2b0-74d2fff60315
+	sourceLineageTag: 6457a0a2-22f4-4347-a525-e824d08a3d3e
+
+	column snapshotyear
+		dataType: int64
+		formatString: 0
+		lineageTag: 61cec81a-4d12-4538-a6eb-644c960a4e3a
+		sourceLineageTag: b3a74a5f-ac19-4e23-bc66-adea477aa21f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: snapshotyear
+
+		annotation SummarizationSetBy = User
+
+	column snapshotweek
+		dataType: int64
+		formatString: 0
+		lineageTag: 656ee76f-2bf8-4474-b48b-d5d0c742ecc2
+		sourceLineageTag: 69094383-e324-456d-9822-e36be881ef96
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: snapshotweek
+
+		annotation SummarizationSetBy = User
+
+	column snapshot_date
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 7af852f6-d8d6-4986-879c-7b450c795da2
+		sourceLineageTag: ab166bc7-0f37-47c3-b47f-1d15cb8f095d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: snapshot_date
+
+		variation Variation
+			isDefault
+			relationship: 8f2809c4-3d62-4ef4-ba58-0efa8210c4e3
+			defaultHierarchy: LocalDateTable_e1edd71e-8fde-492d-80c7-ff96523a2914.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column total_opportunities
+		dataType: int64
+		formatString: 0
+		lineageTag: ef78f2e5-3839-4e24-a6bc-73708800a815
+		sourceLineageTag: c9d8d1fb-4024-4e4a-bd21-ea75924dc8be
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_opportunities
+
+		annotation SummarizationSetBy = User
+
+	column total_acv
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: cdd8c732-a989-4061-861e-899adfcf8afb
+		sourceLineageTag: 43c23d60-3e45-4b90-a0b6-b383284093d5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_acv
+
+		annotation SummarizationSetBy = User
+
+	column pipeline_opps
+		dataType: int64
+		formatString: 0
+		lineageTag: 63d683b8-6921-4b65-9042-66ff2bdcf794
+		sourceLineageTag: 79295b8b-9fc3-4a60-a4ae-158492b7bf89
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: pipeline_opps
+
+		annotation SummarizationSetBy = User
+
+	column pipeline_acv
+		dataType: double
+		lineageTag: f1cf0fe8-9fe7-4785-a8ea-b2b9f985e47e
+		sourceLineageTag: 37d20a2e-1408-442a-b033-f674e5d31f63
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: pipeline_acv
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column upside_opps
+		dataType: int64
+		formatString: 0
+		lineageTag: 1239e437-bdca-40c3-a467-e60686f305ec
+		sourceLineageTag: ac26c83a-9dfa-431c-b274-44c4922fd456
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: upside_opps
+
+		annotation SummarizationSetBy = User
+
+	column upside_acv
+		dataType: double
+		lineageTag: a97aeeb4-0db6-48b9-b779-dcbcfc1dd1a5
+		sourceLineageTag: 7b3e42bf-4bef-4eda-b7fb-92e220ca094f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: upside_acv
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column probable_opps
+		dataType: int64
+		formatString: 0
+		lineageTag: 9671b021-2e0f-419b-8a57-3e3897e6a061
+		sourceLineageTag: 6d72a37d-f762-4358-8365-12f1cfcb64a0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: probable_opps
+
+		annotation SummarizationSetBy = User
+
+	column probable_acv
+		dataType: double
+		lineageTag: a21d4aab-975b-46ec-8b27-93c515d40b5f
+		sourceLineageTag: d695c031-1000-406e-9382-ec3ab4d5b74d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: probable_acv
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column commit_opps
+		dataType: int64
+		formatString: 0
+		lineageTag: 05ee6030-8374-4279-a974-892761a19601
+		sourceLineageTag: ed39fc43-18e8-49a6-b280-a91e81f09bed
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: commit_opps
+
+		annotation SummarizationSetBy = User
+
+	column commit_acv
+		dataType: double
+		lineageTag: b3919fc0-3521-48c2-b3db-024f8571733d
+		sourceLineageTag: 21e1dcac-c301-41ca-b29c-c8dbb1b094c4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: commit_acv
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column done_opps
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a3f5abe-df4b-45e7-86d2-39b7bbce3c73
+		sourceLineageTag: 5fc1d43d-d911-4ab9-8e1d-9ad2fb84f205
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: done_opps
+
+		annotation SummarizationSetBy = User
+
+	column done_acv
+		dataType: double
+		lineageTag: 8d6b6e35-4e56-4523-a9d6-3c9800561361
+		sourceLineageTag: 468bd0e8-8fa7-40e5-8f24-4cf9fc456b5f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: done_acv
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lost_opps
+		dataType: int64
+		formatString: 0
+		lineageTag: 55645a9c-f2c4-4528-838c-19dc092cc2d2
+		sourceLineageTag: a005effb-7431-40ef-ade7-e7217a812e46
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: lost_opps
+
+		annotation SummarizationSetBy = User
+
+	column lost_acv
+		dataType: double
+		lineageTag: 1dc42393-7eb3-4ff4-8c39-d306b6d407f2
+		sourceLineageTag: a57ed56b-45a0-40b9-899a-8857c5329ed0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: lost_acv
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	hierarchy 'snapshotyear Hierarchie'
+		lineageTag: 8cf5267f-4fa8-490b-9262-e58308e743ac
+		sourceLineageTag: 7132142d-7503-412d-94b3-c19ac3766b03
+
+		level snapshotyear
+			lineageTag: 7efd5e1c-0765-44f9-b568-e1d426b93a1c
+			sourceLineageTag: afd40539-14cb-4a11-b9c5-2ff624edfc90
+			column: snapshotyear
+
+		level snapshotweek
+			lineageTag: f4a05356-c9e6-423b-acb7-20a91caf8031
+			sourceLineageTag: 36d6762d-5aa9-4efe-82d9-a226c44f1279
+			column: snapshotweek
+
+	partition 'CRM marketing_generated_pipeline_for_2026_with_originating_lead' = entity
+		mode: directQuery
+		source
+			entityName: CRM marketing_generated_pipeline_for_2026_with_originating_lead
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

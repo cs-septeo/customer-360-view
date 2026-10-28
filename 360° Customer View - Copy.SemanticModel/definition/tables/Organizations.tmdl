@@ -1,0 +1,97 @@
+table Organizations
+	lineageTag: d660e528-2e71-42e7-9ff7-2a69faf19730
+	sourceLineageTag: d4b62ab4-3b2d-47b8-afc7-7f3d58220ece
+
+	column id
+		dataType: string
+		isNullable: false
+		lineageTag: dcc3fdf9-fad4-43ef-88c1-6cad1721df31
+		sourceLineageTag: fe10fdb3-9c24-4222-83ac-9883c7a3c2ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = User
+
+	column name
+		dataType: string
+		lineageTag: b5db0134-c1d6-4161-89f4-68cdc27697dd
+		sourceLineageTag: e06b14f8-fc8b-48d4-9f10-1d9c001809f3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = User
+
+	column created_at
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 35f365a5-5f06-4b9d-9fd2-3d55e3aaef48
+		sourceLineageTag: 29e87c29-9c8c-4aa2-8e22-920f41c6470d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: created_at
+
+		variation Variation
+			isDefault
+			relationship: 5a98f930-a227-42d2-9144-6b384bc3c39d
+			defaultHierarchy: LocalDateTable_2ef7f339-cc12-4ce8-a161-04ddbca566ad.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column external_id
+		dataType: string
+		lineageTag: b9e89ae3-ef8d-464e-8aba-8aa63a959197
+		sourceLineageTag: a8e3bf82-9e12-4667-ae26-696d619b803c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: external_id
+
+		annotation SummarizationSetBy = User
+
+	column organisation_herkunft
+		dataType: string
+		lineageTag: 7473cf91-59e2-41f8-ac9f-42ec949951bc
+		sourceLineageTag: ec891aac-5b71-4052-9379-420aa2df506a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: organisation_herkunft
+
+		annotation SummarizationSetBy = User
+
+	column organisation_debitoren_kundennummer
+		dataType: string
+		lineageTag: 1a634b5b-d5c9-4203-b478-89461d6797ce
+		sourceLineageTag: 8b81929f-3ab1-442a-8305-37c0ba96e893
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: organisation_debitoren_kundennummer
+
+		annotation SummarizationSetBy = User
+
+	column Link
+		dataType: string
+		lineageTag: 60b10fa0-c18e-41ad-9697-b64c6d0023b4
+		sourceLineageTag: 2f39299b-ebfd-4ce5-8bc6-bc3c50d81435
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = User
+
+	column DebitorKey
+		dataType: string
+		lineageTag: c262bec4-072b-4491-9aaa-afef6ca8191d
+		sourceLineageTag: 5a32ef35-5cb1-4a91-a1cb-725eb64c2991
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebitorKey
+
+		annotation SummarizationSetBy = User
+
+	partition Organizations = entity
+		mode: directQuery
+		source
+			entityName: Organizations
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

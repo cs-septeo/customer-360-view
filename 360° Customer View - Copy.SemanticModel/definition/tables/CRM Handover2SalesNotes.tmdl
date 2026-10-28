@@ -1,0 +1,87 @@
+table 'CRM Handover2SalesNotes'
+	lineageTag: 784df62c-6472-4eaa-b1d5-5aa21a34d8ad
+	sourceLineageTag: e4b43e3b-c38d-4cf7-95c3-ff63046a70e8
+
+	column subject
+		dataType: string
+		lineageTag: a4755fd5-37d9-461f-ac13-11dd8e0c4cbb
+		sourceLineageTag: 187cc174-b693-4c6c-a7c7-7c4ebdde6fa2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: subject
+
+		annotation SummarizationSetBy = User
+
+	column createdon
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 383265fa-be9e-41d1-bdc0-0e027ce5b8e9
+		sourceLineageTag: a8779e1e-c265-45db-ad80-6405dc3fc622
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: c5fffc11-8a6d-485e-853d-4c438a52d4df
+			defaultHierarchy: LocalDateTable_bafb7686-9413-453a-9582-4d5e03f3db6f.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column ownerid
+		dataType: string
+		lineageTag: 747eaf01-0198-414e-be14-7d1e2e606096
+		sourceLineageTag: 477163e1-71e6-4b89-98a6-27244d95d042
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = User
+
+	column objectid
+		dataType: string
+		lineageTag: d6d9294b-89ec-499b-b0b5-6e450fc2f8c8
+		sourceLineageTag: 0cfd0b76-0cc7-4a2c-ad9e-acf891f4a913
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: objectid
+
+		annotation SummarizationSetBy = User
+
+	column createdby
+		dataType: string
+		lineageTag: 4af0f425-9d1a-4601-a6d2-36534bc8bb25
+		sourceLineageTag: e1d81e16-3241-48ab-a0e6-3e845fa1595d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = User
+
+	column handover_flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 197f0139-5bcb-4791-aa21-d7c62c74d236
+		sourceLineageTag: 8909e9e4-9cb7-4199-936f-ae834e292f09
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: handover_flag
+
+		annotation SummarizationSetBy = User
+
+	column 'Created By'
+		dataType: string
+		lineageTag: fdb48586-52f2-407f-9165-5cebc20980cf
+		sourceLineageTag: 890e71ec-3afa-4002-9277-d82f6c462ad4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Created By
+
+		annotation SummarizationSetBy = User
+
+	partition 'CRM Handover2SalesNotes' = entity
+		mode: directQuery
+		source
+			entityName: CRM Handover2SalesNotes
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

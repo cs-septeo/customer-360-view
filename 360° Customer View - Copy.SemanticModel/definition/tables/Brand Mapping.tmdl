@@ -1,0 +1,30 @@
+table 'Brand Mapping'
+	lineageTag: b91270b9-6b24-47cd-96c0-57d9df204508
+	sourceLineageTag: 5463965b-ae8b-43f2-bc46-e7dcb624d4be
+
+	column brand_id
+		dataType: string
+		lineageTag: 83fa58a8-f7ac-4a67-b81c-4b89f0a2959c
+		sourceLineageTag: fbeeee74-18b9-4401-a675-0f3946edd7a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: brand_id
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 488f506b-3c65-447a-8f3d-68f0e448002a
+		sourceLineageTag: 69ddc378-b5ee-4bed-bb8f-479cbacf2641
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	partition 'Brand Mapping' = entity
+		mode: directQuery
+		source
+			entityName: Brand Mapping
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

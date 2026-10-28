@@ -1,0 +1,48 @@
+table EndKalenderwoche
+	lineageTag: 176fd887-dc7e-4157-b68d-7ee19a74883e
+	sourceLineageTag: 2cab73b8-24ec-432d-9dfa-825910103913
+
+	measure 'EndKalenderwoche Wert' = EXTERNALMEASURE("EndKalenderwoche Wert", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 6327f134-4d70-418c-a719-71ff6e4cf78f
+		sourceLineageTag: eb8b8329-4d5b-43a9-9808-bb3dd899d31f
+		dataCategory: Uncategorized
+
+	column EndKalenderwoche
+		dataType: int64
+		formatString: 0
+		lineageTag: 9da83ec0-7013-46e3-9317-8dd288c73a83
+		sourceLineageTag: 96b553ba-616e-44f2-9ecd-985be6f2fff6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: EndKalenderwoche
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	column Enddatum
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3bd0c060-a149-4f87-9aad-ded387209d83
+		sourceLineageTag: 875f6ebb-e5c5-49db-9b85-21b24b093e65
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Enddatum
+
+		variation Variation
+			isDefault
+			relationship: f13008e3-8f6c-43ae-a578-9a10224641e5
+			defaultHierarchy: LocalDateTable_37810221-8b3c-406c-b6b4-5fcf7487c692.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	partition EndKalenderwoche = entity
+		mode: directQuery
+		source
+			entityName: EndKalenderwoche
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

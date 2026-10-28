@@ -1,0 +1,106 @@
+table 'BUD Quarterly'
+	lineageTag: b28e548e-22f7-41a3-95ba-d7afd89ed7d3
+	sourceLineageTag: b56867eb-a8fc-4969-a01c-692c6139d5aa
+
+	column SA_BoQ
+		dataType: string
+		lineageTag: 4e1f7368-c8c4-4e9e-8908-e0d812c23a40
+		sourceLineageTag: 6dec56cd-035e-40c3-8e31-2bf520a7f9af
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SA_BoQ
+
+		annotation SummarizationSetBy = User
+
+	column BoQ
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 21ff8686-a868-4dbc-be8e-488ccc4acec1
+		sourceLineageTag: 94401a0f-704d-4f43-a51a-c36f71606b34
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoQ
+
+		variation Variation
+			isDefault
+			relationship: 76994216-b141-4762-8a99-7945d56f43b4
+			defaultHierarchy: LocalDateTable_6f60c970-2a24-44f4-a90d-3fd3c80bb613.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: b656411d-5cf0-4be1-8ae6-a8e1a772f10f
+		sourceLineageTag: 013510f4-307c-4493-bbff-26157db72882
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3c91c6a4-2cba-492a-be8e-936e17e8a7fe
+		sourceLineageTag: f966e075-daca-42d6-b1e8-5fc2a141196c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month
+
+		variation Variation
+			isDefault
+			relationship: ddc755ea-e93d-4fbc-a648-0592db7fe292
+			defaultHierarchy: LocalDateTable_8154f402-5370-445d-8856-2ddfe931edaf.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column Target
+		dataType: int64
+		formatString: 0
+		lineageTag: 93d6be65-bcf7-49b1-80d1-b76dc0d6093e
+		sourceLineageTag: 200fa0bc-c6f8-4908-8baa-a68f7c018b80
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = User
+
+	column Faktor
+		dataType: double
+		lineageTag: 15d08164-07ac-4bb4-ae65-f5b271afb240
+		sourceLineageTag: f1f5b136-081a-4e9a-b3ac-5d728e19d908
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Faktor
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Zusammengeführt
+		dataType: string
+		lineageTag: c89f2345-3c9b-487c-a2b3-5e91ffdc41e5
+		sourceLineageTag: 9db3fb94-d28d-4d9b-998e-c72d6ec5c812
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Zusammengeführt
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 8e58030f-c95a-4781-904f-b9ca6a0c7b07
+		sourceLineageTag: f4355cc0-3d5d-4c0e-805e-44579b2d8574
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	partition 'BUD Quarterly' = entity
+		mode: directQuery
+		source
+			entityName: BUD Quarterly
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

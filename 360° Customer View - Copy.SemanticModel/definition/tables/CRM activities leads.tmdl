@@ -1,0 +1,162 @@
+table 'CRM activities leads'
+	lineageTag: 564c78a3-4836-48f0-b6ca-884b97bb932a
+	sourceLineageTag: 819fc92d-ded1-46f7-98f3-14f85670aeea
+
+	column activitytypecode
+		dataType: string
+		lineageTag: 314860c2-acf1-4c9c-8d8f-c56f3e76eadd
+		sourceLineageTag: b1705a8b-3ba8-41ec-a8ed-ac44ba432746
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: activitytypecode
+
+		annotation SummarizationSetBy = User
+
+	column regardingobjectid
+		dataType: string
+		lineageTag: a67204e9-a3f8-46d7-957c-746b1cb03252
+		sourceLineageTag: e5c3ab67-1521-4c83-8ab6-afb25ace14a4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: regardingobjectid
+
+		annotation SummarizationSetBy = User
+
+	column scheduledstart
+		dataType: string
+		lineageTag: d4d9753d-bea2-4fad-8699-bd3ffb24aeeb
+		sourceLineageTag: a86cbdf9-17e9-4abf-97a2-ab5dbf530e83
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: scheduledstart
+
+		annotation SummarizationSetBy = User
+
+	column scheduledend
+		dataType: string
+		lineageTag: 8fe56db4-7fcc-47e6-9d36-be938de6c4dd
+		sourceLineageTag: 693da88a-41d1-484e-bbd4-01b8b675a1ae
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: scheduledend
+
+		annotation SummarizationSetBy = User
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: abe14965-af4a-42b3-96ef-be7714e0a02b
+		sourceLineageTag: f8b73d1e-da49-4c69-bd68-34e0eb8959aa
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = User
+
+	column activityid
+		dataType: string
+		lineageTag: 40180f68-c509-4a31-ac80-0805a7a3c07d
+		sourceLineageTag: 5d23dcc2-8dc9-45a2-a981-a241c70682f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: activityid
+
+		annotation SummarizationSetBy = User
+
+	column subject
+		dataType: string
+		lineageTag: a742d5f9-257a-4324-bbd2-eeec274bb8b4
+		sourceLineageTag: 7e20e581-fbb4-4d03-9872-e3064c03db37
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: subject
+
+		annotation SummarizationSetBy = User
+
+	column 'Days Left'
+		dataType: int64
+		formatString: 0
+		lineageTag: d81cc507-1034-4691-9b44-db6bb0416e31
+		sourceLineageTag: e46b14f2-ce6b-4966-9399-6b725670bf4e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Days Left
+
+		annotation SummarizationSetBy = User
+
+	column regardingobject_type
+		dataType: string
+		lineageTag: e57ca58b-6da5-4729-b309-ee7d388593ba
+		sourceLineageTag: 6e2f0cb6-b0cb-4062-8739-2e065342ad08
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: regardingobject_type
+
+		annotation SummarizationSetBy = User
+
+	column leadid
+		dataType: string
+		lineageTag: 3812637a-d764-4d7e-a4f8-2e4d4c3dd0e4
+		sourceLineageTag: 83d0b19e-cf93-46ca-a2d8-3d353c7e7154
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: leadid
+
+		annotation SummarizationSetBy = User
+
+	column lead_fullname
+		dataType: string
+		lineageTag: fa4a60ff-88ac-4eed-ad22-022e77541fc5
+		sourceLineageTag: 5a89e7f6-c1c3-43e2-82fb-0c5d2516f2e2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lead_fullname
+
+		annotation SummarizationSetBy = User
+
+	column lead_parentaccountid
+		dataType: string
+		lineageTag: 5a625794-ba1d-4231-a5ea-56375875cbe7
+		sourceLineageTag: 15405059-88d3-4447-82c7-a07892ad93c4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lead_parentaccountid
+
+		annotation SummarizationSetBy = User
+
+	column lead_parentaccount_name
+		dataType: string
+		lineageTag: 1f18c7af-f734-4e0a-a58b-a212faa9af44
+		sourceLineageTag: 24bef401-a54f-4c8b-985a-37689cf59ab5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lead_parentaccount_name
+
+		annotation SummarizationSetBy = User
+
+	column regardingobject_name
+		dataType: string
+		lineageTag: 58a97677-7d06-49d5-9807-773cbd944efb
+		sourceLineageTag: 6f317fb4-fc4d-4355-8e4c-7255abcee297
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: regardingobject_name
+
+		annotation SummarizationSetBy = User
+
+	column accountid_final
+		dataType: string
+		lineageTag: cc4f1712-38a2-4aaf-a2d5-70685a7d4bf3
+		sourceLineageTag: 61ff0508-9a44-4b7c-9ad4-47a02f11bb4a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: accountid_final
+
+		annotation SummarizationSetBy = User
+
+	partition 'CRM activities leads' = entity
+		mode: directQuery
+		source
+			entityName: CRM activities leads
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

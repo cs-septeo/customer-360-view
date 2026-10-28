@@ -1,0 +1,147 @@
+table 'FACT RevenueTracker'
+	lineageTag: d6242842-149f-4d7b-b416-9794968f7104
+	sourceLineageTag: 8de44258-f7ac-4872-ace0-c09d9ecea4ce
+
+	column data_update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 0fcf750d-96f9-4e7a-b055-002357523209
+		sourceLineageTag: 8e9ffd22-c826-49eb-8b20-d53786034f12
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: data_update
+
+		variation Variation
+			isDefault
+			relationship: 56aead18-ed97-429d-930e-46c3c8809b19
+			defaultHierarchy: LocalDateTable_c1f99d63-79fa-4584-9c0d-2e50eb5ae109.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column RowSort
+		dataType: int64
+		formatString: 0
+		lineageTag: 456a0729-b1b2-4fc8-acdf-b60e51f7a004
+		sourceLineageTag: ab444d6c-f6db-4d11-a9f4-20e18c4681ef
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: RowSort
+
+		annotation SummarizationSetBy = User
+
+	column SalesAreaSort
+		dataType: int64
+		formatString: 0
+		lineageTag: ca82d185-6f18-427b-91b6-735a3ba1f89d
+		sourceLineageTag: 21919145-17c3-4c53-93d1-fb26a754a3be
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: SalesAreaSort
+
+		annotation SummarizationSetBy = User
+
+	column ProductSort
+		dataType: int64
+		formatString: 0
+		lineageTag: 83a9e8e1-a0a5-40ca-988a-6efe6c850241
+		sourceLineageTag: 1b0cabf3-7b7a-467c-957e-3b2c8367cbaf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ProductSort
+
+		annotation SummarizationSetBy = User
+
+	column KPISort
+		dataType: int64
+		formatString: 0
+		lineageTag: f0d191c5-3dba-4962-9592-5df73dcd3517
+		sourceLineageTag: 178beb75-c0bd-41c2-a9a3-a1760970da4c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: KPISort
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 7e10ce74-6535-4769-a7d2-5d6f758c2de6
+		sourceLineageTag: cc5d8e4c-83a9-49c8-b8be-7d8d483cd93c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+		sortByColumn: SalesAreaSort
+
+		annotation SummarizationSetBy = User
+
+	column Product
+		dataType: string
+		lineageTag: 97854fd2-f342-4083-bbcb-8869e418f736
+		sourceLineageTag: 8a82d41c-df5b-49a2-b15b-32fb48753961
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Product
+		sortByColumn: ProductSort
+
+		annotation SummarizationSetBy = User
+
+	column KPI
+		dataType: string
+		lineageTag: e3b4b7b7-f8a7-4202-8c1b-6d5bb91f8fd1
+		sourceLineageTag: ac3cba40-b116-4101-894c-8a824a80718d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KPI
+		sortByColumn: KPISort
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 046a04c4-4f15-4035-a348-38877f259695
+		sourceLineageTag: da910ae3-8fbb-4a1d-9457-34eda45f1aad
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column CW
+		dataType: int64
+		formatString: 0
+		lineageTag: eb1e0800-0765-45d7-bf64-136a5ec9f74e
+		sourceLineageTag: 882b0ca1-0f1d-4744-bba5-ed3a99363562
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CW
+
+		annotation SummarizationSetBy = User
+
+	column Year_CW
+		dataType: string
+		lineageTag: 320a7660-8170-4025-8d65-0aa2a806dd37
+		sourceLineageTag: b46d7685-02cf-496a-922a-25941553ce35
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year_CW
+
+		annotation SummarizationSetBy = User
+
+	column Value
+		dataType: double
+		lineageTag: adb11fba-d7bd-434b-a5a4-d15c54c87b04
+		sourceLineageTag: d71c4806-dc2e-4dea-b853-adb794b38d57
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'FACT RevenueTracker' = entity
+		mode: directQuery
+		source
+			entityName: FACT RevenueTracker
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

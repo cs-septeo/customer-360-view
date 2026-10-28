@@ -1,0 +1,796 @@
+relationship e36db2a0-df92-4245-b176-6bca4147b140
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'dim systemuser'.systemuserid
+	toColumn: 'Emp Sales Area Mapping'.systemuserid
+
+relationship 80f91f8d-bf23-4286-9206-e1dbfd3a485e
+	fromColumn: 'fact account'.'Created On'
+	toColumn: LocalDateTable_46174a86-995a-44ed-95df-110cb1423245.Date
+
+relationship 77781d15-71e3-4c81-8e4b-98a147578580
+	isActive: false
+	fromColumn: 'fact account'.ownerid
+	toColumn: 'dim systemuser'.ownerid
+
+relationship ac940e8a-3640-42bc-9ad8-d58d67b83fdb
+	fromColumn: 'fact account'.ncx_landid
+	toColumn: 'dim country'.ncx_countryid
+
+relationship bcdda349-542e-42ca-bbc1-34cc9e17e13e
+	isActive: false
+	fromColumn: 'fact account'.ownerid
+	toColumn: 'Emp Sales Area Mapping'.Ownerid
+
+relationship 3cab7f5e-ab79-4a83-b378-527120b33aa8
+	fromColumn: 'fact account'.bcbi_companyid
+	toColumn: 'dim bcbi_companies'.bcbi_companyid
+
+relationship f1dec92a-c109-42db-a224-3a2443a3a1a6
+	fromColumn: 'fact lead'.'First Contact'
+	toColumn: LocalDateTable_364e00b6-2961-4300-b79e-4ecc6b6bd24c.Date
+
+relationship 2a17789f-014b-4ba4-842a-9b4811f0c110
+	fromColumn: 'fact lead'.'Last Contact'
+	toColumn: LocalDateTable_0c685668-f3ae-4a99-bfa3-87037a658b9a.Date
+
+relationship ce6cd2b7-0c69-448a-84c0-58ae337834ce
+	fromColumn: 'fact lead'.'Closure Date New'
+	toColumn: LocalDateTable_6b1d01a7-e995-4044-9464-da78fb3f641e.Date
+
+relationship c7416e7c-27b1-4575-aff8-4c19beec1fa0
+	fromColumn: 'fact lead'.data_update
+	toColumn: LocalDateTable_d94d49e8-cc8a-487a-aaf5-03cf3a0fd7bf.Date
+
+relationship 2572c77e-4d02-4ce0-9bf1-c2e4323f9758
+	isActive: false
+	fromColumn: 'fact lead'.'Closing Date'
+	toColumn: 'dim datetable'.Date
+
+relationship 3854f1c3-6e9a-46f4-9783-28687d387849
+	isActive: false
+	fromColumn: 'fact lead'.'Created On'
+	toColumn: 'dim datetable'.Date
+
+relationship dc3b846d-23ce-49a2-846d-41b6e81243b6
+	isActive: false
+	fromColumn: 'fact lead'.'Closure Date'
+	toColumn: 'dim datetable'.Date
+
+relationship cba0c60e-7092-4244-bd2a-f26edcd63f56
+	fromColumn: 'fact lead'.'Exp Closing Date (Lead Closed)'
+	toColumn: LocalDateTable_b84faa85-3337-42a6-92d6-bad374357e1e.Date
+
+relationship 3bc3daad-e96d-4271-a4c1-4340a76c1dcb
+	fromColumn: 'fact lead'.'Exp. Closing Date (Opp Closed)'
+	toColumn: LocalDateTable_a7e8513a-6417-47ed-b4df-8a9a5cb09371.Date
+
+relationship 9a4c060a-6a84-446f-9c96-b9df90f76cf9
+	isActive: false
+	fromColumn: 'fact lead'.ownerid
+	toColumn: 'dim systemuser'.systemuserid
+
+relationship b42510f2-352b-46cb-997a-14622e3c13c2
+	fromColumn: 'fact lead'.'Last MQL'
+	toColumn: LocalDateTable_8ceedd7a-672a-4dd7-ae91-2e20d25415bd.Date
+
+relationship daaa0579-3d5d-4d3a-a253-85a1aead999e
+	fromColumn: 'fact lead'.'First MQL'
+	toColumn: LocalDateTable_716957fc-1c1e-4e5c-86e8-7efdca7aee9b.Date
+
+relationship c7291e85-77ab-45ee-b481-7415bc795a47
+	fromColumn: 'fact lead'.'First SQL'
+	toColumn: LocalDateTable_f4af9a1d-3ec9-422d-8fea-d8ba8fc6d667.Date
+
+relationship c4e1d7a6-869c-44ee-8043-7fd8f913ae47
+	fromColumn: 'fact lead'.'Last SQL'
+	toColumn: LocalDateTable_cd27cf28-86a1-4933-88f7-bf466aaca62e.Date
+
+relationship f777245c-4be0-49c5-8aca-0449a711c125
+	fromColumn: 'fact lead'.'Last Phase Transition'
+	toColumn: LocalDateTable_121ecad4-bd2b-4526-965f-58319ca40190.Date
+
+relationship 013b3b07-e6b5-4b2e-a800-6ca0a1d73291
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact lead'.'Opp ID (sec. Mapping)'
+	toColumn: 'fact opportunity'.'Opportunity ID'
+
+relationship 01997959-d32c-47a9-9617-940778cb848d
+	fromColumn: 'fact lead'.modifiedon
+	toColumn: LocalDateTable_fc234f23-ef60-4f29-bf9a-a9a0939e2d07.Date
+
+relationship 7ece0e93-8326-4e36-b52a-db97cf5481fd
+	fromColumn: 'fact lead'.first_deal_created_date
+	toColumn: LocalDateTable_b0f07639-17a4-4bc0-87e1-e9f7fb418979.Date
+
+relationship 3d17a373-660c-481f-89cb-607e5c093cb3
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact lead'.parentaccountid
+	toColumn: 'fact account'.'Account ID'
+
+relationship cab9a5fb-0329-4722-baf2-0df93e44c159
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact lead'.'First Rejection'
+	toColumn: 'dim datetable'.Date
+
+relationship f509607e-dad4-4aca-af63-d6ad66bcac0c
+	fromColumn: 'fact opportunity'.'Last contact'
+	toColumn: LocalDateTable_7be6f1e7-6bd7-41fb-8b6e-e1cb6562a959.Date
+
+relationship 1280bbc2-8d5c-49ae-96be-da8ff0b71e09
+	fromColumn: 'fact opportunity'.'Revenue Due'
+	toColumn: LocalDateTable_f687f2bf-9114-4ac9-a8b2-9d61282454e5.Date
+
+relationship 007bb8a5-5a15-448e-b700-2e8e5c35baa9
+	fromColumn: 'fact opportunity'.'Closing Date'
+	toColumn: 'dim datetable'.Date
+
+relationship 0ebc8ef1-c1a2-43b6-987d-c022ce876b40
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact opportunity'.'Account ID'
+	toColumn: 'fact account'.'Account ID'
+
+relationship fd6e6d40-8e1e-4dac-b292-e3a44346d65a
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact opportunity'.Originatingleadid
+	toColumn: 'fact lead (3)'.leadid
+
+relationship 8e73d919-44f7-48a0-8a4f-12303a35fdfa
+	fromColumn: 'fact opportunity'.data_update
+	toColumn: LocalDateTable_794e8638-325c-4fd4-a86d-a870c3a3fa09.Date
+
+relationship 46bbcd2e-8465-4007-9a20-06a9db96b2eb
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact opportunity'.Originatingleadid
+	toColumn: 'fact lead'.'Lead ID'
+
+relationship 660cd527-55b7-49fd-ae9e-b1a97e6bc9b7
+	fromColumn: 'fact opportunity'.'Actual Close Date'
+	toColumn: LocalDateTable_7ca3a6e8-33f9-4b01-ab04-ce4ad51140a4.Date
+
+relationship b9ef4c2b-ae29-42ef-8b5b-7faf35888967
+	fromColumn: 'fact opportunity'.'Latest Forecast Transition Timestamp'
+	toColumn: LocalDateTable_42d5ca88-f5c2-44bb-9ead-d26aadc443de.Date
+
+relationship 7fd8e7e4-c0e6-4391-a41a-c7d55848413f
+	fromColumn: 'fact opportunity'.'Latest Stage Transition Timestamp'
+	toColumn: LocalDateTable_22739d05-d425-43fd-945d-90e5e50da317.Date
+
+relationship 877881bd-85f8-43ee-be5f-9d5c58ad5ebb
+	isActive: false
+	fromColumn: 'fact opportunity'.'Created On'
+	toColumn: 'dim datetable'.Date
+
+relationship 9d682baf-3247-4771-ab6b-689cb3bc6002
+	fromColumn: 'fact opportunity'.ncx_importcreatedon
+	toColumn: LocalDateTable_fd0827c3-5d2c-4148-9611-240ffa43af41.Date
+
+relationship 158279f4-7c37-4120-a84c-273e082a0ed8
+	isActive: false
+	fromColumn: 'fact opportunity'.'Created On Clean'
+	toColumn: 'dim datetable'.Date
+
+relationship 25fb3fce-3fdd-43f0-b917-61e00a5cdb71
+	fromColumn: 'fact opportunity'.'Modified On'
+	toColumn: LocalDateTable_53020e91-dbfa-4d22-93ad-5d07e4fc12b8.Date
+
+relationship a1d04b64-f590-49c2-a6fe-7627d275cd15
+	fromColumn: 'fact opportunity'.Ownerid
+	toColumn: 'dim systemuser'.systemuserid
+
+relationship 16eca24f-f11d-45ec-94ac-81535de983fe
+	fromColumn: 'fact opportunity'.'Closing Date New'
+	toColumn: LocalDateTable_45fea853-76d8-4096-a255-aa45dfd3cd4d.Date
+
+relationship c7236b85-084b-42cd-ba65-07926151ed12
+	fromColumn: 'fact opportunity'.'Created On Clean (Hirarchy)'
+	toColumn: LocalDateTable_3953feff-9083-43ba-9320-eda285bcd84f.Date
+
+relationship c42ecb3b-bca2-4b6d-a8b9-65edd8645936
+	isActive: false
+	fromColumn: 'fact opportunity'.Ownerid
+	toColumn: 'Emp Sales Area Mapping'.Ownerid
+
+relationship e5247e3e-2079-43d2-a30f-0bd8a33263fb
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'fact opportunity'.'Emp Sales Area Mapping.Sales Area'
+	toColumn: 'fact opportunity_history'.'Sales Area'
+
+relationship 70bbe2a8-aace-4f70-891c-406169784aac
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact opportunity'.'Emp Sales Area Mapping.Sales Area'
+	toColumn: 'Sales Cockpit Target Chart'.'Sales Area'
+
+relationship 5c19448d-32f7-4b53-8169-700ce38ca68a
+	fromColumn: 'CRM opportunitytransition'.createdon
+	toColumn: LocalDateTable_d5516ca1-71b4-41c6-9e7e-42c0ba85c0d0.Date
+
+relationship 8e9ba984-84ba-42ac-b2e4-8c90fca3ba80
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM opportunitytransition'.opportunityid
+	toColumn: 'fact opportunity'.'Opportunity ID'
+
+relationship 3512555f-233e-439e-8dac-4388f170af8b
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM opportunitytransition'.'Transition - Timestamp'
+	toColumn: 'dim datetable (transition - stepname)'.Date
+
+relationship a1461b23-1f14-4eec-a107-618a2cde5818
+	fromColumn: 'CRM opportunitytransition'.'Transition - Timestamp - Kopie'
+	toColumn: LocalDateTable_000f5acf-232e-492d-83d3-90a947d08129.Date
+
+relationship 1ffb9a8d-d8c7-43f0-831a-0d63800e261f
+	fromColumn: 'CRM opportunitytransition'.next_step_date
+	toColumn: LocalDateTable_3b4049f8-4130-4588-ba4b-f3fa57729691.Date
+
+relationship f0c81f75-0700-494a-bc83-ccc024cc3780
+	fromColumn: 'CRM opportunitytransition'.data_update
+	toColumn: LocalDateTable_0ac33976-eabb-4959-b62c-70e828cae9d6.Date
+
+relationship 611389ac-5a07-4ffb-b38c-87bb77b094f3
+	isActive: false
+	fromColumn: 'CRM opportunitytransition'.ownerid
+	toColumn: 'dim systemuser'.ownerid
+
+relationship 07d61105-8b05-46ee-8098-91ece87bcee7
+	isActive: false
+	fromColumn: 'CRM opportunitytransition'.ownerid
+	toColumn: 'Emp Sales Area Mapping'.Ownerid
+
+relationship 217fba39-b6e2-4edf-a46f-2062cd638c45
+	fromColumn: 'CRM lead_transition_pipelinephase'.'Transition - Timestamp'
+	toColumn: LocalDateTable_a556c01c-7a20-4c6c-b4db-e0521270a8f2.Date
+
+relationship b8e2983a-4f14-4093-b2ce-dab3eb9993ff
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM lead_transition_pipelinephase'.createdon
+	toColumn: 'dim datetable'.Date
+
+relationship f62faf88-2a93-4dca-a2c9-d93301e0fe3d
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM lead_transition_pipelinephase'.leadid
+	toColumn: 'fact lead'.'Lead ID'
+
+relationship e7794c7f-1d64-42de-ba2a-b0bb50068c31
+	fromColumn: 'CRM lead_transition_pipelinephase'.data_update
+	toColumn: LocalDateTable_d065530e-cd72-4141-8094-5571770d2645.Date
+
+relationship d7a338a1-6245-4bf8-94ce-f4ab85f645c6
+	fromColumn: 'CRM lead_transition_pipelinephase'.next_stage_date
+	toColumn: LocalDateTable_221317c7-c043-4fa8-868f-5a3c97647538.Date
+
+relationship f918e222-4d99-4a06-bf9c-0710696c943a
+	isActive: false
+	fromColumn: 'CRM lead_transition_pipelinephase'.userid
+	toColumn: 'dim systemuser'.ownerid
+
+relationship f09aa985-43c0-4eef-b12b-32ea7554e521
+	fromColumn: 'CRM opportunitytransition_salesforecast'.createdon
+	toColumn: LocalDateTable_0b200066-788e-4cd6-ab9c-b812bd269494.Date
+
+relationship e9f21644-2fc7-4eb8-b024-5f15500fbfd5
+	fromColumn: 'CRM opportunitytransition_salesforecast'.'Transition - Timestamp'
+	toColumn: LocalDateTable_eeba3f11-bac8-4359-abcd-dbc8b9b3e34b.Date
+
+relationship eabea355-83b1-4332-8059-65d8638f6949
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM opportunitytransition_salesforecast'.opportunityid
+	toColumn: 'fact opportunity'.'Opportunity ID'
+
+relationship f19246a1-5a68-4405-9acc-a583cb53515d
+	fromColumn: 'CRM opportunitytransition_salesforecast'.'Transition - Date'
+	toColumn: 'dim datetable (transition - salesforecast)'.Date
+
+relationship 8bfc3560-442d-4485-b7da-ceb6455d025c
+	fromColumn: 'CRM opportunitytransition_salesforecast'.data_update
+	toColumn: LocalDateTable_ec262bc2-c157-4873-8183-f13ea95d11be.Date
+
+relationship 508a660d-f427-402e-823e-b696a190c188
+	fromColumn: 'dim datetable (transition - stepname)'.Date
+	toColumn: LocalDateTable_9156fb75-ee80-4e5e-9949-662268bb38b2.Date
+
+relationship ece4f8ce-f6ce-4a34-896d-db513942c111
+	fromColumn: 'dim datetable (transition - salesforecast)'.Date
+	toColumn: LocalDateTable_7243c5e6-1f5a-4cf0-b9e5-a0c2fdb42c6a.Date
+
+relationship b638be1d-0f18-4564-a689-295712f70569
+	fromColumn: 'Sales Budget 24 Monthly'.BoQ
+	toColumn: LocalDateTable_44946814-a00a-4794-858e-631135650ffd.Date
+
+relationship 58b53ae7-fcca-4319-9ec0-2a8607d05885
+	fromColumn: 'Sales Budget 24 Monthly'.Month
+	toColumn: 'dim datetable'.Date
+
+relationship 0b027164-0e7d-40c0-ad3f-335b3d7613a9
+	fromColumn: 'fact opportunity_raw_history'.snapshottimestamp
+	toColumn: LocalDateTable_b29151f5-e54c-4eab-97a7-f914219a01a3.Date
+
+relationship de60dd6b-7235-4b3e-b1ef-120166e56baa
+	fromColumn: 'fact opportunity_raw_history'.ncx_schlusstermin
+	toColumn: 'dim datetable'.Date
+
+relationship 6083b39a-8933-4d7e-9812-d8ce9c977d93
+	fromColumn: 'fact opportunity_raw_history'.parentaccountid
+	toColumn: 'fact account'.'Account ID'
+
+relationship dfc1cf38-703c-4458-a8d5-c107d2657124
+	fromColumn: 'fact opportunity_raw_history'.createdon
+	toColumn: LocalDateTable_98304df5-5e42-437c-82a2-205875b1262e.Date
+
+relationship f6165d92-ab07-453f-8a60-cfc11c95b9b1
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact opportunity_raw_history'.CW_SA
+	toColumn: 'Sales Forecast Mgmt Commit'.CW_SA
+
+relationship c9d0b5a5-3983-4475-98db-889aa6d2586a
+	fromColumn: 'fact opportunity_raw_history'.ownerid
+	toColumn: 'dim systemuser'.ownerid
+
+relationship 8c4c488b-16b0-4f56-87db-ca0eb0353ad7
+	fromColumn: 'fact opportunity_raw_history'.PreviousWeek_closing_date
+	toColumn: LocalDateTable_81e1a880-e293-40f6-b2ef-9555df387a5b.Date
+
+relationship e29b0c92-fbb1-4e62-9662-aeef2e9960bd
+	isActive: false
+	fromColumn: 'fact opportunity_raw_history'.ownerid
+	toColumn: 'Emp Sales Area Mapping'.Ownerid
+
+relationship 00e501d3-4f4b-4432-891d-2fe90b41cfe0
+	toCardinality: many
+	fromColumn: 'fact opportunity_raw_history'.'Emp Sales Area Mapping.Sales Area'
+	toColumn: 'fact opportunity_history'.'Sales Area'
+
+relationship e3fd35c1-56bb-4a28-bb6d-1e7c6a000de3
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact opportunity_raw_history'.opportunityid
+	toColumn: 'fact opportunity'.'Opportunity ID'
+
+relationship 841193f9-b96d-473f-a7a4-7403d00827c6
+	fromColumn: 'Sales Forecast Mgmt Commit'.BoW
+	toColumn: LocalDateTable_b12eedf2-af9e-4880-8103-def53a578bcf.Date
+
+relationship 6faa07c4-5970-45e8-942a-b0f25c61a6aa
+	fromColumn: 'Sales Forecast Mgmt Commit'.EoW
+	toColumn: LocalDateTable_4592eb0f-096f-4fb9-a856-67d43e3cb98a.Date
+
+relationship 5a53e434-cba2-4944-9b26-d085ac50674f
+	fromColumn: 'Sales Forecast Mgmt Commit'.BoQ
+	toColumn: LocalDateTable_9828c8f3-d71c-4ba3-81a4-7ebefa094634.Date
+
+relationship 6a7b7595-ab78-4e3f-9e75-43bccbc2204e
+	fromColumn: StartKalenderwoche.Startdatum
+	toColumn: LocalDateTable_d905f6ef-c5ba-4d79-a99d-4018ca4762cc.Date
+
+relationship f13008e3-8f6c-43ae-a578-9a10224641e5
+	fromColumn: EndKalenderwoche.Enddatum
+	toColumn: LocalDateTable_37810221-8b3c-406c-b6b4-5fcf7487c692.Date
+
+relationship 38bfae1a-6508-4d6c-b81e-2a5c88dc7ce2
+	fromColumn: 'Sales Budget 24 Monthly (Real Time)'.Month
+	toColumn: 'dim datetable'.Date
+
+relationship c77a2e32-992a-4037-a77e-48795e97296b
+	fromColumn: 'Sales Budget 24 Monthly (Real Time)'.BoQ
+	toColumn: LocalDateTable_47b2dc30-fec0-47cc-bc8c-79199b575a8c.Date
+
+relationship 65540b1d-ecf7-4f7b-bc00-8df1e1b86e6c
+	toCardinality: many
+	fromColumn: 'Sales Budget 24 Monthly (Real Time)'.'Sales Area'
+	toColumn: 'fact opportunity'.'Emp Sales Area Mapping.Sales Area'
+
+relationship 76994216-b141-4762-8a99-7945d56f43b4
+	fromColumn: 'BUD Quarterly'.BoQ
+	toColumn: LocalDateTable_6f60c970-2a24-44f4-a90d-3fd3c80bb613.Date
+
+relationship ddc755ea-e93d-4fbc-a648-0592db7fe292
+	fromColumn: 'BUD Quarterly'.Month
+	toColumn: LocalDateTable_8154f402-5370-445d-8856-2ddfe931edaf.Date
+
+relationship 854c285d-eacb-4858-89dc-cf53432462e5
+	fromColumn: 'fact opportunity_history'.snapshottimestamp
+	toColumn: LocalDateTable_d376604c-ed73-472a-bc08-73b3d41d6dda.Date
+
+relationship 7a89b67d-43ed-430e-9246-4f3d4b0d5d04
+	fromColumn: 'fact opportunity_history'.BoQ
+	toColumn: LocalDateTable_41e896d0-ad15-4e0b-877d-743a1ea332c0.Date
+
+relationship 97e08c00-d577-4e4d-b3b7-2ee323d99309
+	fromColumn: 'Sales Forecast Mgmt Commit - Real Time'.BoW
+	toColumn: LocalDateTable_b0418272-089c-4b90-bbdb-40ca57c99986.Date
+
+relationship 50d9b50d-56a4-48ab-8be6-6bc1e763f6d2
+	fromColumn: 'Sales Forecast Mgmt Commit - Real Time'.EoW
+	toColumn: LocalDateTable_d5868aff-5fa4-496e-866c-86e86f7a296a.Date
+
+relationship 321e193d-3066-4a57-a67c-d5584da51fe0
+	fromColumn: 'Sales Forecast Mgmt Commit - Real Time'.BoQ
+	toColumn: LocalDateTable_e1b695c3-c7e3-4022-9731-f428ca8a1207.Date
+
+relationship 383c42cd-f4c2-454d-a441-6984f05d317c
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM activities leads'.regardingobjectid
+	toColumn: 'fact lead'.'Lead ID'
+
+relationship 0cd923d3-13cb-491f-9210-ac6a2efd5d3f
+	fromColumn: 'fact opportunity_history (backup)'.snapshottimestamp
+	toColumn: LocalDateTable_2f7805ae-db72-4716-8201-db8443773e42.Date
+
+relationship e5b2ba2b-6759-4162-9032-d7df5d5b9fd1
+	fromColumn: 'fact opportunity_history (backup)'.BoQ
+	toColumn: LocalDateTable_35eaf9b4-f81b-468b-b5b2-6d7fc60ce20b.Date
+
+relationship bd2893b8-68a7-4772-bb15-7799c169f311
+	fromColumn: 'dim opp_product'.data_update
+	toColumn: LocalDateTable_4e95c8d4-3ae6-4042-88c2-a3b1bb04923d.Date
+
+relationship c972157b-b381-4193-9195-fe2fd8754c52
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'dim opp_product'.opportunityid
+	toColumn: 'fact opportunity'.'Opportunity ID'
+
+relationship 8bceb280-6f26-4b71-9b51-ddbcae7227e0
+	fromColumn: 'dim opp_product'.modifiedon
+	toColumn: LocalDateTable_94d7ffd1-8bf4-4742-a3ed-152c96a10ccc.Date
+
+relationship c47ee9bb-a970-4b6d-a596-9d30d5972424
+	fromColumn: 'dim opp_product'.createdon
+	toColumn: LocalDateTable_2941b1d5-4a64-4e13-8c30-bdbfe378f349.Date
+
+relationship ba3cb322-3f80-4055-9670-706b6164a193
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM stp_produkte'.opportunityid
+	toColumn: 'fact opportunity'.'Opportunity ID'
+
+relationship 3b4b06e4-d165-4d8c-b445-715deecba952
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM stp_produkte'.stp_produkt
+	toColumn: 'CRM stp_produkte_codes'.attributevalue
+
+relationship 82b4df6b-738e-4d2c-af70-409c408ab03b
+	fromColumn: 'fact audit_history_lead'.modifiedon
+	toColumn: LocalDateTable_229c725f-1e8e-496e-9579-95c652ff2a09.Date
+
+relationship 32157068-fc77-42cb-b126-88ed428cb24a
+	fromColumn: 'fact audit_history_lead'.leadid
+	toColumn: 'fact lead'.'Lead ID'
+
+relationship a44b4370-f940-4a32-a1fa-7e4f540ac4e2
+	fromColumn: 'Amberlo Pipeline figures'.snapshottimestamp
+	toColumn: LocalDateTable_ed0642ac-15bb-4bae-9e79-5be343de7ba9.Date
+
+relationship fabebc22-eac3-4ae1-80d5-c756e92f54a3
+	fromColumn: 'Amberlo Pipeline figures'.BoQ
+	toColumn: LocalDateTable_6fa88e5f-f86e-40a4-ab62-7547e332b1f6.Date
+
+relationship f91cfc12-b477-4792-bbae-0d51f903cf88
+	fromColumn: max_cw_opp_history.snapshottimestamp
+	toColumn: LocalDateTable_490cd9f0-db7a-41ad-a39d-cf523034714d.Date
+
+relationship 57107100-ce96-4dfa-ad62-ac185f76ad51
+	fromColumn: Ratings.data_update
+	toColumn: LocalDateTable_828146f0-c6c3-4d76-ad64-19dd7b8b8857.Date
+
+relationship 68816f80-98aa-400d-9578-8d15a2e9d291
+	fromColumn: Ratings.created_at
+	toColumn: LocalDateTable_16793e9f-a9b9-487c-924c-242ad31ef56b.Date
+
+relationship 8ea2edc2-890c-4179-a2ee-0a7eec145739
+	fromColumn: Ratings.created_at_timestamp
+	toColumn: LocalDateTable_dd422654-2e8f-48d3-b1be-c4fc67cce1bf.Date
+
+relationship 5a98f930-a227-42d2-9144-6b384bc3c39d
+	fromColumn: Organizations.created_at
+	toColumn: LocalDateTable_2ef7f339-cc12-4ce8-a161-04ddbca566ad.Date
+
+relationship cfa8a72b-b127-4a9e-8461-f90705c20427
+	fromColumn: Organizations.external_id
+	toColumn: 'fact account'.'Account ID'
+
+relationship 659de25d-233a-417c-b558-313daa25d786
+	fromColumn: 'fact quote'.createdon
+	toColumn: LocalDateTable_522685d1-dae5-4627-a677-5ccf8e2e8af4.Date
+
+relationship 09814458-36b5-4618-a427-99344b1bbab4
+	fromColumn: 'fact quote'.modifiedon
+	toColumn: LocalDateTable_9fee2dd1-394c-4089-93ab-092b698ec378.Date
+
+relationship 6c36ed46-4ad2-4d13-8535-d09b6dc79eaf
+	fromColumn: 'fact quote'.closedon
+	toColumn: LocalDateTable_a8356173-8f18-460d-a376-6f8717ff3308.Date
+
+relationship 94d46566-03ed-442f-affa-9e9855d8bf54
+	fromColumn: 'fact quote'.effectivefrom
+	toColumn: LocalDateTable_01c7a1c3-2e10-4d40-aa8e-8e1bec32b71e.Date
+
+relationship 446bed18-a6fe-4014-9074-6dc5e67fa6fb
+	fromColumn: 'fact quote'.effectiveto
+	toColumn: LocalDateTable_22f63a77-0ca0-41b1-9a31-ecf147c4caab.Date
+
+relationship fbad81af-8375-4473-b1d1-d60cf1aa7dae
+	fromColumn: 'fact quote'.expireson
+	toColumn: LocalDateTable_69f1fa48-2b06-4ade-8661-b504610e1070.Date
+
+relationship 6122eac8-9f89-474f-a77d-bd9f86ca8f13
+	fromColumn: 'fact quote'.customerid
+	toColumn: 'fact account'.'Account ID'
+
+relationship a60827e8-1073-46f3-a572-18c27436600a
+	fromColumn: 'fact salesorder'.createdon
+	toColumn: LocalDateTable_761dda12-5415-4bff-80a2-fcf093076090.Date
+
+relationship acb6910a-ee57-4303-8fde-4ba5e39a2c50
+	fromColumn: 'fact salesorder'.modifiedon
+	toColumn: LocalDateTable_5ba9a2af-c305-4fd9-b0a5-b3dd55ff180b.Date
+
+relationship 0119202a-6efe-424b-ba09-35dd696c1a76
+	fromColumn: 'fact salesorder'.datefulfilled
+	toColumn: LocalDateTable_f3e00185-d0d7-444e-80d1-965c1c2124da.Date
+
+relationship 0186bccb-3052-4966-832e-48cf26ac3774
+	fromColumn: 'fact salesorder'.requestdeliveryby
+	toColumn: LocalDateTable_1cadce0b-95db-439e-879f-1de018114b49.Date
+
+relationship 792453dc-0bdf-4486-8f07-d6e252c3721d
+	fromColumn: 'fact salesorder'.customerid
+	toColumn: 'fact account'.'Account ID'
+
+relationship c152e471-b61a-4c68-a836-ea9063151a4d
+	fromColumn: 'fact contacts'.ncx_firmaid
+	toColumn: 'fact account'.'Account ID'
+
+relationship 59a583ce-31f4-4b40-b851-29c081d90af0
+	fromColumn: 'fact contacts'.createdon
+	toColumn: LocalDateTable_09b0c032-0ded-4710-aa56-79f4796a2f13.Date
+
+relationship 576d861b-008c-49d1-83b0-c8f6b2d4381d
+	fromColumn: 'fact contacts'.ncx_firstcontact
+	toColumn: LocalDateTable_91136e67-9204-44a5-b52d-86df0094d640.Date
+
+relationship 8a2f8047-4998-48d7-b636-c6978fffb72f
+	fromColumn: 'fact contacts'.ncx_letzterkontakt
+	toColumn: LocalDateTable_69473c88-0fb8-46b9-80ea-3abbaf438e1a.Date
+
+relationship 10b5a461-fd17-4fa7-90db-3b178682eecb
+	fromColumn: 'CRM activities opps'.regardingobjectid
+	toColumn: 'fact opportunity'.'Opportunity ID'
+
+relationship c1bf96b9-c7e9-4dae-bded-559c74888775
+	fromColumn: 'Data Update'.Update
+	toColumn: LocalDateTable_353128ff-b5c6-4ab5-95bd-a360630983d1.Date
+
+relationship 2469250f-747a-4398-8c9e-dcef88e13d49
+	fromColumn: 'CRM lead_rejections'.data_update
+	toColumn: LocalDateTable_d73240ad-108d-4ff4-9725-c1bfd3e162e7.Date
+
+relationship a4fa5f2e-3eda-456b-8290-64513ba74b67
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM lead_rejections'._objectid_value
+	toColumn: 'fact lead'.'Lead ID'
+
+relationship 746a5aa1-0285-45fb-af91-4ef886652a1a
+	fromColumn: 'CRM lead_rejections'.createdon
+	toColumn: LocalDateTable_eae7b38e-610b-459c-a2c1-993fdb997a24.Date
+
+relationship f7599ce6-41f0-4578-a37b-7fc08cf4c62f
+	fromColumn: Tickets.data_update
+	toColumn: LocalDateTable_0080910c-c328-4126-abeb-1e328beb3aea.Date
+
+relationship 2aea288b-83b6-4589-bdbf-3df6f3b6af48
+	fromColumn: Tickets.created_at
+	toColumn: LocalDateTable_c73e110e-8fc1-4654-88fa-9f32f7207f14.Date
+
+relationship 722cb089-8e69-43be-b658-67235178e389
+	fromColumn: Tickets.metric_created_at
+	toColumn: LocalDateTable_fe765f5a-0878-4293-bc10-84831f192b76.Date
+
+relationship 44820139-7871-40cf-92e2-1981282a1dbf
+	fromColumn: Tickets.metric_solved_at
+	toColumn: LocalDateTable_e80a4117-b230-4840-af10-be3d0585eb0f.Date
+
+relationship b821f03d-e8e0-412c-8499-b4178e1a9b42
+	fromColumn: Tickets.created_at_datetime
+	toColumn: LocalDateTable_d535409e-816b-4149-944f-27278c82e080.Date
+
+relationship 13e543a9-5a32-4a65-9543-132356aa5b03
+	fromColumn: Tickets.metric_solved_at_time_stamp
+	toColumn: LocalDateTable_68ed2af7-b6c0-4d41-af52-0fe635c956e7.Date
+
+relationship bde1ef3e-5a03-4482-83e0-5bd72449bce3
+	fromColumn: Tickets.organization_id
+	toColumn: Organizations.id
+
+relationship 09bd01af-df67-40f0-a399-eeb6d78a1d58
+	fromColumn: 'CRM activities accounts'.accountid
+	toColumn: 'fact account'.'Account ID'
+
+relationship db4c62c1-cfbe-4e4c-9288-78561c62e006
+	fromColumn: 'fact lead (4)'.'Created On'
+	toColumn: LocalDateTable_83e8fd3c-b6a8-4f06-aa82-dfeb80cde250.Date
+
+relationship 53224376-3e7c-4160-9aa5-12b61dcc922b
+	fromColumn: 'fact lead (4)'.'First Contact'
+	toColumn: LocalDateTable_c800ea9f-ff74-4e55-aadc-2f46180cadee.Date
+
+relationship 315b5bc1-5980-44ca-b7c3-24e38c999225
+	fromColumn: 'fact lead (4)'.'Last Contact'
+	toColumn: LocalDateTable_b82d33fe-312f-4916-a4df-e0a18d372617.Date
+
+relationship ee6c8289-6674-4190-b115-eebe4836c906
+	fromColumn: 'fact lead (4)'.'Closure Date'
+	toColumn: LocalDateTable_2bd96fcb-08f0-4d11-8042-cc4dfdf039ea.Date
+
+relationship 593d1b1c-23ed-41c7-aa5b-06db60872c9b
+	fromColumn: 'fact lead (4)'.'Closing Date'
+	toColumn: LocalDateTable_cbb0e1f4-bcd0-44f8-9825-d48fbc6d1a7d.Date
+
+relationship b147468d-bdf4-47d8-9ba3-e8d7ab05451c
+	fromColumn: 'fact lead (4)'.modifiedon
+	toColumn: LocalDateTable_d2c5c327-d1e5-4d5a-be8c-80adbb516b41.Date
+
+relationship f1dbd46d-a1a7-4627-89fb-45e13f1180d3
+	fromColumn: 'fact lead (4)'.parentaccountid
+	toColumn: 'fact account'.'Account ID'
+
+relationship a17310aa-c041-4d56-9b2b-585315b49275
+	fromColumn: 'ERP Debitor'.created
+	toColumn: LocalDateTable_027603b0-df39-462f-949a-f4e9826ed5a7.Date
+
+relationship 5292cc31-c4fb-4fff-93ab-5a4bb51455ce
+	fromColumn: 'ERP Debitor'.lastmodified
+	toColumn: LocalDateTable_49d64b0a-13d3-4096-b44b-221899ebdfc0.Date
+
+relationship 17a79247-08c8-47e7-a34e-59812807d52e
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'ERP Debitor'.DebitorKey
+	toColumn: 'fact account'.'BC ID'
+
+relationship b3b3bd40-32d4-47ae-aac6-3ec40aa53177
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'ERP ContractLine'.DebitorKey
+	toColumn: 'fact account'.'BC ID'
+
+relationship 32e3ff0a-4ed5-4801-98c8-36674e00d3ad
+	fromColumn: 'ERP ContractLine'.VZStart
+	toColumn: LocalDateTable_57662e3b-3155-420d-8688-968e236600da.Date
+
+relationship 28abc165-8c53-4d45-bd06-3041aa632103
+	fromColumn: 'ERP ContractLine'.VZEnde
+	toColumn: LocalDateTable_93195d8e-e0ca-42be-8b32-a18ba59fe31c.Date
+
+relationship 061342f8-2d47-4e21-a54f-fb37472fca75
+	fromColumn: 'ERP ContractLine'.VertragszeileErstelltAm
+	toColumn: LocalDateTable_486181e9-2da1-4b19-b494-2db1eff3b807.Date
+
+relationship ea494214-d3b1-424c-9f90-ed156bdc95e0
+	fromColumn: 'ERP ContractLine'.LatestAllowedCancDate
+	toColumn: LocalDateTable_5b8c3a4e-2a20-44fe-82ee-7c775a311f75.Date
+
+relationship 59c2bc8b-c984-4513-90d5-ec156a3fa3f3
+	fromColumn: 'ERP ContractLine'.CancellationDate
+	toColumn: LocalDateTable_410e3743-c50c-4cfa-929f-074c48da22c9.Date
+
+relationship 818f0dd5-08e7-41b7-b5dd-2d80f0ea0831
+	fromColumn: 'ERP ContractLine'.CancellationReceivedAt
+	toColumn: LocalDateTable_7ee55283-90f6-4d29-8f11-50b11bd565f9.Date
+
+relationship ed6eb655-13bb-4f03-9604-7e67b7487a4e
+	fromColumn: 'EMS projects'.D_OrderDate
+	toColumn: LocalDateTable_a1e3988b-20d4-4f04-a102-498abe5960f1.Date
+
+relationship f5546bb9-7d14-480b-ab2e-e788b43a6a51
+	fromColumn: 'EMS projects'.D_EndDate
+	toColumn: LocalDateTable_3da70ddf-10ec-496c-b21b-c3adbb47c13b.Date
+
+relationship 90f43550-16d8-4c87-a9c6-0ce992b2ffb5
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'EMS projects'.S_Kundennummer
+	toColumn: 'fact account'.'BC ID'
+
+relationship f4be6a27-37f1-4bb0-8144-9b063650049f
+	fromColumn: 'EMS projects'.D_ProjectCreated
+	toColumn: LocalDateTable_353b48f6-c639-4672-a403-2115ee18dda8.Date
+
+relationship 9f59a0ee-b647-4cb9-9c90-78f6ae6d30db
+	fromColumn: 'EMS projects'.D_ProjectModified
+	toColumn: LocalDateTable_9312dafb-bbf3-4229-8907-cb8770bd63fd.Date
+
+relationship 01a5e5e1-fefd-4858-8ee4-87d5fd61837b
+	fromColumn: 'ERP ContractHeader'.systemcreatedat
+	toColumn: LocalDateTable_ed862902-17f9-45b5-a05d-ba21fc6af11b.Date
+
+relationship 3c9167d8-d827-490c-8cbf-7f569be6feff
+	fromColumn: 'ERP ContractHeader'.systemmodifiedat
+	toColumn: LocalDateTable_42f89ae8-89de-441e-a673-d236e15fa20c.Date
+
+relationship 3513e962-a4d8-47b0-950b-a452506e63d5
+	fromColumn: 'ERP ContractHeader'.cancellationdate
+	toColumn: LocalDateTable_f9f7f7c2-f02a-472a-ae88-bbcf71cec0d4.Date
+
+relationship 33314ff6-2558-40ba-8c76-56fd37ab30c2
+	fromColumn: 'ERP ContractHeader'.cancellationreceivedat
+	toColumn: LocalDateTable_1929a0fa-d5c2-4323-9a65-97b8c79422be.Date
+
+relationship 06882397-c697-48ca-9f70-677ac5896f08
+	fromColumn: 'ERP ContractHeader'.datecreated
+	toColumn: LocalDateTable_6a8521bd-25b0-4784-adbf-cab7d8ba82f9.Date
+
+relationship 117d8c2e-3c0f-4933-add6-a48157a4113c
+	fromColumn: 'ERP ContractHeader'.datemodified
+	toColumn: LocalDateTable_14031a2b-ebcd-4f76-b3d5-04ebd95b5f42.Date
+
+relationship 4828ea20-257c-4df4-9e50-68a4f9eecf52
+	fromColumn: 'ERP ContractHeader'.EndingDateMax
+	toColumn: LocalDateTable_f8900451-c4e3-4d9b-8998-9c3fb7659442.Date
+
+relationship 22211fc8-8140-4db8-aded-c1ff5460c3f3
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'ERP ContractHeader'.DebitorKey
+	toColumn: 'fact account'.'BC ID'
+
+relationship 6c8f8fc5-9bd0-4dc2-aa85-9b840defcb8c
+	fromColumn: 'ERP ContractHeader'.documentdate
+	toColumn: LocalDateTable_b319c1b7-8edb-4de3-b90f-12128db76b73.Date
+
+relationship d2fec0aa-e60e-4ca0-940d-056f0f1d21ec
+	fromColumn: 'ERP ContractHeader'.endingdate
+	toColumn: LocalDateTable_62ac5575-a425-45da-8ad2-f1f716309424.Date
+
+relationship 409693a7-343c-4a3f-b77e-8250f26f4908
+	fromColumn: 'ERP ContractHeader'.finisheddate
+	toColumn: LocalDateTable_9635f02a-f1e3-4494-ad42-f0818d999588.Date
+
+relationship c5d4b61a-5222-478c-a613-cbb3bfba4818
+	fromColumn: 'ERP ContractHeader'.finishedon
+	toColumn: LocalDateTable_dc46a5f8-4895-46d1-8d0e-4ea48607206c.Date
+
+relationship 3847ccf1-8485-4467-a337-29d51b451773
+	fromColumn: 'ERP ContractHeader'.orderdate
+	toColumn: LocalDateTable_0eef1093-0139-444c-b5dd-ec8139b1479d.Date
+
+relationship 007bb56f-5777-4a96-bb93-12ff6b87c3cb
+	fromColumn: 'ERP ContractHeader'.origendingdate
+	toColumn: LocalDateTable_ebac879e-caa8-4ed7-9f31-d3631111937d.Date
+
+relationship 299880ea-5218-444b-810c-99fbda8c470d
+	fromColumn: 'ERP ContractHeader'.startingdate
+	toColumn: LocalDateTable_98f797d4-7574-4b3b-8534-0a76d5595b17.Date
+
+relationship c5fffc11-8a6d-485e-853d-4c438a52d4df
+	fromColumn: 'CRM Handover2SalesNotes'.createdon
+	toColumn: LocalDateTable_bafb7686-9413-453a-9582-4d5e03f3db6f.Date
+
+relationship b55b01c2-fe99-46a2-983f-62474d532ada
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'CRM Handover2SalesNotes'.objectid
+	toColumn: 'fact lead'.'Lead ID'
+
+relationship 6fc43146-9ce2-43e9-9b0d-ed15a9bb2a67
+	fromColumn: 'CRM marketing_generated_pipeline_for_2026'.snapshot_date
+	toColumn: LocalDateTable_52be42eb-efea-49f9-a2ef-a2aaff91aba4.Date
+
+relationship 8f2809c4-3d62-4ef4-ba58-0efa8210c4e3
+	fromColumn: 'CRM marketing_generated_pipeline_for_2026_with_originating_lead'.snapshot_date
+	toColumn: LocalDateTable_e1edd71e-8fde-492d-80c7-ff96523a2914.Date
+
+relationship 0fdede47-b5e9-4efe-b7ae-700f10ff00b0
+	fromColumn: 'CRM marketing_generated_pipeline_for_2026_by_sales_area'.snapshot_date
+	toColumn: LocalDateTable_7921909f-4a04-469f-bdc5-a3d8ecdf4caa.Date
+
+relationship 56aead18-ed97-429d-930e-46c3c8809b19
+	fromColumn: 'FACT RevenueTracker'.data_update
+	toColumn: LocalDateTable_c1f99d63-79fa-4584-9c0d-2e50eb5ae109.Date
+
+relationship 90d4d047-b1b4-478d-a4e8-cdbc9715c928
+	fromColumn: 'FACT RevenueTrackerPipeline'.data_update
+	toColumn: LocalDateTable_1890632a-1311-4774-a4ee-a733f27d62c5.Date
+

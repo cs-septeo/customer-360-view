@@ -1,0 +1,271 @@
+table 'Sales Forecast Mgmt Commit'
+	lineageTag: 7445b7c3-5767-460c-a1df-77355617bc85
+	sourceLineageTag: 83baa6f3-2f71-468b-bba1-955c72c479bc
+
+	measure 'Sales Forecast Mgmt Commit' = EXTERNALMEASURE("Sales Forecast Mgmt Commit", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 95c51c31-4573-42e7-9f01-ff7c17ed9da3
+		sourceLineageTag: d5f0dc79-2b62-4cfa-bedf-871ea9e3d48e
+		dataCategory: Uncategorized
+
+	measure 'Δ Commit. vs. Bud' = EXTERNALMEASURE("Δ Commit. vs. Bud", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 25465811-382a-4de5-8b5e-ffbb8eab38cc
+		sourceLineageTag: c2e26a6f-5d97-4aff-bdde-725e07563b45
+		dataCategory: Uncategorized
+
+	measure 'Δ Commit vs. Target %' = EXTERNALMEASURE("Δ Commit vs. Target %", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: facb7559-8206-4c74-8942-993bf185d222
+		sourceLineageTag: 114c7887-3261-4ea1-80db-73cca382be8d
+		dataCategory: Uncategorized
+
+	measure 'End Sales Forecast Commit' = EXTERNALMEASURE("End Sales Forecast Commit", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 8994d027-8fc8-466d-931a-8bcc97f09f6f
+		sourceLineageTag: 77144c99-43f1-4fac-a7b4-10c4b2570cff
+		dataCategory: Uncategorized
+
+	measure 'Start Sales Forecast Commit' = EXTERNALMEASURE("Start Sales Forecast Commit", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 5a2a9f07-3c45-4347-935c-e6c797d95248
+		sourceLineageTag: 7adb7a5e-6e96-41d6-94ad-eb0005d83ec9
+		dataCategory: Uncategorized
+
+	measure 'Δ Sales Forecast Mgmt Commit' = EXTERNALMEASURE("Δ Sales Forecast Mgmt Commit", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: f8c078d8-ad27-4d78-9a5a-92a27c83e4b8
+		sourceLineageTag: 8aeee2b6-b105-438f-acb3-bc34ae22e27a
+		dataCategory: Uncategorized
+
+	measure 'End Δ FC vs. Bud' = EXTERNALMEASURE("End Δ FC vs. Bud", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 3c1b5c9e-f0af-4b73-8088-42d100871d37
+		sourceLineageTag: 564d1fa8-ae5c-4947-9c65-f70de7b0007d
+		dataCategory: Uncategorized
+
+	measure 'Start Δ FC vs. Bud' = EXTERNALMEASURE("Start Δ FC vs. Bud", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 771a0a45-c490-4fa2-96fc-d77cb7310d12
+		sourceLineageTag: a58f7eb6-85d3-4ac6-b1f0-7cf17d0bd91f
+		dataCategory: Uncategorized
+
+	measure 'Start Δ FC vs. BUD %' = EXTERNALMEASURE("Start Δ FC vs. BUD %", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 4bfa038b-52a4-4ff8-a63d-f2ad3e567ad4
+		sourceLineageTag: 934c07e7-f2c7-43b9-bdc9-de9f11c8f43e
+		dataCategory: Uncategorized
+
+	measure 'End Δ FC vs. BUD %' = EXTERNALMEASURE("End Δ FC vs. BUD %", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: f1a2105d-f175-43e4-bb65-e59f88ad3ee3
+		sourceLineageTag: b0393a6c-b8f3-412a-8a2e-199d4afcc17f
+		dataCategory: Uncategorized
+
+	measure 'End Δ Done vs. BUD (History)' = EXTERNALMEASURE("End Δ Done vs. BUD (History)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: f524ce04-63dc-42ab-915a-a80a46e852a9
+		sourceLineageTag: c6014591-8dd9-4c6c-a67c-610547af2a89
+		dataCategory: Uncategorized
+
+	measure 'Start Δ Done vs. BUD (History)' = EXTERNALMEASURE("Start Δ Done vs. BUD (History)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: bb43811c-9d96-42b9-84d6-b532609be4bf
+		sourceLineageTag: 4b1ce0eb-e7a3-4c25-9bd2-762f39c83ec8
+		dataCategory: Uncategorized
+
+	/// CP Cov. = (Commit + Probable) / (FC - Done)
+	measure 'End CP Coverage' = EXTERNALMEASURE("End CP Coverage", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 5ab6b08d-0256-416c-a044-7fe898ddad74
+		sourceLineageTag: 05a3f62f-ee6b-45c7-b5e0-cf67e0942b35
+		dataCategory: Uncategorized
+
+	measure 'Start CP Coverage' = EXTERNALMEASURE("Start CP Coverage", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 8966d890-24a0-413f-87f7-8312225eaea2
+		sourceLineageTag: 27a54eaf-505b-4ccb-a10b-692fe8d8a036
+		dataCategory: Uncategorized
+
+	measure 'End CP Coverage %' = EXTERNALMEASURE("End CP Coverage %", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 0e71d588-32a4-403f-9966-3c4da72cfca8
+		sourceLineageTag: c3cce686-e045-4e99-9720-2b845b9cc95f
+		dataCategory: Uncategorized
+
+	measure 'Start CP Coverage %' = EXTERNALMEASURE("Start CP Coverage %", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 59f84ce8-7e67-4e4b-96da-2627a42d5eee
+		sourceLineageTag: 634efdd1-4a5b-4b03-9196-ca4361e41836
+		dataCategory: Uncategorized
+
+	measure 'End Δ Done vs. FC (History)' = EXTERNALMEASURE("End Δ Done vs. FC (History)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: a6807f85-76fb-4f5f-97fa-2c9a492c16d1
+		sourceLineageTag: f0bb8025-0d80-4661-8472-70bfe6e40dbf
+		dataCategory: Uncategorized
+
+	measure 'Start Δ Done vs. FC (History)' = EXTERNALMEASURE("Start Δ Done vs. FC (History)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 04120e34-6e19-4279-aa13-96677a7b0b1c
+		sourceLineageTag: 84213cd2-2c54-4421-ab27-ed7e296a96f2
+		dataCategory: Uncategorized
+
+	measure 'Δ Commit. vs. Bud 2' = EXTERNALMEASURE("Δ Commit. vs. Bud 2", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 5c9a3c72-fe38-4861-a57c-73a25596cd8d
+		sourceLineageTag: 20cb1ce6-3a59-4dbb-a567-7b090af3934d
+		dataCategory: Uncategorized
+
+	measure 'Start Δ FC vs. Bud 2' = EXTERNALMEASURE("Start Δ FC vs. Bud 2", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 139e2f7c-7722-4380-bc9b-919f59ac8be2
+		sourceLineageTag: 5ed72275-de49-43bf-bc25-63a5d020f681
+		dataCategory: Uncategorized
+
+	measure 'Start Δ FC vs. BUD % 2' = EXTERNALMEASURE("Start Δ FC vs. BUD % 2", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 938670b6-8b77-42e6-bdf0-177b258e756c
+		sourceLineageTag: 90934ca2-9f0f-4055-add0-5ec3f2243151
+		dataCategory: Uncategorized
+
+	measure 'End Δ FC vs. Bud 2' = EXTERNALMEASURE("End Δ FC vs. Bud 2", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 46bc88ee-ac8b-4b73-837c-7800dd23712e
+		sourceLineageTag: c698147f-79ad-44f3-9bb0-c229522c36fb
+		dataCategory: Uncategorized
+
+	measure 'End Δ FC vs. BUD % 2' = EXTERNALMEASURE("End Δ FC vs. BUD % 2", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 5926afef-ad8d-47fc-9abf-132ebae209b1
+		sourceLineageTag: 157f3678-1390-4af7-a583-fb725dbb7f46
+		dataCategory: Uncategorized
+
+	measure 'DCPU Cov' = EXTERNALMEASURE("DCPU Cov", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 4897df84-9189-4938-a999-7dbd92fe35bb
+		sourceLineageTag: a7a4bfc9-4e7a-47b9-b852-6d92679c3f36
+		dataCategory: Uncategorized
+
+	measure 'End DCPU Cov' = EXTERNALMEASURE("End DCPU Cov", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 740d53d5-71cc-4448-9f2e-fceebac647d8
+		sourceLineageTag: f0ddfdad-5459-47da-b132-b18213a026da
+		dataCategory: Uncategorized
+
+	column CW
+		dataType: string
+		lineageTag: c2827b8e-c86d-400d-a3ef-137e79ac7fd3
+		sourceLineageTag: 5165afab-3d85-409a-a3f4-b9cdfa89a2f8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CW
+
+		annotation SummarizationSetBy = User
+
+	column Q
+		dataType: string
+		lineageTag: b0bbdf29-20dc-4aa5-940b-5b5b96469160
+		sourceLineageTag: 6d72948c-e9c6-4a43-9a67-b83ea14d4694
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Q
+
+		annotation SummarizationSetBy = User
+
+	column BoW
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 432e29bc-54ec-4bdb-9667-9e05483b8dab
+		sourceLineageTag: 9dd19f0b-cb70-4689-9f91-c1ed581b174e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoW
+
+		variation Variation
+			isDefault
+			relationship: 841193f9-b96d-473f-a7a4-7403d00827c6
+			defaultHierarchy: LocalDateTable_b12eedf2-af9e-4880-8103-def53a578bcf.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column EoW
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7ba5d045-4a2d-49f1-a3e0-4b9a14b36c96
+		sourceLineageTag: 24b61fe4-02ea-4464-ad52-0f7ec13f8131
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: EoW
+
+		variation Variation
+			isDefault
+			relationship: 6faa07c4-5970-45e8-942a-b0f25c61a6aa
+			defaultHierarchy: LocalDateTable_4592eb0f-096f-4fb9-a856-67d43e3cb98a.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column BoQ
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d88d3b35-6edf-4b8c-adcd-bb3fd67b64ea
+		sourceLineageTag: ce57901c-35e0-4e22-bb85-dd2a3394064a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoQ
+
+		variation Variation
+			isDefault
+			relationship: 5a53e434-cba2-4944-9b26-d085ac50674f
+			defaultHierarchy: LocalDateTable_9828c8f3-d71c-4ba3-81a4-7ebefa094634.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column CW_SA
+		dataType: string
+		isNullable: false
+		lineageTag: 299620bf-88ee-4585-8a40-b4f2325ce050
+		sourceLineageTag: 906bcd59-8be5-4d6e-aee7-88a357c06d78
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CW_SA
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: string
+		lineageTag: c4d8b864-b007-4354-b01b-219dc6c2e0ac
+		sourceLineageTag: 1a413e0c-2f07-4571-8fea-ff92d50af14e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: d92012a1-ed04-4529-8098-f8bce670deaf
+		sourceLineageTag: 3c1c8086-258d-46c9-8843-a3a47c565fe5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Forecast'
+		dataType: int64
+		formatString: 0
+		lineageTag: a18b1987-4355-471d-bfc3-430353ff6981
+		sourceLineageTag: bc569bf6-b6af-4fc7-b4fc-7243571ef384
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sales Forecast
+
+		annotation SummarizationSetBy = User
+
+	partition 'Sales Forecast Mgmt Commit' = entity
+		mode: directQuery
+		source
+			entityName: Sales Forecast Mgmt Commit
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

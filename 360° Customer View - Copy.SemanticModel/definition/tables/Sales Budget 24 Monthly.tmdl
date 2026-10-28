@@ -1,0 +1,264 @@
+table 'Sales Budget 24 Monthly'
+	lineageTag: 30ceb807-a465-471e-9582-67f9520635f5
+	sourceLineageTag: e122a5c1-e66b-4b4e-be44-f02a1b0c3e46
+
+	measure 'Target Measure Monthly' = EXTERNALMEASURE("Target Measure Monthly", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 7f1704a4-a8d9-445c-a820-58bf5f949ed2
+		sourceLineageTag: 9087d015-798d-4af7-b588-9c9303517c93
+		dataCategory: Uncategorized
+
+	measure 'Δ Act. vs. Target Monthly' = EXTERNALMEASURE("Δ Act. vs. Target Monthly", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: a073fc88-b13f-45ae-be91-7e5e09929d21
+		sourceLineageTag: 14503fb4-032a-470d-8d49-5acd110cfc14
+		dataCategory: Uncategorized
+
+	measure 'Δ Act. vs. Target % Monthly' = EXTERNALMEASURE("Δ Act. vs. Target % Monthly", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: #,0\ %;-#,0\ %;#,0\ %
+		lineageTag: cb91f43b-7327-479d-b6e6-61a880297587
+		sourceLineageTag: 661251b0-a643-478b-b810-639e111a19e4
+		dataCategory: Uncategorized
+
+	measure 'BUD CQ (Inso)' = EXTERNALMEASURE("BUD CQ (Inso)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 9995627e-df8d-4e14-a8e4-d51b26db099b
+		sourceLineageTag: 2b75b4a7-0163-4ac7-80e1-4b6c6a346e05
+		dataCategory: Uncategorized
+
+	measure 'BUD CQ (LFM)' = EXTERNALMEASURE("BUD CQ (LFM)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: cef71d6d-1436-48ef-b7ad-18b3ea0497f0
+		sourceLineageTag: 48b35f8a-18e1-48e7-91f8-4f5eab3a3c3d
+		dataCategory: Uncategorized
+
+	measure 'BUD CQ (Smart Data)' = EXTERNALMEASURE("BUD CQ (Smart Data)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 43d7ba33-de42-4d0c-99cb-d6d129c35a9f
+		sourceLineageTag: 400d310a-afeb-479f-9ab6-5af081d44e3b
+		dataCategory: Uncategorized
+
+	measure 'BUD CQ (ELM)' = EXTERNALMEASURE("BUD CQ (ELM)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 72fe217e-0b7e-4a76-acfb-e902358b1d30
+		sourceLineageTag: b67400f5-5d0b-4dd7-b19b-a8f6343ebaf6
+		dataCategory: Uncategorized
+
+	measure 'BUD CQ (SMB)' = EXTERNALMEASURE("BUD CQ (SMB)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: e5fb70a6-52b7-4a98-934c-981390ea2a88
+		sourceLineageTag: a303a18e-cbd2-484a-a277-e1ee5cabdecc
+		dataCategory: Uncategorized
+
+	measure 'BUD CQ (STP)' = EXTERNALMEASURE("BUD CQ (STP)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: cd67fc8e-548b-4538-9bb2-a016565ae3aa
+		sourceLineageTag: 4407564a-0538-4400-a25a-a5c36788f968
+		dataCategory: Uncategorized
+
+	measure 'BUD CY (ELM)' = EXTERNALMEASURE("BUD CY (ELM)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 1917887b-4a55-42c0-a08b-acb1b7d6aaf4
+		sourceLineageTag: c0c93bbb-69fd-41da-b313-e169a95b985e
+		dataCategory: Uncategorized
+
+	measure 'BUD CY (Inso)' = EXTERNALMEASURE("BUD CY (Inso)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 2bac7af0-6212-4219-8cc0-adecaa18066d
+		sourceLineageTag: ca2f3628-94b5-4c96-8ede-205ae149e1d1
+		dataCategory: Uncategorized
+
+	measure 'BUD CY (SMB)' = EXTERNALMEASURE("BUD CY (SMB)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: d4837b1f-d564-499d-8c9c-4aaa22d3eacd
+		sourceLineageTag: 8a177f98-e6c4-491e-9b62-188ec0bd7f90
+		dataCategory: Uncategorized
+
+	measure 'BUD CY (LFM)' = EXTERNALMEASURE("BUD CY (LFM)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: d049bb4d-5b74-448f-9abf-565b2c323a52
+		sourceLineageTag: 4eba5afa-a021-4e77-ab41-2661f725f263
+		dataCategory: Uncategorized
+
+	measure 'BUD CY (Smart Data)' = EXTERNALMEASURE("BUD CY (Smart Data)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: b58fde1b-e35e-48c9-8c77-4d62296dcb38
+		sourceLineageTag: b6b77f0e-f86d-41fd-8b8f-aa655df2359d
+		dataCategory: Uncategorized
+
+	measure 'BUD CM (ELM)' = EXTERNALMEASURE("BUD CM (ELM)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 6b2e18e3-26c8-4bae-a77d-7591db7aba78
+		sourceLineageTag: e7d92d41-578c-4655-acad-3e98b2d9e7e2
+		dataCategory: Uncategorized
+
+	measure 'BUD CM (Inso)' = EXTERNALMEASURE("BUD CM (Inso)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 312748d5-4708-4c50-9d6f-5bef5669f729
+		sourceLineageTag: fa1a4bf3-2ab9-4faf-95cf-3827585723af
+		dataCategory: Uncategorized
+
+	measure 'BUD CM (SMB)' = EXTERNALMEASURE("BUD CM (SMB)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: d5b73793-cea2-4382-b2c8-6011e90728a5
+		sourceLineageTag: f35cba9f-cceb-45aa-99d3-91af3e5e0fcc
+		dataCategory: Uncategorized
+
+	measure 'BUD CM (LFM)' = EXTERNALMEASURE("BUD CM (LFM)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 41d2eb51-b9f7-4b8c-8fc6-b0fcb000bb28
+		sourceLineageTag: 2f2ef5ba-e646-4ab7-b3f0-8e78b78b5ca4
+		dataCategory: Uncategorized
+
+	measure 'BUD CM (Smart Data)' = EXTERNALMEASURE("BUD CM (Smart Data)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: c4d572e7-6eba-4d09-96c1-51e99a88e804
+		sourceLineageTag: ccf41db9-a1bb-474b-8a2e-8d674dba7dab
+		dataCategory: Uncategorized
+
+	measure 'BUD CM (STP)' = EXTERNALMEASURE("BUD CM (STP)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 5e131a83-b9e8-4ee9-913c-d2aa9029e570
+		sourceLineageTag: b1b7b507-31f6-46a8-bf5d-64e06aad7c2b
+		dataCategory: Uncategorized
+
+	measure 'BUD CW (Inso)' = EXTERNALMEASURE("BUD CW (Inso)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: cb4af85d-1a56-4fd8-ad56-53b80677a418
+		sourceLineageTag: b6319862-1bef-431c-a2b1-50168e83578d
+		dataCategory: Uncategorized
+
+	measure 'BUD CW (ELM)' = EXTERNALMEASURE("BUD CW (ELM)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 9bbcc701-7cc7-4fbe-ae6e-3b8153e9e2d1
+		sourceLineageTag: 5f208191-7236-495b-8a8a-32afe616967d
+		dataCategory: Uncategorized
+
+	measure 'BUD CW (SMB)' = EXTERNALMEASURE("BUD CW (SMB)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 324dacfa-9767-4d9d-be60-9257d3c69c89
+		sourceLineageTag: 1e9283e6-945a-47a3-9e9c-19d853688d15
+		dataCategory: Uncategorized
+
+	measure 'BUD CW (LFM)' = EXTERNALMEASURE("BUD CW (LFM)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 0b870bf6-5ccc-4a70-8d6f-05c38091f5b8
+		sourceLineageTag: bd003ec8-f7fa-4733-87b7-f21eceae7e36
+		dataCategory: Uncategorized
+
+	measure 'BUD CW (Smart Data)' = EXTERNALMEASURE("BUD CW (Smart Data)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: de2624af-f9a5-448a-a1cc-478f53e48875
+		sourceLineageTag: 52f0e3d5-2692-4130-81a1-5a7d5ca725d9
+		dataCategory: Uncategorized
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 13af8fcd-e5be-430c-b5a0-ec992e4b6e6e
+		sourceLineageTag: dec8b04a-08c1-47e2-82ed-f3fe91292fdc
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Target
+		dataType: int64
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: dde55b13-c567-4ab7-88a3-a64aa9ae55c2
+		sourceLineageTag: d5030cff-2a0e-452d-8bd5-218055f87434
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Target
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 65552080-ee74-4baf-afab-2122527a7815
+		sourceLineageTag: 22fc2975-afd9-4442-a96a-d73ab3da7ede
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column BoQ
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 4da972d3-97e7-4746-9d87-60fb34228f9b
+		sourceLineageTag: 668b1f46-b5dc-4753-8c72-186d7ac34908
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoQ
+
+		variation Variation
+			isDefault
+			relationship: b638be1d-0f18-4564-a689-295712f70569
+			defaultHierarchy: LocalDateTable_44946814-a00a-4794-858e-631135650ffd.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column Euro
+		dataType: int64
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 20c43e11-63b3-46f0-a56a-2d89940aeed2
+		sourceLineageTag: a49e8b70-6b5e-4731-8096-31059d3567fc
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Euro
+
+		annotation SummarizationSetBy = User
+
+	column Faktor
+		dataType: double
+		lineageTag: 69530b75-5800-4b48-b2b2-72c608db372c
+		sourceLineageTag: 0dbb607e-a95c-4ffe-882b-1385736d55a4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Faktor
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Current Month'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 201502b7-0e80-413c-a5e4-7f985605e667
+		sourceLineageTag: 0a194087-ff1a-4c67-a1b6-78cbac17f811
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Current Month
+
+		annotation SummarizationSetBy = User
+
+	column 'Current Qtr'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5cfc1024-b6d9-4a41-a7ce-d37fe0eca43f
+		sourceLineageTag: 40e18a7d-950a-4d4c-a0ff-b953ec942e2c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Current Qtr
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 3edd6ea9-6812-40a2-8bc8-5d14c922e92e
+		sourceLineageTag: be116daf-db73-4638-8608-7ae6978a17ad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	partition 'Sales Budget 24 Monthly' = entity
+		mode: directQuery
+		source
+			entityName: Sales Budget 24 Monthly
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

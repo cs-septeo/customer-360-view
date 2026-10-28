@@ -1,0 +1,11 @@
+expression 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/CNEE%20%7C%20Sales%20%26%20Marketing%20Reporting%20-%20Intern", "Sales & Marketing Reporting - Reporting Playground"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: f3946df7-806a-45f7-ad28-eeebe8704069
+
+	annotation PBI_IncludeFutureArtifacts = True
+

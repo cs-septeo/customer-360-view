@@ -1,0 +1,41 @@
+table 'CRM stp_produkte_codes'
+	lineageTag: 3e3a1807-5f55-400e-b877-f565dd02ab7f
+	sourceLineageTag: acbf69b4-c55a-4c7f-9869-b060942dd33f
+
+	column attributename
+		dataType: string
+		lineageTag: 5c83dbab-7ffe-4b4e-b0e1-e1ac8c2f1f27
+		sourceLineageTag: 8ee3feb5-55ec-4adb-8125-46f5a0f6158c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: attributename
+
+		annotation SummarizationSetBy = User
+
+	column attributevalue
+		dataType: string
+		isNullable: false
+		lineageTag: 329364d8-be04-4a3e-bf76-0a0f109d206d
+		sourceLineageTag: ecc686c3-0abf-44b2-b7bb-69cda7164857
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: attributevalue
+
+		annotation SummarizationSetBy = User
+
+	column value
+		dataType: string
+		lineageTag: 63661dd2-dbde-4929-9151-c65cf5a83535
+		sourceLineageTag: 184df89f-0131-47eb-ad07-343714f6c855
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: value
+
+		annotation SummarizationSetBy = User
+
+	partition 'CRM stp_produkte_codes' = entity
+		mode: directQuery
+		source
+			entityName: CRM stp_produkte_codes
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

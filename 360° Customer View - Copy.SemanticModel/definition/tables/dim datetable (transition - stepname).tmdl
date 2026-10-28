@@ -1,0 +1,165 @@
+table 'dim datetable (transition - stepname)'
+	lineageTag: 1e6ba881-806b-4907-8535-142ac4ab4c8b
+	sourceLineageTag: 0f0193a5-cdab-4605-98fc-ed19540fed3b
+
+	column Date
+		dataType: dateTime
+		isNullable: false
+		formatString: Long Date
+		lineageTag: b34f7680-38eb-49c8-8c88-3c7192be784b
+		sourceLineageTag: 2f2444e1-5a75-4510-8296-b9271b233b06
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 508a660d-f427-402e-823e-b696a190c188
+			defaultHierarchy: LocalDateTable_9156fb75-ee80-4e5e-9949-662268bb38b2.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column DayNum
+		dataType: int64
+		formatString: 0
+		lineageTag: b496c8e4-2111-4337-84d4-8af1685677b3
+		sourceLineageTag: 48984586-ced4-4a2d-bf4d-66524e41e6a4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: DayNum
+
+		annotation SummarizationSetBy = User
+
+	column MonthNum
+		dataType: int64
+		formatString: 0
+		lineageTag: 70a764df-a7b3-4e3b-8264-fd17b66bba7b
+		sourceLineageTag: 5614d556-753c-4c49-8259-d9e9fbd22f80
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: MonthNum
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 56b97c9a-41c6-4f1a-8953-718ec8824165
+		sourceLineageTag: ce0e25e0-47dc-4e65-a84c-83ccb8cd8467
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 49ee154a-a423-40b1-beb0-d1edc5a78696
+		sourceLineageTag: ccb78c31-a49b-4e8e-932c-08079fd1a321
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column CalendarWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 6148abd7-aaa9-4c45-add1-fcde335817d3
+		sourceLineageTag: fa2943e0-0b7b-4ca2-b9e2-e0b1ff0e5acc
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CalendarWeek
+
+		annotation SummarizationSetBy = User
+
+	column DayOfWeekNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: bec6dd34-7e3a-461f-be93-d0032c6e489f
+		sourceLineageTag: 4ae8fad7-78d0-4e10-b2d5-473804c25764
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: DayOfWeekNumber
+
+		annotation SummarizationSetBy = User
+
+	column DayOfWeekName
+		dataType: string
+		lineageTag: a028b9c5-d65c-4435-a1ca-85eaf8f20fe4
+		sourceLineageTag: e7d7a82e-382a-4f21-add6-9eae61b3e2ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DayOfWeekName
+
+		annotation SummarizationSetBy = User
+
+	column DateInt
+		dataType: int64
+		formatString: 0
+		lineageTag: d82ab2a9-4f28-48d5-aca6-8bbc01186719
+		sourceLineageTag: 739f123b-28f3-4fb2-9be0-b3408356fa4d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: DateInt
+
+		annotation SummarizationSetBy = User
+
+	column YearQuarter
+		dataType: string
+		lineageTag: 6f64a90a-5036-407a-ad38-100151c2df36
+		sourceLineageTag: 075115b1-b083-4dc8-b974-bd0d90915016
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: YearQuarter
+
+		annotation SummarizationSetBy = User
+
+	column YearCalendarWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 00a91f4d-d6e6-4509-87c5-d27a983a874e
+		sourceLineageTag: cf74d539-c9c3-42ac-9ee6-2d396f1d5b29
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: YearCalendarWeek
+
+		annotation SummarizationSetBy = User
+
+	column MonthShort
+		dataType: string
+		lineageTag: 5a00c9d3-542c-4ce3-a3bf-5e6fe588e7ca
+		sourceLineageTag: 71595549-6afb-4d0f-a972-655bc57fa716
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MonthShort
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: string
+		lineageTag: 5211c025-dc81-4b7c-91aa-81c3a87186ca
+		sourceLineageTag: 6cc4e56d-6e68-49f7-9489-4633aa74a9de
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column FirstDayOfMonth
+		dataType: string
+		lineageTag: eed1bd7e-eb02-4a16-bdac-0a5d80d03330
+		sourceLineageTag: 5ddd8cc7-df90-491a-aeed-5ae9d09c5f5f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: FirstDayOfMonth
+
+		annotation SummarizationSetBy = User
+
+	partition 'dim datetable (transition - stepname)' = entity
+		mode: directQuery
+		source
+			entityName: dim datetable (transition - stepname)
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

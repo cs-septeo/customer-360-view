@@ -1,0 +1,151 @@
+table 'CRM lead_rejections'
+	lineageTag: 7dda08d8-7785-4900-9456-25e8fc73dcda
+	sourceLineageTag: ba8734b4-554d-4a9b-aacf-662ad79eb75a
+
+	measure '# Rejections' = EXTERNALMEASURE("# Rejections", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: c77b3e83-600c-4b79-9660-7c83fc4d6f77
+		sourceLineageTag: 1a03b584-e956-434c-bc26-93469804eedc
+		dataCategory: Uncategorized
+
+	column data_update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 29e3ff1a-c86c-4e3d-8027-f44c128316f1
+		sourceLineageTag: 9936866e-b0bf-47a1-80c3-88fbaca71cfd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: data_update
+
+		variation Variation
+			isDefault
+			relationship: 2469250f-747a-4398-8c9e-dcef88e13d49
+			defaultHierarchy: LocalDateTable_d73240ad-108d-4ff4-9725-c1bfd3e162e7.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column objecttypecode
+		dataType: string
+		lineageTag: aad4e1e2-46c8-4d43-b18b-06499cf6c1c5
+		sourceLineageTag: 61c72c48-9dd1-490c-98e4-503035a28af7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: objecttypecode
+
+		annotation SummarizationSetBy = User
+
+	column _userid_value
+		dataType: string
+		lineageTag: b676ddd7-dac1-49d9-a714-40147a160fa4
+		sourceLineageTag: 2155d4e1-9ebe-48e4-9ec0-631ee6a2ab55
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: _userid_value
+
+		annotation SummarizationSetBy = User
+
+	column createdon
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b1aeb184-5d26-40bf-9fd0-9280e20d146f
+		sourceLineageTag: 95f0ae45-c060-4e70-a7d5-e130a1a29e98
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: 746a5aa1-0285-45fb-af91-4ef886652a1a
+			defaultHierarchy: LocalDateTable_eae7b38e-610b-459c-a2c1-993fdb997a24.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column auditid
+		dataType: string
+		lineageTag: 029251fc-6a5d-4ecc-a158-453236c27607
+		sourceLineageTag: 14e42309-8c8b-4578-89c3-e0b002d3f7e2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: auditid
+
+		annotation SummarizationSetBy = User
+
+	column _objectid_value
+		dataType: string
+		lineageTag: ccd2e565-ca6d-4268-b95a-3d89b4f26708
+		sourceLineageTag: 34d98fb5-a780-4e8d-990f-bf0e7096a75d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: _objectid_value
+
+		annotation SummarizationSetBy = User
+
+	column statuscode_old
+		dataType: string
+		lineageTag: 2dfe1251-99c2-4a97-b279-85dc26aaa4d6
+		sourceLineageTag: c9e2d7a3-e50d-4812-b57b-0217404394d7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: statuscode_old
+
+		annotation SummarizationSetBy = User
+
+	column statuscode_new
+		dataType: string
+		lineageTag: f0fed28f-cd63-4028-8fcc-3fa11d812cf1
+		sourceLineageTag: 97a221dc-e7b7-4383-b2cc-ee5b318c27cd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: statuscode_new
+
+		annotation SummarizationSetBy = User
+
+	column rejection_count
+		dataType: int64
+		formatString: 0
+		lineageTag: d43d7c5d-3ee3-4d00-9647-11ec82adce8b
+		sourceLineageTag: a7c80868-afbb-43a5-89cb-39cdd9fae237
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: rejection_count
+
+		annotation SummarizationSetBy = User
+
+	column first_rejection
+		dataType: int64
+		formatString: 0
+		lineageTag: 90a2cade-abbe-49a9-93db-08a80ff45be5
+		sourceLineageTag: b60327eb-14dc-445b-af63-c7c1eabb12b5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: first_rejection
+
+		annotation SummarizationSetBy = User
+
+	column last_rejection
+		dataType: int64
+		formatString: 0
+		lineageTag: b2cf92f7-0453-4b36-9d9c-c1e8d2ed3312
+		sourceLineageTag: 26057859-00f6-42c5-9ad5-4a7b44e72e13
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: last_rejection
+
+		annotation SummarizationSetBy = User
+
+	column first_or_last_rejection
+		dataType: string
+		lineageTag: ad22a172-7ea4-4803-ab2d-05edab4ab4a0
+		sourceLineageTag: fa5072bf-0ef8-4164-98cd-ba347d9d3eef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: first_or_last_rejection
+
+		annotation SummarizationSetBy = User
+
+	partition 'CRM lead_rejections' = entity
+		mode: directQuery
+		source
+			entityName: CRM lead_rejections
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

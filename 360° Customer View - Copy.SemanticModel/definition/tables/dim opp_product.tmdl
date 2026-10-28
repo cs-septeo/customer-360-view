@@ -1,0 +1,152 @@
+table 'dim opp_product'
+	lineageTag: d2ac6384-528b-4da7-b129-b3c61a1f4bdd
+	sourceLineageTag: fc85d7f7-81ee-4993-a46a-269837ac7c8e
+
+	measure Revenue = EXTERNALMEASURE("Revenue", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 8f14199d-0cfd-40fe-a124-58ed2920f029
+		sourceLineageTag: 54545430-11e5-4910-83cd-598be8683278
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data_update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8aa76fe3-8cd5-4f64-b12b-1e74d9456714
+		sourceLineageTag: 91daa112-5863-4f3e-914c-2e703f9529fe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: data_update
+
+		variation Variation
+			isDefault
+			relationship: bd2893b8-68a7-4772-bb15-7799c169f311
+			defaultHierarchy: LocalDateTable_4e95c8d4-3ae6-4042-88c2-a3b1bb04923d.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column opportunityid
+		dataType: string
+		lineageTag: 43468cee-7624-4762-b9a6-7eb128a77de1
+		sourceLineageTag: 0ec5403a-4128-4ca0-b7af-d720ddf2d046
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: opportunityid
+
+		annotation SummarizationSetBy = User
+
+	column productname
+		dataType: string
+		lineageTag: c1283269-2fec-4439-adea-60552a4a71fc
+		sourceLineageTag: 315f4801-cb9d-4e47-b199-6950c96f0389
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: productname
+
+		annotation SummarizationSetBy = User
+
+	column quantity
+		dataType: double
+		lineageTag: 49401322-922a-49d8-a81c-6299b70cb8a7
+		sourceLineageTag: 4265cbd3-dd3f-4737-8228-4004e18511bf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column priceperunit
+		dataType: double
+		lineageTag: 459c550c-db59-4273-96b9-fe945711bb23
+		sourceLineageTag: cb77c1cd-e2a0-40d3-b38c-5feb29c7228a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: priceperunit
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ncx_artikelkategorie
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 62d4deb8-3d7f-40ae-904f-e8615798f5a4
+		sourceLineageTag: c96c3543-53e6-4391-9f1b-0b6e935614a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_artikelkategorie
+
+		annotation SummarizationSetBy = User
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b6aa2929-f21d-456e-b6a9-a79c5d2d4c6f
+		sourceLineageTag: 742927b3-3198-46f2-8870-70c53a220cc5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: 8bceb280-6f26-4b71-9b51-ddbcae7227e0
+			defaultHierarchy: LocalDateTable_94d7ffd1-8bf4-4742-a3ed-152c96a10ccc.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column createdon
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 6f7c9114-1823-4f66-843f-673ed3d35f40
+		sourceLineageTag: 44f1db39-4df2-4d7a-a207-d3bacfe00f2c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: c47ee9bb-a970-4b6d-a596-9d30d5972424
+			defaultHierarchy: LocalDateTable_2941b1d5-4a64-4e13-8c30-bdbfe378f349.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b82c5d4-f5e7-46d9-85fb-7b8be1222928
+		sourceLineageTag: de6166d1-0914-4a99-8326-c6e2fdca6cea
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = User
+
+	column sequencenumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b99dd2a-5a91-4ba0-b234-20be65b71723
+		sourceLineageTag: 4903e679-c212-43ac-9095-79ea5730bb64
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: sequencenumber
+
+		annotation SummarizationSetBy = User
+
+	column opportunityproductid
+		dataType: string
+		lineageTag: 1d0fe379-3b01-46f9-83e2-154a735cedae
+		sourceLineageTag: ce7763a6-fc2b-443a-8e59-0bf589423589
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: opportunityproductid
+
+		annotation SummarizationSetBy = User
+
+	partition 'dim opp_product' = entity
+		mode: directQuery
+		source
+			entityName: dim opp_product
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

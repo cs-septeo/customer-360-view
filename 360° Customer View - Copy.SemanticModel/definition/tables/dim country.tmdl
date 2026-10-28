@@ -1,0 +1,41 @@
+table 'dim country'
+	lineageTag: 62b09cbd-1271-4931-846c-4e396e9b7155
+	sourceLineageTag: 669c01e7-e6f8-4c03-9025-a0307a085a72
+
+	column ncx_countryid
+		dataType: string
+		isNullable: false
+		lineageTag: bd746d2c-34a3-49c1-9003-5296e849a0fa
+		sourceLineageTag: 0a7a34bb-1036-418c-975f-44328a39383f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_countryid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_name
+		dataType: string
+		lineageTag: 2bef5706-9dcb-4255-9f91-2821ced1829c
+		sourceLineageTag: cdce15b3-5adc-441a-9839-f32bb7158763
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_name
+
+		annotation SummarizationSetBy = User
+
+	column ncx_namede
+		dataType: string
+		lineageTag: dc9e4d69-a8e0-4e41-8b5f-7afa09f8b922
+		sourceLineageTag: 63df184f-f693-40a5-8e53-72b1c89cbf3b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_namede
+
+		annotation SummarizationSetBy = User
+
+	partition 'dim country' = entity
+		mode: directQuery
+		source
+			entityName: dim country
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

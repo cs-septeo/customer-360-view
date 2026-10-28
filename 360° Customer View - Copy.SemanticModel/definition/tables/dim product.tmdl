@@ -1,0 +1,127 @@
+table 'dim product'
+	lineageTag: eb9644cd-6245-44dd-864a-fac411db0be7
+	sourceLineageTag: 8115b6a5-6ba3-42ac-827c-81e57b679b94
+
+	column productid
+		dataType: string
+		lineageTag: d58f82ef-0bcc-41c5-abe6-909a4a0ebccc
+		sourceLineageTag: 94810ea9-c597-48b5-befa-fbd4c2f316fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: productid
+
+		annotation SummarizationSetBy = User
+
+	column price_base
+		dataType: double
+		lineageTag: 76a9caa6-c64b-4731-9e76-c3de0cddf010
+		sourceLineageTag: 9365ffac-1287-4cd4-a752-94252cc0dcd8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: price_base
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pricelevelid
+		dataType: string
+		lineageTag: b2d9fb20-3eef-4ef5-8399-a3a1573ab12c
+		sourceLineageTag: f90551f4-83ea-42bc-be7b-20f1bf4d323a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pricelevelid
+
+		annotation SummarizationSetBy = User
+
+	column bcbi_companyid
+		dataType: string
+		lineageTag: 8119b44e-bd36-499d-9153-c8f4f7a4e6b5
+		sourceLineageTag: 9d4aece8-7db4-4d77-a752-b3cd91aa7cbb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: bcbi_companyid
+
+		annotation SummarizationSetBy = User
+
+	column quantityonhand
+		dataType: double
+		lineageTag: 41cd37d0-c3a9-458b-92f3-1b43d5c88de9
+		sourceLineageTag: 78c5c610-7bff-4ac9-acd6-ac3b45c4ac32
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: quantityonhand
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column productnumber
+		dataType: string
+		lineageTag: e1c8f7dd-162c-4f51-aacd-a5c4c74b60e0
+		sourceLineageTag: e675ea1b-3d03-4133-830c-d8a1038312a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: productnumber
+
+		annotation SummarizationSetBy = User
+
+	column producttypecode
+		dataType: int64
+		formatString: 0
+		lineageTag: b2833fb5-8cba-408a-a336-f97f9bbf9f29
+		sourceLineageTag: 8d7f6695-6119-44c1-8b23-8218a95978fd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: producttypecode
+
+		annotation SummarizationSetBy = User
+
+	column name
+		dataType: string
+		lineageTag: 12402486-b477-4622-ae64-eb8765664a29
+		sourceLineageTag: 490af710-bc4e-44fb-b65c-33aa15619aaf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = User
+
+	column price
+		dataType: double
+		lineageTag: 09b7be71-bf5c-4555-9631-387cf2d414ca
+		sourceLineageTag: cbd7cf41-aa4e-4b2e-8c31-32c53c04b6ae
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column organizationid
+		dataType: string
+		lineageTag: a64876ab-601c-4d7d-abf3-9e4ed8556ee8
+		sourceLineageTag: 08216973-3dfe-4d9f-a525-944b83e4c55b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: organizationid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_bcid
+		dataType: string
+		lineageTag: 52846da9-9023-4e22-add8-91a1cac1afa0
+		sourceLineageTag: 311fcf0d-1a5a-47de-9b81-7de251d87659
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_bcid
+
+		annotation SummarizationSetBy = User
+
+	partition 'dim product' = entity
+		mode: directQuery
+		source
+			entityName: dim product
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

@@ -1,0 +1,20 @@
+table 'opps Spaltenübersetzung'
+	lineageTag: 134421b3-e53b-405a-be32-078b969de2c0
+	sourceLineageTag: a391ac59-e765-45c0-b661-46fd11beb4ac
+
+	column 'opps Spaltenübersetzung'
+		dataType: string
+		lineageTag: 30864b74-4829-4c35-8df8-87dee1cccb23
+		sourceLineageTag: 53d0e0e1-b0d2-4e1d-8235-701bd80e5e81
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: opps Spaltenübersetzung
+
+		annotation SummarizationSetBy = User
+
+	partition 'opps Spaltenübersetzung' = entity
+		mode: directQuery
+		source
+			entityName: opps Spaltenübersetzung
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

@@ -1,0 +1,538 @@
+table 'fact account'
+	lineageTag: 71a45cbd-7908-4715-ae0d-dfb415a2bec2
+	sourceLineageTag: 26d42706-e785-4906-a913-a00c3ce58fb6
+
+	column parentaccountid
+		dataType: string
+		lineageTag: 56d9a91f-3d73-4213-a00a-4fce3c408651
+		sourceLineageTag: a742b1e9-da89-4ed8-b84d-a6d31813c23a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: parentaccountid
+
+		annotation SummarizationSetBy = User
+
+	column ownerid
+		dataType: string
+		lineageTag: e9b8a024-1546-48c4-950e-c1ac96816dad
+		sourceLineageTag: b207c96b-0d04-4bc5-8bf9-173ea2c839a6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_hierarchygrandparentaccountid
+		dataType: string
+		lineageTag: defdb6d5-0bfd-4280-a7fd-79c2f83fcf22
+		sourceLineageTag: 00d8bee2-b13d-461d-8347-3588328b01f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_hierarchygrandparentaccountid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_kategorie_kanzleisperre
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1708e50c-3d88-451a-b2d3-1bcb02f089e0
+		sourceLineageTag: ea58f2a2-68e9-4eb7-bff4-2ea5d831caec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_kategorie_kanzleisperre
+
+		annotation SummarizationSetBy = User
+
+	column ncx_rechtsberatung
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4866686f-8dde-4ebc-96de-4c65b3ee5a4a
+		sourceLineageTag: 91ed66cc-a706-4e3c-a2a0-04b1d4232021
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_rechtsberatung
+
+		annotation SummarizationSetBy = User
+
+	column 'AccountID Salesforce'
+		dataType: string
+		lineageTag: c82912c5-74fc-40f9-8006-a6fc82b76535
+		sourceLineageTag: f3a7bb35-f1f9-4563-9eed-39003a874328
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AccountID Salesforce
+
+		annotation SummarizationSetBy = User
+
+	column 'BC ID'
+		dataType: string
+		lineageTag: eff5d9cc-bd7f-4169-ba55-a7a504d22ef1
+		sourceLineageTag: e2d9978c-ae1e-42bc-a566-b58cff624b3c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BC ID
+
+		annotation SummarizationSetBy = User
+
+	column DUNS-Nummer
+		dataType: string
+		lineageTag: 6328d862-8350-4cae-b1a3-0ca04ba55abc
+		sourceLineageTag: 3fcd3a16-d3b6-4328-a608-3cee15faa8f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DUNS-Nummer
+
+		annotation SummarizationSetBy = User
+
+	column ncx_landid
+		dataType: string
+		lineageTag: b28f1838-82c9-42c5-bcf9-297e5405bb73
+		sourceLineageTag: 8e714b93-75ec-43cb-b56d-8a2052ba7003
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_landid
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 486c0f06-25aa-47fd-9bb2-893023d0a696
+		sourceLineageTag: fee73cf3-2734-48f5-a540-21fe73ab3f9d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column 'Created On'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 878c564d-9b24-4ca5-ad1d-704ebb61242e
+		sourceLineageTag: 125f2863-48d7-4307-855c-c9cc5a50b2c2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Created On
+
+		variation Variation
+			isDefault
+			relationship: 80f91f8d-bf23-4286-9206-e1dbfd3a485e
+			defaultHierarchy: LocalDateTable_46174a86-995a-44ed-95df-110cb1423245.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Account ID'
+		dataType: string
+		isNullable: false
+		lineageTag: 40aebcac-e7ff-488c-b645-f5fd4215d365
+		sourceLineageTag: ce2017dd-cc17-4f7f-994e-aee365602a26
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Account ID
+
+		annotation SummarizationSetBy = User
+
+	column 'Open Deals'
+		dataType: int64
+		formatString: 0
+		lineageTag: 828b70e3-bd9c-4597-ba7d-d45b859fc275
+		sourceLineageTag: 3b939250-d7d3-4d6c-aa77-d885ff893913
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Open Deals
+
+		annotation SummarizationSetBy = User
+
+	column 'Open Revenue'
+		dataType: double
+		lineageTag: 11319dc3-a147-4a95-9a21-e90c0c016eca
+		sourceLineageTag: e0f4c6e5-d299-43e4-bac7-c3de2e16e8ac
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Open Revenue
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'First Contact'
+		dataType: string
+		lineageTag: 0556a32d-af9d-4924-b115-d9d3018710e5
+		sourceLineageTag: a48d921d-fc65-40e2-8884-b74decbfbb47
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: First Contact
+
+		annotation SummarizationSetBy = User
+
+	column 'Number of Lawyers'
+		dataType: double
+		lineageTag: 4474f291-5e66-4030-888f-40def80661e9
+		sourceLineageTag: 092905c5-8f40-4f6d-ba60-c636706ca0ea
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Number of Lawyers
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Number of Professionals'
+		dataType: double
+		lineageTag: 88b03c5b-025b-4d1f-bfe7-d7c60e0507de
+		sourceLineageTag: 6768f5f1-8b70-4675-9125-628cf6b43113
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Number of Professionals
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Number of Employees'
+		dataType: double
+		lineageTag: dcb44186-fffb-45bb-b87c-ee950cf5eeb0
+		sourceLineageTag: 548396ef-f8bd-4ae1-bc17-7db14703598f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Number of Employees
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Liquidator
+		dataType: double
+		lineageTag: ea81657f-ec3e-4aa7-b2d1-da40e60494d6
+		sourceLineageTag: 9e3ff5f6-edf7-41c5-9af5-1f262646f84a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Liquidator
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Locations
+		dataType: double
+		lineageTag: 2d84b460-b58e-4913-8ccd-9633627caeaf
+		sourceLineageTag: 6f0313ee-7313-4516-afe0-b6d9a99f1cc6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Locations
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Locations in Germany'
+		dataType: double
+		lineageTag: 599148c4-ac01-4a47-82b0-08cb2d371075
+		sourceLineageTag: bd2e004c-ebde-4e52-9f71-94773021001b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Locations in Germany
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tax Consultant'
+		dataType: double
+		lineageTag: 8e93f81c-06e8-4480-9ab8-c7e9482c5979
+		sourceLineageTag: 92fcbc11-92c9-4930-8e1d-d4c65f30e1bf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Tax Consultant
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Financial Auditor'
+		dataType: double
+		lineageTag: 6b1c7e66-632e-4186-9c5f-0c1d9023207f
+		sourceLineageTag: fdfcbbb9-7bfa-4d9a-a53d-ca8b728058c9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Financial Auditor
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Street (billing)'
+		dataType: string
+		lineageTag: 117c66fb-0d3b-4dbd-a1d0-82423aa1d469
+		sourceLineageTag: d60f1924-a021-486b-91c8-0b8e177d5369
+		dataCategory: Address
+		summarizeBy: none
+		sourceColumn: Street (billing)
+
+		annotation SummarizationSetBy = User
+
+	column 'City (billing)'
+		dataType: string
+		lineageTag: 927d1848-17ab-46a6-9f29-22fc2aae7924
+		sourceLineageTag: 48926444-70eb-4f57-a97f-efbc1682b726
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: City (billing)
+
+		annotation SummarizationSetBy = User
+
+	column State
+		dataType: string
+		lineageTag: 4f3a59d2-9dd6-45b9-82a7-3d3b02fa6acb
+		sourceLineageTag: 5595798c-64b2-4e81-a4c0-4e51e89491ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = User
+
+	column 'Statecode (billing)'
+		dataType: string
+		lineageTag: 8f544e4c-3a4f-4205-b564-d8f07a368691
+		sourceLineageTag: 324daa11-bf01-4496-bb3d-91bd5fc27ccd
+		dataCategory: PostalCode
+		summarizeBy: none
+		sourceColumn: Statecode (billing)
+
+		annotation SummarizationSetBy = User
+
+	column CustomerId
+		dataType: string
+		lineageTag: 414df15f-34a9-4206-b5fe-bd4125647c16
+		sourceLineageTag: fb80efc3-95d6-478c-a364-aaf2167678f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CustomerId
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Strategy'
+		dataType: string
+		lineageTag: 951f0723-53b8-411a-b33d-4833d74aa7fc
+		sourceLineageTag: ad6373aa-1e86-4347-8176-6cf25e7d9d7f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Strategy
+
+		annotation SummarizationSetBy = User
+
+	column Industry
+		dataType: string
+		lineageTag: a8c745bc-011a-4835-8716-8aced20c38ff
+		sourceLineageTag: 6eb8f395-faec-49bc-91c4-8c4355e1f95d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: 486ca802-4de7-4c72-ac9e-a60140afa42f
+		sourceLineageTag: 811df226-05e8-4d0c-9514-9e1f992f904f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column 'Business Relation Type'
+		dataType: string
+		lineageTag: 74748952-8a62-4d2e-8c94-e72836af2477
+		sourceLineageTag: 4baf6968-44c5-4416-b6fb-49672a2b46d0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Business Relation Type
+
+		annotation SummarizationSetBy = User
+
+	column 'Law Firm Software'
+		dataType: string
+		lineageTag: 21948dd1-b7a3-4262-98af-d3f0b69e5ef5
+		sourceLineageTag: 0e95d894-f573-4c24-a83b-c7483b535b69
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Law Firm Software
+
+		annotation SummarizationSetBy = User
+
+	column 'Datasource Sales'
+		dataType: string
+		lineageTag: 7d44807b-ba8b-4f77-b9ee-82ab296b3362
+		sourceLineageTag: a8379631-4144-45f5-ad46-c0374d9dcc0d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datasource Sales
+
+		annotation SummarizationSetBy = User
+
+	column 'Datasource Marketing'
+		dataType: string
+		lineageTag: d98d722a-09a8-4429-9aa8-eedab32b0b28
+		sourceLineageTag: e8089a9f-b207-4245-996c-cd55069d1dfa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datasource Marketing
+
+		annotation SummarizationSetBy = User
+
+	column 'Customer Type'
+		dataType: string
+		lineageTag: 819df1fc-3515-4c67-a22b-ca32c292376d
+		sourceLineageTag: 41aca110-8c78-48c4-b442-a8d2b7d66bf3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Customer Type
+
+		annotation SummarizationSetBy = User
+
+	column 'Industry 2'
+		dataType: string
+		lineageTag: 13b6664a-4155-40fe-acf8-6368d98896b9
+		sourceLineageTag: 93ec8766-00d8-4f71-a66a-3e2602b2b3a8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Industry 2
+
+		annotation SummarizationSetBy = User
+
+	column 'Account Name'
+		dataType: string
+		lineageTag: 032b7fde-922d-4229-920e-d971a5633236
+		sourceLineageTag: ee1d0cc4-e53f-449a-bd40-0649e3576f2c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Account Name
+
+		annotation SummarizationSetBy = User
+
+	column 'Account location'
+		dataType: string
+		lineageTag: 898b3b66-f0cd-4fdc-afbe-031adf979a00
+		sourceLineageTag: c3b60419-0ce6-45fe-9fd2-06d5416ad10c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Account location
+
+		annotation SummarizationSetBy = User
+
+	column 'CRM Link (Account)'
+		dataType: string
+		lineageTag: 1688a59c-bf75-4893-aae1-f6e8a5e02a81
+		sourceLineageTag: 77f2e23b-22c3-433d-9034-0e9a8184580e
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: CRM Link (Account)
+
+		annotation SummarizationSetBy = User
+
+	column 'Last Contact'
+		dataType: string
+		lineageTag: 73cdd55d-d799-4936-88ac-ddae08f8a0c5
+		sourceLineageTag: e0237dc3-2d87-4336-b613-ca13839c9a53
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last Contact
+
+		annotation SummarizationSetBy = User
+
+	column Owner
+		dataType: string
+		lineageTag: 61a32c64-34be-48a5-9964-a5a490a14b72
+		sourceLineageTag: fd7154d1-60fe-4b7f-b9dc-840dfabaefa6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Owner
+
+		annotation SummarizationSetBy = User
+
+	column gcid
+		dataType: string
+		lineageTag: 0a3861cd-2d12-461c-9dd4-448f7defe417
+		sourceLineageTag: a7ea534c-88de-443c-b12b-e9b265b9e59b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: gcid
+
+		annotation SummarizationSetBy = User
+
+	column Country
+		dataType: string
+		lineageTag: 36a938ad-8f14-43cd-b07d-2957c37b525b
+		sourceLineageTag: d26f38cb-3f55-46c1-857e-6fa5ce072903
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = User
+
+	column FullAddress
+		dataType: string
+		lineageTag: b59ae8ad-14f9-445a-8584-6cd13c0f25d5
+		sourceLineageTag: 7a2e2161-af90-4a36-9482-fb19c02d10e0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: FullAddress
+
+		annotation SummarizationSetBy = User
+
+	column 'Firmenname 2'
+		dataType: string
+		lineageTag: 704f2647-23ea-4cdb-a3ae-789244811d2e
+		sourceLineageTag: b2e73515-129d-4dbc-9c9b-2f24479efb2b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Firmenname 2
+
+		annotation SummarizationSetBy = User
+
+	column bcbi_companyid
+		dataType: string
+		lineageTag: 5d9f5c3e-96a0-406b-bc6e-eae9d0750289
+		sourceLineageTag: 62c328dc-f0cf-44a2-99ea-c515944b53b6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: bcbi_companyid
+
+		annotation SummarizationSetBy = User
+
+	column Mail
+		dataType: string
+		lineageTag: b8b697b5-e9e0-42b0-b256-01bab3a1bef3
+		sourceLineageTag: 0e3ab086-7a11-4a35-af59-dbf701e11649
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Mail
+
+		annotation SummarizationSetBy = User
+
+	column Website
+		dataType: string
+		lineageTag: 01c978f7-a491-4176-8a0b-27ba795c3818
+		sourceLineageTag: f8bc26dd-8793-4fb7-b885-ebf94595933e
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: Website
+
+		annotation SummarizationSetBy = User
+
+	column Phone
+		dataType: string
+		lineageTag: 78b3765b-8fe3-44fb-b1c5-566347c869d8
+		sourceLineageTag: bc2db0ba-29ea-4055-96ad-522e7c118712
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = User
+
+	partition 'fact account' = entity
+		mode: directQuery
+		source
+			entityName: fact account
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

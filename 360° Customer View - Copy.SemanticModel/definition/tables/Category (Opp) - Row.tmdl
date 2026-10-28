@@ -1,0 +1,48 @@
+table 'Category (Opp) - Row'
+	lineageTag: a12e7d84-85a5-4853-8ead-822925e032ed
+	sourceLineageTag: 6f69a08e-1978-4167-9e12-533990fa909d
+
+	column 'Category (Opp) - Row'
+		dataType: string
+		lineageTag: 3ca92748-b24b-4de9-9b87-8e3c411c2892
+		sourceLineageTag: b1510e03-127a-48c3-bfe8-450d318fa118
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Category (Opp) - Row
+		sortByColumn: 'Kategorie (Opp) Reihenfolge'
+
+		relatedColumnDetails
+			groupByColumn: 'Kategorie (Opp) Felder'
+
+		annotation SummarizationSetBy = User
+
+	column 'Kategorie (Opp) Felder'
+		dataType: string
+		isHidden
+		lineageTag: ba26b38b-12d1-4908-aa28-9630a73e4c38
+		sourceLineageTag: e8175e78-8625-4365-98da-6f852b06c952
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Kategorie (Opp) Felder
+		sortByColumn: 'Kategorie (Opp) Reihenfolge'
+
+		annotation SummarizationSetBy = User
+
+	column 'Kategorie (Opp) Reihenfolge'
+		dataType: double
+		isHidden
+		formatString: 0
+		lineageTag: c06a25e2-fe1c-40cb-8380-00e8b68d85f4
+		sourceLineageTag: f774e812-9dea-4f88-b077-25c9945c740f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Kategorie (Opp) Reihenfolge
+
+		annotation SummarizationSetBy = User
+
+	partition 'Category (Opp) - Row' = entity
+		mode: directQuery
+		source
+			entityName: Category (Opp) - Row
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

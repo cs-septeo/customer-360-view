@@ -1,0 +1,1522 @@
+table 'fact lead'
+	lineageTag: 954af94f-9c37-40b4-8677-5d5b65cb5ac8
+	sourceLineageTag: aacfedef-e4b1-4c50-b319-feb36bfd4f02
+
+	measure '# Leads' = EXTERNALMEASURE("# Leads", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 10052c99-2ef8-4486-85b7-8d828175a4c3
+		sourceLineageTag: 67793166-4828-42ee-a3dd-a6264059e9dc
+		dataCategory: Uncategorized
+
+	measure '# Lead (MQL)' = EXTERNALMEASURE("# Lead (MQL)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 4259ee5e-0921-4005-bcc1-ef5428ff94a9
+		sourceLineageTag: 65f7cc43-ace5-4660-9b31-ccaf1a927869
+		dataCategory: Uncategorized
+
+	measure '# Lead (SQL)' = EXTERNALMEASURE("# Lead (SQL)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 267dd7df-7f07-454d-a2e9-35a2b98cdccc
+		sourceLineageTag: 783b440b-26ec-4613-a498-ae29a0c3feed
+		dataCategory: Uncategorized
+
+	measure '# Lead (Qualified - Closed On)' = EXTERNALMEASURE("# Lead (Qualified - Closed On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 2886e6ba-e300-42ab-b120-952ce3bf23fb
+		sourceLineageTag: 123cfcf6-01ff-430f-8b70-f97d45fc8384
+		dataCategory: Uncategorized
+
+	measure 'CR (Qualified - Closed On)' = EXTERNALMEASURE("CR (Qualified - Closed On)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: c1862588-2b59-4da0-ae50-07965aaf8d25
+		sourceLineageTag: 513054c4-d664-41ce-b7dc-144d7087b9d2
+		dataCategory: Uncategorized
+
+	measure '# Lead (Lost)' = EXTERNALMEASURE("# Lead (Lost)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 825aa40f-40cf-45ae-adfc-55aab8fbd90b
+		sourceLineageTag: df15f376-284e-4b8e-8f1d-692d47040dce
+		dataCategory: Uncategorized
+
+	measure '# Leads Abschlussdatum' = EXTERNALMEASURE("# Leads Abschlussdatum", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 774170a8-53b7-480b-a011-c67046efaec0
+		sourceLineageTag: 236376a3-0df9-4b49-893f-f85e6b2556cc
+		dataCategory: Uncategorized
+
+	measure '# Leads Created' = EXTERNALMEASURE("# Leads Created", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 1c73525e-2fd4-4e5b-a2e6-fb9b5cc489d2
+		sourceLineageTag: e4360ba3-a4b1-4ed8-af8b-e9b245c8b931
+		dataCategory: Uncategorized
+
+	measure '# Leads Schlusstermin' = EXTERNALMEASURE("# Leads Schlusstermin", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 4409cf2c-fca2-467b-a9a0-b7cabf04c9bc
+		sourceLineageTag: a4097c90-1d15-46c8-b8c6-bb9113977b3f
+		dataCategory: Uncategorized
+
+	measure '# Lead (Opp Won - Created On)' = EXTERNALMEASURE("# Lead (Opp Won - Created On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 9290b289-020b-45c1-b57e-90cda11baf2f
+		sourceLineageTag: 9f99e63e-f210-42cc-aff4-c4aacf223afa
+		dataCategory: Uncategorized
+
+	measure 'CR (Lead 2 Opp - Created On)' = EXTERNALMEASURE("CR (Lead 2 Opp - Created On)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: c424ab83-e1ba-44a8-879a-1116539dc260
+		sourceLineageTag: f36fd82f-66e4-46c4-bacc-c9840d94683c
+		dataCategory: Uncategorized
+
+	measure '# Lead (Qualified - Created On)' = EXTERNALMEASURE("# Lead (Qualified - Created On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 542c3258-1f05-4ca1-b98a-7633bf12b6cc
+		sourceLineageTag: d054fb84-f521-4c3a-afed-b87a0da77e1e
+		dataCategory: Uncategorized
+
+	measure 'CR (Qualified - Created On)' = EXTERNALMEASURE("CR (Qualified - Created On)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7d117d10-3c3e-42a2-b6bd-c16de97d47e9
+		sourceLineageTag: f474b4ec-7b90-41e0-9b31-bf5f6ebdebab
+		dataCategory: Uncategorized
+
+	measure '# ACV Won by Lead Created Date' = EXTERNALMEASURE("# ACV Won by Lead Created Date", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 0d290cae-9383-4046-8d5b-7f081b55370c
+		sourceLineageTag: eded1485-575d-4366-ac43-9f7b108127ef
+		dataCategory: Uncategorized
+
+	measure '# Opps Won by Lead Created' = EXTERNALMEASURE("# Opps Won by Lead Created", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 4317a3bf-6acb-409c-809d-71eaa558cca3
+		sourceLineageTag: f23cad69-aada-4afe-9c56-e0890c9e080e
+		dataCategory: Uncategorized
+
+	measure '# Opps Total by Lead Created Date' = EXTERNALMEASURE("# Opps Total by Lead Created Date", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: bf80175c-b113-489f-b01a-718e7777f9cd
+		sourceLineageTag: 0bef8e91-cf2c-4140-ba58-9c9785b961b4
+		dataCategory: Uncategorized
+
+	measure '# ACV Total by Lead Created Date' = EXTERNALMEASURE("# ACV Total by Lead Created Date", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: afd45200-e718-4680-9b9e-b87b73a25391
+		sourceLineageTag: 47fe37f6-20df-46d3-8105-39411a616b53
+		dataCategory: Uncategorized
+
+	measure '# Lead (Open - Created On)' = EXTERNALMEASURE("# Lead (Open - Created On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 92b982d6-6f4c-446f-90f0-2072ff014248
+		sourceLineageTag: 18fbcc12-c2f1-4b5e-bf97-78c964e00998
+		dataCategory: Uncategorized
+
+	measure '# Lead (Disqualified - Created On)' = EXTERNALMEASURE("# Lead (Disqualified - Created On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 96239e26-40b2-4c1e-906a-3cc9960aec11
+		sourceLineageTag: 0398dbed-6f2d-4f01-8de0-10bd9f36fbc9
+		dataCategory: Uncategorized
+
+	measure '# Lead (Closed - Created On)' = EXTERNALMEASURE("# Lead (Closed - Created On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 4ad6a353-0874-4fd3-89ac-454908d6a2a6
+		sourceLineageTag: d98944ea-e60d-4e54-85d8-1c15ec965acc
+		dataCategory: Uncategorized
+
+	measure 'CR Opps - Lead Created' = EXTERNALMEASURE("CR Opps - Lead Created", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 26b3f79d-eee7-4e88-9689-492185caa2b6
+		sourceLineageTag: 2bbb6dc6-c5d2-482c-a1ef-dd9d9811d2e9
+		dataCategory: Uncategorized
+
+	measure 'Conv Rate (Created On)' = EXTERNALMEASURE("Conv Rate (Created On)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: ef5df5f5-7bfc-448c-ac19-4fad39a4a8d6
+		sourceLineageTag: 42fceb28-6323-49b7-b7e2-aa03099f3d62
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# Lead - MQL Stage reached (Clean)' = EXTERNALMEASURE("# Lead - MQL Stage reached (Clean)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 94e59151-ca6e-4307-b0e7-ea41e29fe187
+		sourceLineageTag: 082c5e37-e18d-4ac7-8da2-ce8b34ab3867
+		dataCategory: Uncategorized
+
+	measure '# Leads - MQL Stage Reached' = EXTERNALMEASURE("# Leads - MQL Stage Reached", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 50c5d3b5-6c5d-4dd0-9977-7a4d3280013f
+		sourceLineageTag: 2044c37e-34da-4330-b248-447f65e53c8c
+		dataCategory: Uncategorized
+
+	measure '# Lead - SQL Stage reached (Clean)' = EXTERNALMEASURE("# Lead - SQL Stage reached (Clean)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: bc98e386-2f8c-4f8e-b852-b4c1cda57a93
+		sourceLineageTag: 6487db5f-ebf5-42e2-a651-155efa8b6b31
+		dataCategory: Uncategorized
+
+	measure '# Leads - SQL Stage Reached' = EXTERNALMEASURE("# Leads - SQL Stage Reached", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 63be0594-50bd-48cb-9ef6-12c8d6bdcbba
+		sourceLineageTag: 9afba781-8b64-4692-8aa1-d69add689591
+		dataCategory: Uncategorized
+
+	measure '# Lead (Disqualified - Closed On)' = EXTERNALMEASURE("# Lead (Disqualified - Closed On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 49a2fc3e-5d4e-4207-ba45-be4ea4d3e8c5
+		sourceLineageTag: 515eee46-0f2f-4ef7-8e80-b922af8ea65f
+		dataCategory: Uncategorized
+
+	measure 'ACV Total by Lead Closure Date' = EXTERNALMEASURE("ACV Total by Lead Closure Date", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: a62bcc90-ef20-461d-914e-d2017e4b5ec7
+		sourceLineageTag: 6c619689-d355-4b79-bd9d-e5770b622877
+		dataCategory: Uncategorized
+
+	measure '# Lead (MQL) Created 3' = EXTERNALMEASURE("# Lead (MQL) Created 3", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 2494f221-db0b-4ce2-bf80-87fd251b0c2e
+		sourceLineageTag: 16008256-e673-4e06-9956-abc8b8fe287b
+		dataCategory: Uncategorized
+
+	measure '# Lead (SQL) Created 3' = EXTERNALMEASURE("# Lead (SQL) Created 3", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 5c77fe93-a80b-4b6c-9f8c-64897089e32b
+		sourceLineageTag: 5b6656d2-b200-4071-bf51-d8fd75be4b31
+		dataCategory: Uncategorized
+
+	measure 'MQL CR (Created On)' = EXTERNALMEASURE("MQL CR (Created On)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: d5a813d9-5e9a-4114-b9aa-ee88e43771f9
+		sourceLineageTag: 6a622241-dae9-4e0a-8024-3e68fbdf7fce
+		dataCategory: Uncategorized
+
+	measure 'SQL CR (Created On)' = EXTERNALMEASURE("SQL CR (Created On)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 9286317f-a8ce-4580-8e1c-258aa7ba1b54
+		sourceLineageTag: d045e6f8-ee6e-47b6-b288-f24db0524098
+		dataCategory: Uncategorized
+
+	measure 'MQL2SQL CR (Created On)' = EXTERNALMEASURE("MQL2SQL CR (Created On)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 031886a1-55fe-4ac4-a55c-608189dca0d1
+		sourceLineageTag: 23bed8df-1981-443a-a6d8-730b607f2669
+		dataCategory: Uncategorized
+
+	measure '# Weekly Avg Leads Created' = EXTERNALMEASURE("# Weekly Avg Leads Created", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 532c45d4-4351-43fd-9a47-a77cd919d503
+		sourceLineageTag: 9200976b-42f8-497e-8e03-b4110c1ec60b
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# Monthly Avg Leads Created' = EXTERNALMEASURE("# Monthly Avg Leads Created", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 319363ad-7d55-4821-8d93-d3c5b5a6d340
+		sourceLineageTag: 66557bfe-8dfc-4218-bd5c-4a470c8d6bbd
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# Leads (with Opps)' = EXTERNALMEASURE("# Leads (with Opps)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 44e70eca-2246-4034-a180-45aa490929b5
+		sourceLineageTag: 963ed067-1356-4768-88ff-3d8cf00ee83a
+		dataCategory: Uncategorized
+
+	measure 'Leads (Bad DQ)' = EXTERNALMEASURE("Leads (Bad DQ)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 5490923c-1dd0-4419-a8f4-f833487f8e7b
+		sourceLineageTag: 0181ff8c-d0e6-4af2-b298-fcb531dc5f9e
+		dataCategory: Uncategorized
+
+	measure 'Leads (Good DQ)' = EXTERNALMEASURE("Leads (Good DQ)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 95ed0a94-85a1-493b-a0d5-3396c0f8d4fd
+		sourceLineageTag: c4ac7985-4205-4d01-b15b-1a484f01e31a
+		dataCategory: Uncategorized
+
+	measure 'Leads (Bad DQ Ratio)' = EXTERNALMEASURE("Leads (Bad DQ Ratio)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 397ec4db-6d3d-48e0-9f9e-380186eb211f
+		sourceLineageTag: b9102791-7890-46c2-8e84-0e49a7cde6cb
+		dataCategory: Uncategorized
+
+	measure 'SQL2Qual CR (Created On)' = EXTERNALMEASURE("SQL2Qual CR (Created On)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 555b1f33-d6cb-4184-9c6b-2e05040eecb9
+		sourceLineageTag: 97120b42-8f62-42c2-a65a-5add8ba195fc
+		dataCategory: Uncategorized
+
+	measure '# Lead (Disq. in Lead or MQL – Closed On)' = EXTERNALMEASURE("# Lead (Disq. in Lead or MQL – Closed On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: c3e92da3-0845-4121-9353-16e0ad3299d3
+		sourceLineageTag: 478ffeae-0020-4f44-ac3d-681e75ada4c0
+		dataCategory: Uncategorized
+
+	measure '# Lead (Disq. in MQL Stage - Created On)' = EXTERNALMEASURE("# Lead (Disq. in MQL Stage - Created On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 8fb12d22-7951-47c1-b7b3-650944a225ce
+		sourceLineageTag: f2f6a8e1-d9dd-4a80-bb9e-1aa529755b68
+		dataCategory: Uncategorized
+
+	measure '# Lead (Disq. in Lead Stage - Created On)' = EXTERNALMEASURE("# Lead (Disq. in Lead Stage - Created On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 549330c3-5cbd-422e-a9e3-6a6fc2284f9a
+		sourceLineageTag: 55df18f7-7254-4ee5-b8c2-0efad82b6a67
+		dataCategory: Uncategorized
+
+	measure '# Rejections (by Rejection Date)' = EXTERNALMEASURE("# Rejections (by Rejection Date)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: ed8895f4-ebb5-444c-a626-4100903c5558
+		sourceLineageTag: 1cbcd12d-d02f-4a8f-a4f3-bd83122d3a38
+		dataCategory: Uncategorized
+
+	measure 'ACV Total by Lead Created Date' = EXTERNALMEASURE("ACV Total by Lead Created Date", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 078dafab-d237-4ee1-a92b-ba3585026c5d
+		sourceLineageTag: 613a1848-6b2d-4748-8f9d-60ea8538d103
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ownerid
+		dataType: string
+		lineageTag: 9092f9ad-08df-4906-909c-3e99265da29d
+		sourceLineageTag: 231f2aeb-4d0c-4b66-967f-144e8409c124
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = User
+
+	column parentcontactid
+		dataType: string
+		lineageTag: 69e6f25e-0eb1-4345-b26c-960583354376
+		sourceLineageTag: a3d8281a-62fe-4caf-a003-6f52317d5aee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: parentcontactid
+
+		annotation SummarizationSetBy = User
+
+	column qualifyingopportunityid
+		dataType: string
+		lineageTag: 6790bb62-b79e-4873-b42e-e1970a308b3c
+		sourceLineageTag: 40af193b-0514-4dbc-9dc2-e4bec43625ba
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: qualifyingopportunityid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_landid
+		dataType: string
+		lineageTag: 4a2d657f-81a8-47c5-97d7-91f03dc1fe14
+		sourceLineageTag: 7b98e882-fe14-44ce-8613-5b2d6b8708ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_landid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_hierarchygrandparentaccountid
+		dataType: string
+		lineageTag: 057a7eb5-ca94-4f2a-86ae-bc763c691b20
+		sourceLineageTag: c27dcb0b-8f30-4943-8458-a047ca96248c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_hierarchygrandparentaccountid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_hierarchyparentaccountid
+		dataType: string
+		lineageTag: e0398811-e5d0-40ec-8157-56a89746afb0
+		sourceLineageTag: 24d95d70-9b7d-44ca-afd5-e6f5f1862801
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_hierarchyparentaccountid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_unternehmenid
+		dataType: string
+		lineageTag: 9185e74b-1f25-4e67-bf93-dd57fe830079
+		sourceLineageTag: ef5c9acc-9472-418d-ab14-4f66028506b2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_unternehmenid
+
+		annotation SummarizationSetBy = User
+
+	column donotsendmm
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6f171dc2-fb3f-4a86-8b39-1c97d7dfa8c4
+		sourceLineageTag: 3d42b04a-4d80-4391-aa83-21b9fa28f43c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: donotsendmm
+
+		annotation SummarizationSetBy = User
+
+	column ncx_bedarfcode
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b0246190-03f5-470f-96cd-3cf2b2de9390
+		sourceLineageTag: 9a817a9e-28cd-4a56-8aee-36b612106307
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_bedarfcode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_entscheidercode
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a1347a32-b031-4e19-8706-42a1bdad94a5
+		sourceLineageTag: 15713e7d-3de5-40df-9c72-acc87173b7f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_entscheidercode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_opportunityerstellen
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2a610452-320a-4f72-9165-355e364202f5
+		sourceLineageTag: 261fd3bb-3a32-426c-b94c-5e07b1729ba5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_opportunityerstellen
+
+		annotation SummarizationSetBy = User
+
+	column Lead
+		dataType: string
+		lineageTag: ad0accc8-3a3f-4c0b-adf4-5a7010a1c3bc
+		sourceLineageTag: 01f4720a-ab8d-4d0d-bb64-d941c42f7064
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Lead
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 89bb81ea-472b-4838-9865-e790cc0e985f
+		sourceLineageTag: 52a06684-6ef6-4302-a324-f48968a889b0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column E-Mail
+		dataType: string
+		lineageTag: a6ba3bba-8fef-46d7-9362-0e74b2d0ce7f
+		sourceLineageTag: 0d6e6684-27d1-4b97-a61f-e70accb8dfb6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: E-Mail
+
+		annotation SummarizationSetBy = User
+
+	column Leadstatus
+		dataType: string
+		lineageTag: 84425a7c-b6c1-4f44-9bc6-0edb3f15090f
+		sourceLineageTag: be216150-e88d-4334-910f-cd9cb4f6d224
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Leadstatus
+
+		annotation SummarizationSetBy = User
+
+	column parentaccountid
+		dataType: string
+		lineageTag: ce5c2407-f917-46c0-aebc-1d2e6e328c4a
+		sourceLineageTag: 3fa4a2e4-125b-4052-b95e-0596d163f1a8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: parentaccountid
+
+		annotation SummarizationSetBy = User
+
+	column 'Created On'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: d77b09c2-960c-4558-b6bd-2db10d82dc35
+		sourceLineageTag: a7322614-cad1-4574-92ec-69a8d7b32be1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Created On
+
+		annotation SummarizationSetBy = User
+
+	column 'Lead ID'
+		dataType: string
+		isNullable: false
+		lineageTag: 7e60661f-b398-4758-a706-4e39c134af6c
+		sourceLineageTag: 3c7a7060-9218-467c-ad91-ffc14ca9016b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Lead ID
+
+		annotation SummarizationSetBy = User
+
+	column 'First Contact'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 6c8043ec-413d-41b2-ab50-b703f7468fa9
+		sourceLineageTag: c0a9581d-ae0e-4d5e-983f-f835e725dc9b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: First Contact
+
+		variation Variation
+			isDefault
+			relationship: f1dec92a-c109-42db-a224-3a2443a3a1a6
+			defaultHierarchy: LocalDateTable_364e00b6-2961-4300-b79e-4ecc6b6bd24c.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Last Contact'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 58c9dc35-7f87-4ec5-a4fd-8234bc0627b5
+		sourceLineageTag: 4d9c81c7-4d01-4d65-8745-d5268214ddd9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last Contact
+
+		variation Variation
+			isDefault
+			relationship: 2a17789f-014b-4ba4-842a-9b4811f0c110
+			defaultHierarchy: LocalDateTable_0c685668-f3ae-4a99-bfa3-87037a658b9a.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Closure Date'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 6a842732-f864-470f-a762-b12624538b19
+		sourceLineageTag: 06f501af-0aef-4c5c-a52c-4225380236a2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Closure Date
+
+		annotation SummarizationSetBy = User
+
+	column 'Closing Date'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 406bd4fd-d5b7-4713-a312-a4069997b331
+		sourceLineageTag: aed07a81-6640-4e8c-85f7-5e3031ab962f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Closing Date
+
+		annotation SummarizationSetBy = User
+
+	column City
+		dataType: string
+		lineageTag: 7aea969f-a6a2-406c-ba02-c1daa7dbbcec
+		sourceLineageTag: 20ddd68a-6d6e-4ea8-b2f3-05993566e476
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = User
+
+	column Street
+		dataType: string
+		lineageTag: 2ef039b7-c3b5-4e1e-90b1-e96f445fc6f3
+		sourceLineageTag: 4bcd22e4-1432-4198-8027-779cccdc0d8d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Street
+
+		annotation SummarizationSetBy = User
+
+	column Postcode
+		dataType: string
+		lineageTag: 64d5a02d-954d-419b-9c26-eece331f8eac
+		sourceLineageTag: 3fbaa7e5-f092-4c30-975b-ae084480db00
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Postcode
+
+		annotation SummarizationSetBy = User
+
+	column Firstname
+		dataType: string
+		lineageTag: f45ff675-ba3a-4dd4-ae41-953fbf51ed87
+		sourceLineageTag: 6e18eab3-a3ab-4217-a64d-01090ec06250
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Firstname
+
+		annotation SummarizationSetBy = User
+
+	column 'Number of Professionals'
+		dataType: double
+		lineageTag: 930d7898-0d26-4c41-b694-f4301d702235
+		sourceLineageTag: 0cb8f6f3-6acd-47b0-880d-8536f1b018a2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Number of Professionals
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Rejection Reason BANT'
+		dataType: string
+		lineageTag: 5eca1100-70c8-417f-b337-cf84dba781d6
+		sourceLineageTag: c8fb40a8-0aba-4ce4-928e-218419ae725d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Rejection Reason BANT
+
+		annotation SummarizationSetBy = User
+
+	column 'Rejection Reason'
+		dataType: string
+		lineageTag: 71712882-0d63-4a70-8620-d1df7a88293c
+		sourceLineageTag: 87518350-9071-418a-9761-acd9b90517bb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Rejection Reason
+
+		annotation SummarizationSetBy = User
+
+	column Industry
+		dataType: string
+		lineageTag: 99f50a3c-78a3-4a18-86a9-eca756edd089
+		sourceLineageTag: e104a31f-1d32-49dc-81d5-a1dddb47de0b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = User
+
+	column 'Company Size'
+		dataType: string
+		lineageTag: fd5fc726-c36a-40ad-9f2a-378b4f08eba7
+		sourceLineageTag: d7acca77-b7ad-49ac-8d69-40b0f3e9500f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Company Size
+
+		annotation SummarizationSetBy = User
+
+	column '1. Position'
+		dataType: string
+		lineageTag: f69936f0-f49c-44a8-be6e-f02113e0cc67
+		sourceLineageTag: 8e76d8b5-a0de-4656-b91d-fde219834dff
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: 1. Position
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: de53ae21-8263-4c60-b6f7-2c9a635c7524
+		sourceLineageTag: 007fd496-b952-42b2-8f1d-bc54645b5518
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column 'Status Reason'
+		dataType: string
+		lineageTag: 21afcabd-91be-4839-99b2-047edbe45a7c
+		sourceLineageTag: 1d707d17-4754-4b37-b1d5-a93f94c32181
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status Reason
+
+		annotation SummarizationSetBy = User
+
+	column Datasetsourcedetails
+		dataType: string
+		lineageTag: 9cea6650-d61b-4a34-ad87-8401ec31e95b
+		sourceLineageTag: 8f8301bd-b71a-4580-b7bb-956114586a68
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datasetsourcedetails
+
+		annotation SummarizationSetBy = User
+
+	column 'Datasetsource (Marketing)'
+		dataType: string
+		lineageTag: ba312e40-806a-47bc-ab83-d80b77197dbb
+		sourceLineageTag: a921e3ec-62a4-4409-ae49-f322e6491ed1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datasetsource (Marketing)
+
+		annotation SummarizationSetBy = User
+
+	column 'Datasetsource (Sales)'
+		dataType: string
+		lineageTag: 1f0baec9-6cd5-4a2e-bd25-b8b328f89304
+		sourceLineageTag: 605c79c3-69a5-4836-a47d-9131e2f62d72
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datasetsource (Sales)
+
+		annotation SummarizationSetBy = User
+
+	column Datasetsource
+		dataType: string
+		lineageTag: a7cba45a-8ce0-4f0d-8e75-5ef2ac868e03
+		sourceLineageTag: 2ab16372-bffa-4c94-9dce-da9b9de07f8d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Datasetsource
+
+		annotation SummarizationSetBy = User
+
+	column 'Conversion Time (Lead)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c16345f-0246-4437-8b31-8b1905fe38f6
+		sourceLineageTag: 67b61b83-b74d-4f91-babc-ea84218fd0d0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Conversion Time (Lead)
+
+		annotation SummarizationSetBy = User
+
+	column 'CRM Link (Lead)'
+		dataType: string
+		lineageTag: 7118e3d4-d870-4125-8e63-db8bb49947b5
+		sourceLineageTag: 259570e5-61b7-438b-af02-e40faf0d026a
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: CRM Link (Lead)
+
+		annotation SummarizationSetBy = User
+
+	column 'Closure Date New'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: c7c34a63-ad23-4a28-abf8-e40082b16dfb
+		sourceLineageTag: 99fda8d5-1459-4a56-a7ea-071bdce1f615
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Closure Date New
+
+		variation Variation
+			isDefault
+			relationship: ce6cd2b7-0c69-448a-84c0-58ae337834ce
+			defaultHierarchy: LocalDateTable_6b1d01a7-e995-4044-9464-da78fb3f641e.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column data_update
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 96d6d4ea-51b0-48ef-bf09-b2c55edc8574
+		sourceLineageTag: cd3e6a4c-57dd-4898-b255-f0a16adc7f91
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: data_update
+
+		variation Variation
+			isDefault
+			relationship: c7416e7c-27b1-4575-aff8-4c19beec1fa0
+			defaultHierarchy: LocalDateTable_d94d49e8-cc8a-487a-aaf5-03cf3a0fd7bf.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Lead Owner'
+		dataType: string
+		lineageTag: 14936baf-93ae-44d5-8466-8d260c3fd16c
+		sourceLineageTag: 36f2480d-6778-40d2-a1a8-7a845d61f75c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Lead Owner
+
+		annotation SummarizationSetBy = User
+
+	column active_bpf_stage
+		dataType: string
+		lineageTag: 01ad3975-2d1e-431a-904f-1fa42d7a8f62
+		sourceLineageTag: 711e94e9-5b5b-425b-9324-d13e2dd995f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: active_bpf_stage
+
+		annotation SummarizationSetBy = User
+
+	column 'Opp ID (sec. Mapping)'
+		dataType: string
+		lineageTag: 19067c90-048b-43d1-a450-91f7ed82148c
+		sourceLineageTag: 310d6cfc-7e7e-411e-8a3d-60b29f88ff6e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Opp ID (sec. Mapping)
+
+		annotation SummarizationSetBy = User
+
+	column 'Processing Status'
+		dataType: string
+		lineageTag: f68424fa-3626-49b7-af2d-bb28a3a70e2c
+		sourceLineageTag: f2246ff2-b2e8-4364-bf56-1ec0a5176d65
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Processing Status
+
+		annotation SummarizationSetBy = User
+
+	column 'Exp Closing Date (Lead Closed)'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: f87257de-c240-4a6d-8aff-fda199920bfa
+		sourceLineageTag: 7abc9455-53d3-4717-9d84-c120b3663886
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Exp Closing Date (Lead Closed)
+
+		variation Variation
+			isDefault
+			relationship: cba0c60e-7092-4244-bd2a-f26edcd63f56
+			defaultHierarchy: LocalDateTable_b84faa85-3337-42a6-92d6-bad374357e1e.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Exp. Closing Date (Opp Closed)'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: b53b44d4-9c85-41a6-8f9f-4d1a7346341c
+		sourceLineageTag: e91ea4f3-74f2-4796-b238-f250394153e5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Exp. Closing Date (Opp Closed)
+
+		variation Variation
+			isDefault
+			relationship: 3bc3daad-e96d-4271-a4c1-4340a76c1dcb
+			defaultHierarchy: LocalDateTable_a7e8513a-6417-47ed-b4df-8a9a5cb09371.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'First Rejection'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 075522ba-7f5a-4b42-848c-e9c91690a90c
+		sourceLineageTag: 7784709c-1db9-472d-a06d-874c874964f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: First Rejection
+
+		annotation SummarizationSetBy = User
+
+	column merged
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8b805ce2-3b9e-4362-bcce-d4e2bf7c14df
+		sourceLineageTag: b503e7d1-d19a-4748-8fab-b7c78952e7dd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: merged
+
+		annotation SummarizationSetBy = User
+
+	column 'Last MQL'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: f5c91d54-d89e-406f-b9d6-511b174e812c
+		sourceLineageTag: 06689ef8-7d12-4d19-a781-a7e0dc80125d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last MQL
+
+		variation Variation
+			isDefault
+			relationship: b42510f2-352b-46cb-997a-14622e3c13c2
+			defaultHierarchy: LocalDateTable_8ceedd7a-672a-4dd7-ae91-2e20d25415bd.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'First MQL'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 0c7a5c9b-8199-40d8-b7e7-42ae93b6792f
+		sourceLineageTag: a367be74-2148-4073-a0ef-dce231388386
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: First MQL
+
+		variation Variation
+			isDefault
+			relationship: daaa0579-3d5d-4d3a-a253-85a1aead999e
+			defaultHierarchy: LocalDateTable_716957fc-1c1e-4e5c-86e8-7efdca7aee9b.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'First SQL'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: c11b914e-7d96-47cc-9cd2-c264e14cabbd
+		sourceLineageTag: 4ff7cbd9-0b96-4525-bf74-058d7fd03757
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: First SQL
+
+		variation Variation
+			isDefault
+			relationship: c7291e85-77ab-45ee-b481-7415bc795a47
+			defaultHierarchy: LocalDateTable_f4af9a1d-3ec9-422d-8fea-d8ba8fc6d667.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Last SQL'
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 41a5f6f8-2676-48fd-8539-1b6d71d525e2
+		sourceLineageTag: 9776f710-0acc-4c13-b430-f2a540807f19
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last SQL
+
+		variation Variation
+			isDefault
+			relationship: c4e1d7a6-869c-44ee-8043-7fd8f913ae47
+			defaultHierarchy: LocalDateTable_cd27cf28-86a1-4933-88f7-bf466aaca62e.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Days First Contact'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d37f7ba-96c2-4996-a0b3-3e7109c4069c
+		sourceLineageTag: d5489511-a09e-4750-8d32-6d4756489e5a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Days First Contact
+
+		annotation SummarizationSetBy = User
+
+	column 'Days First MQL'
+		dataType: int64
+		formatString: 0
+		lineageTag: 07f677f8-bce9-409f-8f4e-d9f661999300
+		sourceLineageTag: 8ae9afb8-4da8-4bf4-923f-37145ee72881
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Days First MQL
+
+		annotation SummarizationSetBy = User
+
+	column 'Days First SQL'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ec7973e-54f7-4227-a181-0270469acaaf
+		sourceLineageTag: a9c6df14-71ec-45a1-839c-cd1d4248d6ec
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Days First SQL
+
+		annotation SummarizationSetBy = User
+
+	column 'Last Phase Transition'
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: baf0bd4d-4e2d-4193-a945-316a984575a1
+		sourceLineageTag: 05f4594d-5cd6-4358-a43e-e6cea1bfae3c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last Phase Transition
+
+		variation Variation
+			isDefault
+			relationship: f777245c-4be0-49c5-8aca-0449a711c125
+			defaultHierarchy: LocalDateTable_121ecad4-bd2b-4526-965f-58319ca40190.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Days in current Phase'
+		dataType: int64
+		formatString: 0
+		lineageTag: c6338102-be41-486b-aa07-472ff18d2e19
+		sourceLineageTag: a259dbca-93c6-4abf-bc6a-604fe05b18ba
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Days in current Phase
+
+		annotation SummarizationSetBy = User
+
+	column 'Lead Age'
+		dataType: int64
+		formatString: 0
+		lineageTag: a1aa4cf2-c845-4e6c-b7c4-744d2044a606
+		sourceLineageTag: e705a4a8-baa9-4f14-b711-e35202ca32fb
+		dataCategory: Uncategorized
+		summarizeBy: average
+		sourceColumn: Lead Age
+
+		annotation SummarizationSetBy = User
+
+	column Lastname
+		dataType: string
+		lineageTag: cc5c6c90-d311-4021-a143-e1feff45da27
+		sourceLineageTag: 2f939ab7-14eb-4088-a5f6-0c133e3bfee7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Lastname
+
+		annotation SummarizationSetBy = User
+
+	column stp_hubspotlead
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7aa71e57-54c0-4640-b8e0-9ded0a649b23
+		sourceLineageTag: 9552246f-990e-4e91-b2a9-0ed28814bb70
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_hubspotlead
+
+		annotation SummarizationSetBy = User
+
+	column Pipelinephase
+		dataType: string
+		lineageTag: 9f800924-fd22-4fb5-a7c8-b7c124eaff05
+		sourceLineageTag: 5c747d90-0fa2-42dc-ad9e-07f87d2e5779
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Pipelinephase
+
+		annotation SummarizationSetBy = User
+
+	column 'X Days unmoved'
+		dataType: int64
+		formatString: 0
+		lineageTag: 914e9e56-d44e-4c77-98fe-603067ed9a9b
+		sourceLineageTag: 836d9680-1385-4ef0-bd0f-af13d5748063
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: X Days unmoved
+
+		annotation SummarizationSetBy = User
+
+	column 'X Days Open'
+		dataType: int64
+		formatString: 0
+		lineageTag: f567073a-92dc-4829-a377-39184f16fd59
+		sourceLineageTag: 9d6912dd-b667-4d87-978f-b3416aef53a3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: X Days Open
+
+		annotation SummarizationSetBy = User
+
+	column 'No Sales Area'
+		dataType: int64
+		formatString: 0
+		lineageTag: c1ee392a-2110-4e24-8a13-c2acea85268c
+		sourceLineageTag: 7491b96a-f064-4ad2-814b-90eddd54aef1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: No Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column 'No Campaign'
+		dataType: int64
+		formatString: 0
+		lineageTag: ed30d28b-f83e-4654-80f6-50282a68c517
+		sourceLineageTag: b4d64d6a-9d71-4876-9f71-4e5ef134dd82
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: No Campaign
+
+		annotation SummarizationSetBy = User
+
+	column 'No Industry'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e2b4d6e-0b0c-4db3-a607-5b3adab4116e
+		sourceLineageTag: 4b4297b9-8911-49da-a5b7-9bf217b85203
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: No Industry
+
+		annotation SummarizationSetBy = User
+
+	column 'First SQL Mover (User)'
+		dataType: string
+		lineageTag: 3e945685-bf24-458b-8e27-ccbde5f9b910
+		sourceLineageTag: ee947058-8914-4a26-8b60-a9c16bf76c1d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: First SQL Mover (User)
+
+		annotation SummarizationSetBy = User
+
+	column 'First MQL Mover (User)'
+		dataType: string
+		lineageTag: 58e66ed4-3ffc-4fb6-be55-c6f8ad387f97
+		sourceLineageTag: 0fd14711-ddc9-4ac8-9580-b58f706bfc41
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: First MQL Mover (User)
+
+		annotation SummarizationSetBy = User
+
+	column 'Business Relation Type (Account)'
+		dataType: string
+		lineageTag: 1af71cd3-df79-4741-bf4b-78cae1de1124
+		sourceLineageTag: 90c6df0d-e1b2-477f-bbba-5b61e9ddac6a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Business Relation Type (Account)
+
+		annotation SummarizationSetBy = User
+
+	column Counter
+		dataType: int64
+		formatString: 0
+		lineageTag: c8dadba4-ac1f-4257-91f3-5192324558cd
+		sourceLineageTag: 644c08ba-d9c3-4f2c-b370-3b2e59cbfb03
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Counter
+
+		annotation SummarizationSetBy = User
+
+	column 'Last Activity Type'
+		dataType: string
+		lineageTag: 51c882d7-6c5b-4dde-be36-e6b5258fe485
+		sourceLineageTag: f6c13bfe-ffb4-466b-88c6-3951af0a99c2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last Activity Type
+
+		annotation SummarizationSetBy = User
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 7e00ab47-70af-4f5c-9c9a-13f973041252
+		sourceLineageTag: 4cf31b9e-daf3-4421-b3ce-9ab9e11617ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: 01997959-d32c-47a9-9617-940778cb848d
+			defaultHierarchy: LocalDateTable_fc234f23-ef60-4f29-bf9a-a9a0939e2d07.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column 'Days Modified On'
+		dataType: int64
+		formatString: 0
+		lineageTag: 27cc25ab-1805-4db4-94ad-78d27f8a1c10
+		sourceLineageTag: 96d16e8b-3907-426d-84fd-2dd8d8dd184d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Days Modified On
+
+		annotation SummarizationSetBy = User
+
+	column MissedActivities
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c47d04f-b17f-48d2-90a4-fd309409e97f
+		sourceLineageTag: 11e66080-f3e6-4a15-825f-c229d82c29d5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: MissedActivities
+
+		annotation SummarizationSetBy = User
+
+	column 'Bad Data Quality Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: 26900d6b-c5b9-4110-bfc7-70cb1a0e139f
+		sourceLineageTag: 36463470-e320-4c16-8fba-8282c1ef9b87
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Bad Data Quality Score
+
+		annotation SummarizationSetBy = User
+
+	column 'X Days unmodified'
+		dataType: int64
+		formatString: 0
+		lineageTag: ba6395fb-3bc7-4ccc-9be5-140798446765
+		sourceLineageTag: 158a4f18-d782-470c-9caf-601d6e18ad40
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: X Days unmodified
+
+		annotation SummarizationSetBy = User
+
+	column 'No activity'
+		dataType: int64
+		formatString: 0
+		lineageTag: ce75a05f-0810-409d-87d5-ab6b2b49cceb
+		sourceLineageTag: 1796113b-73ff-4794-9f1d-4d9a98eda7bc
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: No activity
+
+		annotation SummarizationSetBy = User
+
+	column 'No Opp but Qualified'
+		dataType: int64
+		formatString: 0
+		lineageTag: cebf472e-d701-4ebe-96c4-42906b44bda1
+		sourceLineageTag: 7b0bf65f-c51a-41a5-9486-cc76ec1ac619
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: No Opp but Qualified
+
+		annotation SummarizationSetBy = User
+
+	column statecode
+		dataType: int64
+		formatString: 0
+		lineageTag: bb95f32b-a78b-40aa-905e-4bd3e48ee962
+		sourceLineageTag: a8d64ff5-eae6-4b96-b80f-fa43ccf9bc51
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = User
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: fcfcd7f6-a25d-4c29-984c-4d5f4cae46e1
+		sourceLineageTag: 82372ce6-df97-438f-91f2-9a06b3b4e2e9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_datensatzquellecode
+		dataType: int64
+		formatString: 0
+		lineageTag: f596a6fc-f502-4be9-9cda-67933ff93533
+		sourceLineageTag: 3fa8831d-b6a6-48b1-88d4-dfb7718109c9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_datensatzquellecode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_branchecode
+		dataType: int64
+		formatString: 0
+		lineageTag: fa3349fb-7e05-4330-92d9-aa9616ea4ca0
+		sourceLineageTag: f4029e17-31e1-44d8-8bc6-4557ecd729fa
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_branchecode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_datensatzquelle
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b2f0249-9505-4bbf-82cd-4b6ece3ae223
+		sourceLineageTag: 602b6f01-779f-4e2a-8cf1-2aef7e8ca907
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_datensatzquelle
+
+		annotation SummarizationSetBy = User
+
+	column ncx_datensatzquellesales
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b4b36d1-6589-4809-a5c7-77c7ecf62e0d
+		sourceLineageTag: ea060b9a-29cc-4e99-94ac-f321d1ba6f53
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_datensatzquellesales
+
+		annotation SummarizationSetBy = User
+
+	column ncx_ablehnungsgrundcode
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e0abda4-dd40-46fa-aaa9-47d8aa0a57f3
+		sourceLineageTag: 43d990e4-2fda-4194-afa9-fb6cd8159a57
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_ablehnungsgrundcode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_leadstatuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: f8525456-6f4a-487a-b496-8ec2a261e64e
+		sourceLineageTag: 92ef3ad0-1089-4ed7-83b3-9fa76d76df87
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_leadstatuscode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_firmengroessecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 32976641-9b3b-42ed-ad2e-a6b6574e117e
+		sourceLineageTag: 4ea582fb-1bf6-46fb-aefe-9157ce359835
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_firmengroessecode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_funktioncode
+		dataType: int64
+		formatString: 0
+		lineageTag: 6673a43e-d781-4f8e-9605-9be968ce710e
+		sourceLineageTag: c3072d4f-d421-4c3c-9caf-acaa5a7f30e9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_funktioncode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_marktsegmentcode
+		dataType: int64
+		formatString: 0
+		lineageTag: ea10c7d6-5d8c-41ce-8446-2b1bd1a24a29
+		sourceLineageTag: 40b0f402-db23-43d0-b9c9-dd522aa12fd9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_marktsegmentcode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_ncx_funktiondreicode
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e9e66ed-6d99-406d-ac88-524c8772340b
+		sourceLineageTag: 23ebf0b9-b3cd-4ed8-aff6-dfb493d851c8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_ncx_funktiondreicode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_ncx_funktionzweicode
+		dataType: int64
+		formatString: 0
+		lineageTag: 38c7f76f-657a-4068-ba58-d429297db80d
+		sourceLineageTag: 4f85a9ac-4044-4222-a915-6fcf0f8e1bb6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_ncx_funktionzweicode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_ablehnungsgrundbantcode
+		dataType: int64
+		formatString: 0
+		lineageTag: ef034b29-648d-47ea-b566-028d9cadf19d
+		sourceLineageTag: 36443a4c-a5e5-46b4-8406-29836d6ba6dd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_ablehnungsgrundbantcode
+
+		annotation SummarizationSetBy = User
+
+	column companyname
+		dataType: string
+		lineageTag: 2990462a-9eec-49af-b004-af3bc91f92c2
+		sourceLineageTag: 8c90e44a-fa5f-4aa2-a685-4bf0c9899095
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: companyname
+
+		annotation SummarizationSetBy = User
+
+	column ncx_externalstatuscode
+		dataType: string
+		lineageTag: 8befc538-9a07-4854-aff0-27b784e79dae
+		sourceLineageTag: 6bfe4b54-cc55-40f3-ac90-872668d30526
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_externalstatuscode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_externeid
+		dataType: string
+		lineageTag: 6ef61e10-ea31-441a-afb6-73a951d455d3
+		sourceLineageTag: 700e2dcd-d0c6-40f9-b636-e691218f5b17
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_externeid
+
+		annotation SummarizationSetBy = User
+
+	column ncx_accountidsalesforce
+		dataType: string
+		lineageTag: 48a7db17-7f30-4942-a423-3bfd2e3f3bce
+		sourceLineageTag: 20bba0db-9ccd-498a-8d1f-c67b88c23708
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_accountidsalesforce
+
+		annotation SummarizationSetBy = User
+
+	column ncx_externalstatecode
+		dataType: string
+		lineageTag: e983e28a-a1ac-41e1-bc9b-79123c23a12c
+		sourceLineageTag: 971fe42e-cf7d-45c8-9dac-aac552fedc24
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_externalstatecode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_bearbeitungsstatus
+		dataType: int64
+		formatString: 0
+		lineageTag: c4c06f9d-e3a8-4f01-9cf7-458d3f0edadc
+		sourceLineageTag: 7e1680b0-3105-44a5-80a7-b330580818a3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_bearbeitungsstatus
+
+		annotation SummarizationSetBy = User
+
+	column ncx_pipelinephase
+		dataType: double
+		lineageTag: d323ad27-bf19-41f9-87c7-341bd91525a8
+		sourceLineageTag: 87dc856a-c99a-4ced-b9c2-09cab6e31f3b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_pipelinephase
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column modifiedby
+		dataType: string
+		lineageTag: ac045be1-adc9-4a8c-b25e-4cee9e76d6ff
+		sourceLineageTag: 77698881-d72a-4d74-a7ff-457d8a3facda
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = User
+
+	column stp_geschaftsbeziehung
+		dataType: double
+		lineageTag: 1bd45349-76f1-491f-b45b-eaf6a2c22bb0
+		sourceLineageTag: 9f161178-d8f0-4fbd-bb93-eb5136e0bd0e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: stp_geschaftsbeziehung
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ncx_bedarfdetails
+		dataType: string
+		lineageTag: 4573950b-362b-4d69-aeb7-5cfee2f0dc0d
+		sourceLineageTag: 464d69b2-cb02-4554-9a7e-27f6b7b64a7b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_bedarfdetails
+
+		annotation SummarizationSetBy = User
+
+	column first_deal_created_date
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: a8c1f069-e08b-4099-a71f-1c5303033535
+		sourceLineageTag: 6272f4db-c150-41ff-97eb-7ecb38d807f3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: first_deal_created_date
+
+		variation Variation
+			isDefault
+			relationship: 7ece0e93-8326-4e36-b52a-db97cf5481fd
+			defaultHierarchy: LocalDateTable_b0f07639-17a4-4bc0-87e1-e9f7fb418979.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column Account
+		dataType: string
+		lineageTag: 32799a46-d4ac-4f27-90eb-23a515cd1203
+		sourceLineageTag: c4b1198a-8870-4ad5-ac91-2242b8dd9bad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Account
+
+		annotation SummarizationSetBy = User
+
+	column 'Has Rejection'
+		dataType: int64
+		formatString: 0
+		lineageTag: f3f46529-d738-41d4-a070-0b62656d4a4a
+		sourceLineageTag: a99dc8f9-98e9-4e31-a445-c0af98aad12d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Has Rejection
+
+		annotation SummarizationSetBy = User
+
+	column stp_letztedatensatzquelldetails2
+		dataType: string
+		lineageTag: 9cc3056e-6910-463a-8ac2-3897a42f2cd6
+		sourceLineageTag: 91785d47-9479-405c-b5bb-ec322874971b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_letztedatensatzquelldetails2
+
+		annotation SummarizationSetBy = User
+
+	column stp_geschaftsbeziehungname
+		dataType: string
+		lineageTag: 24e97cc4-0853-400c-a81a-26205e149814
+		sourceLineageTag: 3671dd45-a18d-42ed-a208-fb66fc52fc6c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: stp_geschaftsbeziehungname
+
+		annotation SummarizationSetBy = User
+
+	column 'Products (Opp)'
+		dataType: string
+		lineageTag: 50e627b9-4f5e-40c4-a9bf-c620469b244c
+		sourceLineageTag: e4f58f3b-0ef3-44f5-b102-5758240dab83
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Products (Opp)
+
+		annotation SummarizationSetBy = User
+
+	hierarchy 'Created On Hierarchie'
+		lineageTag: 6b26b90b-3eee-4844-a9e7-6dd6c9c76d45
+		sourceLineageTag: d2a1f5e3-4b5f-4d29-9eea-d81eaf56939a
+
+		level 'Created On'
+			lineageTag: dbb4dcf3-7937-432d-bb6b-cf2867467b2c
+			sourceLineageTag: 6d6ae955-8bc4-4f91-acf2-61b0e5f8115f
+			column: 'Created On'
+
+	partition 'fact lead' = entity
+		mode: directQuery
+		source
+			entityName: fact lead
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

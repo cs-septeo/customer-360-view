@@ -1,0 +1,547 @@
+table 'ERP ContractLine'
+	lineageTag: 1aca51e2-32c2-4464-8842-571b2091017a
+	sourceLineageTag: 36b15200-f7dc-43d2-b66b-7bf116980b0e
+
+	measure 'Run Rate (Active CLs)' = EXTERNALMEASURE("Run Rate (Active CLs)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: 2f9f3a4e-36ef-4105-8e41-c0e8229b7890
+		sourceLineageTag: 78ef6220-b0e5-465a-b49f-69c652237ee2
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Run Rate (Active)' = EXTERNALMEASURE("Run Rate (Active)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		lineageTag: cbb873b8-eba2-4f16-96d8-7c3662381da5
+		sourceLineageTag: 0ccd522e-5de4-4c3d-b13f-d0b864ee7b1f
+		dataCategory: Uncategorized
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CLKey
+		dataType: string
+		lineageTag: be713493-9b4c-4542-9422-d6d515bf419c
+		sourceLineageTag: ffb58ef4-814d-4c25-b22c-066983781884
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CLKey
+
+		annotation SummarizationSetBy = User
+
+	column SalesArea
+		dataType: string
+		lineageTag: f9adc7d5-6377-4259-806c-d321b53bf125
+		sourceLineageTag: 714796aa-b5a7-45a4-89d0-d4bd3b4cf047
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SalesArea
+
+		annotation SummarizationSetBy = User
+
+	column DebitorNr
+		dataType: string
+		lineageTag: 2412785b-de0b-40d5-acef-3e681c305498
+		sourceLineageTag: 6a43b6ec-de80-44bb-adcd-16ef59b96ef5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebitorNr
+
+		annotation SummarizationSetBy = User
+
+	column DebitorName
+		dataType: string
+		lineageTag: 3d5519b1-599b-41ff-8045-4551b8cbd687
+		sourceLineageTag: 9f1e5a13-4d3c-46b1-8b37-a61263b8dca3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebitorName
+
+		annotation SummarizationSetBy = User
+
+	column VNr
+		dataType: string
+		lineageTag: d6826d7a-4802-46ef-836b-4e3f6d0ce0f8
+		sourceLineageTag: 8ad24d8a-fd9d-4bf3-943b-fd04c879e4b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VNr
+
+		annotation SummarizationSetBy = User
+
+	column VZNr
+		dataType: int64
+		formatString: 0
+		lineageTag: f26917ff-3968-4926-83dd-e2e0157def24
+		sourceLineageTag: 8b207960-6a09-4eae-ada8-086518e840ce
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: VZNr
+
+		annotation SummarizationSetBy = User
+
+	column VZStatus
+		dataType: string
+		lineageTag: 3efef686-7508-4785-b408-7ea422ef84d1
+		sourceLineageTag: 31d4db9a-a707-4886-baa2-52e2b3528517
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VZStatus
+
+		annotation SummarizationSetBy = User
+
+	column Product
+		dataType: string
+		lineageTag: 4a29d37c-88f5-4d82-9586-1d51b6f83f50
+		sourceLineageTag: 64c6a97e-d4b3-4313-aa23-0fa1fd15fe5e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = User
+
+	column Bundle
+		dataType: string
+		lineageTag: fa0bcb76-bb2b-43c3-ad8b-c5b506ed9e8c
+		sourceLineageTag: f41f13be-df03-45d0-9c23-fdf1b52531a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Bundle
+
+		annotation SummarizationSetBy = User
+
+	column VZArtikelNr
+		dataType: string
+		lineageTag: 53602431-4011-44b2-b57a-d10cc112c844
+		sourceLineageTag: 758a16a1-8b6f-4ee2-9ec9-0565f9ea209f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VZArtikelNr
+
+		annotation SummarizationSetBy = User
+
+	column VZBeschreibung
+		dataType: string
+		lineageTag: 7249721b-92f3-496e-afa2-961a8f2f63b0
+		sourceLineageTag: 3bc332a6-b097-470b-b38e-c47290eaf7e3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VZBeschreibung
+
+		annotation SummarizationSetBy = User
+
+	column VZStart
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8cd93574-afd0-4ed1-b4cd-554ffad7e203
+		sourceLineageTag: 43dc1a57-8e5e-4e07-b9e2-9514a7ca75c6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VZStart
+
+		variation Variation
+			isDefault
+			relationship: 32e3ff0a-4ed5-4801-98c8-36674e00d3ad
+			defaultHierarchy: LocalDateTable_57662e3b-3155-420d-8688-968e236600da.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column VZEnde
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c5f16994-a732-4a96-91bf-a0b44462aabe
+		sourceLineageTag: f16a1ce8-67fd-4bc2-908e-bb5d92b98494
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VZEnde
+
+		variation Variation
+			isDefault
+			relationship: 28abc165-8c53-4d45-bd06-3041aa632103
+			defaultHierarchy: LocalDateTable_93195d8e-e0ca-42be-8b32-a18ba59fe31c.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column VZDauer
+		dataType: int64
+		formatString: 0
+		lineageTag: d8482e50-989e-4dd1-b99a-e37fc9bedd6b
+		sourceLineageTag: e03768f2-8b9c-4b13-9b0d-e8a522ac9311
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: VZDauer
+
+		annotation SummarizationSetBy = User
+
+	column Menge
+		dataType: double
+		lineageTag: f93f31ba-cf7d-489c-8e8c-9a2627e6bf38
+		sourceLineageTag: 3d3ed05d-3931-40ec-9ec7-c191ae36928c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Menge
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MRR
+		dataType: double
+		lineageTag: 523629a0-5e84-48e5-b8cc-f74d27a4c632
+		sourceLineageTag: c2d1c369-04cc-4bbf-9423-46a71a236343
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: MRR
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Einheitspreis
+		dataType: double
+		lineageTag: 49428bfe-9e75-4f5a-ac68-693eaea32ab1
+		sourceLineageTag: 2f1ae8ae-5034-4708-af7e-df75de2e0443
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Einheitspreis
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VZBetrag
+		dataType: double
+		lineageTag: 3f3c3e61-4594-4a10-86cf-141d8b8a20db
+		sourceLineageTag: dc4ed142-cebf-4506-9d2b-49048b1a6445
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: VZBetrag
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VertragszeileErstelltAm
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 93633e69-32ba-40d5-897b-663d23be0600
+		sourceLineageTag: 0c51828a-8bd0-4d8f-a0b7-01324c321db6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VertragszeileErstelltAm
+
+		variation Variation
+			isDefault
+			relationship: 061342f8-2d47-4e21-a54f-fb37472fca75
+			defaultHierarchy: LocalDateTable_486181e9-2da1-4b19-b494-2db1eff3b807.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column VZEinheit
+		dataType: string
+		lineageTag: 26502dfc-744f-4365-984b-0e659ac5d718
+		sourceLineageTag: e17defc0-4af2-4e99-9777-b77fabc92cd1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VZEinheit
+
+		annotation SummarizationSetBy = User
+
+	column 'Run Rate'
+		dataType: double
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 4ed85bd2-4022-4888-9a94-ef97d64b18c7
+		sourceLineageTag: 7242a651-1127-4be5-93ba-1d3479beb9cf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Run Rate
+
+		annotation SummarizationSetBy = User
+
+	column Entity_orig
+		dataType: string
+		lineageTag: 855ad4d0-2867-4bd9-b483-558a5af0d90d
+		sourceLineageTag: 9f6047ca-2545-4adf-b9e0-646b347095fe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Entity_orig
+
+		annotation SummarizationSetBy = User
+
+	column Entity
+		dataType: string
+		lineageTag: 77ae3907-9cb0-405a-a804-7021886122ce
+		sourceLineageTag: 3113b0ac-a37a-489e-94ab-8a5068f3fe42
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Entity
+
+		annotation SummarizationSetBy = User
+
+	column DebitorKey_orig
+		dataType: string
+		lineageTag: d42d37c0-fb4f-4fa9-ac3d-42350ade3e54
+		sourceLineageTag: 40a8f84e-f81a-47ff-9e68-ba8e3c5d3dc4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebitorKey_orig
+
+		annotation SummarizationSetBy = User
+
+	column DebitorKey
+		dataType: string
+		lineageTag: 04dcc732-f23d-4af1-85e3-607de6d87fb9
+		sourceLineageTag: 72840089-fdc7-46b9-9d02-2581647918b2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DebitorKey
+
+		annotation SummarizationSetBy = User
+
+	column ContractKey
+		dataType: string
+		lineageTag: 72664e95-cd49-403a-bf0b-f046f42c02d2
+		sourceLineageTag: 35648110-6497-447f-9118-47b45d5b4a57
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ContractKey
+
+		annotation SummarizationSetBy = User
+
+	column Contract
+		dataType: string
+		lineageTag: 8f65e15b-55a1-435c-bc9c-69d5ad25c614
+		sourceLineageTag: 1ffa1dec-44db-485d-9032-e41e4796a96d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Contract
+
+		annotation SummarizationSetBy = User
+
+	column DimSetKey
+		dataType: string
+		lineageTag: ad951cf1-7253-4bc2-a078-3eb166199117
+		sourceLineageTag: 1e3276df-f660-4759-92a9-7af65bdc4d1a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DimSetKey
+
+		annotation SummarizationSetBy = User
+
+	column CLStatus
+		dataType: string
+		lineageTag: e6af796e-b281-4d31-98fd-686fce96f65b
+		sourceLineageTag: 95800cb7-47db-4ff9-8ae9-fa22573b30d7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CLStatus
+
+		annotation SummarizationSetBy = User
+
+	column CLBillingPeriodMonths
+		dataType: int64
+		formatString: 0
+		lineageTag: c8d1a110-a8f4-4331-80c8-93c64e2b176e
+		sourceLineageTag: 0a5e1bb6-c426-4a78-ba91-9312f064883b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CLBillingPeriodMonths
+
+		annotation SummarizationSetBy = User
+
+	column CLExtensionPeriodMonths
+		dataType: int64
+		formatString: 0
+		lineageTag: 5987bd37-c04e-466a-bc57-78d509108db1
+		sourceLineageTag: 02e1dd15-41f7-4dae-bc45-9df8364c30d8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CLExtensionPeriodMonths
+
+		annotation SummarizationSetBy = User
+
+	column AmountTotal
+		dataType: double
+		lineageTag: feaba5ea-5830-402b-bc3f-76ee61c5ff83
+		sourceLineageTag: 653c9dbe-e432-4de7-8b44-dae14bd9276c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: AmountTotal
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AmountMonthly
+		dataType: double
+		lineageTag: 2baf04d6-9ff0-4153-bd6e-24fe96da5188
+		sourceLineageTag: 0670ba3c-8101-4fb2-accf-034986a82d00
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: AmountMonthly
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AmountUnitMonthly
+		dataType: double
+		lineageTag: 1e804adf-3db8-4fc7-9810-f337cbfd3882
+		sourceLineageTag: 9713d614-8165-443f-8bf0-81cbf474ba5e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: AmountUnitMonthly
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPriceTotal
+		dataType: double
+		lineageTag: 4496fdce-a9af-4860-b782-9b91b27f9ec6
+		sourceLineageTag: 9b4d0333-8851-40cb-99f4-06d3dba19419
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: UnitPriceTotal
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPriceMonthly
+		dataType: double
+		lineageTag: 6fb68e32-0b8e-480f-af25-b1e4860518a6
+		sourceLineageTag: ea5849f2-60a3-4fec-910a-afa6fa23fdba
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: UnitPriceMonthly
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitCostTotal
+		dataType: double
+		lineageTag: 997dfb3e-a8b8-40e5-a97b-e9012420bc00
+		sourceLineageTag: 97e366d1-e13d-4e47-856b-39cc8bda117d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: UnitCostTotal
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitCostMonthly
+		dataType: double
+		lineageTag: 5584e6d6-3a28-400a-8e18-2f8939e2bf93
+		sourceLineageTag: 65f8cb55-d806-408a-9811-508a36997407
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: UnitCostMonthly
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ArticleKey
+		dataType: string
+		lineageTag: 2b374622-4ab0-48e2-948c-7ae2376959f3
+		sourceLineageTag: a010f892-b0c5-479a-9999-19d09723f963
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ArticleKey
+
+		annotation SummarizationSetBy = User
+
+	column BillingPeriod
+		dataType: string
+		lineageTag: 5c6b342f-082f-466f-901f-f1730593dffa
+		sourceLineageTag: 42efcb68-6d5b-4743-a28e-c565bbe9e42c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BillingPeriod
+
+		annotation SummarizationSetBy = User
+
+	column LatestAllowedCancDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: e2440901-c857-4947-983f-fd8c2a601522
+		sourceLineageTag: 8798682e-8008-40b2-b9ef-268b9fbc9092
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LatestAllowedCancDate
+
+		variation Variation
+			isDefault
+			relationship: ea494214-d3b1-424c-9f90-ed156bdc95e0
+			defaultHierarchy: LocalDateTable_5b8c3a4e-2a20-44fe-82ee-7c775a311f75.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column CancellationDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 1a03097a-a330-4394-ba4b-40967c2babd1
+		sourceLineageTag: 0cd801ba-998f-4304-a825-741fbd0ab91a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CancellationDate
+
+		variation Variation
+			isDefault
+			relationship: 59c2bc8b-c984-4513-90d5-ec156a3fa3f3
+			defaultHierarchy: LocalDateTable_410e3743-c50c-4cfa-929f-074c48da22c9.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column CancellationPeriod
+		dataType: string
+		lineageTag: 83cffc8d-93f9-486c-b947-cc6519ed1726
+		sourceLineageTag: 02383dd7-0331-43a5-94e1-e94c66c67850
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CancellationPeriod
+
+		annotation SummarizationSetBy = User
+
+	column CancellationReceivedAt
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 0efc6743-4264-4492-bf64-fae0bbba01b3
+		sourceLineageTag: 384cfcb8-9f40-41c8-971d-6f1b62dd7d76
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CancellationReceivedAt
+
+		variation Variation
+			isDefault
+			relationship: 818f0dd5-08e7-41b7-b5dd-2d80f0ea0831
+			defaultHierarchy: LocalDateTable_7ee55283-90f6-4d29-8f11-50b11bd565f9.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column CancellationType
+		dataType: string
+		lineageTag: 938f94f0-7136-4a7c-b369-97c9a67c79e8
+		sourceLineageTag: 88b2e9d5-360f-40f5-bcff-c6a442ff02bb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CancellationType
+
+		annotation SummarizationSetBy = User
+
+	column Cancelled
+		dataType: string
+		lineageTag: 8d8903c7-ebff-4967-9b4b-3e6506d04ed9
+		sourceLineageTag: 445dec01-c542-4946-98f1-a9152f3d20f5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Cancelled
+
+		annotation SummarizationSetBy = User
+
+	partition 'ERP ContractLine' = entity
+		mode: directQuery
+		source
+			entityName: ERP ContractLine
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

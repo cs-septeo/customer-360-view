@@ -1,0 +1,48 @@
+table StartKalenderwoche
+	lineageTag: d882fde6-25f1-44be-964d-bc50ec4b4b47
+	sourceLineageTag: d5a73942-bc9f-41b3-8abd-25d68140e4a8
+
+	measure 'StartKalenderwoche Wert' = EXTERNALMEASURE("StartKalenderwoche Wert", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
+		formatString: 0
+		lineageTag: 0a07db3d-6590-4f2a-82c3-0a5441b90f50
+		sourceLineageTag: b35ce71e-22b1-4a88-8bd6-b3e2502dffd7
+		dataCategory: Uncategorized
+
+	column StartKalenderwoche
+		dataType: int64
+		formatString: 0
+		lineageTag: ae90720a-e14b-4711-907b-3e32b287fb88
+		sourceLineageTag: 095cf6e2-ec46-4fa9-8ddf-62b8f404d815
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: StartKalenderwoche
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	column Startdatum
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 574e9f78-c91f-4983-8257-a63999828946
+		sourceLineageTag: c2daadba-910f-4570-b810-8058e5bf2ddf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Startdatum
+
+		variation Variation
+			isDefault
+			relationship: 6a7b7595-ab78-4e3f-9e75-43bccbc2204e
+			defaultHierarchy: LocalDateTable_d905f6ef-c5ba-4d79-a99d-4018ca4762cc.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	partition StartKalenderwoche = entity
+		mode: directQuery
+		source
+			entityName: StartKalenderwoche
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

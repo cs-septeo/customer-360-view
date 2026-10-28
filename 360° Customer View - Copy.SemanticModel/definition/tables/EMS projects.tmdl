@@ -1,0 +1,325 @@
+table 'EMS projects'
+	lineageTag: f7053dca-0691-465a-927a-ace3df83cf3d
+	sourceLineageTag: b808396f-c434-4fd5-8e84-075de8f285d1
+
+	column S_ProjectKey
+		dataType: string
+		lineageTag: 47875653-410d-4e19-8612-d822a7b60c4d
+		sourceLineageTag: 498c947f-b2cc-4262-84c1-7ce528b62a50
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_ProjectKey
+
+		annotation SummarizationSetBy = User
+
+	column S_Name
+		dataType: string
+		lineageTag: f5ad2c22-bb1c-4129-b1cf-09658e58e31d
+		sourceLineageTag: ff513181-540a-49dc-9f81-77576d63e8c1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_Name
+
+		annotation SummarizationSetBy = User
+
+	column N_ProjectType
+		dataType: int64
+		formatString: 0
+		lineageTag: a9c08d75-ecff-497e-98fa-95f23cf8e2a7
+		sourceLineageTag: a20eaa36-2d97-469c-a7d3-c0f28ecc9f1b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: N_ProjectType
+
+		annotation SummarizationSetBy = User
+
+	column S_ProjectCategory
+		dataType: string
+		lineageTag: 3212830a-5a6a-4870-911b-39253aacf036
+		sourceLineageTag: 6a5725ee-21ba-47e0-82bc-658107810790
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_ProjectCategory
+
+		annotation SummarizationSetBy = User
+
+	column S_Kundenname
+		dataType: string
+		lineageTag: e73d54bb-9d2a-44f2-b46a-afd57fb0e7c4
+		sourceLineageTag: 1b44936b-d862-4ec5-9663-b204ac72abc3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_Kundenname
+
+		annotation SummarizationSetBy = User
+
+	column S_Kundennummer
+		dataType: string
+		lineageTag: adf326b1-81d9-4046-8bd3-e3458361eeea
+		sourceLineageTag: b139150b-9a2e-4a35-ba28-921601a513c4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_Kundennummer
+
+		annotation SummarizationSetBy = User
+
+	column S_Code
+		dataType: string
+		lineageTag: d68d3f7d-cd7d-454b-8409-3525ad0fb3f4
+		sourceLineageTag: 675bbde2-997e-48f2-a8dc-cc26564c57c5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_Code
+
+		annotation SummarizationSetBy = User
+
+	column S_ParentKey
+		dataType: string
+		lineageTag: cb90c954-e305-4b12-be43-b6920fc15212
+		sourceLineageTag: faff5992-d9f5-4ff0-a0c4-904614bfed04
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_ParentKey
+
+		annotation SummarizationSetBy = User
+
+	column S_RootKey
+		dataType: string
+		lineageTag: 5c605b0a-ea99-4ca6-82b6-9f248a0acc8f
+		sourceLineageTag: ff429d2b-2c4c-4fc8-8050-6b93c4cbd010
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_RootKey
+
+		annotation SummarizationSetBy = User
+
+	column D_OrderDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: eb375092-f5aa-4edf-a008-cbcad14e4f1a
+		sourceLineageTag: 92321784-bd8a-40ac-88a9-344bfbf65be5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_OrderDate
+
+		variation Variation
+			isDefault
+			relationship: ed6eb655-13bb-4f03-9604-7e67b7487a4e
+			defaultHierarchy: LocalDateTable_a1e3988b-20d4-4f04-a102-498abe5960f1.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column D_DueDate
+		dataType: string
+		lineageTag: 6533fbb8-9fca-4c39-99f2-cf23675f212f
+		sourceLineageTag: e820315a-bc54-4f2c-87a2-86e55d3113bd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_DueDate
+
+		annotation SummarizationSetBy = User
+
+	column D_EndDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 16255627-624a-4732-b409-d592f63ec47f
+		sourceLineageTag: e5518fde-edb0-447c-8e05-3bb0a8e5dd8e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_EndDate
+
+		variation Variation
+			isDefault
+			relationship: f5546bb9-7d14-480b-ab2e-e788b43a6a51
+			defaultHierarchy: LocalDateTable_3da70ddf-10ec-496c-b21b-c3adbb47c13b.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column B_IsOrgaProject
+		dataType: string
+		lineageTag: dd86d16f-b362-47c9-b1c1-d22dfa18c6f1
+		sourceLineageTag: 8e53b8d9-c176-4163-a734-9e152f03d4dd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: B_IsOrgaProject
+
+		annotation SummarizationSetBy = User
+
+	column S_Description
+		dataType: string
+		lineageTag: e0a0bcd0-0b50-42a2-9c2b-ee6602370204
+		sourceLineageTag: a3c94e6e-41e8-4be0-b404-427724c2e0d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_Description
+
+		annotation SummarizationSetBy = User
+
+	column S_ProjectOwner
+		dataType: string
+		lineageTag: b064383f-6425-4d34-9d28-00bcf9862e7d
+		sourceLineageTag: c0b70481-77fd-4d03-a6bf-629c2f3fadf1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_ProjectOwner
+
+		annotation SummarizationSetBy = User
+
+	column S_BillingUser
+		dataType: string
+		lineageTag: 78ec5b18-6c3b-4e34-8438-debe6f803dde
+		sourceLineageTag: c1d90e2a-0d71-4282-990b-6133073081b3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_BillingUser
+
+		annotation SummarizationSetBy = User
+
+	column S_Hint
+		dataType: string
+		lineageTag: e5d336c3-97f9-4eab-b4ce-fbdc9fec7428
+		sourceLineageTag: 4da158e0-efa3-4def-a7e4-823968a1aca1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_Hint
+
+		annotation SummarizationSetBy = User
+
+	column B_IsBillable
+		dataType: string
+		lineageTag: de778646-35af-4c84-bd56-2ceacf9c6062
+		sourceLineageTag: 2ae0550e-89c7-4dd2-88be-577c1bef8974
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: B_IsBillable
+
+		annotation SummarizationSetBy = User
+
+	column B_IsSalesProject
+		dataType: string
+		lineageTag: 1c1c490a-9623-45ec-9200-7337496840bc
+		sourceLineageTag: 529881c7-f5c4-4c06-b767-d10cdb4f7681
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: B_IsSalesProject
+
+		annotation SummarizationSetBy = User
+
+	column S_Currency
+		dataType: string
+		lineageTag: 1f62a18c-e8ae-413e-8d4f-cc5e7d692135
+		sourceLineageTag: 1c9ab23a-7441-4c84-b500-86453c632728
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_Currency
+
+		annotation SummarizationSetBy = User
+
+	column S_CostCenter
+		dataType: string
+		lineageTag: f35908f0-57de-4c63-85a6-bce6aba769a1
+		sourceLineageTag: 70c8d6dd-b5e8-4b2f-9ce4-a3027474a0ca
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_CostCenter
+
+		annotation SummarizationSetBy = User
+
+	column S_ProfitCenter
+		dataType: string
+		lineageTag: eb0a285d-92ad-48d7-823f-052ab63c2650
+		sourceLineageTag: 63f609f5-99be-446a-be2d-682f48262c56
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_ProfitCenter
+
+		annotation SummarizationSetBy = User
+
+	column B_Beendet
+		dataType: string
+		lineageTag: 4f0a903a-5bf8-4792-8fc4-38067eb4139c
+		sourceLineageTag: 1b4c419b-9d1f-4d80-b762-5270f26b4e2c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: B_Beendet
+
+		annotation SummarizationSetBy = User
+
+	column D_ProjectCreated
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: 710098bb-49b9-4308-95ba-2d6f1b9c920f
+		sourceLineageTag: 27643665-b7e8-44bf-a6ac-1006e2ebb467
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_ProjectCreated
+
+		variation Variation
+			isDefault
+			relationship: f4be6a27-37f1-4bb0-8144-9b063650049f
+			defaultHierarchy: LocalDateTable_353b48f6-c639-4672-a403-2115ee18dda8.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column S_ProjectCreatedBy
+		dataType: string
+		lineageTag: 4c573874-750b-42b8-9dc5-b091e4d91565
+		sourceLineageTag: ba4ad7ca-a96d-41f5-908a-69c930ac9f12
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_ProjectCreatedBy
+
+		annotation SummarizationSetBy = User
+
+	column D_ProjectModified
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: d29aeafc-6244-461b-808f-e18e71f683a0
+		sourceLineageTag: f11300cb-3e29-471b-a24d-760d5bf0f7a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_ProjectModified
+
+		variation Variation
+			isDefault
+			relationship: 9f59a0ee-b647-4cb9-9c90-78f6ae6d30db
+			defaultHierarchy: LocalDateTable_9312dafb-bbf3-4229-8907-cb8770bd63fd.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column S_ProjectModifiedBy
+		dataType: string
+		lineageTag: 545e9afb-fd53-47a7-a1e9-4e589258ff5b
+		sourceLineageTag: 2289892e-f31b-4be5-92f7-9a7c91a53736
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: S_ProjectModifiedBy
+
+		annotation SummarizationSetBy = User
+
+	column project_link
+		dataType: string
+		lineageTag: 741ccc0e-0183-4683-af94-1ee092ea1715
+		sourceLineageTag: 0cb77725-1f4d-42bc-ac6a-243008599cd3
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: project_link
+
+		annotation SummarizationSetBy = User
+
+	column 'Project Type'
+		dataType: string
+		lineageTag: a52bdb30-b888-4447-8aa8-72a82f8713cf
+		sourceLineageTag: 025556b8-8dff-4db6-8b4c-9795f35c6e0a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Project Type
+
+		annotation SummarizationSetBy = User
+
+	partition 'EMS projects' = entity
+		mode: directQuery
+		source
+			entityName: EMS projects
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

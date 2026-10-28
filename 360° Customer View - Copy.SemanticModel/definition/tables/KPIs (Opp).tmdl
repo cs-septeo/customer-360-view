@@ -1,0 +1,48 @@
+table 'KPIs (Opp)'
+	lineageTag: 55e879e9-1747-4e3f-a02e-830b3384b739
+	sourceLineageTag: 5d5a9b4b-e77f-4723-9f7d-bea9ca0f4c70
+
+	column 'KPIs (Opp)'
+		dataType: string
+		lineageTag: b3b5db4b-265d-4a0a-86c5-9f34604e01fd
+		sourceLineageTag: 6b5a0f2e-aad3-46fc-9461-79dc397c9320
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KPIs (Opp)
+		sortByColumn: 'KPIs Reihenfolge'
+
+		relatedColumnDetails
+			groupByColumn: 'KPIs Felder'
+
+		annotation SummarizationSetBy = User
+
+	column 'KPIs Felder'
+		dataType: string
+		isHidden
+		lineageTag: a8152f81-0cbe-4f58-9424-cc8b2431cb3e
+		sourceLineageTag: 98f1ae88-2685-426e-a968-eedaf2e93a9d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KPIs Felder
+		sortByColumn: 'KPIs Reihenfolge'
+
+		annotation SummarizationSetBy = User
+
+	column 'KPIs Reihenfolge'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2f7f5401-763b-4f5e-ab5e-effef931785f
+		sourceLineageTag: d562fe15-a07f-42e0-9127-49dc1f56459f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: KPIs Reihenfolge
+
+		annotation SummarizationSetBy = User
+
+	partition 'KPIs (Opp)' = entity
+		mode: directQuery
+		source
+			entityName: KPIs (Opp)
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

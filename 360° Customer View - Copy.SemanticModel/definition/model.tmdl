@@ -1,0 +1,207 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'dim bcbi_companies'
+ref table 'dim systemuser'
+ref table 'fact account'
+ref table 'fact lead'
+ref table 'fact opportunity'
+ref table 'accounts Spaltenübersetzung'
+ref table 'leads Spaltenübersetzung'
+ref table 'opps Spaltenübersetzung'
+ref table 'dim datetable'
+ref table 'CRM opportunitytransition'
+ref table 'dim product'
+ref table 'CRM lead_transition_pipelinephase'
+ref table 'CRM opportunitytransition_salesforecast'
+ref table 'KPIs (Opp)'
+ref table 'Category (Opp) - Row'
+ref table 'Category (Opp) - Column'
+ref table 'fact lead (3)'
+ref table 'dim datetable (transition - stepname)'
+ref table 'dim datetable (transition - salesforecast)'
+ref table 'Category (Lead) - Row'
+ref table 'Sales Budget 24 Monthly'
+ref table 'fact opportunity_raw_history'
+ref table 'Sales Forecast Mgmt Commit'
+ref table StartKalenderwoche
+ref table EndKalenderwoche
+ref table 'Sales Budget 24 Monthly (Real Time)'
+ref table 'BUD Quarterly'
+ref table 'fact opportunity_history'
+ref table 'dim country'
+ref table 'KPIs (Lead)'
+ref table 'KPI Selector Opp History'
+ref table 'Sales Forecast Mgmt Commit - Real Time'
+ref table 'CRM activities leads'
+ref table 'Emp Sales Area Mapping'
+ref table 'fact opportunity_history (backup)'
+ref table 'dim opp_product'
+ref table 'CRM stp_produkte'
+ref table 'CRM stp_produkte_codes'
+ref table 'Sales Cockpit Target Chart'
+ref table 'fact audit_history_lead'
+ref table 'Amberlo Pipeline figures'
+ref table max_cw_opp_history
+ref table Ratings
+ref table Organizations
+ref table 'Brand Mapping'
+ref table 'fact quote'
+ref table 'fact salesorder'
+ref table 'fact contacts'
+ref table 'CRM activities opps'
+ref table 'Data Update'
+ref table 'CRM lead_rejections'
+ref table Tickets
+ref table 'CRM activities accounts'
+ref table 'fact lead (4)'
+ref table 'ERP Debitor'
+ref table 'ERP ContractLine'
+ref table 'EMS projects'
+ref table 'ERP ContractHeader'
+ref table 'CRM Handover2SalesNotes'
+ref table 'CRM marketing_generated_pipeline_for_2026'
+ref table 'CRM marketing_generated_pipeline_for_2026_with_originating_lead'
+ref table 'CRM marketing_generated_pipeline_for_2026_by_sales_area'
+ref table 'FACT RevenueTracker'
+ref table 'FACT RevenueTrackerPipeline'
+ref table LocalDateTable_46174a86-995a-44ed-95df-110cb1423245
+ref table LocalDateTable_364e00b6-2961-4300-b79e-4ecc6b6bd24c
+ref table LocalDateTable_0c685668-f3ae-4a99-bfa3-87037a658b9a
+ref table LocalDateTable_6b1d01a7-e995-4044-9464-da78fb3f641e
+ref table LocalDateTable_d94d49e8-cc8a-487a-aaf5-03cf3a0fd7bf
+ref table LocalDateTable_b84faa85-3337-42a6-92d6-bad374357e1e
+ref table LocalDateTable_a7e8513a-6417-47ed-b4df-8a9a5cb09371
+ref table LocalDateTable_8ceedd7a-672a-4dd7-ae91-2e20d25415bd
+ref table LocalDateTable_716957fc-1c1e-4e5c-86e8-7efdca7aee9b
+ref table LocalDateTable_f4af9a1d-3ec9-422d-8fea-d8ba8fc6d667
+ref table LocalDateTable_cd27cf28-86a1-4933-88f7-bf466aaca62e
+ref table LocalDateTable_121ecad4-bd2b-4526-965f-58319ca40190
+ref table LocalDateTable_fc234f23-ef60-4f29-bf9a-a9a0939e2d07
+ref table LocalDateTable_b0f07639-17a4-4bc0-87e1-e9f7fb418979
+ref table LocalDateTable_7be6f1e7-6bd7-41fb-8b6e-e1cb6562a959
+ref table LocalDateTable_f687f2bf-9114-4ac9-a8b2-9d61282454e5
+ref table LocalDateTable_22739d05-d425-43fd-945d-90e5e50da317
+ref table LocalDateTable_794e8638-325c-4fd4-a86d-a870c3a3fa09
+ref table LocalDateTable_7ca3a6e8-33f9-4b01-ab04-ce4ad51140a4
+ref table LocalDateTable_42d5ca88-f5c2-44bb-9ead-d26aadc443de
+ref table LocalDateTable_fd0827c3-5d2c-4148-9611-240ffa43af41
+ref table LocalDateTable_45fea853-76d8-4096-a255-aa45dfd3cd4d
+ref table LocalDateTable_53020e91-dbfa-4d22-93ad-5d07e4fc12b8
+ref table LocalDateTable_3953feff-9083-43ba-9320-eda285bcd84f
+ref table LocalDateTable_d5516ca1-71b4-41c6-9e7e-42c0ba85c0d0
+ref table LocalDateTable_000f5acf-232e-492d-83d3-90a947d08129
+ref table LocalDateTable_3b4049f8-4130-4588-ba4b-f3fa57729691
+ref table LocalDateTable_0ac33976-eabb-4959-b62c-70e828cae9d6
+ref table LocalDateTable_a556c01c-7a20-4c6c-b4db-e0521270a8f2
+ref table LocalDateTable_d065530e-cd72-4141-8094-5571770d2645
+ref table LocalDateTable_221317c7-c043-4fa8-868f-5a3c97647538
+ref table LocalDateTable_0b200066-788e-4cd6-ab9c-b812bd269494
+ref table LocalDateTable_eeba3f11-bac8-4359-abcd-dbc8b9b3e34b
+ref table LocalDateTable_ec262bc2-c157-4873-8183-f13ea95d11be
+ref table LocalDateTable_9156fb75-ee80-4e5e-9949-662268bb38b2
+ref table LocalDateTable_7243c5e6-1f5a-4cf0-b9e5-a0c2fdb42c6a
+ref table LocalDateTable_44946814-a00a-4794-858e-631135650ffd
+ref table LocalDateTable_b29151f5-e54c-4eab-97a7-f914219a01a3
+ref table LocalDateTable_98304df5-5e42-437c-82a2-205875b1262e
+ref table LocalDateTable_81e1a880-e293-40f6-b2ef-9555df387a5b
+ref table LocalDateTable_b12eedf2-af9e-4880-8103-def53a578bcf
+ref table LocalDateTable_4592eb0f-096f-4fb9-a856-67d43e3cb98a
+ref table LocalDateTable_9828c8f3-d71c-4ba3-81a4-7ebefa094634
+ref table LocalDateTable_d905f6ef-c5ba-4d79-a99d-4018ca4762cc
+ref table LocalDateTable_37810221-8b3c-406c-b6b4-5fcf7487c692
+ref table LocalDateTable_47b2dc30-fec0-47cc-bc8c-79199b575a8c
+ref table LocalDateTable_6f60c970-2a24-44f4-a90d-3fd3c80bb613
+ref table LocalDateTable_8154f402-5370-445d-8856-2ddfe931edaf
+ref table LocalDateTable_d376604c-ed73-472a-bc08-73b3d41d6dda
+ref table LocalDateTable_41e896d0-ad15-4e0b-877d-743a1ea332c0
+ref table LocalDateTable_b0418272-089c-4b90-bbdb-40ca57c99986
+ref table LocalDateTable_d5868aff-5fa4-496e-866c-86e86f7a296a
+ref table LocalDateTable_e1b695c3-c7e3-4022-9731-f428ca8a1207
+ref table LocalDateTable_2f7805ae-db72-4716-8201-db8443773e42
+ref table LocalDateTable_35eaf9b4-f81b-468b-b5b2-6d7fc60ce20b
+ref table LocalDateTable_4e95c8d4-3ae6-4042-88c2-a3b1bb04923d
+ref table LocalDateTable_94d7ffd1-8bf4-4742-a3ed-152c96a10ccc
+ref table LocalDateTable_2941b1d5-4a64-4e13-8c30-bdbfe378f349
+ref table LocalDateTable_229c725f-1e8e-496e-9579-95c652ff2a09
+ref table LocalDateTable_ed0642ac-15bb-4bae-9e79-5be343de7ba9
+ref table LocalDateTable_6fa88e5f-f86e-40a4-ab62-7547e332b1f6
+ref table LocalDateTable_490cd9f0-db7a-41ad-a39d-cf523034714d
+ref table LocalDateTable_828146f0-c6c3-4d76-ad64-19dd7b8b8857
+ref table LocalDateTable_16793e9f-a9b9-487c-924c-242ad31ef56b
+ref table LocalDateTable_dd422654-2e8f-48d3-b1be-c4fc67cce1bf
+ref table LocalDateTable_2ef7f339-cc12-4ce8-a161-04ddbca566ad
+ref table LocalDateTable_522685d1-dae5-4627-a677-5ccf8e2e8af4
+ref table LocalDateTable_9fee2dd1-394c-4089-93ab-092b698ec378
+ref table LocalDateTable_a8356173-8f18-460d-a376-6f8717ff3308
+ref table LocalDateTable_01c7a1c3-2e10-4d40-aa8e-8e1bec32b71e
+ref table LocalDateTable_22f63a77-0ca0-41b1-9a31-ecf147c4caab
+ref table LocalDateTable_69f1fa48-2b06-4ade-8661-b504610e1070
+ref table LocalDateTable_761dda12-5415-4bff-80a2-fcf093076090
+ref table LocalDateTable_5ba9a2af-c305-4fd9-b0a5-b3dd55ff180b
+ref table LocalDateTable_f3e00185-d0d7-444e-80d1-965c1c2124da
+ref table LocalDateTable_1cadce0b-95db-439e-879f-1de018114b49
+ref table LocalDateTable_09b0c032-0ded-4710-aa56-79f4796a2f13
+ref table LocalDateTable_91136e67-9204-44a5-b52d-86df0094d640
+ref table LocalDateTable_69473c88-0fb8-46b9-80ea-3abbaf438e1a
+ref table LocalDateTable_353128ff-b5c6-4ab5-95bd-a360630983d1
+ref table LocalDateTable_d73240ad-108d-4ff4-9725-c1bfd3e162e7
+ref table LocalDateTable_eae7b38e-610b-459c-a2c1-993fdb997a24
+ref table LocalDateTable_0080910c-c328-4126-abeb-1e328beb3aea
+ref table LocalDateTable_c73e110e-8fc1-4654-88fa-9f32f7207f14
+ref table LocalDateTable_fe765f5a-0878-4293-bc10-84831f192b76
+ref table LocalDateTable_e80a4117-b230-4840-af10-be3d0585eb0f
+ref table LocalDateTable_d535409e-816b-4149-944f-27278c82e080
+ref table LocalDateTable_68ed2af7-b6c0-4d41-af52-0fe635c956e7
+ref table LocalDateTable_83e8fd3c-b6a8-4f06-aa82-dfeb80cde250
+ref table LocalDateTable_c800ea9f-ff74-4e55-aadc-2f46180cadee
+ref table LocalDateTable_b82d33fe-312f-4916-a4df-e0a18d372617
+ref table LocalDateTable_2bd96fcb-08f0-4d11-8042-cc4dfdf039ea
+ref table LocalDateTable_cbb0e1f4-bcd0-44f8-9825-d48fbc6d1a7d
+ref table LocalDateTable_d2c5c327-d1e5-4d5a-be8c-80adbb516b41
+ref table LocalDateTable_027603b0-df39-462f-949a-f4e9826ed5a7
+ref table LocalDateTable_49d64b0a-13d3-4096-b44b-221899ebdfc0
+ref table LocalDateTable_57662e3b-3155-420d-8688-968e236600da
+ref table LocalDateTable_93195d8e-e0ca-42be-8b32-a18ba59fe31c
+ref table LocalDateTable_486181e9-2da1-4b19-b494-2db1eff3b807
+ref table LocalDateTable_5b8c3a4e-2a20-44fe-82ee-7c775a311f75
+ref table LocalDateTable_410e3743-c50c-4cfa-929f-074c48da22c9
+ref table LocalDateTable_7ee55283-90f6-4d29-8f11-50b11bd565f9
+ref table LocalDateTable_a1e3988b-20d4-4f04-a102-498abe5960f1
+ref table LocalDateTable_3da70ddf-10ec-496c-b21b-c3adbb47c13b
+ref table LocalDateTable_353b48f6-c639-4672-a403-2115ee18dda8
+ref table LocalDateTable_9312dafb-bbf3-4229-8907-cb8770bd63fd
+ref table LocalDateTable_f9f7f7c2-f02a-472a-ae88-bbcf71cec0d4
+ref table LocalDateTable_1929a0fa-d5c2-4323-9a65-97b8c79422be
+ref table LocalDateTable_6a8521bd-25b0-4784-adbf-cab7d8ba82f9
+ref table LocalDateTable_14031a2b-ebcd-4f76-b3d5-04ebd95b5f42
+ref table LocalDateTable_b319c1b7-8edb-4de3-b90f-12128db76b73
+ref table LocalDateTable_62ac5575-a425-45da-8ad2-f1f716309424
+ref table LocalDateTable_9635f02a-f1e3-4494-ad42-f0818d999588
+ref table LocalDateTable_dc46a5f8-4895-46d1-8d0e-4ea48607206c
+ref table LocalDateTable_0eef1093-0139-444c-b5dd-ec8139b1479d
+ref table LocalDateTable_ebac879e-caa8-4ed7-9f31-d3631111937d
+ref table LocalDateTable_98f797d4-7574-4b3b-8534-0a76d5595b17
+ref table LocalDateTable_ed862902-17f9-45b5-a05d-ba21fc6af11b
+ref table LocalDateTable_42f89ae8-89de-441e-a673-d236e15fa20c
+ref table LocalDateTable_f8900451-c4e3-4d9b-8998-9c3fb7659442
+ref table LocalDateTable_bafb7686-9413-453a-9582-4d5e03f3db6f
+ref table LocalDateTable_52be42eb-efea-49f9-a2ef-a2aaff91aba4
+ref table LocalDateTable_e1edd71e-8fde-492d-80c7-ff96523a2914
+ref table LocalDateTable_7921909f-4a04-469f-bdc5-a3d8ecdf4caa
+ref table LocalDateTable_c1f99d63-79fa-4584-9c0d-2e50eb5ae109
+ref table LocalDateTable_1890632a-1311-4774-a4ee-a733f27d62c5
+
+ref cultureInfo en-US
+

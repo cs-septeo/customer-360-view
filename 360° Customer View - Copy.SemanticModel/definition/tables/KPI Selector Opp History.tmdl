@@ -1,0 +1,48 @@
+table 'KPI Selector Opp History'
+	lineageTag: 45e4028d-ef70-4674-ba94-e56f801dffe0
+	sourceLineageTag: 72b52e09-6809-4bd6-977c-8d88df0f05a6
+
+	column 'KPI Selector Opp History'
+		dataType: string
+		lineageTag: 226d8bda-ffed-4690-9e81-0b4b41d6c8e7
+		sourceLineageTag: b6342604-4357-4d0d-9c0d-091e4197335a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KPI Selector Opp History
+		sortByColumn: 'KPI Selector Opp History Reihenfolge'
+
+		relatedColumnDetails
+			groupByColumn: 'KPI Selector Opp History Felder'
+
+		annotation SummarizationSetBy = User
+
+	column 'KPI Selector Opp History Felder'
+		dataType: string
+		isHidden
+		lineageTag: 7930a47e-e06c-4691-837d-eecc29c718cf
+		sourceLineageTag: 372b4a44-46f0-48b8-8ea8-06f12c29b57a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KPI Selector Opp History Felder
+		sortByColumn: 'KPI Selector Opp History Reihenfolge'
+
+		annotation SummarizationSetBy = User
+
+	column 'KPI Selector Opp History Reihenfolge'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3c0e81f8-242a-4a5b-90b4-b86c0aaf525b
+		sourceLineageTag: ba2a2ee0-0398-4b71-8321-93b02e32a4ed
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: KPI Selector Opp History Reihenfolge
+
+		annotation SummarizationSetBy = User
+
+	partition 'KPI Selector Opp History' = entity
+		mode: directQuery
+		source
+			entityName: KPI Selector Opp History
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

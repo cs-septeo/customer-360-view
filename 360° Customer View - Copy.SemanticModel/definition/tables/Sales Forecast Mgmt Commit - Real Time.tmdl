@@ -1,0 +1,119 @@
+table 'Sales Forecast Mgmt Commit - Real Time'
+	lineageTag: 5eb3048c-9118-45b6-8798-972d5c7e5eaf
+	sourceLineageTag: f6a3f1cf-dbaf-4cc8-9117-c1aa8f99fe65
+
+	column CW
+		dataType: string
+		lineageTag: c48da371-58bc-43d6-a41e-99b73bb25123
+		sourceLineageTag: bec25622-0e50-430e-8cf5-daaad732f2da
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CW
+
+		annotation SummarizationSetBy = User
+
+	column Q
+		dataType: string
+		lineageTag: 24401fd2-417d-49fc-886a-98bb4f7f48a3
+		sourceLineageTag: 46760f46-b57d-4cfc-8162-893f70b061c7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Q
+
+		annotation SummarizationSetBy = User
+
+	column BoW
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 489b1c03-584b-4648-b4ef-63d6827789fa
+		sourceLineageTag: daceb150-d9ce-409e-836d-be2b292bdf08
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoW
+
+		variation Variation
+			isDefault
+			relationship: 97e08c00-d577-4e4d-b3b7-2ee323d99309
+			defaultHierarchy: LocalDateTable_b0418272-089c-4b90-bbdb-40ca57c99986.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column EoW
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b9518af1-4c80-4828-882e-3bde75970cec
+		sourceLineageTag: cdf17393-3e64-4e65-8848-ee9774eef8fe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: EoW
+
+		variation Variation
+			isDefault
+			relationship: 50d9b50d-56a4-48ab-8be6-6bc1e763f6d2
+			defaultHierarchy: LocalDateTable_d5868aff-5fa4-496e-866c-86e86f7a296a.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column BoQ
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: b34e0d27-569d-42ab-b500-6601dae1e66b
+		sourceLineageTag: 3f1d2554-bfbe-4f23-9b9f-c572e2572958
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BoQ
+
+		variation Variation
+			isDefault
+			relationship: 321e193d-3066-4a57-a67c-d5584da51fe0
+			defaultHierarchy: LocalDateTable_e1b695c3-c7e3-4022-9731-f428ca8a1207.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column CW_SA
+		dataType: string
+		lineageTag: 22351da7-f294-43d7-8a4f-d0b953392047
+		sourceLineageTag: 4452b74e-34b3-4f2d-bcb6-07befca43c17
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CW_SA
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: string
+		lineageTag: 2104f01a-58ff-4f83-8a86-a26527cf3b32
+		sourceLineageTag: c1d9da56-58b8-44ee-b408-db2d318f94b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Area'
+		dataType: string
+		lineageTag: e86fba96-1459-4d02-b4bc-77f2ae2eefff
+		sourceLineageTag: a7a7fac6-bfce-4dc5-a655-481f2f234b5f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Area
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Forecast'
+		dataType: int64
+		formatString: 0
+		lineageTag: ad5d27b7-33e2-46e1-ab92-08398ea455f8
+		sourceLineageTag: 83f8d0c1-fcdd-4f87-905d-12851f22c882
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sales Forecast
+
+		annotation SummarizationSetBy = User
+
+	partition 'Sales Forecast Mgmt Commit - Real Time' = entity
+		mode: directQuery
+		source
+			entityName: Sales Forecast Mgmt Commit - Real Time
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

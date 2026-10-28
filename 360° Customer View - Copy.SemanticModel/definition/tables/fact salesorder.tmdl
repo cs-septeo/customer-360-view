@@ -1,0 +1,373 @@
+table 'fact salesorder'
+	lineageTag: 0ed122da-c7ed-490b-81c5-dc1b685778c7
+	sourceLineageTag: 139503ab-d0cc-4aa0-9d1f-d9b5e093afbc
+
+	column salesorderid
+		dataType: string
+		lineageTag: 08e58434-7ae9-4128-a70f-541d3ec8973d
+		sourceLineageTag: 09c3e738-518b-4664-8e00-ece6ed0807de
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: salesorderid
+
+		annotation SummarizationSetBy = User
+
+	column createdby
+		dataType: string
+		lineageTag: 3bf388d5-4f0d-41a3-9609-fbf587c4be7c
+		sourceLineageTag: b79ad980-9c3c-44d6-92f6-04136eea3b02
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = User
+
+	column modifiedby
+		dataType: string
+		lineageTag: 4058885a-8c24-4a11-ab16-3961688c6670
+		sourceLineageTag: dff3e422-6eec-4a53-8786-473d961f584f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = User
+
+	column customerid
+		dataType: string
+		lineageTag: f4cb4dc2-e17c-4f53-8450-bf4ce4ad6f28
+		sourceLineageTag: f46d0794-c4f0-4772-82fe-d0509b18bdea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: customerid
+
+		annotation SummarizationSetBy = User
+
+	column transactioncurrencyid
+		dataType: string
+		lineageTag: ccc97b7e-a1af-4a23-9800-069ba07af493
+		sourceLineageTag: 1aac02c8-4512-4ae5-95cd-2421b2e5ee5e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: transactioncurrencyid
+
+		annotation SummarizationSetBy = User
+
+	column opportunityid
+		dataType: string
+		lineageTag: 0f14bac5-de83-4550-8982-97f573852bb6
+		sourceLineageTag: 666dce24-8c32-4177-ab4a-6f22d96c4aa9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: opportunityid
+
+		annotation SummarizationSetBy = User
+
+	column quoteid
+		dataType: string
+		lineageTag: 317f3098-2736-44c8-ad39-02ac2a43e365
+		sourceLineageTag: 3e7fe69b-d98f-413f-8c3e-67816f4cd8f5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: quoteid
+
+		annotation SummarizationSetBy = User
+
+	column paymenttermscode
+		dataType: int64
+		formatString: 0
+		lineageTag: ea7db1fb-db92-4a5f-921d-92d3bae6862f
+		sourceLineageTag: 9d7e58ba-0f75-439b-acfb-6ac9ce84fb66
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: paymenttermscode
+
+		annotation SummarizationSetBy = User
+
+	column statecode
+		dataType: int64
+		formatString: 0
+		lineageTag: eef73154-51be-420a-ad15-c05576139ab6
+		sourceLineageTag: 6773609d-0385-4e62-8f8a-943cd9333d93
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = User
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: 65450a71-1542-41e1-a666-789c3e38b757
+		sourceLineageTag: 3d4b7ed1-25ef-478a-809e-46d3b6ac496a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_abrechnungszeitraumcode
+		dataType: int64
+		formatString: 0
+		lineageTag: b06ca86c-46dd-4769-ac4d-a8f18ab01bd9
+		sourceLineageTag: 7e35eac1-7681-4c3e-9f63-9c154dfb7560
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_abrechnungszeitraumcode
+
+		annotation SummarizationSetBy = User
+
+	column ncx_marketplacecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e0a313b-78d2-4949-bd7e-59a0ea9b8798
+		sourceLineageTag: 241a8ae3-cc3c-420b-b5b7-634b36ddda55
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ncx_marketplacecode
+
+		annotation SummarizationSetBy = User
+
+	column discountamount
+		dataType: double
+		lineageTag: fba2b66a-7e94-4e54-8c16-bbabf9765ac9
+		sourceLineageTag: 6e0e5309-ed06-4d05-8f95-69c8108ff850
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: discountamount
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column freightamount
+		dataType: double
+		lineageTag: d97701e2-645c-45e4-b5b6-f70c61aabb4a
+		sourceLineageTag: 8e26e518-7314-45fe-b728-16417e862d02
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: freightamount
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column totalamount
+		dataType: double
+		lineageTag: e902edc5-5866-4d48-99f0-a46627651919
+		sourceLineageTag: 7b215259-c8a7-406e-9606-fde9aaa237a2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: totalamount
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column totalamountlessfreight
+		dataType: double
+		lineageTag: 14a81c96-1dac-4fa0-a937-f18f465794ab
+		sourceLineageTag: 849e404f-c11f-465e-bf0c-98b39595cb77
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: totalamountlessfreight
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column totallineitemamount
+		dataType: double
+		lineageTag: a497f60f-f74e-436f-bf0c-826f04aa967b
+		sourceLineageTag: ef75dbe2-af06-4001-8bc9-63be1d1ddcc4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: totallineitemamount
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column totaltax
+		dataType: double
+		formatString: 0
+		lineageTag: 0af30783-866a-4c89-9efb-b8df1642aebd
+		sourceLineageTag: 9f4fba83-77c4-461f-ad80-48fa8b7cee65
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: totaltax
+
+		annotation SummarizationSetBy = User
+
+	column createdon
+		dataType: dateTime
+		formatString: dd\.mm\.yyyy
+		lineageTag: df0faf30-6e39-4fef-be34-c2f6d00be5c3
+		sourceLineageTag: 51a21b49-d220-4dff-95e4-d5dcf687b280
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: a60827e8-1073-46f3-a572-18c27436600a
+			defaultHierarchy: LocalDateTable_761dda12-5415-4bff-80a2-fcf093076090.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: f6828c48-93eb-46dd-a456-cbf3f249b861
+		sourceLineageTag: 98e9877a-1dd1-4609-b99d-ea439a56fa0c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: acb6910a-ee57-4303-8fde-4ba5e39a2c50
+			defaultHierarchy: LocalDateTable_5ba9a2af-c305-4fd9-b0a5-b3dd55ff180b.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column datefulfilled
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b9faf6f6-84d0-43fe-bf3e-97c2dd892246
+		sourceLineageTag: 2b2089e5-132f-4926-9536-0819e9f64d63
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: datefulfilled
+
+		variation Variation
+			isDefault
+			relationship: 0119202a-6efe-424b-ba09-35dd696c1a76
+			defaultHierarchy: LocalDateTable_f3e00185-d0d7-444e-80d1-965c1c2124da.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column requestdeliveryby
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: f6ad0384-9aec-4d73-8cbe-0208feb7445d
+		sourceLineageTag: 21a95b7f-dd6a-4433-ba7d-1287c2b73b65
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: requestdeliveryby
+
+		variation Variation
+			isDefault
+			relationship: 0186bccb-3052-4966-832e-48cf26ac3774
+			defaultHierarchy: LocalDateTable_1cadce0b-95db-439e-879f-1de018114b49.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column ispricelocked
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7f1ad20c-144a-48b5-a527-62517568ed9c
+		sourceLineageTag: bbdb3cc1-2ed8-44e1-9f70-29ded933be4b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ispricelocked
+
+		annotation SummarizationSetBy = User
+
+	column discountpercentage
+		dataType: double
+		lineageTag: 4f78952a-0439-44d3-8093-01fe7f85fb43
+		sourceLineageTag: d4e3cca8-ef08-4751-b074-7b5ef908d0b8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: discountpercentage
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column name
+		dataType: string
+		lineageTag: 4bfa65d5-3784-4771-ab6f-5c446001e84f
+		sourceLineageTag: 4e2b5e51-b024-4268-a8ad-0d929ea9cdf8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = User
+
+	column ordernumber
+		dataType: string
+		lineageTag: 712946bc-4b27-4e34-95e3-67f202efed26
+		sourceLineageTag: 77a7d01e-eadf-4698-92c7-bdcde7d37537
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ordernumber
+
+		annotation SummarizationSetBy = User
+
+	column paymenttermscodename
+		dataType: string
+		lineageTag: f96cb6f8-de64-4340-8442-4f5185192eef
+		sourceLineageTag: 6563f6c9-9eb9-4e82-9c7a-d78d3231bd4e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: paymenttermscodename
+
+		annotation SummarizationSetBy = User
+
+	column statecodename
+		dataType: string
+		lineageTag: 3d2c99c9-d67e-4937-8e4a-cd2e90e0cfb6
+		sourceLineageTag: 08688b94-82b1-401a-bc37-7c7351c042bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: statecodename
+
+		annotation SummarizationSetBy = User
+
+	column statuscodename
+		dataType: string
+		lineageTag: d008c6e0-f78d-4125-9ef5-f0e7aec41b43
+		sourceLineageTag: 55422509-d90a-4d8d-bff7-04dddab92d57
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: statuscodename
+
+		annotation SummarizationSetBy = User
+
+	column ncx_abrechnungszeitraumcodename
+		dataType: string
+		lineageTag: da1b33a5-dd20-4c8e-b43b-82697b45c9e3
+		sourceLineageTag: 53fb8201-160e-4f54-a1c9-55ba565e3649
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_abrechnungszeitraumcodename
+
+		annotation SummarizationSetBy = User
+
+	column ncx_marketplacecodename
+		dataType: string
+		lineageTag: a731a3b8-4c15-4d02-998b-3c152f30c626
+		sourceLineageTag: 969bfdc3-f4e9-4d56-82a2-8b210ed16d50
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ncx_marketplacecodename
+
+		annotation SummarizationSetBy = User
+
+	column 'CRM Link (Salesorder)'
+		dataType: string
+		lineageTag: f4acfe9d-1483-46d2-afbb-130f6158b8e6
+		sourceLineageTag: 0cd3d799-ed2e-475b-93f2-923f78e391ca
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: CRM Link (Salesorder)
+
+		annotation SummarizationSetBy = User
+
+	partition 'fact salesorder' = entity
+		mode: directQuery
+		source
+			entityName: fact salesorder
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

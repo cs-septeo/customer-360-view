@@ -1,0 +1,48 @@
+table 'KPIs (Lead)'
+	lineageTag: 998229c5-e3d7-4959-83f5-63f159351515
+	sourceLineageTag: 894eecf1-4cca-4ec2-9a4b-f48c96af1044
+
+	column 'KPIs (Lead)'
+		dataType: string
+		lineageTag: f51fe4df-6de4-4659-a2c2-63a869f3f544
+		sourceLineageTag: 46aea843-4fda-4126-a171-e9541d777097
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KPIs (Lead)
+		sortByColumn: 'KPIs (Lead) Reihenfolge'
+
+		relatedColumnDetails
+			groupByColumn: 'KPIs (Lead) Felder'
+
+		annotation SummarizationSetBy = User
+
+	column 'KPIs (Lead) Felder'
+		dataType: string
+		isHidden
+		lineageTag: 77acfdd2-bb7a-482b-92b9-ef885ec6f1b2
+		sourceLineageTag: 8cf15eda-845b-4b9d-ba0d-958ac1e36b8e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KPIs (Lead) Felder
+		sortByColumn: 'KPIs (Lead) Reihenfolge'
+
+		annotation SummarizationSetBy = User
+
+	column 'KPIs (Lead) Reihenfolge'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2a8c7730-d673-446b-a7a9-fcf10747847a
+		sourceLineageTag: 9c562b66-d1e9-4ecd-8132-d4ebc06e374b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: KPIs (Lead) Reihenfolge
+
+		annotation SummarizationSetBy = User
+
+	partition 'KPIs (Lead)' = entity
+		mode: directQuery
+		source
+			entityName: KPIs (Lead)
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

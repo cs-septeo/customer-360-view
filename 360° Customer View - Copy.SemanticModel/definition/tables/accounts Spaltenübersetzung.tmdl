@@ -1,0 +1,22 @@
+table 'accounts Spaltenübersetzung'
+	isHidden
+	lineageTag: 62681fde-aecf-434b-a729-88d31ce2344a
+	sourceLineageTag: 14b0824a-98f0-4ab1-a696-a73b65ad3376
+
+	column 'accounts Spaltenübersetzung'
+		dataType: string
+		isHidden
+		lineageTag: 5945a56b-9ca1-4845-a378-7a2acb42761c
+		sourceLineageTag: d36b954b-ced8-4312-af89-24c0b8a91916
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: accounts Spaltenübersetzung
+
+		annotation SummarizationSetBy = User
+
+	partition 'accounts Spaltenübersetzung' = entity
+		mode: directQuery
+		source
+			entityName: accounts Spaltenübersetzung
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+

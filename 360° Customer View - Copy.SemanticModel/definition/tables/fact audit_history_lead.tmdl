@@ -1,0 +1,96 @@
+table 'fact audit_history_lead'
+	lineageTag: 768c595e-7e29-4cb4-9f30-f21e3795e6f4
+	sourceLineageTag: 44312445-2188-4ace-bd4c-ee997b224783
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8078d1ef-0587-4188-950e-4cd2db5e3ac8
+		sourceLineageTag: 54b2c7e4-434b-4429-8b2d-7ecc08b8bb95
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: 82b4df6b-738e-4d2c-af70-409c408ab03b
+			defaultHierarchy: LocalDateTable_229c725f-1e8e-496e-9579-95c652ff2a09.Datumshierarchie
+
+		annotation SummarizationSetBy = User
+
+	column modifiedby
+		dataType: string
+		lineageTag: 9220d366-6e92-430e-9744-bf0f5496fd2f
+		sourceLineageTag: 186b9c3c-d8b8-40ca-869a-74b3f07cdbe9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = User
+
+	column leadid
+		dataType: string
+		lineageTag: 73cd1e20-ec20-42fc-86d4-9ceec6f98cf1
+		sourceLineageTag: 5fd1fa83-33e7-4298-916c-6ae1964b7f2f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: leadid
+
+		annotation SummarizationSetBy = User
+
+	column modifiedfield
+		dataType: string
+		lineageTag: 1e3a040b-848f-4ad9-a9e3-1a1d33a75033
+		sourceLineageTag: b532a628-4ab3-49ea-a895-f4f029320f61
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modifiedfield
+
+		annotation SummarizationSetBy = User
+
+	column oldvalue
+		dataType: string
+		lineageTag: 36aef0a5-b6e8-4e1f-99c3-ef1b3f862029
+		sourceLineageTag: 8b0c53e7-b63f-4f64-ba77-31dbd21d56d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: oldvalue
+
+		annotation SummarizationSetBy = User
+
+	column newvalue
+		dataType: string
+		lineageTag: f0e8932b-3bcd-417b-928e-ac064bcd2ecb
+		sourceLineageTag: 43ebd747-0a3c-4eba-9bd7-c933775cf8cd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: newvalue
+
+		annotation SummarizationSetBy = User
+
+	column newname
+		dataType: string
+		lineageTag: f35d3e28-eba2-43ff-9a44-8dda9209a5d2
+		sourceLineageTag: 646ba8dd-456f-4a4d-9b31-149fb6f107b7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: newname
+
+		annotation SummarizationSetBy = User
+
+	column fullname
+		dataType: string
+		lineageTag: 09059b4b-d4f7-40d0-9c29-b2fd731c667f
+		sourceLineageTag: 2f262124-3949-45e8-ac7d-9ad04a4de55d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: fullname
+
+		annotation SummarizationSetBy = User
+
+	partition 'fact audit_history_lead' = entity
+		mode: directQuery
+		source
+			entityName: fact audit_history_lead
+			expressionSource: 'DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground'
+
