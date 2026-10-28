@@ -1,3 +1,4 @@
+/// CRM quotes (Angebote) per account. statecodename values: Entwurf (draft), Aktiv (active), Gewonnen (won), Geschlossen (closed).
 table 'fact quote'
 	lineageTag: 1d4fbe4b-9114-4bb6-819a-d71f16ea1a8e
 	sourceLineageTag: db7cea9c-636b-4f64-bc68-818b0db59b75
@@ -194,6 +195,7 @@ table 'fact quote'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Total quote amount.
 	column totalamount
 		dataType: double
 		formatString: 0
@@ -439,6 +441,7 @@ table 'fact quote'
 
 		annotation SummarizationSetBy = User
 
+	/// CRM quote number (Angebotsnummer).
 	column quotenumber
 		dataType: string
 		lineageTag: 22f952e3-5743-4388-89b8-63a8eca54d9e
@@ -479,6 +482,7 @@ table 'fact quote'
 
 		annotation SummarizationSetBy = User
 
+	/// Quote state: Entwurf (draft), Aktiv (active), Gewonnen (won), Geschlossen (closed). Open quotes = Entwurf or Aktiv.
 	column statecodename
 		dataType: string
 		lineageTag: 13970f08-0e9e-46ba-9b1b-bef650d8168f

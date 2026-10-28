@@ -1178,6 +1178,15 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "fälligkeitsstruktur": {}
+			        },
+			        {
+			          "altersstruktur": {}
+			        },
+			        {
+			          "overdue bucket": {}
 			        }
 			      ]
 			    },
@@ -1220,6 +1229,21 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "offener betrag": {}
+			        },
+			        {
+			          "offener saldo": {}
+			        },
+			        {
+			          "saldo": {}
+			        },
+			        {
+			          "outstanding amount": {}
+			        },
+			        {
+			          "open balance": {}
 			        }
 			      ]
 			    },
@@ -1241,6 +1265,21 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "überfälliger betrag": {}
+			        },
+			        {
+			          "überfällig": {}
+			        },
+			        {
+			          "fällig": {}
+			        },
+			        {
+			          "overdue": {}
+			        },
+			        {
+			          "past due amount": {}
 			        }
 			      ]
 			    },
@@ -1262,6 +1301,15 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "höchste mahnstufe": {}
+			        },
+			        {
+			          "dunning level": {}
+			        },
+			        {
+			          "reminder level": {}
 			        }
 			      ]
 			    },
@@ -1283,6 +1331,12 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "offene angebote": {}
+			        },
+			        {
+			          "active quotes": {}
 			        }
 			      ]
 			    },
@@ -1430,6 +1484,15 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "auftragswert": {}
+			        },
+			        {
+			          "auftragsvolumen": {}
+			        },
+			        {
+			          "order value": {}
 			        }
 			      ]
 			    },
@@ -1577,6 +1640,12 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "tage seit letztem kontakt": {}
+			        },
+			        {
+			          "days since last contact": {}
 			        }
 			      ]
 			    },
@@ -1734,6 +1803,12 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "anzahl aktivitäten": {}
+			        },
+			        {
+			          "number of activities": {}
 			        }
 			      ]
 			    },
@@ -1923,6 +1998,21 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "rechnungsbetrag": {}
+			        },
+			        {
+			          "fakturierter betrag": {}
+			        },
+			        {
+			          "umsatz": {}
+			        },
+			        {
+			          "invoiced": {}
+			        },
+			        {
+			          "billed amount": {}
 			        }
 			      ]
 			    },
@@ -2259,6 +2349,12 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "aktive verträge": {}
+			        },
+			        {
+			          "laufende verträge": {}
 			        }
 			      ]
 			    },
@@ -2510,6 +2606,555 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        }
+			      ]
+			    },
+			    "fact_account": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kunde": {}
+			        },
+			        {
+			          "kunden": {}
+			        },
+			        {
+			          "mandant": {}
+			        },
+			        {
+			          "customer": {}
+			        },
+			        {
+			          "client": {}
+			        },
+			        {
+			          "firma": {}
+			        },
+			        {
+			          "company": {}
+			        }
+			      ]
+			    },
+			    "fact_account.account_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account",
+			          "ConceptualProperty": "Account Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kundenname": {}
+			        },
+			        {
+			          "firmenname": {}
+			        },
+			        {
+			          "customer name": {}
+			        },
+			        {
+			          "company name": {}
+			        }
+			      ]
+			    },
+			    "fact_account.owner": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account",
+			          "ConceptualProperty": "Owner"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "betreuer": {}
+			        },
+			        {
+			          "verantwortlicher": {}
+			        },
+			        {
+			          "account owner": {}
+			        },
+			        {
+			          "account manager": {}
+			        }
+			      ]
+			    },
+			    "fact_account.bc_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact account",
+			          "ConceptualProperty": "BC ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "debitor": {}
+			        },
+			        {
+			          "debitornummer": {}
+			        },
+			        {
+			          "debitorennummer": {}
+			        },
+			        {
+			          "bc customer number": {}
+			        }
+			      ]
+			    },
+			    "fact_contacts": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact contacts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ansprechpartner": {}
+			        },
+			        {
+			          "kontakt": {}
+			        },
+			        {
+			          "kontakte": {}
+			        },
+			        {
+			          "contact person": {}
+			        },
+			        {
+			          "contact persons": {}
+			        }
+			      ]
+			    },
+			    "fact_opportunity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact opportunity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "verkaufschance": {}
+			        },
+			        {
+			          "verkaufschancen": {}
+			        },
+			        {
+			          "opportunity": {}
+			        },
+			        {
+			          "deal": {}
+			        },
+			        {
+			          "deals": {}
+			        }
+			      ]
+			    },
+			    "tickets": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket": {}
+			        },
+			        {
+			          "support ticket": {}
+			        },
+			        {
+			          "supportanfrage": {}
+			        },
+			        {
+			          "supportfall": {}
+			        }
+			      ]
+			    },
+			    "erp_contractheader": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractHeader"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vertrag": {}
+			        },
+			        {
+			          "verträge": {}
+			        },
+			        {
+			          "contract": {}
+			        },
+			        {
+			          "contracts": {}
+			        }
+			      ]
+			    },
+			    "erp_contractline": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vertragszeile": {}
+			        },
+			        {
+			          "vertragszeilen": {}
+			        },
+			        {
+			          "contract line": {}
+			        },
+			        {
+			          "contract lines": {}
+			        }
+			      ]
+			    },
+			    "erp_contractline.mrr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP ContractLine",
+			          "ConceptualProperty": "MRR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monatlicher umsatz": {}
+			        },
+			        {
+			          "monthly recurring revenue": {}
+			        }
+			      ]
+			    },
+			    "erp_invoices": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rechnung": {}
+			        },
+			        {
+			          "rechnungen": {}
+			        },
+			        {
+			          "faktura": {}
+			        },
+			        {
+			          "invoice": {}
+			        },
+			        {
+			          "invoices": {}
+			        },
+			        {
+			          "bill": {}
+			        },
+			        {
+			          "bills": {}
+			        }
+			      ]
+			    },
+			    "erp_invoices.invoice_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Invoice Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anzahl rechnungen": {}
+			        },
+			        {
+			          "number of invoices": {}
+			        }
+			      ]
+			    },
+			    "erp_invoices.overdue_invoices": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Invoices",
+			          "ConceptualProperty": "Overdue Invoices"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "überfällige rechnungen": {}
+			        },
+			        {
+			          "overdue invoices": {}
+			        },
+			        {
+			          "unpaid invoices": {}
+			        }
+			      ]
+			    },
+			    "erp_credit_memos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Credit Memos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gutschrift": {}
+			        },
+			        {
+			          "gutschriften": {}
+			        },
+			        {
+			          "credit memo": {}
+			        },
+			        {
+			          "credit memos": {}
+			        },
+			        {
+			          "credit note": {}
+			        },
+			        {
+			          "credit notes": {}
+			        }
+			      ]
+			    },
+			    "erp_credit_memos.credit_memo_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Credit Memos",
+			          "ConceptualProperty": "Credit Memo Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gutschriftsbetrag": {}
+			        },
+			        {
+			          "credited amount": {}
+			        }
+			      ]
+			    },
+			    "erp_open_items": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "offene posten": {}
+			        },
+			        {
+			          "offene rechnungen": {}
+			        },
+			        {
+			          "forderungen": {}
+			        },
+			        {
+			          "open items": {}
+			        },
+			        {
+			          "receivables": {}
+			        },
+			        {
+			          "outstanding items": {}
+			        }
+			      ]
+			    },
+			    "erp_open_items.reminder_level": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Reminder Level"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mahnstufe": {}
+			        },
+			        {
+			          "mahnung": {}
+			        },
+			        {
+			          "mahnungen": {}
+			        },
+			        {
+			          "reminder": {}
+			        },
+			        {
+			          "dunning level": {}
+			        }
+			      ]
+			    },
+			    "erp_open_items.days_overdue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ERP Open Items",
+			          "ConceptualProperty": "Days Overdue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tage überfällig": {}
+			        },
+			        {
+			          "verzug": {}
+			        },
+			        {
+			          "zahlungsverzug": {}
+			        },
+			        {
+			          "days past due": {}
+			        }
+			      ]
+			    },
+			    "fact_quote": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact quote"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "angebot": {}
+			        },
+			        {
+			          "angebote": {}
+			        },
+			        {
+			          "quote": {}
+			        },
+			        {
+			          "quotes": {}
+			        },
+			        {
+			          "offer": {}
+			        },
+			        {
+			          "offers": {}
+			        }
+			      ]
+			    },
+			    "fact_salesorder": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact salesorder"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "auftrag": {}
+			        },
+			        {
+			          "aufträge": {}
+			        },
+			        {
+			          "bestellung": {}
+			        },
+			        {
+			          "order": {}
+			        },
+			        {
+			          "orders": {}
+			        },
+			        {
+			          "sales order": {}
+			        },
+			        {
+			          "sales orders": {}
+			        }
+			      ]
+			    },
+			    "crm_activities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aktivität": {}
+			        },
+			        {
+			          "aktivitäten": {}
+			        },
+			        {
+			          "kontakthistorie": {}
+			        },
+			        {
+			          "activity": {}
+			        },
+			        {
+			          "activities": {}
+			        }
+			      ]
+			    },
+			    "crm_activities.last_activity_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Activities",
+			          "ConceptualProperty": "Last Activity Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "letzter kontakt": {}
+			        },
+			        {
+			          "letzte aktivität": {}
+			        },
+			        {
+			          "last contact": {}
+			        },
+			        {
+			          "last activity": {}
+			        }
+			      ]
+			    },
+			    "crm_contact_activities": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kontaktaktivitäten": {}
+			        },
+			        {
+			          "aktivitäten des ansprechpartners": {}
+			        },
+			        {
+			          "contact activities": {}
 			        }
 			      ]
 			    }

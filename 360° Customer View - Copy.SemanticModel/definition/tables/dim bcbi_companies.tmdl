@@ -1,3 +1,4 @@
+/// Business Central companies (legal entities, e.g. 1STP, ADHO, STCH).
 table 'dim bcbi_companies'
 	lineageTag: 454e5c3f-3da1-4b51-bba0-7a2a0701f35f
 	sourceLineageTag: c9a926c1-2902-401a-a075-4d3c867dd0fe

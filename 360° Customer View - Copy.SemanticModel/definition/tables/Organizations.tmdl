@@ -1,3 +1,4 @@
+/// Support system organizations, linked to CRM accounts via external_id = Account ID.
 table Organizations
 	lineageTag: d660e528-2e71-42e7-9ff7-2a69faf19730
 	sourceLineageTag: d4b62ab4-3b2d-47b8-afc7-7f3d58220ece

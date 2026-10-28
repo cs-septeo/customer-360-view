@@ -65,6 +65,7 @@ table 'ERP Open Items'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Ledger entry type: Invoice, Payment, Credit Memo, Refund, Reminder.
 	column 'Document Type'
 		dataType: string
 		lineageTag: abd38f98-4bac-4789-83f4-ff365d1dda0e
@@ -99,6 +100,7 @@ table 'ERP Open Items'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Open amount of the ledger entry in document currency; negative for unapplied payments or credits.
 	column 'Remaining Amount'
 		dataType: decimal
 		formatString: #,0.00
@@ -121,6 +123,7 @@ table 'ERP Open Items'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Last issued reminder level (Mahnstufe) of the open entry; 0 = no reminder sent.
 	column 'Reminder Level'
 		dataType: int64
 		lineageTag: 1f1879e4-7b7f-4844-8b4d-85e912bbefde
@@ -129,6 +132,7 @@ table 'ERP Open Items'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Days past the due date, as of the last data refresh; 0 = not due yet.
 	column 'Days Overdue'
 		dataType: int64
 		lineageTag: 5071ca40-3372-4eef-8224-ce720821be98
@@ -137,6 +141,7 @@ table 'ERP Open Items'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Overdue bucket: Not due, 1-30 days, 31-60 days, 61-90 days, > 90 days.
 	column 'Aging Bucket'
 		dataType: string
 		lineageTag: 4d2d623d-2121-4488-943b-a684b8aa2e0c

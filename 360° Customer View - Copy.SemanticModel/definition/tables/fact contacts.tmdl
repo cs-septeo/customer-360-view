@@ -1,3 +1,4 @@
+/// CRM contacts (Ansprechpartner) of the accounts, with email, phone and function.
 table 'fact contacts'
 	lineageTag: 4b2e54af-d2b5-43ed-80a4-09e2d96adecc
 	sourceLineageTag: 699bd49c-e5e9-4b46-b000-203eb4fa21a2
@@ -103,6 +104,7 @@ table 'fact contacts'
 
 		annotation SummarizationSetBy = User
 
+	/// Contact email address.
 	column emailaddress1
 		dataType: string
 		lineageTag: 27422cde-4398-4af2-9229-45a91a88ddd0
@@ -150,6 +152,7 @@ table 'fact contacts'
 
 		annotation SummarizationSetBy = User
 
+	/// Contact full name. Drill-through field for the Contact Detail page.
 	column fullname
 		dataType: string
 		lineageTag: 4ce23972-8063-4ffd-ade0-f6074e61d107
@@ -217,6 +220,7 @@ table 'fact contacts'
 
 		annotation SummarizationSetBy = User
 
+	/// CRM contact GUID. Key used by CRM Contact Activities.
 	column contactid
 		dataType: string
 		lineageTag: f8107eca-e287-4041-9646-71742503d8ef
@@ -417,6 +421,7 @@ table 'fact contacts'
 
 		annotation SummarizationSetBy = User
 
+	/// Contact function / role (Funktion).
 	column funktion1
 		dataType: string
 		lineageTag: 2648763c-ac5e-46be-9560-37975356f3ce
@@ -427,6 +432,7 @@ table 'fact contacts'
 
 		annotation SummarizationSetBy = User
 
+	/// Contact phone number.
 	column telephone1
 		dataType: string
 		lineageTag: 73e0d2df-6eea-45a8-9071-54015d061bb3

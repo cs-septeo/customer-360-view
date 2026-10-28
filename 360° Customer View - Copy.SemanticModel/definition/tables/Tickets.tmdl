@@ -1,3 +1,4 @@
+/// Support tickets per support organization (linked to the CRM account through Organizations), with priority, type, status and solve time.
 table Tickets
 	lineageTag: 32367ceb-c052-4e9e-8f8d-1d52c0e13e6a
 	sourceLineageTag: 8861975f-06b5-4692-9f46-52f999515267

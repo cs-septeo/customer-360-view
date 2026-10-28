@@ -1,3 +1,4 @@
+/// CRM opportunities (Verkaufschancen) per account, with ACV, sales forecast category, status and closing date.
 table 'fact opportunity'
 	lineageTag: 668865ab-248d-441b-bee2-13a515b7c7d4
 	sourceLineageTag: 686e1842-b3ac-4e64-a92c-52b9819e734b

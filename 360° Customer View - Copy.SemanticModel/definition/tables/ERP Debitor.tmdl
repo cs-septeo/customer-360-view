@@ -1,3 +1,4 @@
+/// Business Central customers (Debitoren) with payments and balance due.
 table 'ERP Debitor'
 	lineageTag: f2d8876d-b637-4363-b870-3430f57d9f6f
 	sourceLineageTag: 3efb2eed-685e-4470-a874-d941a0a4a9df

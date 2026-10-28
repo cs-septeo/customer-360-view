@@ -1,3 +1,4 @@
+/// Business Central contracts (Vertraege) per customer (DebitorKey). ContractStatus: ACTIVE, TERMINATED, CANCELLED, DRAFT.
 table 'ERP ContractHeader'
 	lineageTag: 4d3d152b-f80d-49d9-8cb0-0a1fa033c2f0
 	sourceLineageTag: 1911ef2a-45c2-44dc-9ba5-e3e0ae8d2cb6
@@ -506,6 +507,7 @@ table 'ERP ContractHeader'
 
 		annotation SummarizationSetBy = User
 
+	/// Contract end date (empty for open-ended contracts).
 	column endingdate
 		dataType: dateTime
 		formatString: General Number
@@ -1033,6 +1035,7 @@ table 'ERP ContractHeader'
 
 		annotation SummarizationSetBy = User
 
+	/// Contract start date.
 	column startingdate
 		dataType: dateTime
 		formatString: General Number
@@ -1237,6 +1240,7 @@ table 'ERP ContractHeader'
 
 		annotation SummarizationSetBy = User
 
+	/// Business Central company code (e.g. 1STP, ADHO, STCH).
 	column Entity
 		dataType: string
 		lineageTag: 96c02049-1929-41e6-80fc-21fe1041900b
@@ -1277,6 +1281,7 @@ table 'ERP ContractHeader'
 
 		annotation SummarizationSetBy = User
 
+	/// Business Central contract number (Vertragsnr.).
 	column Contract
 		dataType: string
 		lineageTag: 37a5c305-5ab9-4e73-9608-5c97e3c6947b
@@ -1287,6 +1292,7 @@ table 'ERP ContractHeader'
 
 		annotation SummarizationSetBy = User
 
+	/// Contract status: ACTIVE, TERMINATED, CANCELLED or DRAFT.
 	column ContractStatus
 		dataType: string
 		lineageTag: 41587946-2264-45db-8bb5-e1ea24901131
@@ -1334,6 +1340,7 @@ table 'ERP ContractHeader'
 
 		annotation SummarizationSetBy = User
 
+	/// Total contract amount.
 	column AmountTotal
 		dataType: double
 		lineageTag: 4d6dbe81-9f92-480d-aa3b-3aa7d29107e2

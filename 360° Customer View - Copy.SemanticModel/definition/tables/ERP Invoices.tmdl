@@ -49,6 +49,7 @@ table 'ERP Invoices'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Business Central company code (e.g. 1STP, ADHO, STCH).
 	column Entity
 		dataType: string
 		lineageTag: 914806f6-7ea2-4443-a3b2-248e2b64aca6
@@ -57,6 +58,7 @@ table 'ERP Invoices'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Posted sales invoice number (Rechnungsnr.).
 	column 'Invoice No'
 		dataType: string
 		lineageTag: 2a9fa833-15fb-42dc-9651-acc2fcc77cbb
@@ -105,6 +107,7 @@ table 'ERP Invoices'
 		summarizeBy: sum
 		sourceColumn: Gross Amount
 
+	/// Amount of the invoice still unpaid (gross, document currency).
 	column 'Remaining Amount'
 		dataType: decimal
 		formatString: #,0.00
@@ -112,6 +115,7 @@ table 'ERP Invoices'
 		summarizeBy: sum
 		sourceColumn: Remaining Amount
 
+	/// Document currency; LCY = local currency of the company (EUR, CHF for STCH).
 	column Currency
 		dataType: string
 		lineageTag: bdaaab63-8cf0-40ca-b36c-192b12b99695
@@ -152,6 +156,7 @@ table 'ERP Invoices'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// True when the invoice has a remaining amount and the due date is before the last refresh date.
 	column 'Is Overdue'
 		dataType: boolean
 		lineageTag: f8f9b7ab-5dca-487f-9132-a4f84e7659aa

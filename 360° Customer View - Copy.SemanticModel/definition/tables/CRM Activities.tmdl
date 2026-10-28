@@ -44,6 +44,7 @@ table 'CRM Activities'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Email, Phone Call, Task, Appointment, Chat, Bearbeitungsinformation or Auftragsuebergabe.
 	column 'Activity Type'
 		dataType: string
 		lineageTag: c5079e71-dad4-498a-8dab-6793ba2cee5f
@@ -60,6 +61,7 @@ table 'CRM Activities'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Activity state: Open, Completed, Canceled or Scheduled.
 	column Status
 		dataType: string
 		lineageTag: e5b408a4-1500-4b94-95fb-98c7fc41b3a8
@@ -77,6 +79,7 @@ table 'CRM Activities'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Date of the activity (actual end, else scheduled end, else created on).
 	column 'Activity Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy
@@ -86,6 +89,7 @@ table 'CRM Activities'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// CRM user who owns the activity (empty for inactive users).
 	column Owner
 		dataType: string
 		lineageTag: 6e97e8e8-b271-45f4-b9cd-84e583779d63
@@ -102,6 +106,7 @@ table 'CRM Activities'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Name of the CRM record the activity is about (account, opportunity, quote, ...).
 	column Regarding
 		dataType: string
 		lineageTag: 6c4986a9-9a48-4190-a060-1d10db67435d

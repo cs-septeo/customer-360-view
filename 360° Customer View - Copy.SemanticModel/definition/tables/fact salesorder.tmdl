@@ -1,3 +1,4 @@
+/// CRM sales orders (Auftraege) per account, with total amount and fulfilment date.
 table 'fact salesorder'
 	lineageTag: 0ed122da-c7ed-490b-81c5-dc1b685778c7
 	sourceLineageTag: 139503ab-d0cc-4aa0-9d1f-d9b5e093afbc
@@ -163,6 +164,7 @@ table 'fact salesorder'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Total sales order amount.
 	column totalamount
 		dataType: double
 		lineageTag: e902edc5-5866-4d48-99f0-a46627651919
@@ -307,6 +309,7 @@ table 'fact salesorder'
 
 		annotation SummarizationSetBy = User
 
+	/// CRM sales order number (Auftragsnummer).
 	column ordernumber
 		dataType: string
 		lineageTag: 712946bc-4b27-4e34-95e3-67f202efed26
@@ -327,6 +330,7 @@ table 'fact salesorder'
 
 		annotation SummarizationSetBy = User
 
+	/// Sales order state.
 	column statecodename
 		dataType: string
 		lineageTag: 3d2c99c9-d67e-4937-8e4a-cd2e90e0cfb6

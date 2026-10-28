@@ -37,6 +37,7 @@ table 'CRM Contact Activities'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Email, Phone Call, Task, Appointment, Chat, Bearbeitungsinformation or Auftragsuebergabe.
 	column 'Activity Type'
 		dataType: string
 		lineageTag: 200ac65a-87d5-4ef8-bf48-e599bda64d90
@@ -70,6 +71,7 @@ table 'CRM Contact Activities'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Date of the activity (actual end, else scheduled end, else created on).
 	column 'Activity Date'
 		dataType: dateTime
 		formatString: dd.MM.yyyy

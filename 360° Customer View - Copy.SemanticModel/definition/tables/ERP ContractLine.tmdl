@@ -1,3 +1,4 @@
+/// Business Central contract lines (Vertragszeilen): products, quantities, MRR and run rate per contract.
 table 'ERP ContractLine'
 	lineageTag: 1aca51e2-32c2-4464-8842-571b2091017a
 	sourceLineageTag: 36b15200-f7dc-43d2-b66b-7bf116980b0e
@@ -66,6 +67,7 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
+	/// Contract line number (Vertragszeilennr.).
 	column VZNr
 		dataType: int64
 		formatString: 0
@@ -87,6 +89,7 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
+	/// Product of the contract line.
 	column Product
 		dataType: string
 		lineageTag: 4a29d37c-88f5-4d82-9586-1d51b6f83f50
@@ -117,6 +120,7 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
+	/// Contract line description (product / service text).
 	column VZBeschreibung
 		dataType: string
 		lineageTag: 7249721b-92f3-496e-afa2-961a8f2f63b0
@@ -170,6 +174,7 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
+	/// Quantity (Menge) of the contract line.
 	column Menge
 		dataType: double
 		lineageTag: f93f31ba-cf7d-489c-8e8c-9a2627e6bf38
@@ -182,6 +187,7 @@ table 'ERP ContractLine'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Monthly recurring revenue of the contract line.
 	column MRR
 		dataType: double
 		lineageTag: 523629a0-5e84-48e5-b8cc-f74d27a4c632
@@ -305,6 +311,7 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
+	/// Contract number the line belongs to (Vertragsnr.).
 	column Contract
 		dataType: string
 		lineageTag: 8f65e15b-55a1-435c-bc9c-69d5ad25c614
@@ -325,6 +332,7 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
+	/// Contract line status: ACTIVE, TERMINATED, CANCELLED or DRAFT.
 	column CLStatus
 		dataType: string
 		lineageTag: e6af796e-b281-4d31-98fd-686fce96f65b

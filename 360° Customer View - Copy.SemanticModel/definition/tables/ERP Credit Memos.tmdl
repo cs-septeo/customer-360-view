@@ -40,6 +40,7 @@ table 'ERP Credit Memos'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Posted sales credit memo number (Gutschriftnr.).
 	column 'Credit Memo No'
 		dataType: string
 		lineageTag: 01bb8bfe-f833-449f-a141-e34544fff228
@@ -94,6 +95,7 @@ table 'ERP Credit Memos'
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Invoice the credit memo was applied to.
 	column 'Applies To Doc No'
 		dataType: string
 		lineageTag: ed0552fe-75ba-49e2-a1d6-b0a1efce65e3

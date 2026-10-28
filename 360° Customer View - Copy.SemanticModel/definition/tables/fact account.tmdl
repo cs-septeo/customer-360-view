@@ -1,3 +1,4 @@
+/// CRM accounts (Kunden / customers). Central table of the report: one row per CRM account. Joins to CRM tables via Account ID and to Business Central tables via BC ID.
 table 'fact account'
 	lineageTag: 71a45cbd-7908-4715-ae0d-dfb415a2bec2
 	sourceLineageTag: 26d42706-e785-4906-a913-a00c3ce58fb6
@@ -64,6 +65,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// Business Central customer key (Debitor) in the format Entity|CustomerNo, e.g. 1STP|12007. Links the CRM account to BC contracts, invoices, credit memos and open items.
 	column 'BC ID'
 		dataType: string
 		lineageTag: eff5d9cc-bd7f-4169-ba55-a7a504d22ef1
@@ -120,6 +122,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// CRM account GUID. Key used by opportunities, leads, quotes, orders, contacts and CRM activities.
 	column 'Account ID'
 		dataType: string
 		isNullable: false
@@ -300,6 +303,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// Customer number shown in the report (Kundennummer).
 	column CustomerId
 		dataType: string
 		lineageTag: 414df15f-34a9-4206-b5fe-bd4125647c16
@@ -330,6 +334,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// Sales area (Vertriebsgebiet) of the account.
 	column 'Sales Area'
 		dataType: string
 		lineageTag: 486ca802-4de7-4c72-ac9e-a60140afa42f
@@ -340,6 +345,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// Business relation of the account, e.g. customer or prospect.
 	column 'Business Relation Type'
 		dataType: string
 		lineageTag: 74748952-8a62-4d2e-8c94-e72836af2477
@@ -400,6 +406,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// Customer name (Firmenname). Drill-through field for the Account Detail page.
 	column 'Account Name'
 		dataType: string
 		lineageTag: 032b7fde-922d-4229-920e-d971a5633236
@@ -420,6 +427,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// URL that opens the account in Dynamics 365 CRM.
 	column 'CRM Link (Account)'
 		dataType: string
 		lineageTag: 1688a59c-bf75-4893-aae1-f6e8a5e02a81
@@ -440,6 +448,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// CRM account owner (responsible sales person).
 	column Owner
 		dataType: string
 		lineageTag: 61a32c64-34be-48a5-9964-a5a490a14b72
@@ -450,6 +459,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// Account identifier used by the Overview page filter to show one customer.
 	column gcid
 		dataType: string
 		lineageTag: 0a3861cd-2d12-461c-9dd4-448f7defe417

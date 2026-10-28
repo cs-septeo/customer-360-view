@@ -1,3 +1,4 @@
+/// EMS implementation/service projects per customer (linked via customer number to BC ID), with status and dates.
 table 'EMS projects'
 	lineageTag: f7053dca-0691-465a-927a-ace3df83cf3d
 	sourceLineageTag: b808396f-c434-4fd5-8e84-075de8f285d1
