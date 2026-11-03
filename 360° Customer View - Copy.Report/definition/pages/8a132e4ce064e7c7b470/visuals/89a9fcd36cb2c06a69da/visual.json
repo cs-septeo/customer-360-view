@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "89a9fcd36cb2c06a69da",
   "position": {
     "x": 1003.3333333333334,
@@ -2367,5 +2367,135 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "789d22d011735a6d6496",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "CRM Link (Contact)"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3a52541491d0b5639251",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "ncx_anrede"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4effc43d9b44016090cd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "ncx_vorangestelltertitel"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b6c7591c9c8ca978cd7a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "fullname"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "da8fd4001b90194b312a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "emailaddress1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "98225bd611817ce57ded",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "telephone1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b10de6000169e3e02884",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "funktion1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4a5b21561b443a043170",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "ncx_hauptansprechpartnercode"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bdb25bca97ed87053205",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact contacts"
+              }
+            },
+            "Property": "createdon"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground","ERP Invoices","ERP Credit Memos","ERP Open Items","CRM Activities","CRM Contact Activities"]
 
-annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling","CopilotTooling"]
 
 ref table 'dim bcbi_companies'
 ref table 'dim systemuser'

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "bbed6ebe756994e3faa6",
   "position": {
     "x": 1003.3333333338378,
@@ -2368,5 +2368,154 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "44f002fb35a0e92bcd53",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "CRM Link (Opp)"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a2953ac60eb793d1d9b8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "Sales Area"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "44c7ad1e78385e70ea5a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "Opportunity Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0acbe2be638c02b1adb3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "Emp Sales Area Mapping.Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7f71f50a45ac1cc73671",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "Salesforecast"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d1ef5be1cc02021cd500",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact opportunity"
+                  }
+                },
+                "Property": "ACV"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d44cf8370a5bd05629de",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "Closing Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4cc0203e97daa0708584",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "Status"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "71e997b4a69699c21417",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "Transactiontype"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e9158f4a083601d65717",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact opportunity"
+              }
+            },
+            "Property": "Created On Clean"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

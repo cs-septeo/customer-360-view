@@ -2,6 +2,23 @@
 table 'CRM Contact Activities'
 	lineageTag: 3c2e1c43-52dd-45c0-b5af-c2bc1ec2040a
 
+	/// Number of contacts in the current filter context.
+	measure 'Contact Count' = COUNTROWS ( 'fact contacts' )
+		formatString: #,0
+		displayFolder: Contact Detail
+
+	/// Email of the selected contact. Shown only when exactly one contact is in the filter context.
+	measure 'Contact Email' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[emailaddress1] ) )
+		displayFolder: Contact Detail
+
+	/// Phone number of the selected contact. Shown only when exactly one contact is in the filter context.
+	measure 'Contact Phone' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[telephone1] ) )
+		displayFolder: Contact Detail
+
+	/// Function / role of the selected contact. Shown only when exactly one contact is in the filter context.
+	measure 'Contact Function' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[funktion1] ) )
+		displayFolder: Contact Detail
+
 	/// Number of CRM activities linked to the contact (last 2 years).
 	measure 'Contact Activity Count' = COUNTROWS ( 'CRM Contact Activities' )
 		formatString: #,0
@@ -15,7 +32,7 @@ table 'CRM Contact Activities'
 		lineageTag: c503b1a9-91d1-4866-97fd-36d2a1f074b5
 
 	/// Name of the contact in the current filter context (page subtitle of Contact Detail).
-	measure 'Selected Contact Name' = SELECTEDVALUE ( 'fact contacts'[fullname], "Multiple contacts selected" )
+	measure 'Selected Contact Name' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), VALUES ( 'fact contacts'[fullname] ), "All contacts (" & FORMAT ( COUNTROWS ( 'fact contacts' ), "#,0" ) & ")" )
 		displayFolder: Contact Detail\Formatting
 		lineageTag: aa3bd052-1f79-4317-827d-327ef1cf32eb
 

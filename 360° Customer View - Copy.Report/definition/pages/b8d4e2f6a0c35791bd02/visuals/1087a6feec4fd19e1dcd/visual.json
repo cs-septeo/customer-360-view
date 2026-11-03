@@ -20,6 +20,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "fact contacts"
+                    }
+                  },
+                  "Property": "fullname"
+                }
+              },
+              "queryRef": "fact contacts.fullname",
+              "nativeQueryRef": "Contact",
+              "displayName": "Contact"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "CRM Contact Activities"
                     }
                   },

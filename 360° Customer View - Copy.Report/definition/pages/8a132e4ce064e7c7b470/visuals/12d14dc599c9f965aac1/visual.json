@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "12d14dc599c9f965aac1",
   "position": {
     "x": 9.8410110413085619,
@@ -2288,5 +2288,191 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "60828d806279606d8d8d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "CRM Link (Account)"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c3ffa06abcdb287026dc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Owner"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5f304a277137188b0650",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Account Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "44de296ad4ce5849bc7b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Firmenname 2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1388875a3ada7e1b78a6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "CustomerId"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "60d41c5923a86a09ba30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Business Relation Type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ed44f0105cde600207a7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim bcbi_companies"
+              }
+            },
+            "Property": "bcbi_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9f0aa2e7a10aa3302016",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Website"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "06c2d8bfd9e5800ed170",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Phone"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e29c59118b9b37b00522",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Mail"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cfe72723058211ee95a4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Sales Area"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9eabd6a3e84a90cb2079",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "FullAddress"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "84c5cc2d8a994e27ee58",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact account"
+              }
+            },
+            "Property": "Created On"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -17,61 +17,61 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fact contacts"
-                        }
-                      },
-                      "Property": "emailaddress1"
+                    "SourceRef": {
+                      "Entity": "CRM Contact Activities"
                     }
                   },
-                  "Function": 3
+                  "Property": "Contact Count"
                 }
               },
-              "queryRef": "Min(fact contacts.emailaddress1)",
+              "queryRef": "CRM Contact Activities.Contact Count",
+              "nativeQueryRef": "Contacts",
+              "displayName": "Contacts"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CRM Contact Activities"
+                    }
+                  },
+                  "Property": "Contact Email"
+                }
+              },
+              "queryRef": "CRM Contact Activities.Contact Email",
               "nativeQueryRef": "Email",
               "displayName": "Email"
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fact contacts"
-                        }
-                      },
-                      "Property": "telephone1"
+                    "SourceRef": {
+                      "Entity": "CRM Contact Activities"
                     }
                   },
-                  "Function": 3
+                  "Property": "Contact Phone"
                 }
               },
-              "queryRef": "Min(fact contacts.telephone1)",
+              "queryRef": "CRM Contact Activities.Contact Phone",
               "nativeQueryRef": "Phone",
               "displayName": "Phone"
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fact contacts"
-                        }
-                      },
-                      "Property": "funktion1"
+                    "SourceRef": {
+                      "Entity": "CRM Contact Activities"
                     }
                   },
-                  "Function": 3
+                  "Property": "Contact Function"
                 }
               },
-              "queryRef": "Min(fact contacts.funktion1)",
+              "queryRef": "CRM Contact Activities.Contact Function",
               "nativeQueryRef": "Function",
               "displayName": "Function"
             },
@@ -279,7 +279,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "5L"
+                  "Value": "6L"
                 }
               }
             },

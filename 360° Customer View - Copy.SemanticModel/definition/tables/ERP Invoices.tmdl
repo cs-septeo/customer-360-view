@@ -27,7 +27,7 @@ table 'ERP Invoices'
 		lineageTag: c57d5f34-e7e9-4896-8286-33837de2cbe4
 
 	/// Name of the account in the current filter context (page subtitle of Account Detail).
-	measure 'Selected Account Name' = SELECTEDVALUE ( 'fact account'[Account Name], "Multiple accounts selected" )
+	measure 'Selected Account Name' = IF ( HASONEVALUE ( 'fact account'[Account Name] ), VALUES ( 'fact account'[Account Name] ), "All accounts (" & FORMAT ( COUNTROWS ( 'fact account' ), "#,0" ) & ")" )
 		displayFolder: Account Detail\Formatting
 		lineageTag: f121ad26-8d90-4227-9972-8cd1e5c9cd5c
 
