@@ -222,8 +222,6 @@ table 'Sales Budget 24 Monthly'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column 'Current Month'
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""

@@ -303,8 +303,6 @@ table 'CRM lead_transition_pipelinephase'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column next_stage_date
 		dataType: dateTime
 		formatString: General Number
@@ -331,8 +329,6 @@ table 'CRM lead_transition_pipelinephase'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column hours_between_two_conseq_stages
 		dataType: double
 		lineageTag: b0d9fadd-a322-40bb-83b3-8256a53d5b60
@@ -342,8 +338,6 @@ table 'CRM lead_transition_pipelinephase'
 		sourceColumn: hours_between_two_conseq_stages
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column auditid
 		dataType: string

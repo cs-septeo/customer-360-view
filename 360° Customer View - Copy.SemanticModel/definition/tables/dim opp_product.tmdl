@@ -7,8 +7,6 @@ table 'dim opp_product'
 		sourceLineageTag: 54545430-11e5-4910-83cd-598be8683278
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column data_update
 		dataType: dateTime
 		formatString: General Number
@@ -55,8 +53,6 @@ table 'dim opp_product'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column priceperunit
 		dataType: double
 		lineageTag: 459c550c-db59-4273-96b9-fe945711bb23
@@ -66,8 +62,6 @@ table 'dim opp_product'
 		sourceColumn: priceperunit
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ncx_artikelkategorie
 		dataType: boolean

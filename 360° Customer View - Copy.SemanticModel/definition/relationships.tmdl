@@ -819,3 +819,41 @@ relationship 'CRM Contact Activities_Contact ID_fact contacts_contactid'
 	fromColumn: 'CRM Contact Activities'.'Contact ID'
 	toColumn: 'fact contacts'.contactid
 
+relationship 'Detail Calendar_ERP Invoices'
+	fromColumn: 'ERP Invoices'.'Posting Date'
+	toColumn: 'Detail Calendar'.Date
+
+relationship 'Detail Calendar_ERP Credit Memos'
+	fromColumn: 'ERP Credit Memos'.'Posting Date'
+	toColumn: 'Detail Calendar'.Date
+
+relationship 'Detail Calendar_CRM Activities'
+	fromColumn: 'CRM Activities'.'Activity Date'
+	toColumn: 'Detail Calendar'.Date
+
+relationship 'Detail Calendar_CRM Contact Activities'
+	fromColumn: 'CRM Contact Activities'.'Activity Date'
+	toColumn: 'Detail Calendar'.Date
+
+relationship 'Detail Company_ERP Invoices'
+	fromColumn: 'ERP Invoices'.Entity
+	toColumn: 'Detail Company'.Entity
+
+relationship 'Detail Company_ERP Credit Memos'
+	fromColumn: 'ERP Credit Memos'.Entity
+	toColumn: 'Detail Company'.Entity
+
+relationship 'Detail Company_ERP Open Items'
+	fromColumn: 'ERP Open Items'.Entity
+	toColumn: 'Detail Company'.Entity
+
+relationship ce6c7cc5-6581-47ac-97f9-77f422a1431f
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'fact opportunity'.'Emp Sales Area Mapping.Sales Area'
+	toColumn: 'Sales Forecast Mgmt Commit - Real Time'.'Sales Area'
+
+relationship 8870b634-11fb-4edc-90ea-1c51e1f00482
+	toCardinality: many
+	fromColumn: 'Sales Forecast Mgmt Commit - Real Time'.Q
+	toColumn: 'dim datetable'.Qrt
+

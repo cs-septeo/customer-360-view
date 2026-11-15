@@ -1,4 +1,3 @@
-/// Business Central customers (Debitoren) with payments and balance due.
 table 'ERP Debitor'
 	lineageTag: f2d8876d-b637-4363-b870-3430f57d9f6f
 	sourceLineageTag: 3efb2eed-685e-4470-a874-d941a0a4a9df
@@ -893,8 +892,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column balance_lcy
 		dataType: double
 		lineageTag: 37a361c8-a80d-46ef-9eb1-9e5076c37eb3
@@ -904,8 +901,6 @@ table 'ERP Debitor'
 		sourceColumn: balance_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column balance_due
 		dataType: double
@@ -917,8 +912,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column balance_due_lcy
 		dataType: double
 		lineageTag: 5506332b-313e-410f-94bd-1a464e6636dd
@@ -928,8 +921,6 @@ table 'ERP Debitor'
 		sourceColumn: balance_due_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column outstanding_invoices
 		dataType: double
@@ -941,8 +932,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column outstanding_invoices_lcy
 		dataType: double
 		lineageTag: c1260a3c-5d11-4266-9f87-e19be8309088
@@ -952,8 +941,6 @@ table 'ERP Debitor'
 		sourceColumn: outstanding_invoices_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column net_change
 		dataType: double
@@ -965,8 +952,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column net_change_lcy
 		dataType: double
 		lineageTag: 84190fb2-9f5e-4f2f-9b5c-45fed1030a28
@@ -976,8 +961,6 @@ table 'ERP Debitor'
 		sourceColumn: net_change_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column invoice_amounts
 		dataType: double
@@ -989,8 +972,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column debit_amount
 		dataType: double
 		lineageTag: 9aa44da6-b3c8-4888-bc2f-c7d71d0be784
@@ -1000,8 +981,6 @@ table 'ERP Debitor'
 		sourceColumn: debit_amount
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column debit_amount_lcy
 		dataType: double
@@ -1013,8 +992,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column credit_amount
 		dataType: double
 		lineageTag: d422796c-a2e0-40db-beca-44998d06fcb1
@@ -1024,8 +1001,6 @@ table 'ERP Debitor'
 		sourceColumn: credit_amount
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column credit_amount_lcy
 		dataType: double
@@ -1037,8 +1012,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column inv_amounts_lcy
 		dataType: double
 		lineageTag: a420e32b-3b25-4c0f-aaae-fee474b91b8f
@@ -1049,8 +1022,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column payments
 		dataType: double
 		lineageTag: 38112896-a61e-476d-a216-a2afbd6111f2
@@ -1060,8 +1031,6 @@ table 'ERP Debitor'
 		sourceColumn: payments
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column payments_lcy
 		dataType: double
@@ -1084,8 +1053,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column cr_memo_amounts_lcy
 		dataType: double
 		lineageTag: ec66a1ba-324e-4d5a-bf3c-f674c6f8945a
@@ -1095,8 +1062,6 @@ table 'ERP Debitor'
 		sourceColumn: cr_memo_amounts_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column refunds
 		dataType: double
@@ -1108,8 +1073,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column refunds_lcy
 		dataType: double
 		lineageTag: a2c5a9e7-3526-4fb9-bd7b-9828c564753e
@@ -1119,8 +1082,6 @@ table 'ERP Debitor'
 		sourceColumn: refunds_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column finance_charge_memo_amounts
 		dataType: int64
@@ -1176,8 +1137,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column other_amounts_lcy
 		dataType: double
 		lineageTag: 39d04a49-939d-402d-8431-f97e51226fe7
@@ -1187,8 +1146,6 @@ table 'ERP Debitor'
 		sourceColumn: other_amounts_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column inv_discounts_lcy
 		dataType: int64
@@ -1211,8 +1168,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column sales_lcy
 		dataType: double
 		lineageTag: 2b32e8ec-2a8f-47d7-af12-242a5774607b
@@ -1222,8 +1177,6 @@ table 'ERP Debitor'
 		sourceColumn: sales_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column profit_lcy
 		dataType: double
@@ -1235,8 +1188,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column outstanding_orders
 		dataType: double
 		lineageTag: 9fb667d2-ef05-495e-a26e-363136eb0421
@@ -1247,8 +1198,6 @@ table 'ERP Debitor'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column outstanding_orders_lcy
 		dataType: double
 		lineageTag: 8b5d850a-5b72-477c-8798-a0c0b4e8f77f
@@ -1258,8 +1207,6 @@ table 'ERP Debitor'
 		sourceColumn: outstanding_orders_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column outstanding_serv_orders_lcy
 		dataType: int64
@@ -1336,8 +1283,6 @@ table 'ERP Debitor'
 		sourceColumn: pmt_tolerance_lcy
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column comment
 		dataType: string

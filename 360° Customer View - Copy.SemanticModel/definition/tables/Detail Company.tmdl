@@ -1,0 +1,14 @@
+/// Local list of Business Central companies (Entity) for the Company slicer on Account Detail. Filters ERP Invoices, ERP Credit Memos and ERP Open Items.
+table 'Detail Company'
+	lineageTag: ac29018d-09f3-419b-9bcd-7800c5aa04b8
+
+	/// Business Central company code (e.g. 1STP, ADHO, STCH).
+	column Entity
+		lineageTag: 9ef1019a-5d32-4f77-90f3-07e9ea5b5a94
+		isNameInferred
+		sourceColumn: ERP Invoices[Entity]
+
+	partition 'Detail Company' = calculated
+		mode: import
+		source = DISTINCT ( UNION ( DISTINCT ( 'ERP Invoices'[Entity] ), DISTINCT ( 'ERP Credit Memos'[Entity] ), DISTINCT ( 'ERP Open Items'[Entity] ) ) )
+

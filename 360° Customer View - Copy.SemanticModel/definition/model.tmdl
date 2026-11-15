@@ -207,6 +207,8 @@ ref table 'ERP Credit Memos'
 ref table 'ERP Open Items'
 ref table 'CRM Activities'
 ref table 'CRM Contact Activities'
+ref table 'Detail Calendar'
+ref table 'Detail Company'
 
 ref cultureInfo en-US
 

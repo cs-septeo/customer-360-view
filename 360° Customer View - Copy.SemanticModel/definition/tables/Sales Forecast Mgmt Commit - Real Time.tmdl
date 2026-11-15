@@ -92,6 +92,7 @@ table 'Sales Forecast Mgmt Commit - Real Time'
 
 	column 'Sales Area'
 		dataType: string
+		isNullable: false
 		lineageTag: e86fba96-1459-4d02-b4bc-77f2ae2eefff
 		sourceLineageTag: a7a7fac6-bfce-4dc5-a655-481f2f234b5f
 		dataCategory: Uncategorized
@@ -102,7 +103,7 @@ table 'Sales Forecast Mgmt Commit - Real Time'
 
 	column 'Sales Forecast'
 		dataType: int64
-		formatString: 0
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		lineageTag: ad5d27b7-33e2-46e1-ab92-08398ea455f8
 		sourceLineageTag: 83f8d0c1-fcdd-4f87-905d-12851f22c882
 		dataCategory: Uncategorized

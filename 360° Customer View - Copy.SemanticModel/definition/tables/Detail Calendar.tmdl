@@ -1,0 +1,39 @@
+/// Local date table for the Period slicer on Account/Contact Detail. Filters ERP Invoices and ERP Credit Memos (Posting Date) and CRM Activities / CRM Contact Activities (Activity Date). Open items, contracts, quotes and orders are intentionally not filtered by date.
+table 'Detail Calendar'
+	lineageTag: 22f3e6d2-b50a-4453-bab1-09d45ec36459
+	dataCategory: Time
+
+	/// Calendar date.
+	column Date
+		isUnique
+		formatString: dd.MM.yyyy
+		lineageTag: 2c3956e7-3272-4bc6-9cb9-a5b452928de0
+		isNameInferred
+		sourceColumn: [Date]
+
+	column Year
+		formatString: 0
+		lineageTag: ca19c663-a63d-48bb-a4a9-947afa28779f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+	/// First day of the month.
+	column Month
+		formatString: mmm yyyy
+		lineageTag: 39f2ecc3-b429-4b8a-add0-e9b60b3cc25a
+		isNameInferred
+		sourceColumn: [Month]
+
+	partition 'Detail Calendar' = calculated
+		mode: import
+		source =
+				VAR _min = MINX ( { MIN ( 'ERP Invoices'[Posting Date] ), MIN ( 'ERP Credit Memos'[Posting Date] ), MIN ( 'CRM Activities'[Activity Date] ), MIN ( 'CRM Contact Activities'[Activity Date] ) }, [Value] )
+				VAR _max = MAXX ( { MAX ( 'ERP Invoices'[Posting Date] ), MAX ( 'ERP Credit Memos'[Posting Date] ), MAX ( 'CRM Activities'[Activity Date] ), MAX ( 'CRM Contact Activities'[Activity Date] ), TODAY () }, [Value] )
+				RETURN
+				    ADDCOLUMNS (
+				        CALENDAR ( DATE ( YEAR ( _min ), 1, 1 ), DATE ( YEAR ( _max ), 12, 31 ) ),
+				        "Year", YEAR ( [Date] ),
+				        "Month", DATE ( YEAR ( [Date] ), MONTH ( [Date] ), 1 )
+				    )
+

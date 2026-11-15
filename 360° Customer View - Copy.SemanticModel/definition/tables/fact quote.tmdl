@@ -1,4 +1,3 @@
-/// CRM quotes (Angebote) per account. statecodename values: Entwurf (draft), Aktiv (active), Gewonnen (won), Geschlossen (closed).
 table 'fact quote'
 	lineageTag: 1d4fbe4b-9114-4bb6-819a-d71f16ea1a8e
 	sourceLineageTag: db7cea9c-636b-4f64-bc68-818b0db59b75
@@ -119,7 +118,6 @@ table 'fact quote'
 
 	column ncx_abrechnungszeitraumcode
 		dataType: int64
-		formatString: 0
 		lineageTag: 7bd0db90-c9c8-4edc-8cfb-788280826ba4
 		sourceLineageTag: ce687c54-120f-498e-8899-a63334045558
 		dataCategory: Uncategorized
@@ -130,7 +128,6 @@ table 'fact quote'
 
 	column ncx_umsatzartcode
 		dataType: int64
-		formatString: 0
 		lineageTag: 33de436c-628e-4018-bae9-dfa6a0d14494
 		sourceLineageTag: fe2f6984-cb8b-45b9-aaff-db1f6ae28cc8
 		dataCategory: Uncategorized
@@ -141,7 +138,6 @@ table 'fact quote'
 
 	column ncx_vertragslaufzeitinmonaten
 		dataType: int64
-		formatString: 0
 		lineageTag: d174709c-b3cd-413e-a011-75354aad0776
 		sourceLineageTag: f342b091-2dce-4835-b4ea-cf8aae899e8d
 		dataCategory: Uncategorized
@@ -152,7 +148,6 @@ table 'fact quote'
 
 	column ncx_zahlungsform
 		dataType: int64
-		formatString: 0
 		lineageTag: fe36b74a-a024-4720-8075-38c12148dde8
 		sourceLineageTag: f20e304c-fd2c-41ef-a490-a48120f21f22
 		dataCategory: Uncategorized
@@ -193,9 +188,6 @@ table 'fact quote'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	/// Total quote amount.
 	column totalamount
 		dataType: double
 		formatString: 0
@@ -216,8 +208,6 @@ table 'fact quote'
 		sourceColumn: ncx_aktuellerpreisproberufstrager
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ncx_dienstleistungssumme
 		dataType: double
@@ -369,8 +359,6 @@ table 'fact quote'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column emailaddress
 		dataType: string
 		lineageTag: 9bdcd43f-7695-43bd-a0ee-bbdd1d6c1f90
@@ -441,7 +429,6 @@ table 'fact quote'
 
 		annotation SummarizationSetBy = User
 
-	/// CRM quote number (Angebotsnummer).
 	column quotenumber
 		dataType: string
 		lineageTag: 22f952e3-5743-4388-89b8-63a8eca54d9e
@@ -482,7 +469,6 @@ table 'fact quote'
 
 		annotation SummarizationSetBy = User
 
-	/// Quote state: Entwurf (draft), Aktiv (active), Gewonnen (won), Geschlossen (closed). Open quotes = Entwurf or Aktiv.
 	column statecodename
 		dataType: string
 		lineageTag: 13970f08-0e9e-46ba-9b1b-bef650d8168f

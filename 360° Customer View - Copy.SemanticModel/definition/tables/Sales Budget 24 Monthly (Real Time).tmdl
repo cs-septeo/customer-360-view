@@ -37,28 +37,20 @@ table 'Sales Budget 24 Monthly (Real Time)'
 		sourceLineageTag: 2ce34bac-479c-4f4d-9d75-0ad13f707b9e
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	measure 'Data Label Sales Performance Value 2' = EXTERNALMEASURE("Data Label Sales Performance Value 2", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: fa92778a-235d-4748-88ea-3910b28fa268
 		sourceLineageTag: 9eadbcb3-0850-4382-8b8f-5a5f6ba6b75f
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isText":true}
 
 	measure 'Data Label Pipeline 1' = EXTERNALMEASURE("Data Label Pipeline 1", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: c93812c2-7479-47f7-a328-1537bc5e669f
 		sourceLineageTag: 8c156a1b-52fb-4f5a-9278-0fdc0ad54b71
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	measure 'Data Label Pipeline 2' = EXTERNALMEASURE("Data Label Pipeline 2", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: 9bbdb3ce-a07d-4ad7-8f5b-e0b8ecfb65bb
 		sourceLineageTag: 7f3c3214-52f4-47dc-ae1e-c78e0505af11
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isText":true}
 
 	measure 'BUD CW' = EXTERNALMEASURE("BUD CW", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
@@ -89,21 +81,15 @@ table 'Sales Budget 24 Monthly (Real Time)'
 		sourceLineageTag: 5cce3d12-43ee-45db-a81a-1e52eaedcf06
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Data Label Sales Performance Details 1' = EXTERNALMEASURE("Data Label Sales Performance Details 1", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: 8952494c-af8d-477c-a543-96fcaad94654
 		sourceLineageTag: ca88fede-4192-49cb-bfd1-0cf022eee8a7
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	measure 'Data Label Sales Performance Details 2' = EXTERNALMEASURE("Data Label Sales Performance Details 2", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: bda5313f-b3cd-492c-a8f6-4a907508519e
 		sourceLineageTag: 6ee3f05f-3cc9-4f89-baa1-5d56333bc515
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isText":true}
 
 	measure 'Δ Done vs. BUD (CW)' = EXTERNALMEASURE("Δ Done vs. BUD (CW)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
@@ -122,14 +108,10 @@ table 'Sales Budget 24 Monthly (Real Time)'
 		sourceLineageTag: d4022478-f15d-4e83-948a-610da93d37ac
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	measure 'Data Label Tacho (CW)' = EXTERNALMEASURE("Data Label Tacho (CW)", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: 29f59228-dfa1-44aa-8819-a92ca69bd4a0
 		sourceLineageTag: 9f2de25d-021f-43be-a03a-1e3dc376022c
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isText":true}
 
 	measure 'Δ Done vs. BUD (CM)' = EXTERNALMEASURE("Δ Done vs. BUD (CM)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
@@ -148,28 +130,20 @@ table 'Sales Budget 24 Monthly (Real Time)'
 		sourceLineageTag: e7c4a3ff-5a7f-4a40-bab3-d9309a76b588
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	measure '% Done vs. BUD (CM)' = EXTERNALMEASURE("% Done vs. BUD (CM)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: b9de01d2-6fd5-4089-b8a9-44d52c803a12
 		sourceLineageTag: 4b9fe0fe-3a8d-4f1c-83b3-beafcc73b88b
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Data Label Tacho (CQ)' = EXTERNALMEASURE("Data Label Tacho (CQ)", STRING, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: 42bd65b0-c5b5-4d07-bbc5-d0145ef844be
 		sourceLineageTag: 5c491862-ca0b-4967-91d6-8aab6f9d953a
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	measure '% Done vs. BUD (CQ)' = EXTERNALMEASURE("% Done vs. BUD (CQ)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: afe6cbe6-c6a8-4c33-bbce-324c647937b3
 		sourceLineageTag: 8e196cea-4326-4066-9f6a-b927d872ad20
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'BUD indep.' = EXTERNALMEASURE("BUD indep.", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: 0
@@ -256,8 +230,6 @@ table 'Sales Budget 24 Monthly (Real Time)'
 		sourceColumn: Faktor
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Current Month'
 		dataType: boolean

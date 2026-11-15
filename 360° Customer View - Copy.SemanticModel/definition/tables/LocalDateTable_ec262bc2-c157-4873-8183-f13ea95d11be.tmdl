@@ -7,7 +7,6 @@ table LocalDateTable_ec262bc2-c157-4873-8183-f13ea95d11be
 		dataType: dateTime
 		isHidden
 		isNullable: false
-		formatString: General Date
 		lineageTag: f525d4cc-7870-4e44-a6ec-13bd3a1cd25e
 		sourceLineageTag: 53436256-e27c-4299-8d6d-5cbc6192d1f9
 		dataCategory: Uncategorized
@@ -19,7 +18,6 @@ table LocalDateTable_ec262bc2-c157-4873-8183-f13ea95d11be
 	column Jahr
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: bbe7a2f7-7bc6-41a6-b23c-567954003235
 		sourceLineageTag: 1d63259e-c505-47e1-afba-b21b143bdf42
 		dataCategory: Uncategorized
@@ -31,7 +29,6 @@ table LocalDateTable_ec262bc2-c157-4873-8183-f13ea95d11be
 	column MonthNo
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: 9be68b8f-0e3a-46e3-844c-ed14fc3c72d6
 		sourceLineageTag: 2c625204-4768-4dca-a273-ab69c3373ab9
 		dataCategory: Uncategorized
@@ -55,7 +52,6 @@ table LocalDateTable_ec262bc2-c157-4873-8183-f13ea95d11be
 	column QuarterNo
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: 965c0b04-760c-47ab-87eb-4f16588e1adf
 		sourceLineageTag: 6bf37511-07c6-444d-9029-b6b3c7790c0f
 		dataCategory: Uncategorized
@@ -79,7 +75,6 @@ table LocalDateTable_ec262bc2-c157-4873-8183-f13ea95d11be
 	column Tag
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: e8452559-903d-438a-914b-e667c4c639cf
 		sourceLineageTag: 05afda08-1797-4df6-85ad-8c5b654a8d39
 		dataCategory: Uncategorized

@@ -121,8 +121,6 @@ table 'FACT RevenueTrackerPipeline'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column data_update
 		dataType: dateTime
 		formatString: General Number

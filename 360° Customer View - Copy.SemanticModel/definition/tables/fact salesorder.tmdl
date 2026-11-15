@@ -1,4 +1,3 @@
-/// CRM sales orders (Auftraege) per account, with total amount and fulfilment date.
 table 'fact salesorder'
 	lineageTag: 0ed122da-c7ed-490b-81c5-dc1b685778c7
 	sourceLineageTag: 139503ab-d0cc-4aa0-9d1f-d9b5e093afbc
@@ -120,7 +119,6 @@ table 'fact salesorder'
 
 	column ncx_abrechnungszeitraumcode
 		dataType: int64
-		formatString: 0
 		lineageTag: b06ca86c-46dd-4769-ac4d-a8f18ab01bd9
 		sourceLineageTag: 7e35eac1-7681-4c3e-9f63-9c154dfb7560
 		dataCategory: Uncategorized
@@ -131,7 +129,6 @@ table 'fact salesorder'
 
 	column ncx_marketplacecode
 		dataType: int64
-		formatString: 0
 		lineageTag: 9e0a313b-78d2-4949-bd7e-59a0ea9b8798
 		sourceLineageTag: 241a8ae3-cc3c-420b-b5b7-634b36ddda55
 		dataCategory: Uncategorized
@@ -150,8 +147,6 @@ table 'fact salesorder'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column freightamount
 		dataType: double
 		lineageTag: d97701e2-645c-45e4-b5b6-f70c61aabb4a
@@ -162,9 +157,6 @@ table 'fact salesorder'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	/// Total sales order amount.
 	column totalamount
 		dataType: double
 		lineageTag: e902edc5-5866-4d48-99f0-a46627651919
@@ -174,8 +166,6 @@ table 'fact salesorder'
 		sourceColumn: totalamount
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column totalamountlessfreight
 		dataType: double
@@ -187,8 +177,6 @@ table 'fact salesorder'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column totallineitemamount
 		dataType: double
 		lineageTag: a497f60f-f74e-436f-bf0c-826f04aa967b
@@ -198,8 +186,6 @@ table 'fact salesorder'
 		sourceColumn: totallineitemamount
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column totaltax
 		dataType: double
@@ -297,8 +283,6 @@ table 'fact salesorder'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column name
 		dataType: string
 		lineageTag: 4bfa65d5-3784-4771-ab6f-5c446001e84f
@@ -309,7 +293,6 @@ table 'fact salesorder'
 
 		annotation SummarizationSetBy = User
 
-	/// CRM sales order number (Auftragsnummer).
 	column ordernumber
 		dataType: string
 		lineageTag: 712946bc-4b27-4e34-95e3-67f202efed26
@@ -330,7 +313,6 @@ table 'fact salesorder'
 
 		annotation SummarizationSetBy = User
 
-	/// Sales order state.
 	column statecodename
 		dataType: string
 		lineageTag: 3d2c99c9-d67e-4937-8e4a-cd2e90e0cfb6

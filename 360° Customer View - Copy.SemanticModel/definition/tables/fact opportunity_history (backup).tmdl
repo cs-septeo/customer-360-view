@@ -49,8 +49,6 @@ table 'fact opportunity_history (backup)'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Commit
 		dataType: double
 		lineageTag: 3de1dc39-8a62-4808-b6ae-ff51780a31b2
@@ -60,8 +58,6 @@ table 'fact opportunity_history (backup)'
 		sourceColumn: Commit
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Probable
 		dataType: double
@@ -73,8 +69,6 @@ table 'fact opportunity_history (backup)'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Upside
 		dataType: double
 		lineageTag: 83643865-ec63-4054-abbc-802008dd1b7a
@@ -84,8 +78,6 @@ table 'fact opportunity_history (backup)'
 		sourceColumn: Upside
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Pipeline
 		dataType: double
@@ -97,8 +89,6 @@ table 'fact opportunity_history (backup)'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Lost
 		dataType: double
 		lineageTag: 4d4d70df-a031-42bd-ab03-af784c582763
@@ -108,8 +98,6 @@ table 'fact opportunity_history (backup)'
 		sourceColumn: Lost
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column CW_SA
 		dataType: string
@@ -181,7 +169,6 @@ table 'fact opportunity_history (backup)'
 
 	column Target
 		dataType: int64
-		formatString: 0
 		lineageTag: afa20be6-2903-4ce7-b09c-41d7108def7b
 		sourceLineageTag: 72027354-8853-4d4d-bf19-7b8f04046c77
 		dataCategory: Uncategorized

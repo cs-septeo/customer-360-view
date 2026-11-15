@@ -93,8 +93,6 @@ table 'CRM marketing_generated_pipeline_for_2026_by_sales_area'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column upside_opps
 		dataType: int64
 		formatString: 0
@@ -115,8 +113,6 @@ table 'CRM marketing_generated_pipeline_for_2026_by_sales_area'
 		sourceColumn: upside_acv
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column probable_opps
 		dataType: int64
@@ -139,8 +135,6 @@ table 'CRM marketing_generated_pipeline_for_2026_by_sales_area'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column commit_opps
 		dataType: int64
 		formatString: 0
@@ -161,8 +155,6 @@ table 'CRM marketing_generated_pipeline_for_2026_by_sales_area'
 		sourceColumn: commit_acv
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column done_opps
 		dataType: int64
@@ -185,8 +177,6 @@ table 'CRM marketing_generated_pipeline_for_2026_by_sales_area'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column lost_opps
 		dataType: int64
 		formatString: 0
@@ -207,8 +197,6 @@ table 'CRM marketing_generated_pipeline_for_2026_by_sales_area'
 		sourceColumn: lost_acv
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	hierarchy 'snapshotyear Hierarchie'
 		lineageTag: b836dddc-e53c-432f-90f9-75e41f008701

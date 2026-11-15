@@ -229,28 +229,20 @@ table 'fact opportunity_raw_history'
 		sourceLineageTag: 9e2269ea-8915-434e-966b-702deebbae2d
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure AuftragswertStartKalenderwoche = EXTERNALMEASURE("AuftragswertStartKalenderwoche", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: 8ffdffc3-19e9-473e-9941-c54661a9caca
 		sourceLineageTag: 58f3e49f-f984-4641-8603-597a340afb4f
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure DifferenzAuftragswert = EXTERNALMEASURE("DifferenzAuftragswert", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: 57cf980e-79dd-4897-8efe-3dc7f0061e02
 		sourceLineageTag: ae435675-6b5a-423f-b530-efb4407d143f
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'ACV (CP) History' = EXTERNALMEASURE("ACV (CP) History", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: 826a6e5d-abba-4045-843e-00b94637c5b9
 		sourceLineageTag: db324935-4f19-4c9a-b269-c73c0d07c92f
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'End ACV (CP) History' = EXTERNALMEASURE("End ACV (CP) History", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
@@ -348,8 +340,6 @@ table 'fact opportunity_raw_history'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ncx_schlusstermin
 		dataType: dateTime
 		formatString: dd\.mm\.yyyy
@@ -380,8 +370,6 @@ table 'fact opportunity_raw_history'
 		sourceColumn: ncx_wahrscheinlichkeit
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column opportunityid
 		dataType: string
@@ -443,8 +431,6 @@ table 'fact opportunity_raw_history'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column actualclosedate
 		dataType: string
 		lineageTag: bf70a03e-1498-4e19-9857-7488821406e0
@@ -475,8 +461,6 @@ table 'fact opportunity_raw_history'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ncx_datensatzquellecode
 		dataType: double
 		lineageTag: 739b579e-fad5-403d-84ba-f49271e10299
@@ -487,8 +471,6 @@ table 'fact opportunity_raw_history'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ncx_datensatzquellesales
 		dataType: double
 		lineageTag: 54313c36-5494-44ad-83d0-a10b6bf9bb53
@@ -498,8 +480,6 @@ table 'fact opportunity_raw_history'
 		sourceColumn: ncx_datensatzquellesales
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ncx_typcodename
 		dataType: string
@@ -650,8 +630,6 @@ table 'fact opportunity_raw_history'
 		sourceColumn: ncx_salesforecastcode
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Salesforecast_Number
 		dataType: string

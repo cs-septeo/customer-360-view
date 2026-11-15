@@ -21,7 +21,6 @@ table 'Sales Cockpit Target Chart'
 		dataCategory: Uncategorized
 
 	measure 'Week Max' = EXTERNALMEASURE("Week Max", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
-		formatString: 0
 		lineageTag: 5e20c495-194c-4d3a-aa16-3dff9009dccd
 		sourceLineageTag: 65ac4ebb-cbf5-4f19-a715-9405f27f5d3e
 		dataCategory: Uncategorized

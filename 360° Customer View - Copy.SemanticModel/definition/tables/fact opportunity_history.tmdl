@@ -29,8 +29,6 @@ table 'fact opportunity_history'
 		sourceLineageTag: 1188542e-1c74-4d90-aea1-e02d17f13b1c
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Δ Done Hist' = EXTERNALMEASURE("Δ Done Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
 		displayFolder: Opp History Measures
@@ -233,15 +231,11 @@ table 'fact opportunity_history'
 		sourceLineageTag: bacdaea8-8ad6-4de6-a2af-9f2fada7f535
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'End ACV (CP) Hist' = EXTERNALMEASURE("End ACV (CP) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		displayFolder: Opp History Measures
 		lineageTag: 41897cca-2710-4bb7-bf7a-9e8bc7b67ea4
 		sourceLineageTag: d97968da-0005-4781-af35-6d1ceccc6542
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'End CP Coverage % 2' = EXTERNALMEASURE("End CP Coverage % 2", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: 0\ %;-0\ %;0\ %
@@ -269,8 +263,6 @@ table 'fact opportunity_history'
 		lineageTag: 7d5bd67d-8db6-4a8b-8758-5b4a44e01de8
 		sourceLineageTag: 25d269f5-ecac-49d9-aeff-ecb4dc4dc746
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'End ACV (DCP) Hist' = EXTERNALMEASURE("End ACV (DCP) Hist", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
@@ -352,8 +344,6 @@ table 'fact opportunity_history'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Lost
 		dataType: double
 		lineageTag: bbfbb92e-200e-4fd6-8f44-a07019d1ed9b
@@ -363,8 +353,6 @@ table 'fact opportunity_history'
 		sourceColumn: Lost
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Commit
 		dataType: double
@@ -376,8 +364,6 @@ table 'fact opportunity_history'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Probable
 		dataType: double
 		lineageTag: 2117ccc4-8ab5-4a4c-8c3a-16ae5f920308
@@ -387,8 +373,6 @@ table 'fact opportunity_history'
 		sourceColumn: Probable
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column CW_SA
 		dataType: string
@@ -511,8 +495,6 @@ table 'fact opportunity_history'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Forecast_Quarter
 		dataType: double
 		formatString: 0
@@ -533,8 +515,6 @@ table 'fact opportunity_history'
 		sourceColumn: Forecast
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Comments
 		dataType: string

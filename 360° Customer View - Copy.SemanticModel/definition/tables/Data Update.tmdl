@@ -19,8 +19,6 @@ table 'Data Update'
 		sourceLineageTag: 08a2015b-5aef-4dcc-8fb7-7a142b1d4495
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	measure 'Min Update Status' = EXTERNALMEASURE("Min Update Status", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: 0
 		lineageTag: 89406cf5-bdec-4fe0-a1a8-960807b85d51

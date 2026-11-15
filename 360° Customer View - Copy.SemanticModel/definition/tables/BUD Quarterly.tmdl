@@ -76,8 +76,6 @@ table 'BUD Quarterly'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Zusammengeführt
 		dataType: string
 		lineageTag: c89f2345-3c9b-487c-a2b3-5e91ffdc41e5

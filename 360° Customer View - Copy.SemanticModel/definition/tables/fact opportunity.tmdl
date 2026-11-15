@@ -1,4 +1,3 @@
-/// CRM opportunities (Verkaufschancen) per account, with ACV, sales forecast category, status and closing date.
 table 'fact opportunity'
 	lineageTag: 668865ab-248d-441b-bee2-13a515b7c7d4
 	sourceLineageTag: 686e1842-b3ac-4e64-a92c-52b9819e734b
@@ -30,8 +29,6 @@ table 'fact opportunity'
 		sourceLineageTag: 797e9af3-d40f-45a5-a722-110f6b8abcd7
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'ACV % (prev. month)' = EXTERNALMEASURE("ACV % (prev. month)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: 1. Opp Measures
@@ -52,15 +49,11 @@ table 'fact opportunity'
 		sourceLineageTag: d087e091-05c4-4044-b4d2-ce5637f3b39d
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'ACV (Lfd. Quartal)' = EXTERNALMEASURE("ACV (Lfd. Quartal)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		displayFolder: 1. Opp Measures
 		lineageTag: 33c07e58-07cb-4a88-9b32-2226dc9dd893
 		sourceLineageTag: b7c611c0-d95f-4449-9b7d-36856f362909
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'ACV (Won)' = EXTERNALMEASURE("ACV (Won)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: #,0
@@ -126,7 +119,6 @@ table 'fact opportunity'
 		dataCategory: Uncategorized
 
 	measure 'Opps (Won)' = EXTERNALMEASURE("Opps (Won)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
-		formatString: 0
 		displayFolder: 1. Opp Measures
 		lineageTag: 71e3d937-78b2-42ec-8460-a57332f7c293
 		sourceLineageTag: 9c9c07f6-ec58-43db-8043-3fe0beb7a218
@@ -236,8 +228,6 @@ table 'fact opportunity'
 		sourceLineageTag: 16a12a6e-02c6-4cea-a1b3-11831e70970d
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'ACV (DCP)' = EXTERNALMEASURE("ACV (DCP)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: #,0\ "€";-#,0\ "€";#,0\ "€"
 		displayFolder: 1. Opp Measures
@@ -250,8 +240,6 @@ table 'fact opportunity'
 		lineageTag: 8eda98e3-4e3d-4838-9947-f5c6dc97a9ef
 		sourceLineageTag: 092c87c7-ed32-4998-bbaf-81870d0510ff
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'ACV (DCP) 2' = EXTERNALMEASURE("ACV (DCP) 2", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
@@ -420,8 +408,6 @@ table 'fact opportunity'
 		sourceLineageTag: ee8456fe-2aa4-4ca5-8af1-75f6de4aae2c
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'CR (ACV - Pipeline)' = EXTERNALMEASURE("CR (ACV - Pipeline)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: 1. Opp Measures
@@ -448,8 +434,6 @@ table 'fact opportunity'
 		lineageTag: a278276e-d824-482d-8230-e14b1d79de4d
 		sourceLineageTag: 400a97be-7483-41a9-90c9-d92155a3d6d9
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'ACV (Done CW)' = EXTERNALMEASURE("ACV (Done CW)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
@@ -554,8 +538,6 @@ table 'fact opportunity'
 		lineageTag: b6967b63-e74e-4a6f-84ba-f80e5c00311b
 		sourceLineageTag: e9fe7788-ce44-40ba-b286-d507b91cab60
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column transactioncurrencyid
 		dataType: string
@@ -731,8 +713,6 @@ table 'fact opportunity'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column 'Amount Purchase (Product)'
 		dataType: double
 		lineageTag: 942222c0-6f57-4267-913b-7a5281097e41
@@ -742,8 +722,6 @@ table 'fact opportunity'
 		sourceColumn: Amount Purchase (Product)
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Amount Leasing (Manually)'
 		dataType: double
@@ -755,8 +733,6 @@ table 'fact opportunity'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column 'Amount MRR'
 		dataType: double
 		lineageTag: 1e2b419d-3d43-47d0-9fdd-e94d31361725
@@ -766,8 +742,6 @@ table 'fact opportunity'
 		sourceColumn: Amount MRR
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Amount Maintenance (Product)'
 		dataType: double
@@ -779,8 +753,6 @@ table 'fact opportunity'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column 'Sum Service'
 		dataType: double
 		lineageTag: 5a3c2f35-ee21-4ac6-9530-19dff8e88de6
@@ -790,8 +762,6 @@ table 'fact opportunity'
 		sourceColumn: Sum Service
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'External Opportunity-Deputy ID'
 		dataType: string
@@ -813,8 +783,6 @@ table 'fact opportunity'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Duration
 		dataType: double
 		lineageTag: 2f4eba6d-59c7-4c2c-bcf1-a1aeb961d9f1
@@ -824,8 +792,6 @@ table 'fact opportunity'
 		sourceColumn: Duration
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Last contact'
 		dataType: dateTime
@@ -852,8 +818,6 @@ table 'fact opportunity'
 		sourceColumn: Amount Migration
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Opportunity Number'
 		dataType: string
@@ -901,8 +865,6 @@ table 'fact opportunity'
 		sourceColumn: Probability (%)
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Originatingleadid
 		dataType: string
@@ -1065,8 +1027,6 @@ table 'fact opportunity'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column 'Product Sum'
 		dataType: double
 		lineageTag: 4496a7fa-c13c-48d9-9f5f-78fd6675e3d1
@@ -1076,8 +1036,6 @@ table 'fact opportunity'
 		sourceColumn: Product Sum
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Opportunity ID'
 		dataType: string
@@ -1120,8 +1078,6 @@ table 'fact opportunity'
 		sourceColumn: Order Entry (MRR)
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Account ID'
 		dataType: string
@@ -1255,8 +1211,6 @@ table 'fact opportunity'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Product
 		dataType: string
 		lineageTag: 26931061-6126-48b0-848a-9938c0333ff5
@@ -1389,8 +1343,6 @@ table 'fact opportunity'
 		sourceColumn: ACV old
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Exp. ACV (Avg. Deal Size if ACV zero)'
 		dataType: double

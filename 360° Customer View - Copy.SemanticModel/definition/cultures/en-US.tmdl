@@ -842,6 +842,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Contact": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2389,7 +2399,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "Type": {
+			          "Activity Type": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2399,7 +2409,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Activity Type": {
+			          "Type": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3155,6 +3165,90 @@ cultureInfo en-US
 			        },
 			        {
 			          "contact activities": {}
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.contact_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Contact Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Contacts": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.contact_email": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Contact Email"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Email": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.contact_phone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Contact Phone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Phone": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crm_contact_activities.contact_function": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CRM Contact Activities",
+			          "ConceptualProperty": "Contact Function"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Function": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    }

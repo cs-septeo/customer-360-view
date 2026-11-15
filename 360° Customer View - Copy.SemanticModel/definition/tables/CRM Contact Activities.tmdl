@@ -2,23 +2,6 @@
 table 'CRM Contact Activities'
 	lineageTag: 3c2e1c43-52dd-45c0-b5af-c2bc1ec2040a
 
-	/// Number of contacts in the current filter context.
-	measure 'Contact Count' = COUNTROWS ( 'fact contacts' )
-		formatString: #,0
-		displayFolder: Contact Detail
-
-	/// Email of the selected contact. Shown only when exactly one contact is in the filter context.
-	measure 'Contact Email' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[emailaddress1] ) )
-		displayFolder: Contact Detail
-
-	/// Phone number of the selected contact. Shown only when exactly one contact is in the filter context.
-	measure 'Contact Phone' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[telephone1] ) )
-		displayFolder: Contact Detail
-
-	/// Function / role of the selected contact. Shown only when exactly one contact is in the filter context.
-	measure 'Contact Function' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[funktion1] ) )
-		displayFolder: Contact Detail
-
 	/// Number of CRM activities linked to the contact (last 2 years).
 	measure 'Contact Activity Count' = COUNTROWS ( 'CRM Contact Activities' )
 		formatString: #,0
@@ -35,6 +18,27 @@ table 'CRM Contact Activities'
 	measure 'Selected Contact Name' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), VALUES ( 'fact contacts'[fullname] ), "All contacts (" & FORMAT ( COUNTROWS ( 'fact contacts' ), "#,0" ) & ")" )
 		displayFolder: Contact Detail\Formatting
 		lineageTag: aa3bd052-1f79-4317-827d-327ef1cf32eb
+
+	/// Number of contacts in the current filter context.
+	measure 'Contact Count' = COUNTROWS ( 'fact contacts' )
+		formatString: #,0
+		displayFolder: Contact Detail
+		lineageTag: f03b959e-599c-4417-a9e1-8303ef561e42
+
+	/// Email of the selected contact. Shown only when exactly one contact is in the filter context.
+	measure 'Contact Email' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[emailaddress1] ) )
+		displayFolder: Contact Detail
+		lineageTag: 25f22ee2-2422-43c9-994b-28936516c369
+
+	/// Phone number of the selected contact. Shown only when exactly one contact is in the filter context.
+	measure 'Contact Phone' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[telephone1] ) )
+		displayFolder: Contact Detail
+		lineageTag: ba09dfb9-62ca-4eaa-9180-7b1cdf40f3e4
+
+	/// Function / role of the selected contact. Shown only when exactly one contact is in the filter context.
+	measure 'Contact Function' = IF ( HASONEVALUE ( 'fact contacts'[contactid] ), SELECTEDVALUE ( 'fact contacts'[funktion1] ) )
+		displayFolder: Contact Detail
+		lineageTag: 62ea9746-c52f-498d-939b-5ecfac4f449a
 
 	column 'Activity ID'
 		dataType: string

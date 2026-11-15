@@ -54,8 +54,6 @@ table 'Emp Sales Area Mapping'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	partition 'Emp Sales Area Mapping' = entity
 		mode: directQuery
 		source

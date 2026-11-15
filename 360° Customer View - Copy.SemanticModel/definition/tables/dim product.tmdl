@@ -22,8 +22,6 @@ table 'dim product'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column pricelevelid
 		dataType: string
 		lineageTag: b2d9fb20-3eef-4ef5-8399-a3a1573ab12c
@@ -53,8 +51,6 @@ table 'dim product'
 		sourceColumn: quantityonhand
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column productnumber
 		dataType: string
@@ -96,8 +92,6 @@ table 'dim product'
 		sourceColumn: price
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column organizationid
 		dataType: string

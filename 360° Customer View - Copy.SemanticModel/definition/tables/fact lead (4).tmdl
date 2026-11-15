@@ -1,4 +1,3 @@
-/// CRM leads linked to an account, with status, pipeline phase and source.
 table 'fact lead (4)'
 	lineageTag: d45619ce-a1a6-4a1d-a036-4e1e59edc1ee
 	sourceLineageTag: 16b05d92-6329-43d2-be94-54e5636b857a
@@ -132,8 +131,6 @@ table 'fact lead (4)'
 		sourceColumn: Number of Professionals
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Rejection Reason BANT'
 		dataType: string

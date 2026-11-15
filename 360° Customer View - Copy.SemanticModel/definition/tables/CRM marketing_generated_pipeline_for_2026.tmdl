@@ -72,8 +72,6 @@ table 'CRM marketing_generated_pipeline_for_2026'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column upside_acv
 		dataType: double
 		lineageTag: 2e69a4be-3146-43b8-b112-9e199f9f79cc
@@ -83,8 +81,6 @@ table 'CRM marketing_generated_pipeline_for_2026'
 		sourceColumn: upside_acv
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column probable_acv
 		dataType: double
@@ -96,8 +92,6 @@ table 'CRM marketing_generated_pipeline_for_2026'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column commit_acv
 		dataType: double
 		lineageTag: 4bb940d1-b38e-46e5-846c-3bb96adb349d
@@ -107,8 +101,6 @@ table 'CRM marketing_generated_pipeline_for_2026'
 		sourceColumn: commit_acv
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column done_acv
 		dataType: double
@@ -120,8 +112,6 @@ table 'CRM marketing_generated_pipeline_for_2026'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column lost_acv
 		dataType: double
 		lineageTag: 51ed2fe7-9808-4774-befe-4df70033853d
@@ -131,8 +121,6 @@ table 'CRM marketing_generated_pipeline_for_2026'
 		sourceColumn: lost_acv
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column pipeline_opps
 		dataType: int64

@@ -1,4 +1,3 @@
-/// Business Central contract lines (Vertragszeilen): products, quantities, MRR and run rate per contract.
 table 'ERP ContractLine'
 	lineageTag: 1aca51e2-32c2-4464-8842-571b2091017a
 	sourceLineageTag: 36b15200-f7dc-43d2-b66b-7bf116980b0e
@@ -8,14 +7,10 @@ table 'ERP ContractLine'
 		sourceLineageTag: 78ef6220-b0e5-465a-b49f-69c652237ee2
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Run Rate (Active)' = EXTERNALMEASURE("Run Rate (Active)", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: cbb873b8-eba2-4f16-96d8-7c3662381da5
 		sourceLineageTag: 0ccd522e-5de4-4c3d-b13f-d0b864ee7b1f
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column CLKey
 		dataType: string
@@ -67,7 +62,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-	/// Contract line number (Vertragszeilennr.).
 	column VZNr
 		dataType: int64
 		formatString: 0
@@ -89,7 +83,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-	/// Product of the contract line.
 	column Product
 		dataType: string
 		lineageTag: 4a29d37c-88f5-4d82-9586-1d51b6f83f50
@@ -120,7 +113,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-	/// Contract line description (product / service text).
 	column VZBeschreibung
 		dataType: string
 		lineageTag: 7249721b-92f3-496e-afa2-961a8f2f63b0
@@ -174,7 +166,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-	/// Quantity (Menge) of the contract line.
 	column Menge
 		dataType: double
 		lineageTag: f93f31ba-cf7d-489c-8e8c-9a2627e6bf38
@@ -185,9 +176,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	/// Monthly recurring revenue of the contract line.
 	column MRR
 		dataType: double
 		lineageTag: 523629a0-5e84-48e5-b8cc-f74d27a4c632
@@ -197,8 +185,6 @@ table 'ERP ContractLine'
 		sourceColumn: MRR
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Einheitspreis
 		dataType: double
@@ -210,8 +196,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column VZBetrag
 		dataType: double
 		lineageTag: 3f3c3e61-4594-4a10-86cf-141d8b8a20db
@@ -221,8 +205,6 @@ table 'ERP ContractLine'
 		sourceColumn: VZBetrag
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column VertragszeileErstelltAm
 		dataType: dateTime
@@ -311,7 +293,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-	/// Contract number the line belongs to (Vertragsnr.).
 	column Contract
 		dataType: string
 		lineageTag: 8f65e15b-55a1-435c-bc9c-69d5ad25c614
@@ -332,7 +313,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-	/// Contract line status: ACTIVE, TERMINATED, CANCELLED or DRAFT.
 	column CLStatus
 		dataType: string
 		lineageTag: e6af796e-b281-4d31-98fd-686fce96f65b
@@ -375,8 +355,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column AmountMonthly
 		dataType: double
 		lineageTag: 2baf04d6-9ff0-4153-bd6e-24fe96da5188
@@ -386,8 +364,6 @@ table 'ERP ContractLine'
 		sourceColumn: AmountMonthly
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column AmountUnitMonthly
 		dataType: double
@@ -399,8 +375,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column UnitPriceTotal
 		dataType: double
 		lineageTag: 4496fdce-a9af-4860-b782-9b91b27f9ec6
@@ -410,8 +384,6 @@ table 'ERP ContractLine'
 		sourceColumn: UnitPriceTotal
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column UnitPriceMonthly
 		dataType: double
@@ -423,8 +395,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column UnitCostTotal
 		dataType: double
 		lineageTag: 997dfb3e-a8b8-40e5-a97b-e9012420bc00
@@ -435,8 +405,6 @@ table 'ERP ContractLine'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column UnitCostMonthly
 		dataType: double
 		lineageTag: 5584e6d6-3a28-400a-8e18-2f8939e2bf93
@@ -446,8 +414,6 @@ table 'ERP ContractLine'
 		sourceColumn: UnitCostMonthly
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ArticleKey
 		dataType: string

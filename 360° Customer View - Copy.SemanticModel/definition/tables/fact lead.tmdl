@@ -21,7 +21,6 @@ table 'fact lead'
 		dataCategory: Uncategorized
 
 	measure '# Lead (Qualified - Closed On)' = EXTERNALMEASURE("# Lead (Qualified - Closed On)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
-		formatString: 0
 		lineageTag: 2886e6ba-e300-42ab-b120-952ce3bf23fb
 		sourceLineageTag: 123cfcf6-01ff-430f-8b70-f97d45fc8384
 		dataCategory: Uncategorized
@@ -133,8 +132,6 @@ table 'fact lead'
 		sourceLineageTag: 42fceb28-6323-49b7-b7e2-aa03099f3d62
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure '# Lead - MQL Stage reached (Clean)' = EXTERNALMEASURE("# Lead - MQL Stage reached (Clean)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: 0
 		lineageTag: 94e59151-ca6e-4307-b0e7-ea41e29fe187
@@ -206,14 +203,10 @@ table 'fact lead'
 		sourceLineageTag: 9200976b-42f8-497e-8e03-b4110c1ec60b
 		dataCategory: Uncategorized
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure '# Monthly Avg Leads Created' = EXTERNALMEASURE("# Monthly Avg Leads Created", DOUBLE, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		lineageTag: 319363ad-7d55-4821-8d93-d3c5b5a6d340
 		sourceLineageTag: 66557bfe-8dfc-4218-bd5c-4a470c8d6bbd
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '# Leads (with Opps)' = EXTERNALMEASURE("# Leads (with Opps)", INTEGER, "DirectQuery to AS - Sales & Marketing Reporting - Reporting Playground")
 		formatString: 0
@@ -273,8 +266,6 @@ table 'fact lead'
 		lineageTag: 078dafab-d237-4ee1-a92b-ba3585026c5d
 		sourceLineageTag: 613a1848-6b2d-4748-8f9d-60ea8538d103
 		dataCategory: Uncategorized
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ownerid
 		dataType: string
@@ -565,8 +556,6 @@ table 'fact lead'
 		sourceColumn: Number of Professionals
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Rejection Reason BANT'
 		dataType: string
@@ -1404,8 +1393,6 @@ table 'fact lead'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column modifiedby
 		dataType: string
 		lineageTag: ac045be1-adc9-4a8c-b25e-4cee9e76d6ff
@@ -1425,8 +1412,6 @@ table 'fact lead'
 		sourceColumn: stp_geschaftsbeziehung
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ncx_bedarfdetails
 		dataType: string

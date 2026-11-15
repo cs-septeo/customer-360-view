@@ -33,8 +33,6 @@ table 'dim systemuser'
 
 		annotation SummarizationSetBy = User
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column 'Sales Area (Reporting) FINAL'
 		dataType: string
 		lineageTag: f2454a1d-9e89-47c9-9c67-39ede274589c
