@@ -10,9 +10,31 @@ table 'ERP Credit Memos'
 
 	/// Net amount of posted sales credit memos (BC), in document currency.
 	measure 'Credit Memo Amount' = SUM ( 'ERP Credit Memos'[Net Amount] )
-		formatString: #,0.00
 		displayFolder: Account Detail
 		lineageTag: edc02862-911d-4cce-9442-1b4e40988161
+
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Credit Memos'[Currency Code] ), "Code", 'ERP Credit Memos'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
+
+	/// Net credit memo amount posted in the last 12 months (ignores the Period slicer).
+	measure 'Credit Memo Amount (12M)' = CALCULATE ( [Credit Memo Amount], REMOVEFILTERS ( 'Detail Calendar' ), 'ERP Credit Memos'[Posting Date] > EDATE ( TODAY (), -12 ) )
+		displayFolder: Account Detail
+		lineageTag: f3e0ae8f-f949-4fb2-ac59-3bbc1595d2e6
+
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Credit Memos'[Currency Code] ), "Code", 'ERP Credit Memos'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
+
+	/// Credit memos of the last 12 months as a share of the invoiced amount; a high ratio signals billing issues.
+	measure 'Credit Memo Ratio (12M)' = DIVIDE ( [Credit Memo Amount (12M)], [Invoiced Amount (12M)] )
+		formatString: 0.0%
+		displayFolder: Account Detail
+		lineageTag: ead8015d-ffab-42e9-adcd-1b210a282254
 
 	column 'Credit Memo Key'
 		dataType: string
@@ -119,6 +141,11 @@ table 'ERP Credit Memos'
 		sourceColumn: Cancelled
 
 		annotation SummarizationSetBy = Automatic
+
+	/// ISO currency of the document. LCY is resolved to the company currency: CHF for STCH, EUR for all other companies.
+	column 'Currency Code' = IF ( 'ERP Credit Memos'[Currency] = "LCY", IF ( 'ERP Credit Memos'[Entity] = "STCH", "CHF", "EUR" ), 'ERP Credit Memos'[Currency] )
+		dataType: string
+		lineageTag: 19f12e77-2623-4e74-802f-a0d8e2037dea
 
 	partition 'ERP Credit Memos' = m
 		mode: import

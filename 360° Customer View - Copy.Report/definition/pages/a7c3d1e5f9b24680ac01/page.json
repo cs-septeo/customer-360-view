@@ -3,7 +3,7 @@
   "name": "a7c3d1e5f9b24680ac01",
   "displayName": "Account Detail (Drill)",
   "displayOption": "FitToWidth",
-  "height": 2105,
+  "height": 2215,
   "width": 2000,
   "filterConfig": {
     "filters": [
@@ -205,6 +205,16 @@
     {
       "source": "ebfc2dae7a31796de037",
       "target": "61ff58c85dc4068af51c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ebfc2dae7a31796de037",
+      "target": "8f5f9540b43a1a3573af",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ebfc2dae7a31796de037",
+      "target": "ccbb6ef936df2b5b661b",
       "type": "NoFilter"
     },
     {

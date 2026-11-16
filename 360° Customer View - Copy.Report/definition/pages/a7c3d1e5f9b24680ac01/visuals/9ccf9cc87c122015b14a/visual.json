@@ -3,9 +3,9 @@
   "name": "9ccf9cc87c122015b14a",
   "position": {
     "x": 675.0,
-    "y": 180,
+    "y": 280,
     "z": 5100,
-    "height": 110,
+    "height": 120,
     "width": 650.0,
     "tabOrder": 5100
   },
@@ -53,12 +53,42 @@
                       "Entity": "ERP Open Items"
                     }
                   },
+                  "Property": "Overdue %"
+                }
+              },
+              "queryRef": "ERP Open Items.Overdue %",
+              "nativeQueryRef": "Overdue %",
+              "displayName": "Overdue %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ERP Open Items"
+                    }
+                  },
+                  "Property": "DSO (Days)"
+                }
+              },
+              "queryRef": "ERP Open Items.DSO (Days)",
+              "nativeQueryRef": "DSO (Days)",
+              "displayName": "DSO (Days)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ERP Open Items"
+                    }
+                  },
                   "Property": "Max Reminder Level"
                 }
               },
               "queryRef": "ERP Open Items.Max Reminder Level",
-              "nativeQueryRef": "Mahnstufe",
-              "displayName": "Mahnstufe"
+              "nativeQueryRef": "Reminder Level",
+              "displayName": "Reminder Level"
             }
           ]
         }
@@ -155,6 +185,29 @@
           },
           "selector": {
             "metadata": "ERP Open Items.Overdue Amount"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ERP Open Items"
+                        }
+                      },
+                      "Property": "Payment Status Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ERP Open Items.Overdue %"
           }
         },
         {
@@ -280,7 +333,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "5L"
                 }
               }
             },

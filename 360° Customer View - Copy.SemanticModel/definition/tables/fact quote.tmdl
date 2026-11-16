@@ -10,9 +10,25 @@ table 'fact quote'
 
 	/// Total amount of open CRM quotes (Entwurf or Aktiv).
 	measure 'Open Quotes Amount' = CALCULATE ( SUM ( 'fact quote'[totalamount] ), 'fact quote'[statecodename] IN { "Entwurf", "Aktiv" } )
-		formatString: #,0.00
 		displayFolder: Account Detail
 		lineageTag: 0b9c518b-8b64-4cc3-afed-d0c5e7b5594e
+
+		formatStringDefinition =
+				VAR _codes = DISTINCT ( SELECTCOLUMNS ( VALUES ( 'fact quote'[transactioncurrencyid] ), "Code", IF ( 'fact quote'[transactioncurrencyid] = "6130bd35-2569-ee11-9ae7-0022489e2a84", "CHF", "EUR" ) ) )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", """" & _code & """ #,0.00" )
+
+	/// Total quote amount, in quote currency.
+	measure 'Quote Amount' = SUM ( 'fact quote'[totalamount] )
+		displayFolder: Account Detail
+		lineageTag: 13b141cc-4e65-4fd2-82e0-e9a9e12643ba
+
+		formatStringDefinition =
+				VAR _codes = DISTINCT ( SELECTCOLUMNS ( VALUES ( 'fact quote'[transactioncurrencyid] ), "Code", IF ( 'fact quote'[transactioncurrencyid] = "6130bd35-2569-ee11-9ae7-0022489e2a84", "CHF", "EUR" ) ) )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", """" & _code & """ #,0.00" )
 
 	column quoteid
 		dataType: string

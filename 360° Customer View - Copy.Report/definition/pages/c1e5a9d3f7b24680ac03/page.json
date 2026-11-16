@@ -3,7 +3,7 @@
   "name": "c1e5a9d3f7b24680ac03",
   "displayName": "Account Detail",
   "displayOption": "FitToWidth",
-  "height": 2105,
+  "height": 2215,
   "width": 2000,
   "filterConfig": {
     "filters": [
@@ -186,6 +186,16 @@
     {
       "source": "b36e5dbcdddd8cfb2dd5",
       "target": "32550e2f1c25e79ab756",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b36e5dbcdddd8cfb2dd5",
+      "target": "cd117cca626927d06e3f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "b36e5dbcdddd8cfb2dd5",
+      "target": "287a5d7b8ba4ac1e48b5",
       "type": "NoFilter"
     },
     {

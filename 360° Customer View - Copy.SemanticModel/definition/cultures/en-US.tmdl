@@ -2246,6 +2246,16 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
+			          "Contract Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Status": {
 			            "State": "Suggested",
 			            "Source": {
@@ -3242,6 +3252,48 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "Function": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "detail_calendar.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Detail Calendar",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Period": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "detail_company.entity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Detail Company",
+			          "ConceptualProperty": "Entity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Company": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

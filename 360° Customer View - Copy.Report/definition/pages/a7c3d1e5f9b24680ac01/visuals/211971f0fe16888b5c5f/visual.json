@@ -3,7 +3,7 @@
   "name": "211971f0fe16888b5c5f",
   "position": {
     "x": 10,
-    "y": 1680,
+    "y": 1790,
     "z": 10000,
     "height": 400,
     "width": 982.5,
@@ -77,21 +77,16 @@
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fact salesorder"
-                        }
-                      },
-                      "Property": "totalamount"
+                    "SourceRef": {
+                      "Entity": "fact salesorder"
                     }
                   },
-                  "Function": 0
+                  "Property": "Orders Amount"
                 }
               },
-              "queryRef": "Sum(fact salesorder.totalamount)",
+              "queryRef": "fact salesorder.Orders Amount",
               "nativeQueryRef": "Amount",
               "displayName": "Amount"
             },
@@ -239,7 +234,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Aufträge (Orders)'"
+                  "Value": "'Orders'"
                 }
               }
             },

@@ -3,7 +3,7 @@
   "name": "f53f906cdca7b8b8d78d",
   "position": {
     "x": 10,
-    "y": 1330,
+    "y": 1440,
     "z": 9000,
     "height": 330,
     "width": 982.5,
@@ -112,43 +112,23 @@
                 }
               },
               "queryRef": "Max(ERP Open Items.Reminder Level)",
-              "nativeQueryRef": "Mahnstufe",
-              "displayName": "Mahnstufe"
+              "nativeQueryRef": "Reminder Level",
+              "displayName": "Reminder Level"
             },
             {
               "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "ERP Open Items"
-                        }
-                      },
-                      "Property": "Remaining Amount"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(ERP Open Items.Remaining Amount)",
-              "nativeQueryRef": "Remaining",
-              "displayName": "Remaining"
-            },
-            {
-              "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "ERP Open Items"
                     }
                   },
-                  "Property": "Currency"
+                  "Property": "Open Amount"
                 }
               },
-              "queryRef": "ERP Open Items.Currency",
-              "nativeQueryRef": "Currency",
-              "displayName": "Currency"
+              "queryRef": "ERP Open Items.Open Amount",
+              "nativeQueryRef": "Remaining",
+              "displayName": "Remaining"
             }
           ]
         }
@@ -449,7 +429,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Offene Posten & Mahnungen (Open Items)'"
+                  "Value": "'Open Items & Reminders'"
                 }
               }
             },

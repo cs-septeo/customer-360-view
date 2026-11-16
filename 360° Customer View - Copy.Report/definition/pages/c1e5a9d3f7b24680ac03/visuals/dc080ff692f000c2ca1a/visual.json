@@ -3,9 +3,9 @@
   "name": "dc080ff692f000c2ca1a",
   "position": {
     "x": 1340.0,
-    "y": 180,
+    "y": 280,
     "z": 5200,
-    "height": 110,
+    "height": 120,
     "width": 650.0,
     "tabOrder": 5200
   },
@@ -35,6 +35,21 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "fact quote"
+                    }
+                  },
+                  "Property": "Open Quotes Amount"
+                }
+              },
+              "queryRef": "fact quote.Open Quotes Amount",
+              "nativeQueryRef": "Open Quotes Amount",
+              "displayName": "Open Quotes Amount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "fact salesorder"
                     }
                   },
@@ -50,6 +65,21 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "ERP Credit Memos"
+                    }
+                  },
+                  "Property": "Credit Memo Ratio (12M)"
+                }
+              },
+              "queryRef": "ERP Credit Memos.Credit Memo Ratio (12M)",
+              "nativeQueryRef": "Credit Memo Ratio",
+              "displayName": "Credit Memo Ratio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "CRM Activities"
                     }
                   },
@@ -57,8 +87,8 @@
                 }
               },
               "queryRef": "CRM Activities.Days Since Last Activity",
-              "nativeQueryRef": "Days Since Last Activity",
-              "displayName": "Days Since Last Activity"
+              "nativeQueryRef": "Days Since Contact",
+              "displayName": "Days Since Contact"
             }
           ]
         }
@@ -234,7 +264,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "5L"
                 }
               }
             },

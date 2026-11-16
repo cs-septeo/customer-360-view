@@ -3,7 +3,7 @@
   "name": "de20fe2a42f65d1264ae",
   "position": {
     "x": 1007.5,
-    "y": 1330,
+    "y": 1440,
     "z": 9100,
     "height": 330,
     "width": 982.5,
@@ -77,21 +77,16 @@
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fact quote"
-                        }
-                      },
-                      "Property": "totalamount"
+                    "SourceRef": {
+                      "Entity": "fact quote"
                     }
                   },
-                  "Function": 0
+                  "Property": "Quote Amount"
                 }
               },
-              "queryRef": "Sum(fact quote.totalamount)",
+              "queryRef": "fact quote.Quote Amount",
               "nativeQueryRef": "Amount",
               "displayName": "Amount"
             },
@@ -239,7 +234,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Angebote (Quotes)'"
+                  "Value": "'Quotes'"
                 }
               }
             },

@@ -8,6 +8,17 @@ table 'ERP ContractHeader'
 		displayFolder: Account Detail
 		lineageTag: 5cdc1ff4-97cc-4915-9863-89bcc96e938f
 
+	/// Active contracts whose end date is within the next 90 days (renewal / churn risk).
+	measure 'Contracts Ending (90 Days)' = CALCULATE ( COUNTROWS ( 'ERP ContractHeader' ), 'ERP ContractHeader'[ContractStatus] = "ACTIVE", 'ERP ContractHeader'[endingdate] >= TODAY (), 'ERP ContractHeader'[endingdate] <= TODAY () + 90 )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 6dfc56dc-142c-4aa9-95b7-2907e1f18161
+
+	/// Yellow when an active contract ends within 90 days.
+	measure 'Contracts Ending Color' = IF ( [Contracts Ending (90 Days)] > 0, "#F2C94C", "#0F1548" )
+		displayFolder: Account Detail\Formatting
+		lineageTag: 5e458966-1adf-4c77-8b70-e465d2935c43
+
 	column address
 		dataType: string
 		lineageTag: 485888a4-df66-4e4a-8768-8f8150a80ba0

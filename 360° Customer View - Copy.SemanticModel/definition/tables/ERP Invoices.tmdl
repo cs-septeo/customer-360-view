@@ -10,15 +10,25 @@ table 'ERP Invoices'
 
 	/// Net amount of posted sales invoices (BC), in document currency.
 	measure 'Invoiced Amount' = SUM ( 'ERP Invoices'[Net Amount] )
-		formatString: #,0.00
 		displayFolder: Account Detail
 		lineageTag: 4d25873f-b8ef-477f-aa53-2654a88474b6
 
-	/// Net invoiced amount posted in the last 12 months.
-	measure 'Invoiced Amount (12M)' = CALCULATE ( [Invoiced Amount], 'ERP Invoices'[Posting Date] > EDATE ( TODAY (), -12 ) )
-		formatString: #,0.00
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Invoices'[Currency Code] ), "Code", 'ERP Invoices'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
+
+	/// Net invoiced amount posted in the last 12 months (ignores the Period slicer).
+	measure 'Invoiced Amount (12M)' = CALCULATE ( [Invoiced Amount], REMOVEFILTERS ( 'Detail Calendar' ), 'ERP Invoices'[Posting Date] > EDATE ( TODAY (), -12 ) )
 		displayFolder: Account Detail
 		lineageTag: 30071379-9386-441e-ae36-f0556ac11dc7
+
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Invoices'[Currency Code] ), "Code", 'ERP Invoices'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
 
 	/// Invoices with a remaining amount and a due date before today (as of last refresh).
 	measure 'Overdue Invoices' = CALCULATE ( COUNTROWS ( 'ERP Invoices' ), 'ERP Invoices'[Is Overdue] = TRUE () )
@@ -30,6 +40,49 @@ table 'ERP Invoices'
 	measure 'Selected Account Name' = IF ( HASONEVALUE ( 'fact account'[Account Name] ), VALUES ( 'fact account'[Account Name] ), "All accounts (" & FORMAT ( COUNTROWS ( 'fact account' ), "#,0" ) & ")" )
 		displayFolder: Account Detail\Formatting
 		lineageTag: f121ad26-8d90-4227-9972-8cd1e5c9cd5c
+
+	/// Unpaid (remaining) amount of posted sales invoices, in document currency.
+	measure 'Invoice Remaining Amount' = SUM ( 'ERP Invoices'[Remaining Amount] )
+		displayFolder: Account Detail
+		lineageTag: 62fc9090-0243-4c57-aa7d-2c8cbbeece07
+
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Invoices'[Currency Code] ), "Code", 'ERP Invoices'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
+
+	/// Net invoiced amount posted 13 to 24 months ago (ignores the Period slicer).
+	measure 'Invoiced Amount (Prior 12M)' = CALCULATE ( [Invoiced Amount], REMOVEFILTERS ( 'Detail Calendar' ), 'ERP Invoices'[Posting Date] > EDATE ( TODAY (), -24 ), 'ERP Invoices'[Posting Date] <= EDATE ( TODAY (), -12 ) )
+		displayFolder: Account Detail
+		lineageTag: e80fe167-3de8-4295-a7f1-56e01c31ce02
+
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Invoices'[Currency Code] ), "Code", 'ERP Invoices'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
+
+	/// Change of the net invoiced amount of the last 12 months versus the 12 months before.
+	measure 'Invoiced 12M vs Prior %' =
+			VAR _cur = [Invoiced Amount (12M)]
+			VAR _prev = [Invoiced Amount (Prior 12M)]
+			RETURN IF ( NOT ISBLANK ( _prev ) && _prev <> 0, DIVIDE ( _cur - _prev, ABS ( _prev ) ) )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Account Detail
+		lineageTag: 4efdaaf7-d099-4aba-94c5-30b83c7440f1
+
+	/// Gross invoiced amount of the last 12 months; denominator of DSO.
+	measure 'Invoiced Gross (12M)' = CALCULATE ( SUM ( 'ERP Invoices'[Gross Amount] ), REMOVEFILTERS ( 'Detail Calendar' ), 'ERP Invoices'[Posting Date] > EDATE ( TODAY (), -12 ) )
+		formatString: #,0.00
+		isHidden
+		displayFolder: Account Detail\Helpers
+		lineageTag: 35e054dd-f4c0-4c28-9982-0d5a21333b58
+
+	/// Red when invoicing decreased versus the prior 12 months, green otherwise.
+	measure 'Trend Color' = VAR _t = [Invoiced 12M vs Prior %] RETURN IF ( NOT ISBLANK ( _t ), IF ( _t < 0, "#FF543A", "#1DD291" ) )
+		displayFolder: Account Detail\Formatting
+		lineageTag: 0d93aa07-a32b-4d73-a724-15d141bbb105
 
 	column 'Invoice Key'
 		dataType: string
@@ -171,6 +224,11 @@ table 'ERP Invoices'
 		formatString: mmm yyyy
 		lineageTag: 515a2deb-f98b-4949-90f8-ff5470153a6f
 		summarizeBy: none
+
+	/// ISO currency of the document. LCY is resolved to the company currency: CHF for STCH, EUR for all other companies (CRM company default currency).
+	column 'Currency Code' = IF ( 'ERP Invoices'[Currency] = "LCY", IF ( 'ERP Invoices'[Entity] = "STCH", "CHF", "EUR" ), 'ERP Invoices'[Currency] )
+		dataType: string
+		lineageTag: 17adc78e-7bae-49ac-901a-42500e115039
 
 	partition 'ERP Invoices' = m
 		mode: import

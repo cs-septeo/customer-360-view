@@ -3,7 +3,7 @@
   "name": "59e165d3631f3a572af0",
   "position": {
     "x": 1007.5,
-    "y": 980,
+    "y": 1090,
     "z": 8100,
     "height": 330,
     "width": 982.5,
@@ -47,38 +47,18 @@
             },
             {
               "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "ERP Credit Memos"
-                        }
-                      },
-                      "Property": "Net Amount"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(ERP Credit Memos.Net Amount)",
-              "nativeQueryRef": "Net Amount",
-              "displayName": "Net Amount"
-            },
-            {
-              "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "ERP Credit Memos"
                     }
                   },
-                  "Property": "Currency"
+                  "Property": "Credit Memo Amount"
                 }
               },
-              "queryRef": "ERP Credit Memos.Currency",
-              "nativeQueryRef": "Currency",
-              "displayName": "Currency"
+              "queryRef": "ERP Credit Memos.Credit Memo Amount",
+              "nativeQueryRef": "Net Amount",
+              "displayName": "Net Amount"
             },
             {
               "field": {
@@ -122,8 +102,8 @@
                 }
               },
               "queryRef": "ERP Credit Memos.Entity",
-              "nativeQueryRef": "Entity",
-              "displayName": "Entity"
+              "nativeQueryRef": "Company",
+              "displayName": "Company"
             }
           ]
         }
@@ -239,7 +219,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Gutschriften (Credit Memos)'"
+                  "Value": "'Credit Memos'"
                 }
               }
             },

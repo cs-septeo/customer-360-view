@@ -3,7 +3,7 @@
   "name": "d4bcce7de28281060907",
   "position": {
     "x": 10,
-    "y": 630,
+    "y": 740,
     "z": 7000,
     "height": 330,
     "width": 982.5,
@@ -72,8 +72,8 @@
                 }
               },
               "queryRef": "ERP ContractHeader.Entity",
-              "nativeQueryRef": "Entity",
-              "displayName": "Entity"
+              "nativeQueryRef": "Company",
+              "displayName": "Company"
             },
             {
               "field": {
@@ -119,26 +119,6 @@
               "queryRef": "ERP ContractHeader.billingperiod",
               "nativeQueryRef": "Billing Period",
               "displayName": "Billing Period"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "ERP ContractHeader"
-                        }
-                      },
-                      "Property": "AmountTotal"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(ERP ContractHeader.AmountTotal)",
-              "nativeQueryRef": "Amount",
-              "displayName": "Amount"
             }
           ]
         }
@@ -254,7 +234,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Verträge (Contracts)'"
+                  "Value": "'Contracts'"
                 }
               }
             },

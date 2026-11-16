@@ -10,9 +10,14 @@ table 'fact salesorder'
 
 	/// Total amount of CRM sales orders (Auftraege).
 	measure 'Orders Amount' = SUM ( 'fact salesorder'[totalamount] )
-		formatString: #,0.00
 		displayFolder: Account Detail
 		lineageTag: 67935413-628a-4f17-ac22-0e8dce7aa63e
+
+		formatStringDefinition =
+				VAR _codes = DISTINCT ( SELECTCOLUMNS ( VALUES ( 'fact salesorder'[transactioncurrencyid] ), "Code", IF ( 'fact salesorder'[transactioncurrencyid] = "6130bd35-2569-ee11-9ae7-0022489e2a84", "CHF", "EUR" ) ) )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", """" & _code & """ #,0.00" )
 
 	column salesorderid
 		dataType: string

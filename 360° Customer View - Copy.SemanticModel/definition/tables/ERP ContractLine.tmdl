@@ -12,6 +12,28 @@ table 'ERP ContractLine'
 		sourceLineageTag: 0ccd522e-5de4-4c3d-b13f-d0b864ee7b1f
 		dataCategory: Uncategorized
 
+	/// Run rate of active contract lines, shown with the company currency (CHF for STCH, EUR otherwise).
+	measure 'Active Run Rate' = [Run Rate (Active CLs)]
+		displayFolder: Account Detail
+		lineageTag: c3712a35-3481-4c74-9d26-cda20f625468
+
+		formatStringDefinition =
+				VAR _codes = DISTINCT ( SELECTCOLUMNS ( VALUES ( 'ERP ContractLine'[Entity] ), "Code", IF ( 'ERP ContractLine'[Entity] = "STCH", "CHF", "EUR" ) ) )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", """" & _code & """ #,0.00" )
+
+	/// Monthly recurring revenue of the contract lines, in company currency.
+	measure 'Contract Line MRR' = SUM ( 'ERP ContractLine'[MRR] )
+		displayFolder: Account Detail
+		lineageTag: 88f24572-48b7-43b0-8451-d19629970ce3
+
+		formatStringDefinition =
+				VAR _codes = DISTINCT ( SELECTCOLUMNS ( VALUES ( 'ERP ContractLine'[Entity] ), "Code", IF ( 'ERP ContractLine'[Entity] = "STCH", "CHF", "EUR" ) ) )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", """" & _code & """ #,0.00" )
+
 	column CLKey
 		dataType: string
 		lineageTag: be713493-9b4c-4542-9422-d6d515bf419c

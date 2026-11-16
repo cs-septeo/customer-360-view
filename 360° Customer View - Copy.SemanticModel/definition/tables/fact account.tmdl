@@ -432,6 +432,7 @@ table 'fact account'
 
 		annotation SummarizationSetBy = User
 
+	/// Customer group identifier: several CRM accounts can share one gcid. The Power App filters the report by gcid.
 	column gcid
 		dataType: string
 		lineageTag: 0a3861cd-2d12-461c-9dd4-448f7defe417

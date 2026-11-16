@@ -4,15 +4,25 @@ table 'ERP Open Items'
 
 	/// Remaining amount of all open customer ledger entries (invoices minus unapplied payments/credits).
 	measure 'Open Amount' = SUM ( 'ERP Open Items'[Remaining Amount] )
-		formatString: #,0.00
 		displayFolder: Account Detail
 		lineageTag: 17fe33e3-211f-445d-9535-763ff294a029
 
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Open Items'[Currency Code] ), "Code", 'ERP Open Items'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
+
 	/// Positive remaining amount of open ledger entries whose due date has passed.
 	measure 'Overdue Amount' = CALCULATE ( SUM ( 'ERP Open Items'[Remaining Amount] ), 'ERP Open Items'[Days Overdue] > 0, 'ERP Open Items'[Remaining Amount] > 0 )
-		formatString: #,0.00
 		displayFolder: Account Detail
 		lineageTag: 6fdfe366-3ea3-496f-bffa-20f961ffb608
+
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Open Items'[Currency Code] ), "Code", 'ERP Open Items'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
 
 	/// Number of overdue open ledger entries with a positive remaining amount.
 	measure 'Overdue Items' = CALCULATE ( COUNTROWS ( 'ERP Open Items' ), 'ERP Open Items'[Days Overdue] > 0, 'ERP Open Items'[Remaining Amount] > 0 )
@@ -30,6 +40,92 @@ table 'ERP Open Items'
 	measure 'Payment Status Color' = SWITCH ( TRUE (), [Max Reminder Level] > 0, "#FF543A", [Overdue Amount] > 0, "#F2C94C", "#1DD291" )
 		displayFolder: Account Detail\Formatting
 		lineageTag: cb839ce9-3efc-4d6b-aa81-fc8945294f53
+
+	/// Positive open amount still owed by the customer (excludes unapplied payments and credits).
+	measure Receivables = CALCULATE ( SUM ( 'ERP Open Items'[Remaining Amount] ), 'ERP Open Items'[Remaining Amount] > 0 )
+		displayFolder: Account Detail
+		lineageTag: c4950c44-0848-488e-96d0-e936a35f1134
+
+		formatStringDefinition =
+				VAR _codes = SELECTCOLUMNS ( VALUES ( 'ERP Open Items'[Currency Code] ), "Code", 'ERP Open Items'[Currency Code] )
+				VAR _n = COUNTROWS ( _codes )
+				VAR _code = MAXX ( _codes, [Code] )
+				RETURN SWITCH ( TRUE (), _n = 0, "#,0.00", _n > 1, "#,0.00 ""(mixed currencies)""", _code = "EUR", """€"" #,0.00", _code = "USD", """$"" #,0.00", """" & _code & """ #,0.00" )
+
+	/// Share of the receivables that is past due.
+	measure 'Overdue %' = DIVIDE ( [Overdue Amount], [Receivables] )
+		formatString: 0.0%
+		displayFolder: Account Detail
+		lineageTag: 785a7232-afeb-46ee-8e1d-ed6acf991d00
+
+	/// Days sales outstanding: receivables divided by the gross amount invoiced in the last 12 months, times 365.
+	measure 'DSO (Days)' =
+			VAR _gross = [Invoiced Gross (12M)]
+			RETURN IF ( _gross > 0, DIVIDE ( [Receivables], _gross ) * 365 )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 40a6104d-35a8-45c4-88fe-2b10500d0df9
+
+	/// Highest number of days past due of any open item with a positive remaining amount.
+	measure 'Max Days Overdue' = CALCULATE ( MAX ( 'ERP Open Items'[Days Overdue] ), 'ERP Open Items'[Remaining Amount] > 0 )
+		formatString: #,0
+		displayFolder: Account Detail
+		lineageTag: 550f123e-c98d-43d6-bb0d-88859e4cda94
+
+	/// Customer health for one account name: At risk = reminder level 2+ or more than 60 days overdue; Attention = reminder level 1, anything overdue, no contact for 90+ days, or an active contract ending within 90 days; otherwise Healthy. Ignores the page slicers. Blank when more than one account is in context.
+	measure 'Account Health Status' =
+			IF (
+			    HASONEVALUE ( 'fact account'[Account Name] ),
+			    CALCULATE (
+			        VAR _reminder = [Max Reminder Level]
+			        VAR _overdue = COALESCE ( [Max Days Overdue], 0 )
+			        VAR _idle = [Days Since Last Activity]
+			        VAR _ending = COALESCE ( [Contracts Ending (90 Days)], 0 )
+			        VAR _red = _reminder >= 2 || _overdue > 60
+			        VAR _amber = _reminder = 1 || _overdue > 0 || ISBLANK ( _idle ) || _idle > 90 || _ending > 0
+			        RETURN IF ( _red, "At risk", IF ( _amber, "Attention", "Healthy" ) ),
+			        REMOVEFILTERS ( 'Detail Calendar' ),
+			        REMOVEFILTERS ( 'Detail Company' ),
+			        REMOVEFILTERS ( 'CRM Activities'[Activity Type] )
+			    ),
+			    "Several accounts"
+			)
+		displayFolder: Account Health
+		lineageTag: 0f762bd1-ee19-4816-afa7-49a285477c01
+
+	/// Traffic-light color of Account Health Status.
+	measure 'Account Health Color' = SWITCH ( [Account Health Status], "At risk", "#FF543A", "Attention", "#F2C94C", "Healthy", "#1DD291", "#0F1548" )
+		displayFolder: Account Health
+		lineageTag: b9176f64-c35c-40cc-81a2-b48bec3944d4
+
+	/// Explains Account Health Status, e.g. 'Reminder level 2 · 35 days overdue'. Blank when more than one account is selected.
+	measure 'Account Health Reasons' =
+			IF (
+			    HASONEVALUE ( 'fact account'[Account Name] ),
+			    CALCULATE (
+			        VAR _reminder = [Max Reminder Level]
+			        VAR _overdue = COALESCE ( [Max Days Overdue], 0 )
+			        VAR _idle = [Days Since Last Activity]
+			        VAR _ending = COALESCE ( [Contracts Ending (90 Days)], 0 )
+			        VAR _reasons =
+			            FILTER (
+			                {
+			                    IF ( _reminder > 0, "Reminder level " & _reminder ),
+			                    IF ( _overdue > 0, FORMAT ( _overdue, "#,0" ) & " days overdue" ),
+			                    IF ( ISBLANK ( _idle ), "No contact in 2 years", IF ( _idle > 90, "No contact for " & FORMAT ( _idle, "#,0" ) & " days" ) ),
+			                    IF ( _ending > 0, _ending & " contract(s) ending within 90 days" )
+			                },
+			                [Value] <> ""
+			            )
+			        RETURN IF ( COUNTROWS ( _reasons ) = 0, "No open issues", CONCATENATEX ( _reasons, [Value], " · " ) ),
+			        REMOVEFILTERS ( 'Detail Calendar' ),
+			        REMOVEFILTERS ( 'Detail Company' ),
+			        REMOVEFILTERS ( 'CRM Activities'[Activity Type] )
+			    ),
+			    "This view covers several accounts. Right-click an account on Overview and drill through to see its health, or check Customer Health on Overview."
+			)
+		displayFolder: Account Health
+		lineageTag: 09c8eee5-17a7-401a-a08e-d5a65d592e3c
 
 	column 'Entry Key'
 		dataType: string
@@ -159,6 +255,11 @@ table 'ERP Open Items'
 		sourceColumn: Aging Sort
 
 		annotation SummarizationSetBy = Automatic
+
+	/// ISO currency of the ledger entry. LCY is resolved to the company currency: CHF for STCH, EUR for all other companies.
+	column 'Currency Code' = IF ( 'ERP Open Items'[Currency] = "LCY", IF ( 'ERP Open Items'[Entity] = "STCH", "CHF", "EUR" ), 'ERP Open Items'[Currency] )
+		dataType: string
+		lineageTag: 11110a52-0178-4bfe-8fa1-9f3567cb7f3a
 
 	partition 'ERP Open Items' = m
 		mode: import

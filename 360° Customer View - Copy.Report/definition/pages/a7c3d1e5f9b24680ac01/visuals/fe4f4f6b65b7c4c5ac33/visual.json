@@ -3,9 +3,9 @@
   "name": "fe4f4f6b65b7c4c5ac33",
   "position": {
     "x": 10,
-    "y": 180,
+    "y": 280,
     "z": 5000,
-    "height": 110,
+    "height": 120,
     "width": 650.0,
     "tabOrder": 5000
   },
@@ -35,13 +35,28 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "ERP ContractHeader"
+                    }
+                  },
+                  "Property": "Contracts Ending (90 Days)"
+                }
+              },
+              "queryRef": "ERP ContractHeader.Contracts Ending (90 Days)",
+              "nativeQueryRef": "Ending in 90 Days",
+              "displayName": "Ending in 90 Days"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "ERP ContractLine"
                     }
                   },
-                  "Property": "Run Rate (Active CLs)"
+                  "Property": "Active Run Rate"
                 }
               },
-              "queryRef": "ERP ContractLine.Run Rate (Active CLs)",
+              "queryRef": "ERP ContractLine.Active Run Rate",
               "nativeQueryRef": "Run Rate",
               "displayName": "Run Rate"
             },
@@ -59,6 +74,21 @@
               "queryRef": "ERP Invoices.Invoiced Amount (12M)",
               "nativeQueryRef": "Invoiced (12M)",
               "displayName": "Invoiced (12M)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ERP Invoices"
+                    }
+                  },
+                  "Property": "Invoiced 12M vs Prior %"
+                }
+              },
+              "queryRef": "ERP Invoices.Invoiced 12M vs Prior %",
+              "nativeQueryRef": "vs Prior 12M",
+              "displayName": "vs Prior 12M"
             }
           ]
         }
@@ -132,6 +162,52 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ERP ContractHeader"
+                        }
+                      },
+                      "Property": "Contracts Ending Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ERP ContractHeader.Contracts Ending (90 Days)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ERP Invoices"
+                        }
+                      },
+                      "Property": "Trend Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ERP Invoices.Invoiced 12M vs Prior %"
           }
         }
       ],
@@ -234,7 +310,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "5L"
                 }
               }
             },

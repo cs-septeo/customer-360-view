@@ -3,7 +3,7 @@
   "name": "2b916544fa9f78f211d7",
   "position": {
     "x": 10,
-    "y": 980,
+    "y": 1090,
     "z": 8000,
     "height": 330,
     "width": 982.5,
@@ -62,58 +62,33 @@
             },
             {
               "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "ERP Invoices"
-                        }
-                      },
-                      "Property": "Net Amount"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(ERP Invoices.Net Amount)",
-              "nativeQueryRef": "Net Amount",
-              "displayName": "Net Amount"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "ERP Invoices"
-                        }
-                      },
-                      "Property": "Remaining Amount"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(ERP Invoices.Remaining Amount)",
-              "nativeQueryRef": "Remaining",
-              "displayName": "Remaining"
-            },
-            {
-              "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "ERP Invoices"
                     }
                   },
-                  "Property": "Currency"
+                  "Property": "Invoiced Amount"
                 }
               },
-              "queryRef": "ERP Invoices.Currency",
-              "nativeQueryRef": "Currency",
-              "displayName": "Currency"
+              "queryRef": "ERP Invoices.Invoiced Amount",
+              "nativeQueryRef": "Net Amount",
+              "displayName": "Net Amount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ERP Invoices"
+                    }
+                  },
+                  "Property": "Invoice Remaining Amount"
+                }
+              },
+              "queryRef": "ERP Invoices.Invoice Remaining Amount",
+              "nativeQueryRef": "Remaining",
+              "displayName": "Remaining"
             },
             {
               "field": {
@@ -142,8 +117,8 @@
                 }
               },
               "queryRef": "ERP Invoices.Entity",
-              "nativeQueryRef": "Entity",
-              "displayName": "Entity"
+              "nativeQueryRef": "Company",
+              "displayName": "Company"
             },
             {
               "field": {
@@ -274,7 +249,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Rechnungen (Invoices)'"
+                  "Value": "'Invoices'"
                 }
               }
             },
